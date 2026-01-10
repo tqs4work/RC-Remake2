@@ -39405,6 +39405,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: w1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 672
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e9d373008e7a54ebb8e8c8b482c98a
+      internalID: -1639575460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: w2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986e79dcb6dd4494babae2ab95b8d42b
+      internalID: 1638657168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: w3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 672
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81dc399177237e43bd7e2e122cc7cd3
+      internalID: 1685222826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: w4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 672
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcfcab8ad76d104d86d37e9886ff9cd
+      internalID: -417574436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -41161,6 +41249,10 @@ TextureImporter:
       spr_tileset_sunnysideworld_16px_997: 1390494513
       spr_tileset_sunnysideworld_16px_998: -1040258695
       spr_tileset_sunnysideworld_16px_999: 1504022310
+      w1: -1639575460
+      w2: 1638657168
+      w3: 1685222826
+      w4: -417574436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
