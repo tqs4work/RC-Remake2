@@ -161,12 +161,11 @@ public class FirebaseConnect : MonoBehaviour
         {
             Username = username,
             Password = password,
-            Timecreate = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")
-            //Timecreate = DateTime.Now.ToString("yyyy-MM-dd")
+            Timecreate = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")            
         };
-        await firebase.Child("Accounts").Child("Acc Create " + account.Timecreate).PutAsync(account);
-        Console.WriteLine("Sign Up Successful");
+        await firebase.Child("Accounts").Child("Acc Created " + account.Timecreate).PutAsync(account);       
         ShowMess("Sign Up Successful");
+        ClearInput();
     }
     public static async Task SignIn()
     {
