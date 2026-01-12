@@ -10,6 +10,8 @@ using Google.Apis.Auth.OAuth2;
 using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using FirebaseException = Firebase.Database.FirebaseException;
 
 public class FirebaseConnect : MonoBehaviour
 {
@@ -17,18 +19,15 @@ public class FirebaseConnect : MonoBehaviour
     async void Start()
     {
         //await AddData();
-        await ReadData();
+        //await ReadData();
         //await DeleteData();
-
-
+        await Task.Delay(1000);
+        //await UpdateData();
     }
 
     async void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            await SignUp();
-        }
+    {        
+        await Task.Delay(1000);
     }
 
     public async void OnSignUpButtonClick()
@@ -62,7 +61,7 @@ public class FirebaseConnect : MonoBehaviour
         FirebaseApp.Create(new AppOptions()
         {
             //KEY GENERATE (PROJECT SETTING -> SERVICE ACCOUNTS -> GENERATE NEW KEY)
-            Credential = GoogleCredential.FromFile("realm-craft-topdown-2d-firebase-adminsdk-fbsvc-d8f4112a2d")
+            Credential = GoogleCredential.FromFile("realm-craft-topdown-2d-firebase-adminsdk-fbsvc-1e1dc59d80")
         });
 
         var firebase = new FirebaseClient(firebaseUrl);
@@ -86,10 +85,10 @@ public class FirebaseConnect : MonoBehaviour
         var firebase = new FirebaseClient(firebaseUrl);
         var Data = new
         {
-            Message = "Connect to Firebase",
+            Message = "Console.ReadLine()",
             Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
         };
-        await firebase.Child("Tasks").PutAsync(Data);
+        await firebase.Child("Tasks").PatchAsync(Data);
     }
 
 
@@ -100,7 +99,7 @@ public class FirebaseConnect : MonoBehaviour
         var Data = await firebase.Child("Tasks").Child("Message").OnceSingleAsync<dynamic>(); //lấy 1 đối tượng
         var allData = await firebase.Child("Tasks").Child("Player0").OnceAsync<dynamic>(); //lấy nhiều đối tượng
 
-        //OnceAsync<dynamic>(), phương thức trả về một tập hợp (collection) chứa các đối tượng trong nút "Tasks" nên ph?i s? lý Key Value ?? xu?t
+        //OnceAsync<dynamic>(), phương thức trả về một tập hợp (collection) chứa các đối tượng trong nút "Tasks" nên phải xử lý Key Value để xuất
 
         Console.WriteLine($"{Data}");
 
@@ -127,7 +126,7 @@ public class FirebaseConnect : MonoBehaviour
             Message = Console.ReadLine(),
             Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
         };
-        await firebase.Child("Tasks").PatchAsync(updateData);
+        await firebase.Child("Tasks").PutAsync(updateData);
     }
 
 
@@ -148,15 +147,19 @@ public class FirebaseConnect : MonoBehaviour
         string password = GameObject.Find("Canvas").gameObject.transform.Find("InputPassword").gameObject.GetComponent<TMP_InputField>().text;
         var firebase = new FirebaseClient(firebaseUrl);
         var accounts = await firebase.Child("Accounts").OnceAsync<Account>();
-        foreach (var acc in accounts)
+        if (accounts != null)
         {
-            if (acc.Object.Username == username)
+            foreach (var acc in accounts)
             {
-                ShowMess("Account Existed");
-                ClearInput();
-                return;
+                if (acc.Object.Username == username)
+                {
+                    ShowMess("Account Existed");
+                    ClearInput();
+                    return;
+                }
             }
         }
+                
         var account = new Account
         {
             Username = username,
@@ -220,5 +223,17 @@ public class FirebaseConnect : MonoBehaviour
         public string Region { get; set; }
         public DateTime LastLogin { get; set; }
     }
+
+    //public class Inventory
+    //{
+    //    public List<Item> Items { get; set; }
+    //}    
+
+    //public class Item
+    //{
+    //    public string Id { get; set; }
+    //    public string Icon { get; set; }
+    //    public int Quantity { get; set; }
+    //}
 
 }
