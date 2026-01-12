@@ -19,21 +19,34 @@ public class Item2String
     public string hp;
     public string mp;
     [Header("Chỉ số đặc biệt")]
-    public string bonus;
+    public string bonus;    
 
-    public Item2String(Item item)
+    // ✅ BẮT BUỘC cho Firebase
+    public Item2String() { }
+
+    // ❌ KHÔNG dùng cho Firebase
+    public static Item2String FromItem(Item item)
     {
-        itemID = item.itemID;
-        itemName = item.itemName;
-        description = item.description;
-        icon = item.icon != null ? item.icon.name : "";
-        quantity = item.quantity.ToString();
-        price = item.price.ToString();
-        level = item.level.ToString();
-        atk = item.atk.ToString();
-        def = item.def.ToString();
-        hp = item.hp.ToString();
-        mp = item.mp.ToString();
-        bonus = item.bonus.ToString();
+        if (item == null)
+        {
+            Debug.LogError("Item is null when converting to Item2String");
+            return null;
+        }
+
+        return new Item2String
+        {
+            itemID = item.itemID,
+            itemName = item.itemName,
+            description = item.description,
+            icon = item.icon != null ? item.icon.name : "",
+            quantity = item.quantity.ToString(),
+            price = item.price.ToString(),
+            level = item.level.ToString(),
+            atk = item.atk.ToString(),
+            def = item.def.ToString(),
+            hp = item.hp.ToString(),
+            mp = item.mp.ToString(),
+            bonus = item.bonus.ToString()
+        };
     }
 }
