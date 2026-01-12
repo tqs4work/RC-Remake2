@@ -105,22 +105,13 @@ public class FirebaseConnect : MonoBehaviour
 
         foreach (var item in allData)
             Console.WriteLine($"{item.Key} : {item.Object}"); //Object = Value
-
-
-        //Test
-
-        GameObject t = GameObject.Find("Canvas").gameObject.transform.Find("Text").gameObject;
-        if (t != null)
-        {
-            t.GetComponent<TextMeshProUGUI>().text = $"{Data}";
-        }
+        
     }
 
     //Update
     public static async Task UpdateData()
     {
-        var firebase = new FirebaseClient(firebaseUrl);
-        Console.Write("Input new message: ");
+        var firebase = new FirebaseClient(firebaseUrl);        
         var updateData = new
         {
             Message = Console.ReadLine(),
@@ -160,12 +151,8 @@ public class FirebaseConnect : MonoBehaviour
             }
         }
                 
-        var account = new Account
-        {
-            Username = username,
-            Password = password,
-            Timecreate = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")            
-        };
+        var account = CreateAccount(username, password);
+
         await firebase.Child("Accounts").Child("Acc Created " + account.Timecreate).PutAsync(account);       
         ShowMess("Sign Up Successful");
         ClearInput();
@@ -184,10 +171,59 @@ public class FirebaseConnect : MonoBehaviour
                 ShowMess("Sign In Successful");
                 return;
             }
-        }
-        Console.WriteLine("Sign In Failed");
-        ShowMess("Sign In Failed");
+        }        
+        ShowMess("Username or Password Incorrect");
     }
+
+    public static Account CreateAccount(string username, string password)
+    {
+        var account = new Account
+        {
+            Username = username,
+            Password = password,
+            Timecreate = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"),
+            player = new Player() // Tạo mới đối tượng Player
+        };
+
+        // Gán thông tin cho Player
+        account.player.Name = "NewPlayer";
+        account.player.Hp = 100;
+        account.player.Mp = 50;
+        account.player.Exp = 0;
+        account.player.Lv = 1;
+        account.player.Gold = 0;
+        account.player.IsOnline = false;
+        account.player.LastLogin = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+        account.player.inventory = new Inventory
+        {
+            Items = new List<Item>()
+        };
+
+        // Tạo một item mới từ Item ScriptableObject đã tạo trong Unity
+        Item starterSword = ScriptableObject.CreateInstance<Item>();
+        starterSword.itemID = "item001";
+        starterSword.itemName = "Starter Sword";
+        starterSword.description = "A basic sword for new adventurers.";
+        starterSword.quantity = 1;
+        starterSword.price = 100;
+        starterSword.level = 1;
+        starterSword.atk = 10;
+        starterSword.def = 0;
+        starterSword.hp = 0;
+        starterSword.mp = 0;
+        starterSword.bonus = 0;
+
+        // Thêm item vào inventory
+        account.player.inventory.Items.Add(starterSword);
+
+        // Xét điều kiện cho Property ID đã được gán trong Player
+        return account;
+    }
+
+    public static void AddItem(Item item, Player player)
+    {
+        player.inventory.Items.Add(item);
+    }    
 
     static void ShowMess(string mess)
     {
@@ -210,30 +246,35 @@ public class FirebaseConnect : MonoBehaviour
         public string Username { get; set; }
         public string Password { get; set; }
         public string Timecreate { get; set; }
-        public Player p { get; set; }
+        public Player player { get; set; }
     }
     public class Player
     {
-        public string Id { get; set; }
+        private static int _nextId = 1; // Biến tĩnh để theo dõi ID tiếp theo
+        public string ID { get; set; }
         public string Name { get; set; }
-        public int VipLevel { get; set; }
+        public int Hp { get; set; }
+        public int Mp { get; set; }
+        public int Exp { get; set; }
+        public int Lv { get; set; }
         public int Gold { get; set; }
-        public int Coins { get; set; }
-        public bool IsActive { get; set; }
-        public string Region { get; set; }
-        public DateTime LastLogin { get; set; }
+        public bool IsOnline { get; set; }       
+        public string LastLogin { get; set; }
+
+        public Inventory inventory { get; set; }
+
+        // Constructor
+        public Player()
+        {
+            ID = _nextId.ToString("D4"); // Gán ID với định dạng 4 ký tự
+            _nextId++; // Tăng ID tiếp theo
+        }
     }
 
-    //public class Inventory
-    //{
-    //    public List<Item> Items { get; set; }
-    //}    
-
-    //public class Item
-    //{
-    //    public string Id { get; set; }
-    //    public string Icon { get; set; }
-    //    public int Quantity { get; set; }
-    //}
+    public class Inventory
+    {
+        public List<Item> Items { get; set; }
+    }
+    
 
 }

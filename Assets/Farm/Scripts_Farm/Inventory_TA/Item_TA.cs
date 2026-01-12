@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item_", menuName = "Inventory/NewItem")]
-public class InventoryItem : ScriptableObject
+public class Item : ScriptableObject
 {
     [Header("Thông tin vật phẩm")]
-    public string idItem;
+    public string itemID;
     public string itemName;
     [TextArea]
     public string description;
@@ -20,11 +20,6 @@ public class InventoryItem : ScriptableObject
     public float hp;
     public float mp;
     [Header("Chỉ số đặc biệt")]
-    public float bonus;
-
-    public InventoryItem_String_TA ToFirebaseModel()
-    {
-        return new InventoryItem_String_TA(this);
-    }
+    public float bonus;    
 
 }

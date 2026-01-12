@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class InventoryItem_String_TA
+public class Item2String
 {
     [Header("Thông tin vật phẩm")]
-    public string idItem;
+    public string itemID;
     public string itemName;
     [TextArea]
     public string description;
@@ -21,9 +21,9 @@ public class InventoryItem_String_TA
     [Header("Chỉ số đặc biệt")]
     public string bonus;
 
-    public InventoryItem_String_TA(InventoryItem item)
+    public Item2String(Item item)
     {
-        idItem = item.idItem;
+        itemID = item.itemID;
         itemName = item.itemName;
         description = item.description;
         icon = item.icon != null ? item.icon.name : "";
