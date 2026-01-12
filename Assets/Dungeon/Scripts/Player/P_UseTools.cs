@@ -176,6 +176,7 @@ public class P_UseTools : MonoBehaviour
         yield return new WaitForSeconds(4/6f);
         GameObject a = Instantiate(arrowPre, bPos.transform.position, Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90));
         a.GetComponent<Rigidbody2D>().linearVelocity = direct * 15f;
+        Destroy(a, 3f);
         isRA = false;
         yield return new WaitForSeconds(2/6f);        
         isAction = false;

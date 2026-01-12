@@ -11,9 +11,133 @@ using Google.Apis.Auth.OAuth2;
 using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirebaseConnect : MonoBehaviour
 {
+
+    private const string firebaseUrl =
+        "https://realm-craft-topdown-2d-default-rtdb.asia-southeast1.firebasedatabase.app/";
+
+    private FirebaseService _firebase;
+
+    private void Awake()
+    {
+        _firebase = new FirebaseService(firebaseUrl);
+    }
+
+    // ================= UI BUTTON =================
+
+    public async void OnSignUpButtonClick()
+    {
+        await SignUp();
+    }
+
+    public async void OnSignInButtonClick()
+    {
+        await SignIn();
+    }
+
+    // ================= CORE LOGIC =================
+
+    private async Task SignUp()
+    {
+        string username = GetUsername();
+        string password = GetPassword();
+
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            ShowMessage("Username or password is empty");
+            return;
+        }
+
+        var accounts = await _firebase.GetAccounts();
+
+        if (accounts.Any(a => a.Username == username))
+        {
+            ShowMessage("Account already exists");
+            ClearInput();
+            return;
+        }
+
+        AccountData account = AccountFactory.Create(username, password);
+        await _firebase.CreateAccount(account);
+
+        ShowMessage("Sign up success");
+        ClearInput();
+    }
+
+    private async Task SignIn()
+    {
+        string username = GetUsername();
+        string password = GetPassword();
+
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            ShowMessage("Username or password is empty");
+            return;
+        }
+
+        var accounts = await _firebase.GetAccounts();
+
+        var account = accounts
+            .FirstOrDefault(a => a.Username == username && a.Password == password);
+
+        if (account == null)
+        {
+            ShowMessage("Username or password incorrect");
+            return;
+        }
+
+
+
+        // ✅ LOAD PLAYER VÀO RUNTIME
+        PlayerRuntime.Instance.Player.LoadFromData(account.Player);
+
+        ShowMessage("Sign in successful");
+
+        SceneManager.LoadScene("GameScene");
+    }
+
+    // ================= HELPERS =================
+
+    private string GetUsername()
+    {
+        return GameObject.Find("Canvas")
+            .transform.Find("InputUsername")
+            .GetComponent<TMP_InputField>().text.Trim();
+    }
+
+    private string GetPassword()
+    {
+        return GameObject.Find("Canvas")
+            .transform.Find("InputPassword")
+            .GetComponent<TMP_InputField>().text.Trim();
+    }
+
+    private void ClearInput()
+    {
+        GetInputField("InputUsername").text = "";
+        GetInputField("InputPassword").text = "";
+    }
+
+    private TMP_InputField GetInputField(string name)
+    {
+        return GameObject.Find("Canvas")
+            .transform.Find(name)
+            .GetComponent<TMP_InputField>();
+    }
+
+    private void ShowMessage(string message)
+    {
+        GameObject.Find("Canvas")
+            .transform.Find("Text")
+            .GetComponent<TextMeshProUGUI>().text = message;
+    }
+
+
+    //*******************************************************************************
+    /*
     // Firebase URL
     private const string firebaseUrl = "https://realm-craft-topdown-2d-default-rtdb.asia-southeast1.firebasedatabase.app/";
     private static readonly HttpClient client = new HttpClient();
@@ -85,9 +209,15 @@ public class FirebaseConnect : MonoBehaviour
         {
             if (acc.Object.Username == username && acc.Object.Password == password)
             {
+                PlayerData playerData = acc.Object.Player;
+                PlayerRuntime.Instance.Player.LoadFromData(playerData);
+
                 ShowMessage("Sign In Successful");
+
+                SceneManager.LoadScene("GameScene");
                 return;
             }
+
         }
 
         ShowMessage("Username or Password Incorrect");
@@ -163,8 +293,7 @@ public class FirebaseConnect : MonoBehaviour
     }
 
     public class Player
-    {
-        private static int _nextId = 1;
+    {        
         public string ID { get; private set; } // Chỉ cho phép đọc
         public string Name { get; set; }
         public int Hp { get; set; }
@@ -175,13 +304,7 @@ public class FirebaseConnect : MonoBehaviour
         public bool IsOnline { get; set; }
         public string LastLogin { get; set; }
         public List<Item2String> Inventory { get; set; }
-
-        public Player()
-        {
-            ID = _nextId.ToString("D4");
-            _nextId++;
-        }
-
+        
         public void CreatePlayer()
         {
             Name = "NewPlayer";
@@ -195,5 +318,7 @@ public class FirebaseConnect : MonoBehaviour
             Inventory = new List<Item2String>();
         }
     }
+    */
+    //*******************************************************************************
 
 }
