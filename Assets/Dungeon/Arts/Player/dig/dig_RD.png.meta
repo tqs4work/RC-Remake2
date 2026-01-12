@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: cf208b826745a7345a5cc8496c140197
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3789663123950375946
+    second: dig_RD_0
+  - first:
+      213: -5476625917505226362
+    second: dig_RD_1
+  - first:
+      213: -6612370723809922618
+    second: dig_RD_2
+  - first:
+      213: 8812577480244651572
+    second: dig_RD_3
+  - first:
+      213: 3308654372930778192
+    second: dig_RD_4
+  - first:
+      213: 2089268087166220852
+    second: dig_RD_5
+  - first:
+      213: 7554089526247458778
+    second: dig_RD_6
+  - first:
+      213: 2940628791884945374
+    second: dig_RD_7
+  - first:
+      213: -3679443704434770956
+    second: dig_RD_8
+  - first:
+      213: -3391292332219104827
+    second: dig_RD_9
+  - first:
+      213: -8385370033197871516
+    second: dig_RD_10
+  - first:
+      213: 5272815853099464343
+    second: dig_RD_11
+  - first:
+      213: 2945319460875817982
+    second: dig_RD_12
+  - first:
+      213: 1566129403649176350
+    second: dig_RD_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dig_RD_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 24
+        width: 20
+        height: 20
+      alignment: 9
+      pivot: {x: 0.41545525, y: 0.044761945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb6a8e9779686bc0800000000000000
+      internalID: -3789663123950375946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 24
+        width: 20
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42195892, y: 0.047858737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68937639ebd1ff3b0800000000000000
+      internalID: -5476625917505226362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 23
+        width: 24
+        height: 22
+      alignment: 9
+      pivot: {x: 0.31661162, y: 0.099876665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1fd1c4cd32c34a0800000000000000
+      internalID: -6612370723809922618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 23
+        width: 25
+        height: 21
+      alignment: 9
+      pivot: {x: 0.26843995, y: 0.09369378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436e699f6809c4a70800000000000000
+      internalID: 8812577480244651572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_4
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 23
+        width: 26
+        height: 20
+      alignment: 9
+      pivot: {x: 0.24493057, y: 0.10209246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054f4174f93baed20800000000000000
+      internalID: 3308654372930778192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_5
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 23
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.27648246, y: 0.09893426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a3a1081429efc10800000000000000
+      internalID: 2089268087166220852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 23
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.2789397, y: 0.095776334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad78a7d966485d860800000000000000
+      internalID: 7554089526247458778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 24
+        width: 26
+        height: 20
+      alignment: 9
+      pivot: {x: 0.32400748, y: 0.051002216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7969c5e463fc820800000000000000
+      internalID: 2940628791884945374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_8
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 24
+        width: 27
+        height: 26
+      alignment: 9
+      pivot: {x: 0.35213667, y: 0.041923963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb3e12027dffecc0800000000000000
+      internalID: -3679443704434770956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_9
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 24
+        width: 22
+        height: 29
+      alignment: 9
+      pivot: {x: 0.47912875, y: 0.03498104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c103987795bfe0d0800000000000000
+      internalID: -3391292332219104827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_11
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 24
+        width: 23
+        height: 26
+      alignment: 9
+      pivot: {x: 0.59038246, y: 0.037430543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796ba02f41ecc2940800000000000000
+      internalID: 5272815853099464343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_12
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 24
+        width: 30
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5152303, y: 0.04313795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef35c87d170efd820800000000000000
+      internalID: 2945319460875817982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dig_RD_13
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 24
+        width: 31
+        height: 20
+      alignment: 9
+      pivot: {x: 0.50617045, y: 0.05275278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13bdc815620cb510800000000000000
+      internalID: 1566129403649176350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 59ea92a659e5f4944aad24e25712925b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dig_RD_0: -3789663123950375946
+      dig_RD_1: -5476625917505226362
+      dig_RD_10: -8385370033197871516
+      dig_RD_11: 5272815853099464343
+      dig_RD_12: 2945319460875817982
+      dig_RD_13: 1566129403649176350
+      dig_RD_2: -6612370723809922618
+      dig_RD_3: 8812577480244651572
+      dig_RD_4: 3308654372930778192
+      dig_RD_5: 2089268087166220852
+      dig_RD_6: 7554089526247458778
+      dig_RD_7: 2940628791884945374
+      dig_RD_8: -3679443704434770956
+      dig_RD_9: -3391292332219104827
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
