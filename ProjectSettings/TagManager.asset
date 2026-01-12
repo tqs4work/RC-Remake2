@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - P_Bullet
+  - E_Bullet
+  - Exp
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -95,8 +98,8 @@ TagManager:
   - name: Smoke
     uniqueID: 2321790999
     locked: 0
-  - name: NPCVillage
-    uniqueID: 3045851475
+  - name: Canvas
+    uniqueID: 831296717
     locked: 0
   m_RenderingLayers:
   - Default

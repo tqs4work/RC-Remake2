@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 9b84825e2d7f98443aff7621be83e18a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3083036838099942475
+    second: roll_0
+  - first:
+      213: 7020422449882287015
+    second: roll_1
+  - first:
+      213: 4904745224428211008
+    second: roll_2
+  - first:
+      213: -8883362746367683638
+    second: roll_3
+  - first:
+      213: 3368263156373419212
+    second: roll_4
+  - first:
+      213: 8601325017491710851
+    second: roll_5
+  - first:
+      213: -5248456778479591328
+    second: roll_6
+  - first:
+      213: 3900071125500284896
+    second: roll_7
+  - first:
+      213: -621652423166530624
+    second: roll_8
+  - first:
+      213: 8652928507064195328
+    second: roll_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: roll_D_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.49339822, y: -0.00058131746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab2ca9b5b7bde942b7b07215fb1c6c5
+      internalID: 328119947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 25
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.001206398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6431036b04865ff4498b94a28feac730
+      internalID: 300020354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4999981, y: 0.007999929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9d39dc1f655924f97c9ab574f14120
+      internalID: 134676609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 24
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4999981, y: 0.0022790274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcb29a015c86b142bce732dba106f10
+      internalID: 696756386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49463463, y: -0.003441747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359d549f2ac56a84aa00b2dfb70935a0
+      internalID: 1105800196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_5
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4999981, y: -0.003441747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64f1de773444ed4ea5e34be37748d90
+      internalID: 109445534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_6
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 24
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.48927116, y: -0.0034418742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02afe43267daf0b4d96054375212950d
+      internalID: 1902027714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_7
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 27
+        width: 15
+        height: 14
+      alignment: 9
+      pivot: {x: 0.48855388, y: -0.0026243755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421c3366d8ccc8f4d912c7c4ee09c92a
+      internalID: 1013772886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_8
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 27
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49999565, y: 0.013721084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2521aa7f0e2e14346bb6879d0e1d3d10
+      internalID: -2117693308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_9
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 27
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.49386597, y: 0.0012061596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86a57d2716a6ab419966d4c4a54fc12
+      internalID: 1938682920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_D_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4999953, y: -0.00058131746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d49ef73e659c2a4784c2ee9d1a38708
+      internalID: 1988492248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6c14d86578d845a42848ac6812c323a1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      roll_D_0: 328119947
+      roll_D_1: 300020354
+      roll_D_10: 1988492248
+      roll_D_2: 134676609
+      roll_D_3: 696756386
+      roll_D_4: 1105800196
+      roll_D_5: 109445534
+      roll_D_6: 1902027714
+      roll_D_7: 1013772886
+      roll_D_8: -2117693308
+      roll_D_9: 1938682920
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
