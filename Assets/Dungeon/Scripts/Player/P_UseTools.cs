@@ -95,8 +95,7 @@ public class P_UseTools : MonoBehaviour
         }
     }    
     IEnumerator Water()
-    {
-        GetComponent<P_Life>().sta -= 5;
+    {        
         animator.SetTrigger("Water");
         isAction = true;
         yield return new WaitForSeconds(1f);
@@ -104,8 +103,7 @@ public class P_UseTools : MonoBehaviour
     }
 
     IEnumerator Axe()
-    {
-        GetComponent<P_Life>().sta -= 5;
+    {        
         animator.SetTrigger("Axe");
         isAction = true;
         yield return new WaitForSeconds(1f);
@@ -120,8 +118,7 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
     IEnumerator Minning()
-    {
-        GetComponent<P_Life>().sta -= 5;
+    {        
         if (isDetectM)
         {
             TurnBody();
@@ -135,8 +132,7 @@ public class P_UseTools : MonoBehaviour
     }
 
     IEnumerator Dig()
-    {
-        GetComponent<P_Life>().sta -= 5;
+    {        
         animator.SetTrigger("Dig");
         isAction = true;
         yield return new WaitForSeconds(1f);
@@ -144,8 +140,7 @@ public class P_UseTools : MonoBehaviour
     }
 
     IEnumerator Roll()
-    {
-        GetComponent<P_Life>().sta -= 5;
+    {        
         animator.SetTrigger("Roll");
         isRoll = true;
         yield return new WaitForSeconds(1f);
@@ -154,7 +149,7 @@ public class P_UseTools : MonoBehaviour
 
     IEnumerator MA()
     {
-        GetComponent<P_Life>().sta -= 5;
+        PlayerRuntime.Instance.Player.Mp -= 5;
         if (isDetectE)
         {
             TurnBody();
@@ -169,7 +164,7 @@ public class P_UseTools : MonoBehaviour
 
     IEnumerator RA()
     {      
-        GetComponent<P_Life>().sta -= 5;
+        PlayerRuntime.Instance.Player.Mp -= 5;
         animator.SetTrigger("RA");
         isRA = true;
         isAction = true;

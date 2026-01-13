@@ -14,11 +14,21 @@ public static class PlayerDataConverter
             Exp = player.Exp,
             Lv = player.Lv,
             Gold = player.Gold,
-            Inventory = new List<Item2String>()
+            //Inventory = new List<Item2String>()
+            Inventory = new Dictionary<string, Item2String>()
         };
 
+        //foreach (var item in player.Inventory)
+        //    data.Inventory.Add(Item2String.FromItem(item));
+
         foreach (var item in player.Inventory)
-            data.Inventory.Add(Item2String.FromItem(item));
+        {
+            if (item == null || string.IsNullOrEmpty(item.itemID))
+                continue;
+
+            // key = itemID
+            data.Inventory[item.itemID] = Item2String.FromRuntime(item);
+        }
 
         return data;
     }

@@ -11,7 +11,7 @@ public class Player
     public int Lv;
     public int Gold;
 
-    public List<Item> Inventory = new();
+    public List<ItemRuntime> Inventory = new();
 
     public void LoadFromData(PlayerData data)
     {
@@ -25,7 +25,7 @@ public class Player
 
         Inventory.Clear();
         foreach (var item in data.Inventory)
-            Inventory.Add(ItemFactory.CreateFromData(item));
+            Inventory.Add(ItemRuntime.FromData(item.Value));
     }
 }
 

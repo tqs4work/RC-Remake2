@@ -4,13 +4,15 @@ using System.Threading.Tasks;
 public class PlayerRuntime : MonoBehaviour
 {
     public static PlayerRuntime Instance;
-
     public Player Player;
-
-    // ?? KEY ACCOUNT HI?N T?I
     public string AccountKey;
 
     private FirebaseService _firebase;
+
+    private float _saveTimer = 0f;
+    private const float SAVE_INTERVAL = 1f;
+
+    private bool _isSaving = false; // ? C? CH?NG SAVE CH?NG
 
     private void Awake()
     {
@@ -30,6 +32,17 @@ public class PlayerRuntime : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        _saveTimer += Time.deltaTime;
+
+        if (_saveTimer >= SAVE_INTERVAL)
+        {
+            _saveTimer = 0f;
+            _ = SavePlayer(); // fire & forget
+        }
+    }
+
     private async void OnApplicationQuit()
     {
         await SavePlayer();
@@ -45,10 +58,13 @@ public class PlayerRuntime : MonoBehaviour
     {
         if (Player == null) return;
         if (string.IsNullOrEmpty(AccountKey)) return;
+        if (_isSaving) return; // ? CH?N SAVE CH?NG
+
+        _isSaving = true;
 
         PlayerData data = PlayerDataConverter.ToData(Player);
-
-        // ? TRUY?N ?ÚNG ACCOUNT KEY
         await _firebase.SavePlayer(AccountKey, data);
+
+        _isSaving = false;
     }
 }
