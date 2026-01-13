@@ -25,7 +25,7 @@ public class Player
 
         Inventory.Clear();
         foreach (var item in data.Inventory)
-            Inventory.Add(ItemFactory.CreateFromData(item));
+            Inventory.Add(ItemFactory.CreateFromData(item.Value));
     }
 }
 

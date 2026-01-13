@@ -28,13 +28,17 @@ public static class AccountFactory
             Gold = 0,
             IsOnline = false,
             LastLogin = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"),
-            Inventory = new List<Item2String>()
+            //Inventory = new List<Item2String>()
+            Inventory = new Dictionary<string, Item2String>()
         };
 
         Item item = ScriptableObject.CreateInstance<Item>();
         StarterItemBuilder.Build(item);
-        player.Inventory.Add(Item2String.FromItem(item));
-
+        //player.Inventory.Add(Item2String.FromItem(item));
+        
+        Item2String itemData = Item2String.FromItem(item);
+        // ? KEY = itemID
+        player.Inventory[item.itemID] = itemData;
         return player;
     }
 }
