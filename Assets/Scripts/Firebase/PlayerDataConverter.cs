@@ -23,10 +23,11 @@ public static class PlayerDataConverter
 
         foreach (var item in player.Inventory)
         {
-            var itemData = Item2String.FromItem(item);
+            if (item == null || string.IsNullOrEmpty(item.itemID))
+                continue;
 
-            // ?? KEY = itemID
-            data.Inventory[item.itemID] = itemData;
+            // key = itemID
+            data.Inventory[item.itemID] = Item2String.FromRuntime(item);
         }
 
         return data;

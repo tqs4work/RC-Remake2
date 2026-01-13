@@ -34,9 +34,11 @@ public static class AccountFactory
 
         Item item = ScriptableObject.CreateInstance<Item>();
         StarterItemBuilder.Build(item);
-        //player.Inventory.Add(Item2String.FromItem(item));
         
-        Item2String itemData = Item2String.FromItem(item);
+        ItemRuntime runtimeItem = ItemRuntime.FromItem(item);
+
+        Item2String itemData = Item2String.FromRuntime(runtimeItem);
+
         // ? KEY = itemID
         player.Inventory[item.itemID] = itemData;
         return player;

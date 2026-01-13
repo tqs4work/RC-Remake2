@@ -34,17 +34,22 @@ public class PlayerTest : MonoBehaviour
         var player = PlayerRuntime.Instance.Player;
         if (player == null) return;
 
-        // ?? T?O ITEM TEST
-        Item testItem = new Item
+        ItemRuntime testItem = new ItemRuntime
         {
             itemID = "sword_test",
             itemName = "Test Sword",
+            description = "Item test",
+            quantity = 1,
             atk = 10,
-            def = 0
+            def = 0,
+            hp = 0,
+            mp = 0,
+            bonus = 0
         };
 
         player.Inventory.Add(testItem);
 
         Debug.Log("Added Test Sword to inventory");
     }
+
 }
