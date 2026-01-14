@@ -16,7 +16,7 @@ public class BlackSmithDialogue_TU : ScriptableObject
     public Sprite npcPortrait; // Ảnh đại diện NPC hiển thị trên UI
 
     [Header("Defaults")] // Hội thoại mặc định
-    public float defautTypeSpeed = 0.05f; // Tốc độ gõ chữ mặc định
+    public float defaultTypeSpeed = 0.05f; // Tốc độ gõ chữ mặc định
     public AudioClip defaultVoiceSound; // Âm thanh giọng nói mặc định
     public float defaultVoicePitch = 1f; // Cao độ giọng nói mặc định
     public float defaultAutodelay = 1.5f; // Delay mặc định khi tự động chuyển câu(nếu bật auto)

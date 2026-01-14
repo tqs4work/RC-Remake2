@@ -13,6 +13,7 @@ public class Item : ScriptableObject
     [Header("Chỉ số vật phẩm")]
     public int quantity;
     public int price;
+    public bool stackable = false;
     public int level;
     [Header("Chỉ số chiến đấu")]
     public float atk;
