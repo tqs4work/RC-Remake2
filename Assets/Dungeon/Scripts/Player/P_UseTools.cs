@@ -51,7 +51,7 @@ public class P_UseTools : MonoBehaviour
     void ScrollMouse()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        select.GetComponent<RectTransform>().anchoredPosition = new Vector2(-900f + (numberTool - 1) * 110f, 0);
+        select.GetComponent<RectTransform>().anchoredPosition = new Vector2(-250f + (numberTool - 1) * 100f, 60);
         if (scrollInput > 0)
         {
             numberTool++;
