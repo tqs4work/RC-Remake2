@@ -119,7 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &8483141
+=======
+--- !u!1 &25539242
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,9 +131,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 8483142}
   - component: {fileID: 8483144}
   - component: {fileID: 8483143}
+=======
+  - component: {fileID: 25539243}
+  - component: {fileID: 25539245}
+  - component: {fileID: 25539244}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -137,32 +147,52 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &8483142
+=======
+--- !u!224 &25539243
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 8483141}
+=======
+  m_GameObject: {fileID: 25539242}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 1770189484}
+=======
+  m_Father: {fileID: 1561482897}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!114 &8483143
+=======
+--- !u!114 &25539244
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 8483141}
+=======
+  m_GameObject: {fileID: 25539242}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -186,15 +216,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &8483144
+=======
+--- !u!222 &25539245
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 8483141}
   m_CullTransparentMesh: 1
 --- !u!1 &27513865
+=======
+  m_GameObject: {fileID: 25539242}
+  m_CullTransparentMesh: 1
+--- !u!1 &29794504
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,28 +242,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 27513866}
   - component: {fileID: 27513868}
   - component: {fileID: 27513867}
   m_Layer: 5
   m_Name: MpNum
+=======
+  - component: {fileID: 29794505}
+  - component: {fileID: 29794507}
+  - component: {fileID: 29794506}
+  m_Layer: 5
+  m_Name: PlayerArt
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &27513866
+=======
+--- !u!224 &29794505
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 27513865}
+=======
+  m_GameObject: {fileID: 29794504}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 409647164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -232,11 +289,22 @@ RectTransform:
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27513867
+=======
+  m_Father: {fileID: 1691278065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.0000305, y: -1}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &29794506
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 27513865}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -377,6 +445,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31438903}
+=======
+  m_GameObject: {fileID: 29794504}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -390,7 +461,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 1392158287, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+=======
+  m_Sprite: {fileID: 1247447060, guid: 0868b347768956149bd3c50ed38d37a5, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -400,12 +475,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &31438906
+=======
+--- !u!222 &29794507
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 31438903}
   m_CullTransparentMesh: 1
 --- !u!1 &34632328
@@ -528,6 +608,9 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34632328}
+=======
+  m_GameObject: {fileID: 29794504}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &44794615
 GameObject:
@@ -1915,6 +1998,221 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5966736126850433051, guid: f9970656805822b489480b36795d1586, type: 3}
   m_PrefabInstance: {fileID: 85333517}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+=======
+--- !u!1 &89329617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 89329618}
+  - component: {fileID: 89329620}
+  - component: {fileID: 89329619}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &89329618
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89329617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 975310235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &89329619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89329617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -3753825769889500098, guid: 1e85b645a7f6d714c9556a9b3656b0c1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &89329620
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89329617}
+  m_CullTransparentMesh: 1
+--- !u!1 &116171429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116171430}
+  - component: {fileID: 116171432}
+  - component: {fileID: 116171431}
+  m_Layer: 5
+  m_Name: city
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &116171430
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116171429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 378852584}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 811, y: -391}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &116171431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116171429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: city
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &116171432
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116171429}
+  m_CullTransparentMesh: 1
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &122463346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2300,194 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+=======
+--- !u!1 &131505401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131505402}
+  - component: {fileID: 131505404}
+  - component: {fileID: 131505403}
+  m_Layer: 5
+  m_Name: LvNum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &131505402
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131505401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 843371310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.0000305, y: 0.49998474}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &131505403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131505401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &131505404
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131505401}
+  m_CullTransparentMesh: 1
+--- !u!1 &139365126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139365128}
+  - component: {fileID: 139365127}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &139365127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139365126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0df14fb937d1e848b77045aae5a83ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 1484222287}
+  maxSlots: 25
+  inventory: []
+  inventoryPanel: {fileID: 1659614397}
+--- !u!4 &139365128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139365126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3923212, y: 2.2483275, z: -0.01098875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &155119886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,7 +3192,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &265413597
+=======
+--- !u!1 &261664702
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2714,37 +3204,96 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 265413599}
   - component: {fileID: 265413598}
   m_Layer: 0
   m_Name: InventoryManager
+=======
+  - component: {fileID: 261664703}
+  - component: {fileID: 261664705}
+  - component: {fileID: 261664704}
+  m_Layer: 5
+  m_Name: Image
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!114 &265413598
+=======
+--- !u!224 &261664703
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261664702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1784318797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &261664704
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 265413597}
+=======
+  m_GameObject: {fileID: 261664702}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0df14fb937d1e848b77045aae5a83ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   slotPrefab: {fileID: 81412109}
   maxSlots: 25
   inventory: []
   inventoryPanel: {fileID: 31438903}
 --- !u!4 &265413599
 Transform:
+=======
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8959118705387878318, guid: fba5edceb6f923c42809b3bbd88a483a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &261664705
+CanvasRenderer:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 265413597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2755,6 +3304,11 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267073788
+=======
+  m_GameObject: {fileID: 261664702}
+  m_CullTransparentMesh: 1
+--- !u!1 &272952249
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2762,28 +3316,157 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 267073789}
   - component: {fileID: 267073791}
   - component: {fileID: 267073790}
   m_Layer: 5
   m_Name: Amount
+=======
+  - component: {fileID: 272952252}
+  - component: {fileID: 272952251}
+  - component: {fileID: 272952250}
+  m_Layer: 5
+  m_Name: Portal
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  m_IsActive: 1
+--- !u!224 &267073789
+RectTransform:
+=======
+  m_IsActive: 0
+--- !u!95 &272952250
+Animator:
+  serializedVersion: 7
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  m_GameObject: {fileID: 267073788}
+=======
+  m_GameObject: {fileID: 272952249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98646244810d9d449be161b7c44b8578, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &272952251
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272952249}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 11
+  m_Sprite: {fileID: -1160010366554915182, guid: f759fcc89af7e764ebd64ae5b549440e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.1875, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &272952252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272952249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 216, y: 216, z: 108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 333321366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &285148639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285148640}
+  - component: {fileID: 285148642}
+  - component: {fileID: 285148641}
+  m_Layer: 5
+  m_Name: GoldNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &267073789
+--- !u!224 &285148640
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267073788}
+  m_GameObject: {fileID: 285148639}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 81412108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2792,12 +3475,26 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267073790
+=======
+  m_Father: {fileID: 1322402616}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -27.999989, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &285148641
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 267073788}
+=======
+  m_GameObject: {fileID: 285148639}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -2811,7 +3508,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_text: 99
+=======
+  m_text: 10000
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2838,14 +3539,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_fontSize: 20
   m_fontSizeBase: 20
+=======
+  m_fontSize: 36
+  m_fontSizeBase: 36
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2883,15 +3589,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &267073791
+=======
+--- !u!222 &285148642
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 267073788}
   m_CullTransparentMesh: 1
 --- !u!1 &336158169
+=======
+  m_GameObject: {fileID: 285148639}
+  m_CullTransparentMesh: 1
+--- !u!1 &333321365
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2899,22 +3615,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 336158170}
   - component: {fileID: 336158172}
   - component: {fileID: 336158171}
   m_Layer: 5
   m_Name: Icon
+=======
+  - component: {fileID: 333321366}
+  - component: {fileID: 333321369}
+  - component: {fileID: 333321368}
+  - component: {fileID: 333321367}
+  m_Layer: 5
+  m_Name: Canvas
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &336158170
+=======
+--- !u!224 &333321366
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 336158169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2929,11 +3659,33 @@ RectTransform:
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336158171
+=======
+  m_GameObject: {fileID: 333321365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 447923251}
+  - {fileID: 1659614398}
+  - {fileID: 1495251593}
+  - {fileID: 272952252}
+  - {fileID: 378852584}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &333321367
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 336158169}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2960,12 +3712,70 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &336158172
 CanvasRenderer:
+=======
+  m_GameObject: {fileID: 333321365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &333321368
+MonoBehaviour:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 336158169}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 333321365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &333321369
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333321365}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 1235351532}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 831296717
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1001 &342322798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3327,7 +4137,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &367063468
+=======
+--- !u!1 &371124374
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3335,9 +4149,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 367063469}
   - component: {fileID: 367063471}
   - component: {fileID: 367063470}
+=======
+  - component: {fileID: 371124375}
+  - component: {fileID: 371124377}
+  - component: {fileID: 371124376}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3345,32 +4165,52 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &367063469
+=======
+--- !u!224 &371124375
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 367063468}
+=======
+  m_GameObject: {fileID: 371124374}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 1504703134}
+=======
+  m_Father: {fileID: 1501006356}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!114 &367063470
+=======
+--- !u!114 &371124376
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 367063468}
+=======
+  m_GameObject: {fileID: 371124374}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3384,7 +4224,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -3753825769889500098, guid: 1e85b645a7f6d714c9556a9b3656b0c1, type: 3}
+=======
+  m_Sprite: {fileID: 8509550459451208454, guid: 6a18b28ca30e9554aa8612e77275318b, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3394,14 +4238,60 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &367063471
+=======
+--- !u!222 &371124377
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 367063468}
+=======
+  m_GameObject: {fileID: 371124374}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
+--- !u!1 &378852583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 378852584}
+  m_Layer: 5
+  m_Name: GateName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &378852584
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378852583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 565897803}
+  - {fileID: 116171430}
+  - {fileID: 1875116054}
+  m_Father: {fileID: 333321366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &388148359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,7 +4722,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &409647163
+=======
+--- !u!1 &389802271
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3840,6 +4734,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 409647164}
   m_Layer: 5
   m_Name: HP_MP
@@ -3884,40 +4779,51 @@ GameObject:
   - component: {fileID: 413455110}
   - component: {fileID: 413455112}
   - component: {fileID: 413455111}
+=======
+  - component: {fileID: 389802272}
+  - component: {fileID: 389802274}
+  - component: {fileID: 389802273}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
-  m_Name: box1 (2)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &413455110
+=======
+--- !u!224 &389802272
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 413455109}
+=======
+  m_GameObject: {fileID: 389802271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1052374358}
-  m_Father: {fileID: 443442197}
+  m_Children: []
+  m_Father: {fileID: 1693343181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -50, y: 60}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &413455111
+--- !u!114 &389802273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413455109}
+  m_GameObject: {fileID: 389802271}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3931,7 +4837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Sprite: {fileID: 6674386295937086461, guid: 0e9945ae3c15cd9428a32ed38e963020, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3941,15 +4847,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &413455112
+--- !u!222 &389802274
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413455109}
+  m_GameObject: {fileID: 389802271}
   m_CullTransparentMesh: 1
---- !u!1 &442271222
+--- !u!1 &447923250
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3957,28 +4863,154 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 442271223}
-  - component: {fileID: 442271225}
-  - component: {fileID: 442271224}
+  - component: {fileID: 447923251}
+  - component: {fileID: 447923253}
+  - component: {fileID: 447923252}
   m_Layer: 5
-  m_Name: UpgradeStoneText
+  m_Name: Main Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &442271223
+--- !u!224 &447923251
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447923250}
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  - {fileID: 1052374358}
+  m_Father: {fileID: 443442197}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -50, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &413455111
+=======
+  - {fileID: 2092754687}
+  - {fileID: 776076209}
+  m_Father: {fileID: 333321366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &447923252
+>>>>>>> dev:Assets/Scenes/Forge.unity
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  m_GameObject: {fileID: 413455109}
+=======
+  m_GameObject: {fileID: 447923250}
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+=======
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+--- !u!222 &413455112
+=======
+--- !u!222 &447923253
+>>>>>>> dev:Assets/Scenes/Forge.unity
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  m_GameObject: {fileID: 413455109}
+  m_CullTransparentMesh: 1
+--- !u!1 &442271222
+=======
+  m_GameObject: {fileID: 447923250}
+  m_CullTransparentMesh: 1
+--- !u!1 &542166172
+>>>>>>> dev:Assets/Scenes/Forge.unity
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+  - component: {fileID: 442271223}
+  - component: {fileID: 442271225}
+  - component: {fileID: 442271224}
+  m_Layer: 5
+  m_Name: UpgradeStoneText
+=======
+  - component: {fileID: 542166173}
+  - component: {fileID: 542166175}
+  - component: {fileID: 542166174}
+  m_Layer: 5
+  m_Name: UnderBar
+>>>>>>> dev:Assets/Scenes/Forge.unity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+--- !u!224 &442271223
+=======
+--- !u!224 &542166173
+>>>>>>> dev:Assets/Scenes/Forge.unity
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 442271222}
+=======
+  m_GameObject: {fileID: 542166172}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 34632329}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3987,11 +5019,22 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442271224
+=======
+  m_Father: {fileID: 843371310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.9999695, y: -0.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &542166174
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 442271222}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4258,6 +5301,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479238277}
+=======
+  m_GameObject: {fileID: 542166172}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -4271,7 +5317,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 2913089383398367032, guid: 2f6c97c96dc284f49a309dab0f27e616, type: 3}
+=======
+  m_Sprite: {fileID: -7328182317289897309, guid: 522fc767e73fe9e4cb84108ab7534008, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4281,15 +5331,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &479238281
+=======
+--- !u!222 &542166175
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 479238277}
   m_CullTransparentMesh: 1
 --- !u!1 &508325998
+=======
+  m_GameObject: {fileID: 542166172}
+  m_CullTransparentMesh: 1
+--- !u!1 &565897802
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4297,28 +5357,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 508325999}
   - component: {fileID: 508326001}
   - component: {fileID: 508326000}
   m_Layer: 5
   m_Name: ExpBar
+=======
+  - component: {fileID: 565897803}
+  - component: {fileID: 565897805}
+  - component: {fileID: 565897804}
+  m_Layer: 5
+  m_Name: farm
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &508325999
+=======
+--- !u!224 &565897803
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 508325998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+=======
+  m_GameObject: {fileID: 565897802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 1263915514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4327,15 +5405,32 @@ RectTransform:
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508326000
+=======
+  m_Father: {fileID: 378852584}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 814, y: 388}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565897804
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 508325998}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+=======
+  m_GameObject: {fileID: 565897802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4346,6 +5441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -9109874204076813634, guid: 91edcd2e6ab17bc4db467160c3f6acd3, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -4357,12 +5453,91 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &508326001
+=======
+  m_text: farm
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &565897805
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 508325998}
+=======
+  m_GameObject: {fileID: 565897802}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1001 &569681041
 PrefabInstance:
@@ -7139,7 +8314,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &725914301
+=======
+--- !u!1 &734693042
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7147,16 +8326,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 725914302}
   - component: {fileID: 725914304}
   - component: {fileID: 725914303}
   m_Layer: 5
   m_Name: box1 (1)
+=======
+  - component: {fileID: 734693044}
+  - component: {fileID: 734693043}
+  m_Layer: 0
+  m_Name: UpdateCanvas
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &725914302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7178,12 +8365,109 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725914303
+=======
+--- !u!114 &734693043
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 725914301}
+=======
+  m_GameObject: {fileID: 734693042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48f63f98fa85da4490c6b07c21faeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Hp: 0
+  Mp: 0
+  Exp: 0
+  Lv: 0
+  Gold: 0
+  canvas: {fileID: 0}
+  player: {fileID: 0}
+  hpBar: {fileID: 0}
+  hpNum: {fileID: 0}
+  mpBar: {fileID: 0}
+  mpNum: {fileID: 0}
+  usernameText: {fileID: 0}
+  lvNum: {fileID: 0}
+  expBar: {fileID: 0}
+  goldNum: {fileID: 0}
+  isDead: 0
+  hp0: 0
+  mp0: 100
+--- !u!4 &734693044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734693042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776076208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776076209}
+  - component: {fileID: 776076211}
+  - component: {fileID: 776076210}
+  m_Layer: 5
+  m_Name: ToolPan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &776076209
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776076208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1693343181}
+  - {fileID: 1784318797}
+  - {fileID: 1856221349}
+  - {fileID: 1501006356}
+  - {fileID: 975310235}
+  - {fileID: 1561482897}
+  - {fileID: 1289785223}
+  m_Father: {fileID: 447923251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 60.48001}
+  m_SizeDelta: {x: 1920, y: 120.95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &776076210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776076208}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -7207,15 +8491,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &725914304
+=======
+--- !u!222 &776076211
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 725914301}
   m_CullTransparentMesh: 1
 --- !u!1 &742792416
+=======
+  m_GameObject: {fileID: 776076208}
+  m_CullTransparentMesh: 1
+--- !u!1 &805176300
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7223,27 +8517,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 742792417}
   - component: {fileID: 742792419}
   - component: {fileID: 742792418}
   m_Layer: 5
   m_Name: box1 (3)
+=======
+  - component: {fileID: 805176301}
+  - component: {fileID: 805176303}
+  - component: {fileID: 805176302}
+  m_Layer: 5
+  m_Name: BG
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &742792417
+=======
+--- !u!224 &805176301
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 742792416}
+=======
+  m_GameObject: {fileID: 805176300}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Children:
   - {fileID: 1387244469}
   m_Father: {fileID: 443442197}
@@ -7254,11 +8565,23 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742792418
+=======
+  m_Children: []
+  m_Father: {fileID: 2092754687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -10.893, y: -64.14}
+  m_SizeDelta: {x: 804.03, y: 343.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &805176302
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 742792416}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7446,9 +8769,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793585105}
+=======
+  m_GameObject: {fileID: 805176300}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -7459,6 +8785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_text: "Th\u1EE3 r\xE8n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7532,14 +8859,33 @@ MonoBehaviour:
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &793585108
+=======
+  m_Sprite: {fileID: -7730486409907412771, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &805176303
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 793585105}
   m_CullTransparentMesh: 1
 --- !u!1 &827316314
+=======
+  m_GameObject: {fileID: 805176300}
+  m_CullTransparentMesh: 1
+--- !u!1 &843371309
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7547,23 +8893,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 827316318}
   - component: {fileID: 827316317}
   - component: {fileID: 827316316}
   - component: {fileID: 827316315}
   m_Layer: 5
   m_Name: Canvas
+=======
+  - component: {fileID: 843371310}
+  m_Layer: 5
+  m_Name: LV_EXP
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!114 &827316315
 MonoBehaviour:
+=======
+--- !u!224 &843371310
+RectTransform:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 827316314}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7646,6 +9004,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+  m_GameObject: {fileID: 843371309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 0.7, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 542166173}
+  - {fileID: 2085086169}
+  - {fileID: 131505402}
+  m_Father: {fileID: 2092754687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -238, y: -167}
+  m_SizeDelta: {x: 101.99997, y: 100.999985}
+  m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &867443105
 GameObject:
   m_ObjectHideFlags: 0
@@ -8376,6 +9752,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &920442321
 GameObject:
   m_ObjectHideFlags: 0
@@ -8483,6 +9860,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920442321}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &929343030
 GameObject:
   m_ObjectHideFlags: 0
@@ -18790,7 +20169,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &930687406
+=======
+--- !u!1 &975310234
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18798,27 +20181,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 930687407}
   - component: {fileID: 930687409}
   - component: {fileID: 930687408}
   m_Layer: 5
   m_Name: Image
+=======
+  - component: {fileID: 975310235}
+  - component: {fileID: 975310237}
+  - component: {fileID: 975310236}
+  m_Layer: 5
+  m_Name: box1 (4)
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &930687407
+=======
+--- !u!224 &975310235
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 930687406}
+=======
+  m_GameObject: {fileID: 975310234}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Children: []
   m_Father: {fileID: 725914302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18828,12 +20228,28 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930687408
+=======
+  m_Children:
+  - {fileID: 89329618}
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 150, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &975310236
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 930687406}
+=======
+  m_GameObject: {fileID: 975310234}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -18847,7 +20263,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 8959118705387878318, guid: fba5edceb6f923c42809b3bbd88a483a, type: 3}
+=======
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18857,15 +20277,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &930687409
+=======
+--- !u!222 &975310237
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 930687406}
   m_CullTransparentMesh: 1
 --- !u!1 &956316748
+=======
+  m_GameObject: {fileID: 975310234}
+  m_CullTransparentMesh: 1
+--- !u!1 &981844612
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18873,6 +20303,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 956316750}
   - component: {fileID: 956316749}
   m_Layer: 0
@@ -18942,17 +20373,29 @@ GameObject:
   - component: {fileID: 959476779}
   m_Layer: 5
   m_Name: ButtonRepair
+=======
+  - component: {fileID: 981844613}
+  - component: {fileID: 981844615}
+  - component: {fileID: 981844614}
+  m_Layer: 5
+  m_Name: Amount
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &959476778
+=======
+--- !u!224 &981844613
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 959476777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -18968,11 +20411,28 @@ RectTransform:
   m_SizeDelta: {x: 363.66, y: 57.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959476779
+=======
+  m_GameObject: {fileID: 981844612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484222286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 35.5, y: -41.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &981844614
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 959476777}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -19021,6 +20481,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+=======
+  m_GameObject: {fileID: 981844612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -19031,6 +20497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 2913089383398367032, guid: 2f6c97c96dc284f49a309dab0f27e616, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19042,11 +20509,87 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &959476781
+=======
+  m_text: 99
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &981844615
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 959476777}
   m_CullTransparentMesh: 1
 --- !u!1 &960346927
@@ -19128,6 +20671,9 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960346927}
+=======
+  m_GameObject: {fileID: 981844612}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1025485581
 GameObject:
@@ -19397,7 +20943,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10be04f666004a14b83c0af624f5f700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1031744056
+=======
+--- !u!1 &1058902428
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19405,20 +20955,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1031744057}
   m_Layer: 5
   m_Name: GOLD
+=======
+  - component: {fileID: 1058902429}
+  - component: {fileID: 1058902431}
+  - component: {fileID: 1058902430}
+  m_Layer: 5
+  m_Name: HpBar
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1031744057
+=======
+--- !u!224 &1058902429
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1031744056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -19460,10 +21023,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052374357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+=======
+  m_GameObject: {fileID: 1058902428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 413455110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19472,12 +21040,26 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052374359
+=======
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 30.000038}
+  m_SizeDelta: {x: 450, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1058902430
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1052374357}
+=======
+  m_GameObject: {fileID: 1058902428}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -19491,23 +21073,39 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -3766519690804746565, guid: 2ac65bce02deb3e438d0098e13193539, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
+=======
+  m_Sprite: {fileID: 7107526608384918283, guid: da30d82a44cb60042a38d44739e684e3, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1052374360
+=======
+--- !u!222 &1058902431
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1052374357}
+=======
+  m_GameObject: {fileID: 1058902428}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1082306188
 GameObject:
@@ -19938,7 +21536,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1084865619
+=======
+--- !u!1 &1113381387
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19946,28 +21548,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1084865620}
   - component: {fileID: 1084865622}
   - component: {fileID: 1084865621}
   m_Layer: 5
   m_Name: BG
+=======
+  - component: {fileID: 1113381388}
+  - component: {fileID: 1113381390}
+  - component: {fileID: 1113381389}
+  m_Layer: 5
+  m_Name: Deco
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1084865620
+=======
+--- !u!224 &1113381388
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1084865619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+=======
+  m_GameObject: {fileID: 1113381387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 81412108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19976,12 +21596,26 @@ RectTransform:
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084865621
+=======
+  m_Father: {fileID: 1691278065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1113381389
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1084865619}
+=======
+  m_GameObject: {fileID: 1113381387}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -19995,7 +21629,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -385749564, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+=======
+  m_Sprite: {fileID: -7134224125491679639, guid: 9e9f14013d24b0a499cc584ad2b12892, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20005,15 +21643,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1084865622
+=======
+--- !u!222 &1113381390
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1084865619}
   m_CullTransparentMesh: 1
 --- !u!1 &1110909120
+=======
+  m_GameObject: {fileID: 1113381387}
+  m_CullTransparentMesh: 1
+--- !u!1 &1145514859
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20021,59 +21669,100 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1110909121}
   - component: {fileID: 1110909123}
   - component: {fileID: 1110909122}
   m_Layer: 5
   m_Name: Main Panel
+=======
+  - component: {fileID: 1145514860}
+  - component: {fileID: 1145514862}
+  - component: {fileID: 1145514861}
+  m_Layer: 5
+  m_Name: Image
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_IsActive: 0
 --- !u!224 &1110909121
+=======
+  m_IsActive: 1
+--- !u!224 &1145514860
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1110909120}
+=======
+  m_GameObject: {fileID: 1145514859}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Children:
   - {fileID: 1662985533}
   - {fileID: 443442197}
   m_Father: {fileID: 827316318}
+=======
+  m_Children: []
+  m_Father: {fileID: 1856221349}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110909122
+=======
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1145514861
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1110909120}
+=======
+  m_GameObject: {fileID: 1145514859}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
+=======
+  m_Sprite: {fileID: -3766519690804746565, guid: 2ac65bce02deb3e438d0098e13193539, type: 3}
+  m_Type: 0
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20082,13 +21771,96 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1110909123
+=======
+--- !u!222 &1145514862
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1110909120}
+=======
+  m_GameObject: {fileID: 1145514859}
+  m_CullTransparentMesh: 1
+--- !u!1 &1148423879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148423880}
+  - component: {fileID: 1148423882}
+  - component: {fileID: 1148423881}
+  m_Layer: 5
+  m_Name: MpBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1148423880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148423879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -28.000051}
+  m_SizeDelta: {x: 450, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1148423881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148423879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7107526608384918283, guid: 5ad02eb13b45e074e8023405541fac8c, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1148423882
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148423879}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1162059835
 GameObject:
@@ -21011,7 +22783,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1263915513
+=======
+--- !u!1 &1285265188
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21019,25 +22795,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1263915514}
   m_Layer: 5
   m_Name: LV_EXP
+=======
+  - component: {fileID: 1285265189}
+  - component: {fileID: 1285265191}
+  - component: {fileID: 1285265190}
+  m_Layer: 5
+  m_Name: BG
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1263915514
+=======
+--- !u!224 &1285265189
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1263915513}
+=======
+  m_GameObject: {fileID: 1285265188}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Children:
   - {fileID: 1520871286}
   - {fileID: 508325999}
@@ -21049,6 +22842,230 @@ RectTransform:
   m_AnchoredPosition: {x: -238, y: -167}
   m_SizeDelta: {x: 101.99997, y: 100.999985}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+  m_Children: []
+  m_Father: {fileID: 1484222286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 35.7, y: -42}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1285265190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285265188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -385749564, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1285265191
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285265188}
+  m_CullTransparentMesh: 1
+--- !u!1 &1289785222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289785223}
+  - component: {fileID: 1289785225}
+  - component: {fileID: 1289785224}
+  m_Layer: 5
+  m_Name: select
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1289785223
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289785222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -250, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1289785224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289785222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8586693324203152019, guid: cf98ffa72d7eb474ebd32e09a9692953, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1289785225
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289785222}
+  m_CullTransparentMesh: 1
+--- !u!1 &1290929957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290929958}
+  - component: {fileID: 1290929961}
+  - component: {fileID: 1290929960}
+  - component: {fileID: 1290929959}
+  m_Layer: 5
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290929958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290929957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1484222286}
+  m_Father: {fileID: 1659614398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.040008545, y: 0.23001099}
+  m_SizeDelta: {x: -220.84, y: -267.97}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290929959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290929957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 15
+    m_Right: 15
+    m_Top: 10
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 10, y: 10}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &1290929960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290929957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1290929961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290929957}
+  m_CullTransparentMesh: 1
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &1314373531
 GameObject:
   m_ObjectHideFlags: 0
@@ -21206,7 +23223,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1322121375
+=======
+--- !u!1 &1322402615
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21214,22 +23235,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1322121376}
   - component: {fileID: 1322121378}
   - component: {fileID: 1322121377}
   m_Layer: 5
   m_Name: UnderBar
+=======
+  - component: {fileID: 1322402616}
+  m_Layer: 5
+  m_Name: GOLD
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1322121376
+=======
+--- !u!224 &1322402616
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1322121375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -21245,10 +23277,30 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322121377
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 1322402615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1480877519}
+  - {fileID: 285148640}
+  m_Father: {fileID: 2092754687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 181, y: -160}
+  m_SizeDelta: {x: 256, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1337253542
+GameObject:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1322121375}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -21275,12 +23327,39 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1322121378
 CanvasRenderer:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337253543}
+  m_Layer: 0
+  m_Name: CamSys
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1337253543
+Transform:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1322121375}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1337253542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1819894028}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &1348357315
 GameObject:
   m_ObjectHideFlags: 0
@@ -24764,7 +26843,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1473473055
+=======
+--- !u!1 &1480877518
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24772,28 +26855,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1473473056}
   - component: {fileID: 1473473058}
   - component: {fileID: 1473473057}
   m_Layer: 5
   m_Name: select
+=======
+  - component: {fileID: 1480877519}
+  - component: {fileID: 1480877521}
+  - component: {fileID: 1480877520}
+  m_Layer: 5
+  m_Name: GoldImg
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1473473056
+=======
+--- !u!224 &1480877519
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1473473055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+=======
+  m_GameObject: {fileID: 1480877518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 443442197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -24802,12 +26903,26 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473473057
+=======
+  m_Father: {fileID: 1322402616}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 103.000015, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1480877520
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1473473055}
+=======
+  m_GameObject: {fileID: 1480877518}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -24821,7 +26936,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -8586693324203152019, guid: cf98ffa72d7eb474ebd32e09a9692953, type: 3}
+=======
+  m_Sprite: {fileID: 482499827933125320, guid: 3a228372403e39248a15de60fb774d37, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24831,15 +26950,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1473473058
+=======
+--- !u!222 &1480877521
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1473473055}
   m_CullTransparentMesh: 1
 --- !u!1 &1504703133
+=======
+  m_GameObject: {fileID: 1480877518}
+  m_CullTransparentMesh: 1
+--- !u!1 &1484222285
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24847,28 +26976,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1504703134}
   - component: {fileID: 1504703136}
   - component: {fileID: 1504703135}
   m_Layer: 5
   m_Name: box1 (4)
+=======
+  - component: {fileID: 1484222286}
+  - component: {fileID: 1484222289}
+  - component: {fileID: 1484222288}
+  - component: {fileID: 1484222287}
+  m_Layer: 5
+  m_Name: Slot
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_IsActive: 1
 --- !u!224 &1504703134
+=======
+  m_IsActive: 0
+--- !u!224 &1484222286
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1504703133}
+=======
+  m_GameObject: {fileID: 1484222285}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - {fileID: 367063469}
   m_Father: {fileID: 443442197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24878,12 +27026,73 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504703135
+=======
+  - {fileID: 2081968573}
+  - {fileID: 1285265189}
+  - {fileID: 981844613}
+  m_Father: {fileID: 1290929958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1484222287
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1504703133}
+=======
+  m_GameObject: {fileID: 1484222285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1484222288}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1484222288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484222285}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -24907,13 +27116,172 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1504703136
+=======
+--- !u!222 &1484222289
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1504703133}
+=======
+  m_GameObject: {fileID: 1484222285}
+  m_CullTransparentMesh: 1
+--- !u!1 &1495251592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495251593}
+  - component: {fileID: 1495251594}
+  - component: {fileID: 1495251595}
+  m_Layer: 5
+  m_Name: BBG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1495251593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495251592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 333321366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1495251594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495251592}
+  m_CullTransparentMesh: 1
+--- !u!114 &1495251595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495251592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1501006355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501006356}
+  - component: {fileID: 1501006358}
+  - component: {fileID: 1501006357}
+  m_Layer: 5
+  m_Name: box1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1501006356
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501006355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 371124375}
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 50, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1501006357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501006355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1501006358
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501006355}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1512045386
 GameObject:
@@ -25072,7 +27440,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1520871285
+=======
+--- !u!1 &1533127870
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25080,22 +27452,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1520871286}
   - component: {fileID: 1520871288}
   - component: {fileID: 1520871287}
   m_Layer: 5
   m_Name: UnderBar
+=======
+  - component: {fileID: 1533127871}
+  m_Layer: 5
+  m_Name: HP_MP
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1520871286
+=======
+--- !u!224 &1533127871
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1520871285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -25148,6 +27531,28 @@ CanvasRenderer:
   m_GameObject: {fileID: 1520871285}
   m_CullTransparentMesh: 1
 --- !u!1 &1520880093
+=======
+  m_GameObject: {fileID: 1533127870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1732257039}
+  - {fileID: 1058902429}
+  - {fileID: 1926285170}
+  - {fileID: 1625004225}
+  - {fileID: 1148423880}
+  - {fileID: 1887940864}
+  m_Father: {fileID: 2092754687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 94, y: -63}
+  m_SizeDelta: {x: 450, y: 158}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1556122408
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25155,28 +27560,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1520880094}
   - component: {fileID: 1520880096}
   - component: {fileID: 1520880095}
   m_Layer: 5
   m_Name: Image
+=======
+  - component: {fileID: 1556122409}
+  - component: {fileID: 1556122411}
+  - component: {fileID: 1556122410}
+  m_Layer: 5
+  m_Name: Text
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1520880094
+=======
+--- !u!224 &1556122409
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1520880093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+=======
+  m_GameObject: {fileID: 1556122408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Father: {fileID: 1688470904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -25185,11 +27608,22 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520880095
+=======
+  m_Father: {fileID: 1659614398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 341}
+  m_SizeDelta: {x: 800, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1556122410
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1520880093}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -25271,6 +27705,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600573847}
+=======
+  m_GameObject: {fileID: 1556122408}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -25356,15 +27793,30 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1600573850
+=======
+--- !u!222 &1556122411
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1600573847}
   m_CullTransparentMesh: 1
 --- !u!1 &1602005804
+=======
+  m_GameObject: {fileID: 1556122408}
+  m_CullTransparentMesh: 1
+--- !u!4 &1559726028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5966736126850433051, guid: f9970656805822b489480b36795d1586, type: 3}
+  m_PrefabInstance: {fileID: 7271293599451015230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1561482896
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25372,29 +27824,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1602005805}
   - component: {fileID: 1602005808}
   - component: {fileID: 1602005807}
   - component: {fileID: 1602005806}
   m_Layer: 5
   m_Name: ButtonWeaponUpgrade
+=======
+  - component: {fileID: 1561482897}
+  - component: {fileID: 1561482899}
+  - component: {fileID: 1561482898}
+  m_Layer: 5
+  m_Name: box1 (5)
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1602005805
+=======
+--- !u!224 &1561482897
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1602005804}
+=======
+  m_GameObject: {fileID: 1561482896}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - {fileID: 2052029992}
   m_Father: {fileID: 960346928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25404,11 +27873,23 @@ RectTransform:
   m_SizeDelta: {x: 363.66, y: 53.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602005806
+=======
+  - {fileID: 25539243}
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 250, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1561482898
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1602005804}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -25454,6 +27935,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602005804}
+=======
+  m_GameObject: {fileID: 1561482896}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -25467,7 +27951,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: 2913089383398367032, guid: 2f6c97c96dc284f49a309dab0f27e616, type: 3}
+=======
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25477,15 +27965,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1602005808
+=======
+--- !u!222 &1561482899
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1602005804}
   m_CullTransparentMesh: 1
 --- !u!1 &1662985532
+=======
+  m_GameObject: {fileID: 1561482896}
+  m_CullTransparentMesh: 1
+--- !u!1 &1625004224
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25493,22 +27991,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1662985533}
   - component: {fileID: 1662985535}
   - component: {fileID: 1662985534}
   m_Layer: 5
   m_Name: PlayerInfo
+=======
+  - component: {fileID: 1625004225}
+  - component: {fileID: 1625004227}
+  - component: {fileID: 1625004226}
+  m_Layer: 5
+  m_Name: UnderBar (1)
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1662985533
+=======
+--- !u!224 &1625004225
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1662985532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -25529,26 +28040,54 @@ RectTransform:
   m_SizeDelta: {x: 782.24, y: 215.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662985534
+=======
+  m_GameObject: {fileID: 1625004224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015258789, y: -28.000044}
+  m_SizeDelta: {x: 450, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1625004226
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1662985532}
+=======
+  m_GameObject: {fileID: 1625004224}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -7730486409907412771, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+=======
+  m_Sprite: {fileID: -3491547502832315832, guid: 80735a90097b774478166883e102fa15, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25558,13 +28097,98 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1662985535
+=======
+--- !u!222 &1625004227
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1662985532}
+=======
+  m_GameObject: {fileID: 1625004224}
+  m_CullTransparentMesh: 1
+--- !u!1 &1659614397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659614398}
+  - component: {fileID: 1659614400}
+  - component: {fileID: 1659614399}
+  m_Layer: 5
+  m_Name: InventoryPan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1659614398
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659614397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1556122409}
+  - {fileID: 1290929958}
+  m_Father: {fileID: 333321366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1659614399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659614397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1392158287, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1659614400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659614397}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1684643700
 GameObject:
@@ -26779,7 +29403,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1687952250
+=======
+--- !u!1 &1691278064
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26787,7 +29415,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1687952251}
+=======
+  - component: {fileID: 1691278065}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
   m_Name: P_ART
   m_TagString: Untagged
@@ -26795,28 +29427,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1687952251
+=======
+--- !u!224 &1691278065
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1687952250}
+=======
+  m_GameObject: {fileID: 1691278064}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - {fileID: 191793262}
   - {fileID: 1985763785}
   m_Father: {fileID: 1662985533}
+=======
+  - {fileID: 1113381388}
+  - {fileID: 29794505}
+  m_Father: {fileID: 2092754687}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -237, y: -26}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1688470903
+=======
+--- !u!1 &1693343180
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26824,9 +29474,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1688470904}
   - component: {fileID: 1688470906}
   - component: {fileID: 1688470905}
+=======
+  - component: {fileID: 1693343181}
+  - component: {fileID: 1693343183}
+  - component: {fileID: 1693343182}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
   m_Name: box1
   m_TagString: Untagged
@@ -26834,33 +29490,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1688470904
+=======
+--- !u!224 &1693343181
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1688470903}
+=======
+  m_GameObject: {fileID: 1693343180}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - {fileID: 1520880094}
   m_Father: {fileID: 443442197}
+=======
+  - {fileID: 389802272}
+  m_Father: {fileID: 776076209}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -250, y: 60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!114 &1688470905
+=======
+--- !u!114 &1693343182
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1688470903}
+=======
+  m_GameObject: {fileID: 1693343180}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -26884,15 +29561,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1688470906
+=======
+--- !u!222 &1693343183
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1688470903}
   m_CullTransparentMesh: 1
 --- !u!1 &1701845391
+=======
+  m_GameObject: {fileID: 1693343180}
+  m_CullTransparentMesh: 1
+--- !u!1 &1732257038
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26900,22 +29587,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1701845392}
   - component: {fileID: 1701845394}
   - component: {fileID: 1701845393}
   m_Layer: 5
   m_Name: Image
+=======
+  - component: {fileID: 1732257039}
+  - component: {fileID: 1732257041}
+  - component: {fileID: 1732257040}
+  m_Layer: 5
+  m_Name: UnderBar
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1701845392
+=======
+--- !u!224 &1732257039
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1701845391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -26931,12 +29631,32 @@ RectTransform:
   m_SizeDelta: {x: 641.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701845393
+=======
+  m_GameObject: {fileID: 1732257038}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: 450, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1732257040
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1701845391}
+=======
+  m_GameObject: {fileID: 1732257038}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -26950,7 +29670,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_Sprite: {fileID: -5256508804588260846, guid: 570c57535557e2242a35c6f0d1c122d5, type: 3}
+=======
+  m_Sprite: {fileID: -3491547502832315832, guid: 80735a90097b774478166883e102fa15, type: 3}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26960,13 +29684,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1701845394
+=======
+--- !u!222 &1732257041
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1701845391}
+=======
+  m_GameObject: {fileID: 1732257038}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1735069288
 GameObject:
@@ -27055,7 +29787,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1770189483
+=======
+--- !u!4 &1774025921 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6298709040178351898, guid: d611b9b67bb729c42b8b994ded396aab, type: 3}
+  m_PrefabInstance: {fileID: 6587426291984115010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784318796
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27063,6 +29804,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1770189484}
   - component: {fileID: 1770189486}
   - component: {fileID: 1770189485}
@@ -27147,19 +29889,29 @@ GameObject:
   - component: {fileID: 1786220742}
   - component: {fileID: 1786220744}
   - component: {fileID: 1786220743}
+=======
+  - component: {fileID: 1784318797}
+  - component: {fileID: 1784318799}
+  - component: {fileID: 1784318798}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Layer: 5
-  m_Name: UnderBar (1)
+  m_Name: box1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1786220742
+=======
+--- !u!224 &1784318797
+>>>>>>> dev:Assets/Scenes/Forge.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1786220741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -27174,12 +29926,33 @@ RectTransform:
   m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786220743
+=======
+  m_GameObject: {fileID: 1784318796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 261664703}
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -150, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1784318798
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1786220741}
+=======
+  m_GameObject: {fileID: 1784318796}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -27193,7 +29966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3491547502832315832, guid: 80735a90097b774478166883e102fa15, type: 3}
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27203,15 +29976,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1786220744
+=======
+--- !u!222 &1784318799
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1786220741}
   m_CullTransparentMesh: 1
 --- !u!1 &1857290554
+=======
+  m_GameObject: {fileID: 1784318796}
+  m_CullTransparentMesh: 1
+--- !u!1 &1819894027
+>>>>>>> dev:Assets/Scenes/Forge.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27219,22 +30002,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - component: {fileID: 1857290555}
   - component: {fileID: 1857290557}
   - component: {fileID: 1857290556}
   m_Layer: 5
   m_Name: HpNum
+=======
+  - component: {fileID: 1819894028}
+  - component: {fileID: 1819894030}
+  - component: {fileID: 1819894029}
+  m_Layer: 0
+  m_Name: Cam1
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!224 &1857290555
 RectTransform:
+=======
+--- !u!4 &1819894028
+Transform:
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1857290554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -27249,12 +30046,567 @@ RectTransform:
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857290556
+=======
+  m_GameObject: {fileID: 1819894027}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.95, y: -2.18, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1337253543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819894029
+>>>>>>> dev:Assets/Scenes/Forge.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1857290554}
+=======
+  m_GameObject: {fileID: 1819894027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraDistance: 10
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 1, y: 1, z: 1}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
+--- !u!114 &1819894030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819894027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 1823608428}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!1001 &1823608427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 446773295727943449, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476046097815599491, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: select
+      value: 
+      objectReference: {fileID: 1289785222}
+    - target: {fileID: 3879140044489312321, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401914158898243522, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: BBG
+      value: 
+      objectReference: {fileID: 1495251595}
+    - target: {fileID: 7401914158898243522, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: Portal
+      value: 
+      objectReference: {fileID: 272952249}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+--- !u!4 &1823608428 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+  m_PrefabInstance: {fileID: 1823608427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1856221348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856221349}
+  - component: {fileID: 1856221351}
+  - component: {fileID: 1856221350}
+  m_Layer: 5
+  m_Name: box1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1856221349
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856221348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1145514860}
+  m_Father: {fileID: 776076209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -50, y: 60}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1856221350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856221348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1759059355, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1856221351
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856221348}
+  m_CullTransparentMesh: 1
+--- !u!1 &1875116053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875116054}
+  - component: {fileID: 1875116056}
+  - component: {fileID: 1875116055}
+  m_Layer: 5
+  m_Name: forge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1875116054
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875116053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 378852584}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -813, y: -387}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1875116055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875116053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: forge
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1875116056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875116053}
+  m_CullTransparentMesh: 1
+--- !u!1 &1877978406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877978407}
+  - component: {fileID: 1877978409}
+  - component: {fileID: 1877978408}
+  m_Layer: 5
+  m_Name: Username
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1877978407
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877978406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2092754687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 85, y: 29}
+  m_SizeDelta: {x: 400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1877978408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877978406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Username
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1877978409
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877978406}
+  m_CullTransparentMesh: 1
+--- !u!1 &1887940863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887940864}
+  - component: {fileID: 1887940866}
+  - component: {fileID: 1887940865}
+  m_Layer: 5
+  m_Name: MpNum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1887940864
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887940863}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1, y: -28.999992}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1887940865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887940863}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -27340,13 +30692,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!222 &1857290557
+=======
+--- !u!222 &1887940866
+>>>>>>> dev:Assets/Scenes/Forge.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   m_GameObject: {fileID: 1857290554}
+=======
+  m_GameObject: {fileID: 1887940863}
+>>>>>>> dev:Assets/Scenes/Forge.unity
   m_CullTransparentMesh: 1
 --- !u!1 &1896204663
 GameObject:
@@ -29017,6 +32377,143 @@ Transform:
   - {fileID: 1512045387}
   m_Father: {fileID: 53089389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1926285169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926285170}
+  - component: {fileID: 1926285172}
+  - component: {fileID: 1926285171}
+  m_Layer: 5
+  m_Name: HpNum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1926285170
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926285169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533127871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1, y: 29.000008}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1926285171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926285169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 100/100
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1926285172
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926285169}
+  m_CullTransparentMesh: 1
 --- !u!1 &1933664528
 GameObject:
   m_ObjectHideFlags: 0
@@ -29510,6 +33007,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &1990621285
 GameObject:
   m_ObjectHideFlags: 0
@@ -29722,6 +33220,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041845700}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &2048613951
 GameObject:
   m_ObjectHideFlags: 0
@@ -30350,6 +33850,81 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2081968572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081968573}
+  - component: {fileID: 2081968575}
+  - component: {fileID: 2081968574}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2081968573
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081968572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484222286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 70, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2081968574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081968572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 5807921338739458136, guid: fa1d300e8ad45054490e3e8fef905b06, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2081968575
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081968572}
+  m_CullTransparentMesh: 1
 --- !u!1 &2084984332
 GameObject:
   m_ObjectHideFlags: 0
@@ -30767,6 +34342,165 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
+=======
+--- !u!1 &2085086168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085086169}
+  - component: {fileID: 2085086171}
+  - component: {fileID: 2085086170}
+  m_Layer: 5
+  m_Name: ExpBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2085086169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085086168}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 843371310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -0.50001526}
+  m_SizeDelta: {x: 75, y: 75}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2085086170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085086168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -9109874204076813634, guid: 91edcd2e6ab17bc4db467160c3f6acd3, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 0.53
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2085086171
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085086168}
+  m_CullTransparentMesh: 1
+--- !u!1 &2092754686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092754687}
+  - component: {fileID: 2092754689}
+  - component: {fileID: 2092754688}
+  m_Layer: 5
+  m_Name: PlayerInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2092754687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092754686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 805176301}
+  - {fileID: 1533127871}
+  - {fileID: 1691278065}
+  - {fileID: 843371310}
+  - {fileID: 1877978407}
+  - {fileID: 1322402616}
+  m_Father: {fileID: 447923251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 248, y: -65}
+  m_SizeDelta: {x: 782.24, y: 215.31}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2092754688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092754686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -7730486409907412771, guid: 5bd90a62674b62140a2420a7fec9d88e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2092754689
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092754686}
+  m_CullTransparentMesh: 1
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &2098208299
 GameObject:
   m_ObjectHideFlags: 0
@@ -30854,6 +34588,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
 --- !u!1 &2118353524
 GameObject:
   m_ObjectHideFlags: 0
@@ -30889,6 +34624,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+=======
+>>>>>>> dev:Assets/Scenes/Forge.unity
 --- !u!1 &2141704830
 GameObject:
   m_ObjectHideFlags: 0
@@ -31099,8 +34836,17 @@ SceneRoots:
   - {fileID: 1025485583}
   - {fileID: 53089389}
   - {fileID: 1162059836}
+<<<<<<< HEAD:Assets/Scenes/BlackSmith_Trung.unity
   - {fileID: 265413599}
   - {fileID: 827316318}
   - {fileID: 2068596180}
   - {fileID: 956316750}
   - {fileID: 869969020}
+=======
+  - {fileID: 1348357316}
+  - {fileID: 139365128}
+  - {fileID: 333321366}
+  - {fileID: 1823608427}
+  - {fileID: 1337253543}
+  - {fileID: 734693044}
+>>>>>>> dev:Assets/Scenes/Forge.unity
