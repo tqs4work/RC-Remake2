@@ -29,6 +29,9 @@ public class Item2String
     public string def;
     public string durability;
 
+    [Header("Hạt giống")]
+    public string growTime;
+
     [Header("Chỉ số đặc biệt")]
     public string bonus;
 
@@ -59,6 +62,8 @@ public class Item2String
             atk = item.atk.ToString(),
             def = item.def.ToString(),
             durability = item.durability.ToString(),
+
+            growTime = item.growTime.ToString(),
 
             bonus = item.bonus.ToString()
         };

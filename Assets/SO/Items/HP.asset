@@ -20,11 +20,13 @@ MonoBehaviour:
   isStackable: 1
   maxStack: 10
   price: 100
+  stackable: 0
   level: 1
   quantity: 1
-  hpAmount: 0
+  hpAmount: 50
   mpAmount: 0
   atk: 10
   def: 0
   durability: 0
+  growTime: 0
   bonus: 0

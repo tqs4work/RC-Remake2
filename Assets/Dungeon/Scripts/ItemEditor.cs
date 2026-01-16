@@ -23,6 +23,8 @@ public class ItemEditor : Editor
     SerializedProperty def;
     SerializedProperty durability;
 
+    SerializedProperty growTime;
+
     SerializedProperty bonus;
 
     void OnEnable()
@@ -45,6 +47,8 @@ public class ItemEditor : Editor
         atk = serializedObject.FindProperty("atk");
         def = serializedObject.FindProperty("def");
         durability = serializedObject.FindProperty("durability");
+
+        growTime = serializedObject.FindProperty("growTime");
 
         bonus = serializedObject.FindProperty("bonus");
     }
@@ -93,6 +97,12 @@ public class ItemEditor : Editor
             EditorGUILayout.PropertyField(maxStack);
         }
 
+
+        if(type == ItemType.Seed)
+        {
+            //EditorGUILayout.LabelField("Th?i gian phát tri?n", vietnameseBold);
+            EditorGUILayout.PropertyField(growTime);
+        }
 
         EditorGUILayout.PropertyField(bonus);
         serializedObject.ApplyModifiedProperties();
