@@ -28,6 +28,9 @@ public class ItemRuntime
     public float def;
     public float durability;
 
+    [Header("H?t gi?ng")]
+    public float growTime;
+
     [Header("Ch? s? ??c bi?t")]
     public float bonus;
 
@@ -53,6 +56,8 @@ public class ItemRuntime
             atk = item.atk,
             def = item.def,
             durability = item.durability,
+
+            growTime = item.growTime,
 
             bonus = item.bonus
         };
@@ -81,6 +86,8 @@ public class ItemRuntime
             atk = float.Parse(data.atk),
             def = float.Parse(data.def),
             durability = float.Parse(data.durability),
+
+            growTime = float.Parse(data.growTime),
 
             bonus = float.Parse(data.bonus)
         };
