@@ -21,9 +21,9 @@ public class Player
         Mp = data.Mp;
         Exp = data.Exp;
         Lv = data.Lv;
-        Gold = data.Gold;
-
+        Gold = data.Gold;        
         Inventory.Clear();
+        if (data.Inventory == null) return;
         foreach (var item in data.Inventory)
             Inventory.Add(ItemRuntime.FromData(item.Value));
     }

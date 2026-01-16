@@ -32,15 +32,13 @@ public static class AccountFactory
             Inventory = new Dictionary<string, Item2String>()
         };
 
-        Item item = ScriptableObject.CreateInstance<Item>();
-        StarterItemBuilder.Build(item);
-        
-        ItemRuntime runtimeItem = ItemRuntime.FromItem(item);
+        //Item item = ScriptableObject.CreateInstance<Item>();
+        //StarterItemBuilder.Build(item);
+        //ItemRuntime runtimeItem = ItemRuntime.FromItem(item);
+        //Item2String itemData = Item2String.FromRuntime(runtimeItem);
+        //// ? KEY = itemID
+        //player.Inventory[item.itemID] = itemData;
 
-        Item2String itemData = Item2String.FromRuntime(runtimeItem);
-
-        // ? KEY = itemID
-        player.Inventory[item.itemID] = itemData;
         return player;
     }
 }

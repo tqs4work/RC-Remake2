@@ -41,9 +41,7 @@ public class PlayerTest : MonoBehaviour
             description = "Item test",
             quantity = 1,
             atk = 10,
-            def = 0,
-            hp = 0,
-            mp = 0,
+            def = 0,            
             bonus = 0
         };
 

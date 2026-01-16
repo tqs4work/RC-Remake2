@@ -25,10 +25,16 @@ public static class ItemFactory
         item.price = int.Parse(data.price);
         item.level = int.Parse(data.level);
 
+        item.isStackable = bool.Parse(data.isStackable);
+        item.maxStack = int.Parse(data.maxStack);
+
+        item.hpAmount = int.Parse(data.hpAmount);
+        item.mpAmount = int.Parse(data.mpAmount);
+
         item.atk = int.Parse(data.atk);
         item.def = int.Parse(data.def);
-        item.hp = int.Parse(data.hp);
-        item.mp = int.Parse(data.mp);
+        item.durability = int.Parse(data.durability);
+        
         item.bonus = int.Parse(data.bonus);
 
         return item;

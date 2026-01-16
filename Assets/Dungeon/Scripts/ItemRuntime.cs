@@ -5,17 +5,30 @@ public class ItemRuntime
 {
     public string itemID;
     public string itemName;
-    public string description;
-    public string icon;
+    public string description;    
 
-    public int quantity;
+    
+
+    [Header("Hình ?nh")]
+    public Sprite icon;
+
+    [Header("Ch? s? v?t ph?m")]
+    public bool isStackable;
+    public int maxStack;
     public int price;
     public int level;
 
+    [Header("V?t ph?m tiêu th?")]
+    public int quantity;
+    public int hpAmount;
+    public int mpAmount;
+
+    [Header("V?t ph?m chi?n ??u")]
     public float atk;
     public float def;
-    public float hp;
-    public float mp;
+    public float durability;
+
+    [Header("Ch? s? ??c bi?t")]
     public float bonus;
 
     public static ItemRuntime FromItem(Item item)
@@ -25,16 +38,22 @@ public class ItemRuntime
             itemID = item.itemID,
             itemName = item.itemName,
             description = item.description,
-            icon = item.icon != null ? item.icon.name : "",
+            icon = item.icon,
 
-            quantity = item.quantity,
+            isStackable = item.isStackable,
+            maxStack = item.maxStack,
+            
             price = item.price,
             level = item.level,
 
+            quantity = item.quantity,
+            hpAmount = item.hpAmount,
+            mpAmount = item.mpAmount,
+
             atk = item.atk,
             def = item.def,
-            hp = item.hp,
-            mp = item.mp,
+            durability = item.durability,
+
             bonus = item.bonus
         };
     }
@@ -46,16 +65,23 @@ public class ItemRuntime
             itemID = data.itemID,
             itemName = data.itemName,
             description = data.description,
-            icon = data.icon,
+            icon = Resources.Load<Sprite>(data.icon),
 
-            quantity = int.Parse(data.quantity),
+            isStackable = bool.Parse(data.isStackable),
+            maxStack = int.Parse(data.maxStack),
+
+            
             price = int.Parse(data.price),
             level = int.Parse(data.level),
 
+            quantity = int.Parse(data.quantity),
+            hpAmount = int.Parse(data.hpAmount),
+            mpAmount = int.Parse(data.mpAmount),
+
             atk = float.Parse(data.atk),
             def = float.Parse(data.def),
-            hp = float.Parse(data.hp),
-            mp = float.Parse(data.mp),
+            durability = float.Parse(data.durability),
+
             bonus = float.Parse(data.bonus)
         };
     }

@@ -10,17 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
-  m_Name: Tool
+  m_Name: HP
   m_EditorClassIdentifier: 
-  itemID: D001
-  itemName: Axe
-  description: "M\u1ED9t chi\u1EBFc r\xECu ch\u1EAFc ch\u1EAFn"
-  icon: {fileID: 8959118705387878318, guid: fba5edceb6f923c42809b3bbd88a483a, type: 3}
-  quantity: 1
+  itemType: 2
+  itemID: D002
+  itemName: HP Pot
+  description: Hoi mau
+  icon: {fileID: 21300000, guid: 333867a3099b71843a92795f48c3909a, type: 2}
+  isStackable: 1
+  maxStack: 10
   price: 100
   level: 1
+  quantity: 1
+  hpAmount: 0
+  mpAmount: 0
   atk: 10
   def: 0
-  hp: 100
-  mp: 0
+  durability: 0
   bonus: 0

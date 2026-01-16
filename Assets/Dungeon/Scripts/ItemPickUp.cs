@@ -25,7 +25,7 @@ public class ItemPickup : MonoBehaviour
 
         foreach (var invItem in PlayerRuntime.Instance.Player.Inventory)
         {
-            if (invItem.itemID == newItem.itemID)
+            if (invItem.itemID == newItem.itemID && invItem.isStackable)
             {
                 invItem.quantity += newItem.quantity;
                 Debug.Log($"Picked up: {newItem.itemName} (Total: {invItem.quantity})");
