@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920dbe91b008b2e4d806f88634f01ddf, type: 3}
+  m_Name: BlackSmithDialogue_TU
+  m_EditorClassIdentifier: 
+  npcName: "Th\u1EE3 r\xE8n"
+  npcPortrait: {fileID: -2121612950466890601, guid: 8b4717274835b6c48b218b9fdf67bfd2, type: 3}
+  defautTypeSpeed: 0.05
+  defaultVoiceSound: {fileID: 8300000, guid: 68b42c0ba3fe4b741953c8df0c2b296a, type: 3}
+  defaultVoicePitch: 1
+  defaultAutodelay: 1.5
+  lines:
+  - lineText: "Xin ch\xE0o! C\u1EA7n r\xE8n hay s\u1EEDa g\xEC kh\xF4ng?"
+    linePortrait: {fileID: -2121612950466890601, guid: 8b4717274835b6c48b218b9fdf67bfd2, type: 3}
+    voiceSound: {fileID: 8300000, guid: 68b42c0ba3fe4b741953c8df0c2b296a, type: 3}
+    voicePitch: 1.55
+    typeSpeed: 0
+    autoProgress: 0
+    autoDelay: 0
+  - lineText: "C\u1EA3m \u01A1n \u0111\xE3 gh\xE9 c\u1EEDa h\xE0ng."
+    linePortrait: {fileID: -2121612950466890601, guid: 8b4717274835b6c48b218b9fdf67bfd2, type: 3}
+    voiceSound: {fileID: 8300000, guid: 68b42c0ba3fe4b741953c8df0c2b296a, type: 3}
+    voicePitch: 0
+    typeSpeed: 0
+    autoProgress: 0
+    autoDelay: 0

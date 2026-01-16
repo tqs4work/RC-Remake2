@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: b475d1878da01a94297215aa51545d50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1049339076375273231
+    second: doing_RD_0
+  - first:
+      213: 1027594011633970244
+    second: doing_RD_1
+  - first:
+      213: 3606961161600974204
+    second: doing_RD_2
+  - first:
+      213: -8411492012168240948
+    second: doing_RD_3
+  - first:
+      213: 5524703999319145942
+    second: doing_RD_4
+  - first:
+      213: 1887212643871439531
+    second: doing_RD_5
+  - first:
+      213: -1998125986631329020
+    second: doing_RD_6
+  - first:
+      213: -4721208519625539654
+    second: doing_RD_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: doing_D_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4999994, y: 0.0010932287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0d24d07968a9543b82371efda22b32
+      internalID: -1585889165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5000012, y: -0.007195261}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21645ce62d1c9e4ba006c42f64f4f23
+      internalID: -262038532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 24
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0010517968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e597b8ee1903df489701a8bc208df34
+      internalID: -529757777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0051753786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da42b4a347ad05e419dc3bb751971e85
+      internalID: 1427176573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_4
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: -0.007195261}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ce8456d4d47a34eb7f8c61ea7fcaf6
+      internalID: 1547162279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_5
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 24
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0020484924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c32ec4ac7f1bb4489749ec89dde8ca4
+      internalID: 1487778452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_6
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 26
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.49242225, y: 0.0075205695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e79f23a56c20944aaf9ddd0b01e928
+      internalID: 1621136660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_D_7
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4999953, y: 0.0020487043}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4dd913da65364418aa45102126c170
+      internalID: 788810128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a820780afc6228f4993a8aeeb18a8c02
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      doing_D_0: -1585889165
+      doing_D_1: -262038532
+      doing_D_2: -529757777
+      doing_D_3: 1427176573
+      doing_D_4: 1547162279
+      doing_D_5: 1487778452
+      doing_D_6: 1621136660
+      doing_D_7: 788810128
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

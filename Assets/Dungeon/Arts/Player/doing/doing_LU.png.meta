@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 796733bbf82b1c44c916b26ef521337c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1049339076375273231
+    second: doing_RD_0
+  - first:
+      213: 1027594011633970244
+    second: doing_RD_1
+  - first:
+      213: 3606961161600974204
+    second: doing_RD_2
+  - first:
+      213: -8411492012168240948
+    second: doing_RD_3
+  - first:
+      213: 5524703999319145942
+    second: doing_RD_4
+  - first:
+      213: 1887212643871439531
+    second: doing_RD_5
+  - first:
+      213: -1998125986631329020
+    second: doing_RD_6
+  - first:
+      213: -4721208519625539654
+    second: doing_RD_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: doing_LU_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 24
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.56516874, y: 0.054118108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcda6e884e17354bb74547aaf1d122b
+      internalID: 682258638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 24
+        width: 16
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5916424, y: -0.00685713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1e4b44c3abbe54baba825ee77ad376
+      internalID: -719121270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 24
+        width: 14
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5416009, y: 0.002925661}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27a96def3fbd6940853ecb7ecf822cc
+      internalID: -1939311073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_3
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 25
+        width: 15
+        height: 18
+      alignment: 9
+      pivot: {x: 0.56353354, y: 0.002925449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f947a4964437f4ea646719368e81cd
+      internalID: 1376804957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 24
+        width: 17
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6152308, y: 0.002925449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f5c2e8f2041a04ead5f502b319d3c5
+      internalID: 2126982673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_5
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 24
+        width: 17
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6154893, y: 0.0037797291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5cb6bd6be6db3449b17897f1a7e8d3
+      internalID: -444240077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_6
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 25
+        width: 17
+        height: 18
+      alignment: 9
+      pivot: {x: 0.61953914, y: 0.0000104904175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e0f8a1a14704040b79373c258e740c
+      internalID: 1021874766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doing_LU_7
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 25
+        width: 16
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5997925, y: 0.0040427316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758b7b25ff283874b99c1be9d96c917f
+      internalID: 1920587278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a820780afc6228f4993a8aeeb18a8c02
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      doing_LU_0: 682258638
+      doing_LU_1: -719121270
+      doing_LU_2: -1939311073
+      doing_LU_3: 1376804957
+      doing_LU_4: 2126982673
+      doing_LU_5: -444240077
+      doing_LU_6: 1021874766
+      doing_LU_7: 1920587278
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

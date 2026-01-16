@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 27eb827b22006634e98a87da3669c2db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3083036838099942475
+    second: roll_0
+  - first:
+      213: 7020422449882287015
+    second: roll_1
+  - first:
+      213: 4904745224428211008
+    second: roll_2
+  - first:
+      213: -8883362746367683638
+    second: roll_3
+  - first:
+      213: 3368263156373419212
+    second: roll_4
+  - first:
+      213: 8601325017491710851
+    second: roll_5
+  - first:
+      213: -5248456778479591328
+    second: roll_6
+  - first:
+      213: 3900071125500284896
+    second: roll_7
+  - first:
+      213: -621652423166530624
+    second: roll_8
+  - first:
+      213: 8652928507064195328
+    second: roll_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: roll_U_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4999994, y: -0.0025027592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04490631d740db547987dd575b4b8557
+      internalID: 878098947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 25
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.45619854, y: 0.0017555952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0264be5e7efc8564489ad72f50435d5a
+      internalID: -395184746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: -0.0042062122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f181fc102f242fc4293f62bc94ab9aa8
+      internalID: -1509107782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: -0.00079956057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9490780b018491c4b91e83703e629f30
+      internalID: -581550255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_4
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49533844, y: -0.0017673492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343f0ea87fb650a4e8fd252473bead0b
+      internalID: -680024847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 25
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49437714, y: 0.002061081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289060b1781064d4d8fcd349aad7339d
+      internalID: -1379369394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_6
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 25
+        width: 15
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0050607407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7bae91fc3b61d45bacdb3438a37922
+      internalID: 1198105718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_7
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 25
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.50000435, y: -0.0039380393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a1c5ddf4e040a41a6980b09cd8a57f
+      internalID: 439424646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_8
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 25
+        width: 14
+        height: 16
+      alignment: 9
+      pivot: {x: 0.50000435, y: -0.0061877966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c8788b7ab1b904b8332af0e68070b9
+      internalID: -1938795476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll_U_9
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 25
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5000047, y: -0.009937604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad78720658297eb44803d0dbfc30ea2c
+      internalID: 1823234988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6c14d86578d845a42848ac6812c323a1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      roll_U_0: 878098947
+      roll_U_1: -395184746
+      roll_U_2: -1509107782
+      roll_U_3: -581550255
+      roll_U_4: -680024847
+      roll_U_5: -1379369394
+      roll_U_6: 1198105718
+      roll_U_7: 439424646
+      roll_U_8: -1938795476
+      roll_U_9: 1823234988
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

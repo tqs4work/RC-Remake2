@@ -2,13 +2,17 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - P_Bullet
+  - E_Bullet
+  - Exp
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -41,3 +45,65 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BrownGround
+    uniqueID: 1644065193
+    locked: 0
+  - name: GreenGround
+    uniqueID: 3660567137
+    locked: 0
+  - name: RoadGround
+    uniqueID: 11439369
+    locked: 0
+  - name: DecorationShadow
+    uniqueID: 1609395601
+    locked: 0
+  - name: DecorationPlant
+    uniqueID: 3895770055
+    locked: 0
+  - name: DecorationItems
+    uniqueID: 549046237
+    locked: 0
+  - name: DecorationWall
+    uniqueID: 3476412241
+    locked: 0
+  - name: DecorationTrees
+    uniqueID: 4166716187
+    locked: 0
+  - name: DecorationFire
+    uniqueID: 3962155123
+    locked: 0
+  - name: DecorationStatue
+    uniqueID: 318396149
+    locked: 0
+  - name: Water
+    uniqueID: 1918453109
+    locked: 0
+  - name: HouseBlackSmith
+    uniqueID: 3449549887
+    locked: 0
+  - name: HouseVillage
+    uniqueID: 2643965059
+    locked: 0
+  - name: front porch
+    uniqueID: 3762182751
+    locked: 0
+  - name: Chimney
+    uniqueID: 2626998831
+    locked: 0
+  - name: NpcBlackSmith
+    uniqueID: 2427142575
+    locked: 0
+  - name: Player
+    uniqueID: 505610103
+    locked: 0
+  - name: Smoke
+    uniqueID: 2321790999
+    locked: 0
+  - name: Canvas
+    uniqueID: 831296717
+    locked: 0
+  - name: NpcVilage
+    uniqueID: 2056364219
+    locked: 0
+  m_RenderingLayers:
+  - Default
