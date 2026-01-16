@@ -5,7 +5,8 @@ public enum ItemType
     Weapon,
     Armor,
     Consumable,
-    Quest   
+    Seed,
+    Material
 }
 [CreateAssetMenu(fileName = "Item_", menuName = "Inventory/NewItem")]
 public class Item : ScriptableObject
@@ -37,7 +38,10 @@ public class Item : ScriptableObject
     public float atk;
     public float def;
     public float durability;
-    
+
+    [Header("Hạt giống")]
+    public float growTime;    
+
     [Header("Chỉ số đặc biệt")]
     public float bonus;    
 
