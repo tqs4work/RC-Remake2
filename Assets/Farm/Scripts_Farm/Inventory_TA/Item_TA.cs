@@ -25,6 +25,7 @@ public class Item : ScriptableObject
     public bool isStackable;
     public int maxStack;
     public int price;
+    public bool stackable = false;
     public int level;
 
     [Header("Vật phẩm tiêu thụ")]
