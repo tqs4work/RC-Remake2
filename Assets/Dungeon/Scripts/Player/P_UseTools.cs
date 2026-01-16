@@ -94,7 +94,7 @@ public class P_UseTools : MonoBehaviour
             }
         }
     }    
-    IEnumerator Water()
+    public IEnumerator Water()
     {        
         animator.SetTrigger("Water");
         isAction = true;
@@ -102,7 +102,7 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
 
-    IEnumerator Axe()
+    public IEnumerator Axe()
     {        
         animator.SetTrigger("Axe");
         isAction = true;
@@ -110,14 +110,14 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
 
-    IEnumerator Hammer()
+    public IEnumerator Hammer()
     {
         animator.SetTrigger("Hammer");
         isAction = true;
         yield return new WaitForSeconds(1f);
         isAction = false;
     }
-    IEnumerator Minning()
+    public IEnumerator Minning()
     {        
         if (isDetectM)
         {
@@ -131,7 +131,7 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
 
-    IEnumerator Dig()
+    public IEnumerator Dig()
     {        
         animator.SetTrigger("Dig");
         isAction = true;
@@ -139,7 +139,7 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
 
-    IEnumerator Roll()
+    public IEnumerator Roll()
     {        
         animator.SetTrigger("Roll");
         isRoll = true;
@@ -147,7 +147,7 @@ public class P_UseTools : MonoBehaviour
         isRoll = false;
     }
 
-    IEnumerator MA()
+    public IEnumerator MA()
     {
         PlayerRuntime.Instance.Player.Mp -= 5;
         if (isDetectE)
@@ -162,7 +162,7 @@ public class P_UseTools : MonoBehaviour
         isAction = false;
     }
 
-    IEnumerator RA()
+    public IEnumerator RA()
     {      
         PlayerRuntime.Instance.Player.Mp -= 5;
         animator.SetTrigger("RA");
