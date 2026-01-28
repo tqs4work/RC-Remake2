@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
-  m_Name: Weapon
+  m_Name: Shovel
   m_EditorClassIdentifier: 
   itemType: 0
-  itemID: D001
-  itemName: Axe
+  itemID: D002
+  itemName: Shovel
   description: "M\u1ED9t chi\u1EBFc r\xECu ch\u1EAFc ch\u1EAFn"
-  icon: {fileID: 8959118705387878318, guid: fba5edceb6f923c42809b3bbd88a483a, type: 3}
+  icon: {fileID: -3766519690804746565, guid: 2ac65bce02deb3e438d0098e13193539, type: 3}
   isStackable: 0
   maxStack: 10
   price: 100
+  stackable: 0
   level: 1
   quantity: 1
   hpAmount: 0
@@ -27,4 +28,5 @@ MonoBehaviour:
   atk: 10
   def: 0
   durability: 100
+  growTime: 0
   bonus: 0

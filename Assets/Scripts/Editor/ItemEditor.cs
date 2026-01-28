@@ -55,10 +55,8 @@ public class ItemEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        serializedObject.Update();
-        InitStyles();
-
-        //EditorGUILayout.LabelField("Thông tin c? b?n", vietnameseBold);
+        serializedObject.Update();        
+        
         EditorGUILayout.PropertyField(itemType);
         EditorGUILayout.PropertyField(itemID);
         EditorGUILayout.PropertyField(itemName);
@@ -74,8 +72,7 @@ public class ItemEditor : Editor
         ItemType type = (ItemType)itemType.enumValueIndex;
 
         if (type == ItemType.Weapon || type == ItemType.Armor)
-        {
-            //EditorGUILayout.LabelField("Ch? s? chi?n ??u", vietnameseBold);
+        {            
             EditorGUILayout.PropertyField(atk);
             EditorGUILayout.PropertyField(def);
             EditorGUILayout.PropertyField(durability);
@@ -84,8 +81,7 @@ public class ItemEditor : Editor
         }
 
         if(type == ItemType.Consumable)
-        {
-            //EditorGUILayout.LabelField("Ch? s? h?i ph?c", vietnameseBold);
+        {            
             EditorGUILayout.PropertyField(hpAmount);
             EditorGUILayout.PropertyField(mpAmount);
         }
@@ -99,23 +95,12 @@ public class ItemEditor : Editor
 
 
         if(type == ItemType.Seed)
-        {
-            //EditorGUILayout.LabelField("Th?i gian phát tri?n", vietnameseBold);
+        {            
             EditorGUILayout.PropertyField(growTime);
         }
 
         EditorGUILayout.PropertyField(bonus);
         serializedObject.ApplyModifiedProperties();
     }
-
-    private GUIStyle vietnameseBold;
-
-    void InitStyles()
-    {
-        if (vietnameseBold != null) return;
-
-        vietnameseBold = new GUIStyle(EditorStyles.label);
-        vietnameseBold.fontStyle = FontStyle.Bold;
-        vietnameseBold.fontSize = 12;
-    }
+    
 }
