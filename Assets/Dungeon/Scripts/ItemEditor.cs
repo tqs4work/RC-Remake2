@@ -21,13 +21,6 @@ public class ItemEditor : Editor
 
     SerializedProperty atk;
     SerializedProperty def;
-    SerializedProperty crit;
-    SerializedProperty useDurability;
-    SerializedProperty maxRepairRateOfBuyPrice;
-
-    SerializedProperty addATKPerLevel;
-    SerializedProperty addDEFPerLevel;
-    SerializedProperty addCRITPerLevel;
     SerializedProperty durability;
 
     SerializedProperty growTime;
@@ -54,14 +47,6 @@ public class ItemEditor : Editor
         atk = serializedObject.FindProperty("atk");
         def = serializedObject.FindProperty("def");
         durability = serializedObject.FindProperty("durability");
-
-        crit = serializedObject.FindProperty("crit");
-        useDurability = serializedObject.FindProperty("useDurability");
-        maxRepairRateOfBuyPrice = serializedObject.FindProperty("maxRepairRateOfBuyPrice");
-
-        addATKPerLevel = serializedObject.FindProperty("addATKPerLevel");
-        addDEFPerLevel = serializedObject.FindProperty("addDEFPerLevel");
-        addCRITPerLevel = serializedObject.FindProperty("addCRITPerLevel");
 
         growTime = serializedObject.FindProperty("growTime");
 
@@ -93,18 +78,7 @@ public class ItemEditor : Editor
             //EditorGUILayout.LabelField("Ch? s? chi?n ??u", vietnameseBold);
             EditorGUILayout.PropertyField(atk);
             EditorGUILayout.PropertyField(def);
-            EditorGUILayout.PropertyField(crit);
-
-            EditorGUILayout.PropertyField(useDurability);
             EditorGUILayout.PropertyField(durability);
-
-            EditorGUILayout.PropertyField(maxRepairRateOfBuyPrice);
-
-            EditorGUILayout.Space();
-
-            EditorGUILayout.PropertyField(addATKPerLevel, true);
-            EditorGUILayout.PropertyField(addDEFPerLevel, true);
-            EditorGUILayout.PropertyField(addCRITPerLevel, true);
 
 
         }
