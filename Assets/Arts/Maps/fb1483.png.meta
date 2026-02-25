@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9344e8d4dbb5b8e459c1f2716d86517a
+guid: 366ec3dca58ec0b4baa3ea909e47fe08
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3558186268152044001
-    second: BackgroundWood_0
+      213: -6330183015092542134
+    second: fb1483_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackgroundWood_0
+      name: fb1483_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e910ed0f87316130800000000000000
-      internalID: 3558186268152044001
+      spriteID: a45a236261ca628a0800000000000000
+      internalID: -6330183015092542134
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackgroundWood_0: 3558186268152044001
+      fb1483_0: -6330183015092542134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,7 +9,7 @@ public class ItemRuntime
 
     
 
-    [Header("Hình ?nh")]
+    [Header("Hï¿½nh ?nh")]
     public Sprite icon;
 
     [Header("Ch? s? v?t ph?m")]
@@ -18,7 +18,7 @@ public class ItemRuntime
     public int price;
     public int level;
 
-    [Header("V?t ph?m tiêu th?")]
+    [Header("V?t ph?m tiï¿½u th?")]
     public int quantity;
     public int hpAmount;
     public int mpAmount;
