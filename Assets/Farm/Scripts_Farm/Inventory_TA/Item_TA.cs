@@ -36,6 +36,8 @@ public class Item : ScriptableObject
     public int mpAmount;
 
     [Header("Vật phẩm chiến đấu")]
+    [Tooltip("Áp dụng cho Weapon/Armor. Arrow/Stone không dùng độ bền")]
+    public float atk = 0f;
     public float def = 0f;
     public bool useDurability = true;
     public float durability;
