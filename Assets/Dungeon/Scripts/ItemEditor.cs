@@ -21,6 +21,13 @@ public class ItemEditor : Editor
 
     SerializedProperty atk;
     SerializedProperty def;
+    SerializedProperty crit;
+    SerializedProperty useDurability;
+    SerializedProperty maxRepairRateOfBuyPrice;
+
+    SerializedProperty addATKPerLevel;
+    SerializedProperty addDEFPerLevel;
+    SerializedProperty addCRITPerLevel;
     SerializedProperty durability;
 
     SerializedProperty growTime;
@@ -48,6 +55,14 @@ public class ItemEditor : Editor
         def = serializedObject.FindProperty("def");
         durability = serializedObject.FindProperty("durability");
 
+        crit = serializedObject.FindProperty("crit");
+        useDurability = serializedObject.FindProperty("useDurability");
+        maxRepairRateOfBuyPrice = serializedObject.FindProperty("maxRepairRateOfBuyPrice");
+
+        addATKPerLevel = serializedObject.FindProperty("addATKPerLevel");
+        addDEFPerLevel = serializedObject.FindProperty("addDEFPerLevel");
+        addCRITPerLevel = serializedObject.FindProperty("addCRITPerLevel");
+
         growTime = serializedObject.FindProperty("growTime");
 
         bonus = serializedObject.FindProperty("bonus");
@@ -58,7 +73,7 @@ public class ItemEditor : Editor
         serializedObject.Update();
         InitStyles();
 
-        //EditorGUILayout.LabelField("Thông tin c? b?n", vietnameseBold);
+        //EditorGUILayout.LabelField("Thï¿½ng tin c? b?n", vietnameseBold);
         EditorGUILayout.PropertyField(itemType);
         EditorGUILayout.PropertyField(itemID);
         EditorGUILayout.PropertyField(itemName);
@@ -78,7 +93,18 @@ public class ItemEditor : Editor
             //EditorGUILayout.LabelField("Ch? s? chi?n ??u", vietnameseBold);
             EditorGUILayout.PropertyField(atk);
             EditorGUILayout.PropertyField(def);
+            EditorGUILayout.PropertyField(crit);
+
+            EditorGUILayout.PropertyField(useDurability);
             EditorGUILayout.PropertyField(durability);
+
+            EditorGUILayout.PropertyField(maxRepairRateOfBuyPrice);
+
+            EditorGUILayout.Space();
+
+            EditorGUILayout.PropertyField(addATKPerLevel, true);
+            EditorGUILayout.PropertyField(addDEFPerLevel, true);
+            EditorGUILayout.PropertyField(addCRITPerLevel, true);
 
 
         }
@@ -100,7 +126,7 @@ public class ItemEditor : Editor
 
         if(type == ItemType.Seed)
         {
-            //EditorGUILayout.LabelField("Th?i gian phát tri?n", vietnameseBold);
+            //EditorGUILayout.LabelField("Th?i gian phï¿½t tri?n", vietnameseBold);
             EditorGUILayout.PropertyField(growTime);
         }
 

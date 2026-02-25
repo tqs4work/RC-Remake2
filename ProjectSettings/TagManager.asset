@@ -8,6 +8,7 @@ TagManager:
   - E_Bullet
   - Exp
   - Enemy
+  - Blacksmith
   layers:
   - Default
   - TransparentFX
@@ -99,26 +100,17 @@ TagManager:
   - name: Smoke
     uniqueID: 2321790999
     locked: 0
-  - name: Canvas
-    uniqueID: 831296717
-    locked: 0
   - name: NpcVilage
     uniqueID: 2056364219
     locked: 0
-  - name: Ground
-    uniqueID: 1549973675
+  - name: Canvas
+    uniqueID: 831296717
     locked: 0
-  - name: Walk in front
-    uniqueID: 3851074687
+  - name: UpgradeAnimated
+    uniqueID: 477888809
     locked: 0
-  - name: Collision
-    uniqueID: 3635690597
-    locked: 0
-  - name: Walk behind
-    uniqueID: 1062787601
-    locked: 0
-  - name: Decor
-    uniqueID: 2957610449
+  - name: Arrow
+    uniqueID: 3712002063
     locked: 0
   m_RenderingLayers:
   - Default
