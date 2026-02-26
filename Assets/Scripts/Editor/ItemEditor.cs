@@ -27,6 +27,15 @@ public class ItemEditor : Editor
 
     SerializedProperty bonus;
 
+
+    SerializedProperty crit;
+    SerializedProperty useDurability;
+    SerializedProperty maxRepairRateOfBuyPrice;
+
+    SerializedProperty addATKPerLevel;
+    SerializedProperty addDEFPerLevel;
+    SerializedProperty addCRITPerLevel;
+
     void OnEnable()
     {
         itemType = serializedObject.FindProperty("itemType");
@@ -51,6 +60,14 @@ public class ItemEditor : Editor
         growTime = serializedObject.FindProperty("growTime");
 
         bonus = serializedObject.FindProperty("bonus");
+
+
+        crit = serializedObject.FindProperty("crit");
+        useDurability = serializedObject.FindProperty("useDurability");
+        maxRepairRateOfBuyPrice = serializedObject.FindProperty("maxRepairRateOfBuyPrice");
+        addATKPerLevel = serializedObject.FindProperty("addATKPerLevel");
+        addDEFPerLevel = serializedObject.FindProperty("addDEFPerLevel");
+        addCRITPerLevel = serializedObject.FindProperty("addCRITPerLevel");
     }
 
     public override void OnInspectorGUI()
@@ -76,6 +93,14 @@ public class ItemEditor : Editor
             EditorGUILayout.PropertyField(atk);
             EditorGUILayout.PropertyField(def);
             EditorGUILayout.PropertyField(durability);
+
+
+            EditorGUILayout.PropertyField(crit);
+            EditorGUILayout.PropertyField(useDurability);
+            EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(addATKPerLevel, true);
+            EditorGUILayout.PropertyField(addDEFPerLevel, true);
+            EditorGUILayout.PropertyField(addCRITPerLevel, true);
 
 
         }
