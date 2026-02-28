@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
   m_Name: Seed
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 8
   itemID: F001
   itemName: 
   description: 
@@ -27,6 +27,20 @@ MonoBehaviour:
   mpAmount: 0
   atk: 0
   def: 0
+  crit: 0
+  useDurability: 1
   durability: 0
+  addATKPerLevel: 0000000000000000000000000000000000000000
+  addDEFPerLevel: 0000000000000000000000000000000000000000
+  addCRITPerLevel:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  maxDurability: 100
+  maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
+  stoneLevel: 1
+  upgradePriceToNext: 0
