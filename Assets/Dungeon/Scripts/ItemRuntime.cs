@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -71,6 +72,7 @@ public class ItemRuntime
     {
         return new ItemRuntime
         {
+            itemType = Enum.Parse<ItemType>(data.itemType),
             itemID = data.itemID,
             itemName = data.itemName,
             description = data.description,

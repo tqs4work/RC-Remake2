@@ -11,7 +11,7 @@ public class Player
     public int Lv;
     public int Gold;
 
-    public List<ItemRuntime> Inventory = new();
+    public List<ItemRuntime> Inventory = new();    
 
     public void LoadFromData(PlayerData data)
     {

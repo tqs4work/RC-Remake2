@@ -14,6 +14,8 @@ public class InventoryUI : MonoBehaviour
     public GameObject farmPanel;
     public GameObject cityPanel;
     public GameObject dungeonPanel;
+    
+    bool isPanelOpen = false;
 
     [Header("Containers")]
     public Transform toolContainer;
@@ -28,27 +30,29 @@ public class InventoryUI : MonoBehaviour
         inventory = PlayerRuntime.Instance.Player.Inventory;        
     }
     private void Update()
-    {
+    {        
+        isPanelOpen = (toolPanel.activeSelf || farmPanel.activeSelf || cityPanel.activeSelf || dungeonPanel.activeSelf);
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (toolPanel.activeSelf || farmPanel.activeSelf || cityPanel.activeSelf || dungeonPanel.activeSelf)
+            if (isPanelOpen)
                 HideAllPanels();
             else
                 ShowToolPanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && isPanelOpen)
         {            
             ShowToolPanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isPanelOpen)
         {
             ShowFarmPanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) && isPanelOpen)
         {
             ShowCityPanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha4) && isPanelOpen)
         {
             ShowDungeonPanel();
         }

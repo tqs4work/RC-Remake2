@@ -13,8 +13,7 @@ public static class PlayerDataConverter
             Mp = player.Mp,
             Exp = player.Exp,
             Lv = player.Lv,
-            Gold = player.Gold,
-            //Inventory = new List<Item2String>()
+            Gold = player.Gold,            
             Inventory = new Dictionary<string, Item2String>()
         };
        

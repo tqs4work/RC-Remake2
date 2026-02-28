@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2964855953087630426}
   - component: {fileID: 692985124714490206}
   - component: {fileID: 456234257882555967}
+  - component: {fileID: 8130288120500681007}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -218,15 +219,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
-  numberTool: 0
-  select: {fileID: 0}
-  arrowDir: {fileID: 0}
-  aPos: {fileID: 0}
-  bPos: {fileID: 0}
-  arrowPre: {fileID: 0}
+  hotbar: {fileID: 0}
+  arrowDir: {fileID: 5680183309000555417}
+  attackPoint: {fileID: 6494936513683437936}
+  shootPoint: {fileID: 5296332563064691426}
+  arrowPrefab: {fileID: 4579202726128203985, guid: f19bf9aacc992c64280ad29258662e8e, type: 3}
   stone1: {fileID: 0}
   stone2: {fileID: 0}
   stone3: {fileID: 0}
+--- !u!114 &8130288120500681007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879140044489312321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572418d8908f9ef40b2c46c2591e1aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4750511402780536614
 GameObject:
   m_ObjectHideFlags: 0

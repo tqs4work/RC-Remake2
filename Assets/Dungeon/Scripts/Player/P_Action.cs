@@ -183,7 +183,7 @@ public class P_Action : MonoBehaviour
         isAction = true;
         isRangedAiming = true;
 
-        animator.SetTrigger("RA");
+        animator.SetTrigger("RA");       
 
         yield return new WaitForSeconds(0.4f);
 
@@ -191,26 +191,36 @@ public class P_Action : MonoBehaviour
 
         isRangedAiming = false;
 
+
         yield return new WaitForSeconds(0.2f);
+
+        arrowDir.SetActive(false);
         isAction = false;
     }
 
     void ShootArrow()
-    {
+    {        
         GameObject arrow = Instantiate(
             arrowPrefab,
             shootPoint.position,
             Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90)
         );
 
-        arrow.GetComponent<Rigidbody2D>().linearVelocity = direct * 15f;
+        //arrow.GetComponent<Rigidbody2D>().linearVelocity = direct.normalized * 15f;
+        arrow.GetComponent<Rigidbody2D>().AddForce(direct * 10f, ForceMode2D.Impulse);
+        
         Destroy(arrow, 3f);
+        
     }
 
     void Aim()
     {
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direct = (mouse - transform.position).normalized;
+        Vector3 mouse = Input.mousePosition;
+        mouse.z = Mathf.Abs(Camera.main.transform.position.z); // kho?ng cách t? camera t?i world
+
+        Vector3 worldMouse = Camera.main.ScreenToWorldPoint(mouse);
+
+        direct = ((Vector2)worldMouse - (Vector2)transform.position).normalized;
 
         arrowDir.SetActive(true);
         arrowDir.transform.rotation =
@@ -236,7 +246,7 @@ public class P_Action : MonoBehaviour
 
         DropStone();
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         isAction = false;
     }
 

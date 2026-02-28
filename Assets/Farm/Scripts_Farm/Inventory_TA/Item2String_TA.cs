@@ -3,7 +3,7 @@
 public class Item2String
 {
     [Header("Thông tin vật phẩm")]
-    public ItemType itemType;
+    public string itemType;
     public string itemID;
     public string itemName;
 
@@ -44,6 +44,7 @@ public class Item2String
     {
         return new Item2String
         {
+            itemType = item.itemType.ToString(),
             itemID = item.itemID,
             itemName = item.itemName,
             description = item.description,

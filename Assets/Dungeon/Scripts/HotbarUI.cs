@@ -18,6 +18,7 @@ public class HotbarUI : MonoBehaviour
     void Update()
     {
         HandleScroll();
+        Refresh();
     }
 
     void HandleScroll()
