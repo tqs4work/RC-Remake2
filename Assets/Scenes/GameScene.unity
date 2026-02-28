@@ -2889,6 +2889,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: aPos
+      value: 
+      objectReference: {fileID: 1012781218}
+    - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: select
       value: 
       objectReference: {fileID: 138219139}
@@ -2900,6 +2904,10 @@ PrefabInstance:
       propertyPath: arrowPre
       value: 
       objectReference: {fileID: 4579202726128203985, guid: f19bf9aacc992c64280ad29258662e8e, type: 3}
+    - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: numberTool
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2476046097815599491, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: select
       value: 
@@ -2914,7 +2922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5680183309000555417, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7401914158898243522, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: BBG

@@ -1,5 +1,4 @@
 using System.Collections;
-using FirebaseAdmin.Messaging;
 using UnityEngine;
 
 public class P_Action : MonoBehaviour
@@ -25,6 +24,73 @@ public class P_Action : MonoBehaviour
     [SerializeField] GameObject stone1;
     [SerializeField] GameObject stone2;
     [SerializeField] GameObject stone3;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+    void Update()
+    {
+        ScrollMouse();
+
+        arrowDir.SetActive(isRA && isAction);
+
+
+        if (isRA)
+        {
+            Aim();
+        }
+
+        CheckE();
+
+    }
+    void ScrollMouse()
+    {
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        select.GetComponent<RectTransform>().anchoredPosition = new Vector2(-250f + (numberTool - 1) * 100f, 60);
+        if (scrollInput > 0)
+        {
+            numberTool++;
+            if (numberTool > 6) numberTool = 1;
+
+        }
+        else if (scrollInput < 0)
+        {
+            numberTool--;
+            if (numberTool < 1) numberTool = 6;
+        }
+        if (Input.GetKey(KeyCode.LeftShift) && !isRoll)
+        {
+            StartCoroutine(Roll());
+        }
+        if (Input.GetMouseButtonDown(0) && !isAction)
+        {
+            switch (numberTool)
+            {
+                case 1:
+                    StartCoroutine(Axe());
+                    break;
+                case 2:
+                    StartCoroutine(Minning());
+                    break;
+                case 3:
+                    StartCoroutine(Dig());
+                    break;
+                case 4:
+                    StartCoroutine(Water());
+                    break;
+                case 5:
+                    StartCoroutine(MA());
+                    break;
+                case 6:
+                    StartCoroutine(RA());
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     public IEnumerator Water()
     {
         animator.SetTrigger("Water");
