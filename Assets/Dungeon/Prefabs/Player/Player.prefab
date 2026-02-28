@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 505610103
-  m_SortingLayer: 17
+  m_SortingLayerID: -1160203513
+  m_SortingLayer: 30
   m_SortingOrder: 0
   m_Sprite: {fileID: -7832987262840425037, guid: 0868b347768956149bd3c50ed38d37a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,12 +218,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
-  numberTool: 0
-  select: {fileID: 0}
-  arrowDir: {fileID: 0}
-  aPos: {fileID: 0}
-  bPos: {fileID: 0}
-  arrowPre: {fileID: 0}
+  hotbar: {fileID: 0}
+  arrowDir: {fileID: 5680183309000555417}
+  attackPoint: {fileID: 6494936513683437936}
+  shootPoint: {fileID: 5296332563064691426}
+  arrowPrefab: {fileID: 4579202726128203985, guid: f19bf9aacc992c64280ad29258662e8e, type: 3}
   stone1: {fileID: 0}
   stone2: {fileID: 0}
   stone3: {fileID: 0}
@@ -369,8 +368,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 505610103
-  m_SortingLayer: 17
+  m_SortingLayerID: -1160203513
+  m_SortingLayer: 30
   m_SortingOrder: -1
   m_Sprite: {fileID: 3312798837105470071, guid: 527b02276b2e9f946aa8572c1b8a4ffa, type: 3}
   m_Color: {r: 1, g: 0.0056602955, b: 0.0056602955, a: 0.6117647}
