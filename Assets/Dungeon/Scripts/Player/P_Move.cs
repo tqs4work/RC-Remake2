@@ -19,7 +19,7 @@ public class P_Move : MonoBehaviour
     
     void Update()
     {        
-        isAction = GetComponent<P_UseTools>().isAction;
+        isAction = GetComponent<P_Action>().isAction;
         Animate();
         if(!isAction)
         {

@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 4393858263483325418}
   - component: {fileID: 2964855953087630426}
   - component: {fileID: 692985124714490206}
-  - component: {fileID: 2476046097815599491}
-  - component: {fileID: 7401914158898243522}
+  - component: {fileID: 456234257882555967}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -206,7 +205,7 @@ MonoBehaviour:
   moveSpeed: 3
   lastX: 0
   lastY: 0
---- !u!114 &2476046097815599491
+--- !u!114 &456234257882555967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,36 +214,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3879140044489312321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38f2c48450c37048a348e678c7cc170, type: 3}
+  m_Script: {fileID: 11500000, guid: f715142b5591b3f4580dcc28c966751b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
-  numberTool: 1
+  numberTool: 0
   select: {fileID: 0}
-  arrowDir: {fileID: 5680183309000555417}
-  aPos: {fileID: 4750511402780536614}
-  bPos: {fileID: 5680183309000555417}
-  arrowPre: {fileID: 4579202726128203985, guid: f19bf9aacc992c64280ad29258662e8e, type: 3}
-  stone1: {fileID: 8865049232744371489, guid: 6f2d27e9503f2ea4b83e11ad5fd595a5, type: 3}
-  stone2: {fileID: 7633964021250337418, guid: a28bcc3a38fac8c43953420ad93d49f0, type: 3}
-  stone3: {fileID: 2194655918947702174, guid: 123b8a8256c5c454dbb7a9b503d31fe4, type: 3}
---- !u!114 &7401914158898243522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879140044489312321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18c1a0ef97d64464d9a5affbaa09a72e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam1: {fileID: 0}
-  cam2: {fileID: 0}
-  cam3: {fileID: 0}
-  BBG: {fileID: 0}
-  Portal: {fileID: 0}
+  arrowDir: {fileID: 0}
+  aPos: {fileID: 0}
+  bPos: {fileID: 0}
+  arrowPre: {fileID: 0}
+  stone1: {fileID: 0}
+  stone2: {fileID: 0}
+  stone3: {fileID: 0}
 --- !u!1 &4750511402780536614
 GameObject:
   m_ObjectHideFlags: 0
