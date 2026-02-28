@@ -2,6 +2,10 @@
 
 public enum ItemType
 {
+    Shovel,
+    Axe,
+    Pickaxe,
+    WateringCan,
     Weapon,
     Armor,
     Consumable,
