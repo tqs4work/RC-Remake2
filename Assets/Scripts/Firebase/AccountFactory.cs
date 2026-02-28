@@ -28,18 +28,18 @@ public static class AccountFactory
             Gold = 0,
             IsOnline = false,
             LastLogin = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"),
-            //Inventory = new List<Item2String>()
-            Inventory = new Dictionary<string, Item2String>()
+
+            // ? C?u trúc Inventory m?i
+
+            Inventory = new Dictionary<string, Dictionary<string, Item2String>>()
         };
 
-        //Item item = ScriptableObject.CreateInstance<Item>();
-        //StarterItemBuilder.Build(item);
-        //ItemRuntime runtimeItem = ItemRuntime.FromItem(item);
-        //Item2String itemData = Item2String.FromRuntime(runtimeItem);
-        //// ? KEY = itemID
-        //player.Inventory[item.itemID] = itemData;
+        // T?o s?n 4 container r?ng
+        player.Inventory["Tool"] = new Dictionary<string, Item2String>();
+        player.Inventory["Farm"] = new Dictionary<string, Item2String>();
+        player.Inventory["City"] = new Dictionary<string, Item2String>();
+        player.Inventory["Dungeon"] = new Dictionary<string, Item2String>();
 
         return player;
     }
 }
-

@@ -308,41 +308,41 @@ public class FarmController_TA : MonoBehaviour
     }
     public void HarvestCrop(Vector3Int pos)
     {
-        // Kiểm tra xem ô đất này có cây đang trồng trong sổ không
-        if (activeCrops.ContainsKey(pos))
-        {
-            PlantedCrop crop = activeCrops[pos];
-            PlantData data = crop.plantInfo; 
+        //// Kiểm tra xem ô đất này có cây đang trồng trong sổ không
+        //if (activeCrops.ContainsKey(pos))
+        //{
+        //    PlantedCrop crop = activeCrops[pos];
+        //    PlantData data = crop.plantInfo; 
 
-            // nhét đồ vào túi 
-            if (data.harvestItemData != null) 
-            {
-                ItemRuntime newItem = ItemRuntime.FromItem(data.harvestItemData);
-                newItem.quantity = data.harvestQuantity; // Lấy số lượng thu hoạch từ PlantData - mặc định là 1 
+        //    // nhét đồ vào túi 
+        //    if (data.harvestItemData != null) 
+        //    {
+        //        ItemRuntime newItem = ItemRuntime.FromItem(data.harvestItemData);
+        //        newItem.quantity = data.harvestQuantity; // Lấy số lượng thu hoạch từ PlantData - mặc định là 1 
 
-                bool isAdded = false;
-                foreach (var invItem in PlayerRuntime.Instance.Player.Inventory)
-                {
-                    if (invItem.itemID == newItem.itemID && invItem.isStackable)
-                    {
-                        invItem.quantity += newItem.quantity;
-                        isAdded = true;
-                        break;
-                    }
-                }
-                if (!isAdded)
-                {
-                    PlayerRuntime.Instance.Player.Inventory.Add(newItem);
-                }
-                Debug.Log($"Đã thu hoạch: {data.harvestItemName}");
-            }
+        //        bool isAdded = false;
+        //        foreach (var invItem in PlayerRuntime.Instance.Player.Inventory)
+        //        {
+        //            if (invItem.itemID == newItem.itemID && invItem.isStackable)
+        //            {
+        //                invItem.quantity += newItem.quantity;
+        //                isAdded = true;
+        //                break;
+        //            }
+        //        }
+        //        if (!isAdded)
+        //        {
+        //            PlayerRuntime.Instance.Player.Inventory.Add(newItem);
+        //        }
+        //        Debug.Log($"Đã thu hoạch: {data.harvestItemName}");
+        //    }
 
-            //setup lại nông trại, tất cả đất về bình thường trừ cái seed phải là null 
-            tm_Soil.SetTile(pos, tb_Soil);
-            tm_Hole.SetTile(pos, tb_Hole);
-            tm_Seed.SetTile(pos, null);
-            tm_HoleSeed.SetTile(pos, tb_HoleSeed);
-        }
+        //    //setup lại nông trại, tất cả đất về bình thường trừ cái seed phải là null 
+        //    tm_Soil.SetTile(pos, tb_Soil);
+        //    tm_Hole.SetTile(pos, tb_Hole);
+        //    tm_Seed.SetTile(pos, null);
+        //    tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+        //}
     }
 }    
 

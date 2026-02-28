@@ -117,19 +117,45 @@ public class P_Action : MonoBehaviour
 
     #region Consumable
 
+    //void Consume(ItemRuntime item)
+    //{
+    //    if (item.quantity <= 0) return;
+
+    //    var player = PlayerRuntime.Instance.Player;
+
+    //    player.Hp += item.hpAmount;
+    //    player.Mp += item.mpAmount;
+
+    //    item.quantity--;
+
+    //    if (item.quantity <= 0)
+    //        player.Inventory.Remove(item);
+
+    //    hotbar.Refresh();
+    //}
+
     void Consume(ItemRuntime item)
     {
-        if (item.quantity <= 0) return;
+        if (item == null || item.quantity <= 0)
+            return;
 
         var player = PlayerRuntime.Instance.Player;
 
+        // H?i HP / MP
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
         item.quantity--;
 
+        // N?u h?t item ? xóa kh?i Tool container
         if (item.quantity <= 0)
-            player.Inventory.Remove(item);
+        {
+            if (player.Inventory.ContainsKey(InventoryContainerType.Tool))
+            {
+                var toolContainer = player.Inventory[InventoryContainerType.Tool];
+                toolContainer.items.Remove(item);
+            }
+        }
 
         hotbar.Refresh();
     }
@@ -143,11 +169,11 @@ public class P_Action : MonoBehaviour
         isAction = true;
 
         animator.SetTrigger("MA");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(4/6f);
 
         DoMeleeHit();
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1/3f);
         isAction = false;
     }
 
@@ -185,14 +211,14 @@ public class P_Action : MonoBehaviour
 
         animator.SetTrigger("RA");       
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(5/6f);
 
         ShootArrow();
 
         isRangedAiming = false;
 
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1/6f);
 
         arrowDir.SetActive(false);
         isAction = false;

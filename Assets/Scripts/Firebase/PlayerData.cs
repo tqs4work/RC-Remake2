@@ -13,5 +13,10 @@ public class PlayerData
     public int Gold;
     public bool IsOnline;
     public string LastLogin;    
-    public Dictionary<string, Item2String> Inventory;
+    
+    //public Dictionary<string, Item2String> Inventory;
+
+    //
+    public Dictionary<string, Dictionary<string, Item2String>> Inventory;
+    //
 }

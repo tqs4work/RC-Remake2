@@ -14,18 +14,43 @@ public static class PlayerDataConverter
             Exp = player.Exp,
             Lv = player.Lv,
             Gold = player.Gold,            
-            Inventory = new Dictionary<string, Item2String>()
+            
+            //Inventory = new Dictionary<string, Item2String>()
+
+            //
+            Inventory = new Dictionary<string, Dictionary<string, Item2String>>()
+            //
         };
-       
 
-        foreach (var item in player.Inventory)
+
+        //foreach (var item in player.Inventory)
+        //{
+        //    if (item == null || string.IsNullOrEmpty(item.itemID))
+        //        continue;
+
+        //    // key = itemID
+        //    data.Inventory[item.itemID] = Item2String.FromRuntime(item);
+        //}
+
+        //
+        foreach (var container in player.Inventory)
         {
-            if (item == null || string.IsNullOrEmpty(item.itemID))
-                continue;
+            string containerName = container.Key.ToString();
 
-            // key = itemID
-            data.Inventory[item.itemID] = Item2String.FromRuntime(item);
+            data.Inventory[containerName] =
+                new Dictionary<string, Item2String>();
+
+            foreach (var item in container.Value.items)
+            {
+                if (item == null || string.IsNullOrEmpty(item.itemID))
+                    continue;
+
+                data.Inventory[containerName][item.itemID] =
+                    Item2String.FromRuntime(item);
+            }
         }
+        //
+
 
         return data;
     }
