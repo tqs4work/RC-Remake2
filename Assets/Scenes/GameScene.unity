@@ -2891,6 +2891,10 @@ PrefabInstance:
     - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: aPos
       value: 
+      objectReference: {fileID: 837342704}
+    - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+      propertyPath: bPos
+      value: 
       objectReference: {fileID: 1012781218}
     - target: {fileID: 456234257882555967, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
       propertyPath: select
@@ -3004,6 +3008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572418d8908f9ef40b2c46c2591e1aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &837342704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4750511402780536614, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+  m_PrefabInstance: {fileID: 837342700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &840719129
 GameObject:
   m_ObjectHideFlags: 0
