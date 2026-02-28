@@ -10,7 +10,7 @@ public class ItemPickup : MonoBehaviour
     }
     private void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +21,7 @@ public class ItemPickup : MonoBehaviour
 
     private void Pickup()
     {
-        ItemRuntime newItem = ItemRuntime.FromItem(itemData);        
+        ItemRuntime newItem = ItemRuntime.FromItem(itemData);
 
         foreach (var invItem in PlayerRuntime.Instance.Player.Inventory)
         {
@@ -29,6 +29,14 @@ public class ItemPickup : MonoBehaviour
             {
                 invItem.quantity += newItem.quantity;
                 Debug.Log($"Picked up: {newItem.itemName} (Total: {invItem.quantity})");
+                Destroy(gameObject);
+                return;
+            }
+            if (invItem.itemID == newItem.itemID && !invItem.isStackable)
+            {
+                newItem.itemID = newItem.itemID + " " + Random.Range(0f, 1000f).ToString();
+                Debug.Log($"Picked up: {newItem.itemName} (Total: {invItem.quantity})");
+                PlayerRuntime.Instance.Player.Inventory.Add(newItem);
                 Destroy(gameObject);
                 return;
             }

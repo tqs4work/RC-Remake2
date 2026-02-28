@@ -8,6 +8,7 @@ TagManager:
   - E_Bullet
   - Exp
   - Enemy
+  - Farm
   layers:
   - Default
   - TransparentFX
@@ -99,9 +100,6 @@ TagManager:
   - name: Smoke
     uniqueID: 2321790999
     locked: 0
-  - name: Canvas
-    uniqueID: 831296717
-    locked: 0
   - name: NpcVilage
     uniqueID: 2056364219
     locked: 0
@@ -125,6 +123,15 @@ TagManager:
     locked: 0
   - name: canvas
     uniqueID: 3152315233
+    locked: 0
+  - name: UpgrdeAnimated
+    uniqueID: 2051001651
+    locked: 0
+  - name: Arrow
+    uniqueID: 1526079609
+    locked: 0
+  - name: Canvas
+    uniqueID: 831296717
     locked: 0
   m_RenderingLayers:
   - Default
