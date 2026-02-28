@@ -26,6 +26,10 @@ public class GateEnter_S : MonoBehaviour
             {
                 SceneManager.LoadScene("Forge");
             }
+            else if (gate.gateName == "dungeonGate")
+            {
+                SceneManager.LoadScene("Dungeon");
+            }
         }
     }
 }

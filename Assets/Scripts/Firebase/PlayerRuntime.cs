@@ -12,7 +12,7 @@ public class PlayerRuntime : MonoBehaviour
     private float _saveTimer = 0f;
     private const float SAVE_INTERVAL = 1f;
 
-    private bool _isSaving = false; // ? C? CH?NG SAVE CH?NG
+    private bool _isSaving = false;
 
     private void Awake()
     {

@@ -17,9 +17,7 @@ public static class PlayerDataConverter
             //Inventory = new List<Item2String>()
             Inventory = new Dictionary<string, Item2String>()
         };
-
-        //foreach (var item in player.Inventory)
-        //    data.Inventory.Add(Item2String.FromItem(item));
+       
 
         foreach (var item in player.Inventory)
         {
