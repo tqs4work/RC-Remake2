@@ -88,7 +88,7 @@ public class ItemEditor : Editor
 
         ItemType type = (ItemType)itemType.enumValueIndex;
 
-        if (type == ItemType.Weapon || type == ItemType.Armor)
+        if (type == ItemType.Sword || type == ItemType.Armor || type == ItemType.Shovel || type == ItemType.Bow || type == ItemType.Axe || type == ItemType.Pickaxe)
         {            
             EditorGUILayout.PropertyField(atk);
             EditorGUILayout.PropertyField(def);
