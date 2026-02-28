@@ -62,14 +62,34 @@ public class P_Action : MonoBehaviour
 
         switch (item.itemType)
         {
-            case ItemType.Weapon:
+            case ItemType.Sword:
                 if (EnoughMP(5))
                     StartCoroutine(MeleeAttack());
                 break;
 
-            case ItemType.Arrow:
+            case ItemType.Bow:
                 if (EnoughMP(5))
                     StartCoroutine(RangedAttack());
+                break;
+
+            case ItemType.Shovel:
+                if (EnoughMP(5))
+                    StartCoroutine(Dig());
+                break;
+
+            case ItemType.Axe:
+                if (EnoughMP(5))
+                    StartCoroutine(Axe());
+                break;
+
+            case ItemType.Pickaxe:
+                if (EnoughMP(5))
+                    StartCoroutine(Mining());
+                break;
+
+            case ItemType.WateringCan:
+                if (EnoughMP(5))
+                    StartCoroutine(Water());
                 break;
 
             case ItemType.Consumable:
@@ -248,6 +268,26 @@ public class P_Action : MonoBehaviour
     {
         isAction = true;
         animator.SetTrigger("Dig");
+        yield return new WaitForSeconds(1f);
+        isAction = false;
+    }
+
+    #endregion
+
+    #region Axe / Watering
+
+    public IEnumerator Axe()
+    {
+        animator.SetTrigger("Axe");
+        isAction = true;
+        yield return new WaitForSeconds(1f);
+        isAction = false;
+    }
+
+    public IEnumerator Water()
+    {
+        animator.SetTrigger("Water");
+        isAction = true;
         yield return new WaitForSeconds(1f);
         isAction = false;
     }
