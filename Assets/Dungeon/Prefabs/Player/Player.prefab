@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 692985124714490206}
   - component: {fileID: 2476046097815599491}
   - component: {fileID: 7401914158898243522}
-  - component: {fileID: 446773295727943449}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -246,21 +245,6 @@ MonoBehaviour:
   cam3: {fileID: 0}
   BBG: {fileID: 0}
   Portal: {fileID: 0}
---- !u!114 &446773295727943449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879140044489312321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7704c20ef68ee479838d122b823f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stone1: 0
-  stone2: 0
-  stone3: 0
 --- !u!1 &4750511402780536614
 GameObject:
   m_ObjectHideFlags: 0

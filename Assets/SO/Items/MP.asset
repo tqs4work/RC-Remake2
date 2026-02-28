@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MP
   m_EditorClassIdentifier: 
   itemType: 2
-  itemID: D003
+  itemID: D010
   itemName: MP Pot
   description: Hoi mana
   icon: {fileID: 21300000, guid: 44b7b40adfda3174facf5d4114b5baf6, type: 2}
@@ -27,6 +27,20 @@ MonoBehaviour:
   mpAmount: 0
   atk: 10
   def: 0
+  crit: 0
+  useDurability: 1
   durability: 0
+  addATKPerLevel: 0000000000000000000000000000000000000000
+  addDEFPerLevel: 0000000000000000000000000000000000000000
+  addCRITPerLevel:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  maxDurability: 100
+  maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
+  stoneLevel: 1
+  upgradePriceToNext: 0
