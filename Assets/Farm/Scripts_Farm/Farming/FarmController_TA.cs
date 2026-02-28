@@ -1,4 +1,6 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -38,6 +40,22 @@ public class FarmController_TA : MonoBehaviour
 
     public PlantData selectedPlant;
     bool isStandingOnHole = false;
+    [Header("Harvest UI")]
+    public GameObject harvestPopupPrefab;
+
+    [System.Serializable]
+    public class PlantedCrop
+    {
+        public Vector3Int position; //vị trí cây 
+        public PlantData plantInfo; //thông tin cây 
+        public int currentStage = 0;
+        public bool isWatered = false;     
+        public Coroutine growthCoroutine;  // Coroutine phát triển của cây trồng 
+    }
+
+    // danh sách cây trồng đang đc trồng trên bản đồ 
+    private Dictionary<Vector3Int, PlantedCrop> activeCrops = new Dictionary<Vector3Int, PlantedCrop>();
+    public ItemPickup pickup;
 
     [SerializeField] HotbarUI hotbar;
     private void Start()
@@ -161,10 +179,48 @@ public class FarmController_TA : MonoBehaviour
         {
             Debug.Log("Tưới nước");
             Vector3Int cellPos = currentTargetCell;
-            Debug.Log("CellPos: " + cellPos);
-            TileBase currentTileBase = tm_Seed.GetTile(cellPos);
-        }    
+            //kiểm tra xem ô này có cây không 
+            if(activeCrops.ContainsKey(cellPos))
+            {
+                //lấy thông tin của cái cây đó (truyền vị trí vô thì sẽ biết đc đó là cây gì) 
+                PlantedCrop crop = activeCrops[cellPos];
+                if (!crop.isWatered && crop.currentStage < crop.plantInfo.growthStages.Count - 1) // nếu cây chưa tưới nước và chưa chín 
+                {
+                    //đánh dấu đc tưới nước 
+                    crop.isWatered = true;
 
+                    // Đổi hình hố đất thành đất ướt 
+                    tm_HoleSeed.SetTile(cellPos, null);
+                    //dùng này để tránh kẹt coroutin - khi coroutine cũ chưa chạy xong sẽ dễ kẹt nên tắt đi 
+                    if (crop.growthCoroutine != null)
+                    {
+                        StopCoroutine(crop.growthCoroutine); 
+                    }
+                    // Chạy coroutin đếm ngược thời gian lớn 
+                    crop.growthCoroutine = StartCoroutine(GrowCropRoutine(crop));
+
+                    Debug.Log("Tưới nước thành công! Đồng hồ thời gian bắt đầu chạy.");
+                }
+                else if (crop.currentStage >= crop.plantInfo.growthStages.Count - 1)
+                {
+                    Debug.Log("Cây đã chín rồi, không cần tưới nữa, mau thu hoạch thôi!");
+                    ////lấy vị trí của cái ô đất 
+                    //Vector3 worldPos = tm_Seed.GetCellCenterLocal(crop.position);
+                    ////hiện cái pop up thu hoạch ra
+                    //GameObject popup = Instantiate(harvestPopupPrefab, worldPos, Quaternion.identity);
+                    //popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
+                }
+                else
+                {
+                    Debug.Log("Đất vẫn còn ướt, không cần tưới thêm!");
+                }
+            }
+            else
+            {
+                Debug.Log("Ô này không có hạt giống, tưới tốn nước!");
+            }
+        }
+        
     }
     
 
@@ -197,6 +253,16 @@ public class FarmController_TA : MonoBehaviour
             // Đặt hạt giống (Stage 0) xuống Tilemap Seed
             TileBase seedTile = plantToPlant.growthStages[0].stageTile;
             tm_Seed.SetTile(cellPos, seedTile);
+            if (!activeCrops.ContainsKey(cellPos)) // nếu không phải là activecrops có pos đc lưu trong dic thì lưu cái mới vô 
+            {
+                PlantedCrop newCrop = new PlantedCrop();
+                newCrop.position = cellPos;
+                newCrop.plantInfo = plantToPlant;
+                newCrop.currentStage = 0;
+                newCrop.isWatered = false; // Mới gieo chưa có nước
+
+                activeCrops.Add(cellPos, newCrop);
+            }
 
             Debug.Log($"Đã gieo thành công: {plantToPlant.seedName} tại {cellPos}");
 
@@ -208,4 +274,75 @@ public class FarmController_TA : MonoBehaviour
             Debug.Log("Không tìm thấy hố tại vị trí này để gieo");
         }
     }
-}
+    private IEnumerator GrowCropRoutine(PlantedCrop crop)
+    {
+        //lấy giai đoạn hiện tại của cây trồng 
+        float timeToWait = crop.plantInfo.growthStages[crop.currentStage].growthTimeInSeconds;
+
+        // chờ đúng số giây ở trong giai đoạn đó 
+        yield return new WaitForSeconds(timeToWait);
+
+        //tăng giai đoạn lên 1level 
+        crop.currentStage++;
+
+        // cập nhật tile mới theo giai đoạn 
+        TileBase nextStageTile = crop.plantInfo.growthStages[crop.currentStage].stageTile;
+        tm_Seed.SetTile(crop.position, nextStageTile);
+
+        // cây cạn nước để tưới tiếp cho giai đoạn sau 
+        crop.isWatered = false;
+
+        // đặt lại cái đất cũ che đi cái nước 
+        tm_HoleSeed.SetTile(crop.position, tb_HoleSeed);
+
+        Debug.Log($"Cây ở {crop.position} đã lớn lên level {crop.currentStage}. Cần tưới nước tiếp!");
+
+        // nếu cây trồng chín 
+        if (crop.currentStage == crop.plantInfo.growthStages.Count - 1)
+        {
+            Debug.Log($"Cây ở {crop.position} ĐÃ CHÍN TỰ ĐỘNG!");
+            Vector3 worldPos = tm_Seed.GetCellCenterWorld(crop.position);
+            GameObject popup = Instantiate(harvestPopupPrefab, worldPos, Quaternion.identity);
+            popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
+        }
+    }
+    public void HarvestCrop(Vector3Int pos)
+    {
+        // Kiểm tra xem ô đất này có cây đang trồng trong sổ không
+        if (activeCrops.ContainsKey(pos))
+        {
+            PlantedCrop crop = activeCrops[pos];
+            PlantData data = crop.plantInfo; 
+
+            // nhét đồ vào túi 
+            if (data.harvestItemData != null) 
+            {
+                ItemRuntime newItem = ItemRuntime.FromItem(data.harvestItemData);
+                newItem.quantity = data.harvestQuantity; // Lấy số lượng thu hoạch từ PlantData - mặc định là 1 
+
+                bool isAdded = false;
+                foreach (var invItem in PlayerRuntime.Instance.Player.Inventory)
+                {
+                    if (invItem.itemID == newItem.itemID && invItem.isStackable)
+                    {
+                        invItem.quantity += newItem.quantity;
+                        isAdded = true;
+                        break;
+                    }
+                }
+                if (!isAdded)
+                {
+                    PlayerRuntime.Instance.Player.Inventory.Add(newItem);
+                }
+                Debug.Log($"Đã thu hoạch: {data.harvestItemName}");
+            }
+
+            //setup lại nông trại, tất cả đất về bình thường trừ cái seed phải là null 
+            tm_Soil.SetTile(pos, tb_Soil);
+            tm_Hole.SetTile(pos, tb_Hole);
+            tm_Seed.SetTile(pos, null);
+            tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+        }
+    }
+}    
+

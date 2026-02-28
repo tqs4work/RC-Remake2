@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: Seed_Wheat
   m_EditorClassIdentifier: 
   seedName: Wheat
-  seedIcon: {fileID: 5088316998373936774, guid: d9fb779e2256d5d47a67d690cfae5adc, type: 3}
-  buyPrice: 50
+  seedIcon: {fileID: -666870068449178133, guid: 04477fad81de9bc48871c621afa0c63a, type: 3}
+  buyPrice: 10
   growthStages:
-  - stageTile: {fileID: 11400000, guid: 429428637d3eb154495af2ebaf251f57, type: 2}
-    growthTimeInSeconds: 5
-  harvestItemID: F1
+  - stageTile: {fileID: 11400000, guid: 2bd4fa2844cf15c48b1b357190af8201, type: 2}
+    growthTimeInSeconds: 1
+  - stageTile: {fileID: 11400000, guid: 80501da5e5b93194783a1124c9a1ba1d, type: 2}
+    growthTimeInSeconds: 1
+  - stageTile: {fileID: 11400000, guid: e933b8cb95c8b9f448f54514ee2d8fca, type: 2}
+    growthTimeInSeconds: 1
+  - stageTile: {fileID: 11400000, guid: 6590b73b17c83f24a8cbf8b8eca4f1fb, type: 2}
+    growthTimeInSeconds: 1
+  - stageTile: {fileID: 11400000, guid: 1193c253c9f30cf41abb8d9412de8894, type: 2}
+    growthTimeInSeconds: 1
+  harvestItemData: {fileID: 11400000, guid: 263f731cd799fcb44b995389d95e866c, type: 2}
   harvestItemName: Wheat
   harvestItemDescription: 
   harvestItemIconPath: 

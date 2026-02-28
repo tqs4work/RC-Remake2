@@ -19,7 +19,7 @@ public class ItemPickup : MonoBehaviour
         Pickup();
     }
 
-    private void Pickup()
+    public void Pickup()
     {
         ItemRuntime newItem = ItemRuntime.FromItem(itemData);
 
