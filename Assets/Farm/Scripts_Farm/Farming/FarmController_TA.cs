@@ -32,7 +32,7 @@ public class FarmController_TA : MonoBehaviour
     [Header("UI Shop")]
     public GameObject seedMenuPanel;
 
-    public P_UseTools toolScript;
+    public P_Action toolScript;
 
     bool isFarm = false;
 
@@ -40,7 +40,7 @@ public class FarmController_TA : MonoBehaviour
     bool isStandingOnHole = false;
     private void Start()
     {
-        toolScript = GetComponent<P_UseTools>();
+        toolScript = GetComponent<P_Action>();
     }
     private void Update()
     {

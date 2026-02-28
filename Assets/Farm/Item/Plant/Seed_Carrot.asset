@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: Seed_Carrot
   m_EditorClassIdentifier: 
   seedName: Carrot
-  seedIcon: {fileID: 7615445290590067633, guid: a8db3d796b83ab240bd8c6e5beb07f73, type: 3}
+  seedIcon: {fileID: -3829704256182829468, guid: a82741115f92345448d14144bb89f44c, type: 3}
   buyPrice: 100
-  growthStages: []
+  growthStages:
+  - stageTile: {fileID: 11400000, guid: 5edf0da0bc7f1034abf78db5dcabdec0, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: d8f79291b7de0324e996edad8c64ba36, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: e73fe596123e0a44f9017c7f0a8f3050, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: 6d389c5f6545f214c81ac678d2664cd1, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: 230637e82c287524286e64bf5a3eb244, type: 2}
+    growthTimeInSeconds: 5
   harvestItemID: F2
   harvestItemName: Carrot
   harvestItemDescription: 
