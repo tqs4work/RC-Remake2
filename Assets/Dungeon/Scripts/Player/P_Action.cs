@@ -115,24 +115,7 @@ public class P_Action : MonoBehaviour
         return true;
     }
 
-    #region Consumable
-
-    //void Consume(ItemRuntime item)
-    //{
-    //    if (item.quantity <= 0) return;
-
-    //    var player = PlayerRuntime.Instance.Player;
-
-    //    player.Hp += item.hpAmount;
-    //    player.Mp += item.mpAmount;
-
-    //    item.quantity--;
-
-    //    if (item.quantity <= 0)
-    //        player.Inventory.Remove(item);
-
-    //    hotbar.Refresh();
-    //}
+    #region Consumable    
 
     void Consume(ItemRuntime item)
     {

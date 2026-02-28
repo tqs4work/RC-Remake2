@@ -80,10 +80,21 @@ public class HotbarUI : MonoBehaviour
     public HotbarSlot[] slots;
     public int selectedIndex = 0;
 
-    private List<ItemRuntime> inventory;
+    //private List<ItemRuntime> inventory;
+
+    //
+    HotbarData hotbarData;
+    //
+
+
 
     void Start()
     {
+        //
+        hotbarData = PlayerRuntime.Instance.Player.Hotbar;
+        //
+
+
         Refresh();
         UpdateHighlight();
     }
@@ -116,24 +127,42 @@ public class HotbarUI : MonoBehaviour
         }
     }
 
+    //public void Refresh()
+    //{
+    //    var playerInventory = PlayerRuntime.Instance.Player.Inventory;
+
+    //    // ?? Hotbar l?y t? Tool container
+    //    if (!playerInventory.ContainsKey(InventoryContainerType.Tool))
+    //        return;
+
+    //    inventory = playerInventory[InventoryContainerType.Tool].items;
+
+    //    for (int i = 0; i < slots.Length; i++)
+    //    {
+    //        if (i < inventory.Count)
+    //            slots[i].SetItem(inventory[i]);
+    //        else
+    //            slots[i].SetItem(null);
+    //    }
+    //}
+
+    //
     public void Refresh()
     {
-        var playerInventory = PlayerRuntime.Instance.Player.Inventory;
-
-        // ?? Hotbar l?y t? Tool container
-        if (!playerInventory.ContainsKey(InventoryContainerType.Tool))
-            return;
-
-        inventory = playerInventory[InventoryContainerType.Tool].items;
-
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < inventory.Count)
-                slots[i].SetItem(inventory[i]);
+            // ?? GÁN INDEX CHO SLOT
+            slots[i].slotIndex = i;
+
+            var item = hotbarData.slots[i];
+
+            if (item != null)
+                slots[i].SetItem(item);
             else
                 slots[i].SetItem(null);
         }
     }
+    //
 
     void UpdateHighlight()
     {
@@ -143,14 +172,22 @@ public class HotbarUI : MonoBehaviour
         }
     }
 
+    //public ItemRuntime GetSelectedItem()
+    //{
+    //    if (inventory == null)
+    //        return null;
+
+    //    if (selectedIndex < inventory.Count)
+    //        return inventory[selectedIndex];
+
+    //    return null;
+    //}
+
+
+    //
     public ItemRuntime GetSelectedItem()
     {
-        if (inventory == null)
-            return null;
-
-        if (selectedIndex < inventory.Count)
-            return inventory[selectedIndex];
-
-        return null;
+        return hotbarData.slots[selectedIndex];
     }
+    //
 }

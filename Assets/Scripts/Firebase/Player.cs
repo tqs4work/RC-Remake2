@@ -32,6 +32,8 @@ public class Player
 
         Inventory[InventoryContainerType.Dungeon] =
             new InventoryContainer { containerType = InventoryContainerType.Dungeon };
+
+        Hotbar = new HotbarData(6); // 6 slot
     }
 
 
@@ -69,6 +71,62 @@ public class Player
     };
     }
 
+    public HotbarData Hotbar;
+
+    public bool MoveToHotbar(InventoryContainerType fromContainer, ItemRuntime item, int hotbarIndex)
+    {
+        if (!Inventory.ContainsKey(fromContainer))
+            return false;
+
+        if (!Inventory[fromContainer].items.Contains(item))
+            return false;
+
+        // N?u hotbar slot ?ã có item ? tr? v? container c?
+        if (Hotbar.slots[hotbarIndex] != null)
+        {
+            Inventory[fromContainer].AddItem(Hotbar.slots[hotbarIndex]);
+        }
+
+        // Remove kh?i container
+        Inventory[fromContainer].items.Remove(item);
+
+        // Gán vào hotbar
+        Hotbar.slots[hotbarIndex] = item;
+
+        return true;
+    }
+
+    public bool MoveFromHotbar(int hotbarIndex, InventoryContainerType toContainer)
+    {
+        if (!Inventory.ContainsKey(toContainer))
+            return false;
+
+        var item = Hotbar.slots[hotbarIndex];
+        if (item == null)
+            return false;
+
+        Inventory[toContainer].AddItem(item);
+
+        Hotbar.slots[hotbarIndex] = null;
+
+        return true;
+    }
+
+    public void MoveItem(
+    InventoryContainerType from,
+    InventoryContainerType to,
+    ItemRuntime item)
+    {
+        if (!Inventory.ContainsKey(from)) return;
+        if (!Inventory.ContainsKey(to)) return;
+
+        if (Inventory[from].items.Contains(item))
+        {
+            Inventory[from].items.Remove(item);
+            Inventory[to].items.Add(item);
+        }
+    }
+
     //
 
     public void LoadFromData(PlayerData data)
@@ -80,15 +138,7 @@ public class Player
         Exp = data.Exp;
         Lv = data.Lv;
         Gold = data.Gold;
-
-
-        //Inventory.Clear();
-        //if (data.Inventory == null) return;
-        //foreach (var item in data.Inventory)
-        //    Inventory.Add(ItemRuntime.FromData(item.Value));
-
-
-        //
+        
         Inventory = new Dictionary<InventoryContainerType, InventoryContainer>
         {
             { InventoryContainerType.Tool, new InventoryContainer { containerType = InventoryContainerType.Tool } },
@@ -114,8 +164,7 @@ public class Player
                     ItemRuntime.FromData(itemPair.Value)
                 );
             }
-        }
-        //
+        }        
     }
 }
 

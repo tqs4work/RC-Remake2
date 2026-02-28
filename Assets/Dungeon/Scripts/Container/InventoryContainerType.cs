@@ -3,5 +3,6 @@ public enum InventoryContainerType
     Tool,
     Farm,
     City,
-    Dungeon
+    Dungeon,
+    Hotbar
 }
