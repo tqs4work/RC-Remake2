@@ -38,6 +38,8 @@ public class FarmController_TA : MonoBehaviour
 
     public PlantData selectedPlant;
     bool isStandingOnHole = false;
+
+    [SerializeField] HotbarUI hotbar;
     private void Start()
     {
         toolScript = GetComponent<P_Action>();
@@ -136,12 +138,12 @@ public class FarmController_TA : MonoBehaviour
 
     void HandleFarmAction()
     {
+        ItemRuntime item = hotbar.GetSelectedItem();
+        if (item == null) return;
+
         if (seedMenuPanel.activeSelf) return;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Vừa click chuột! Tool hiện tại đang là số: " + toolScript.numberTool);
-        }
-        if (toolScript.numberTool == 3 &&  Input.GetMouseButtonDown(0))
+
+        if (item.itemType == ItemType.Shovel &&  Input.GetMouseButtonDown(0))
         {
             Debug.Log("Đào");
             Vector3Int cellPos = currentTargetCell;
@@ -155,35 +157,13 @@ public class FarmController_TA : MonoBehaviour
             }
              
         }
-        //if(toolScript.numberTool == 2 && Input.GetMouseButtonDown(0))
-        //{
-        //    if (selectedPlant == null || selectedPlant.growthStages.Count == 0)
-        //    {
-        //        Debug.Log("Chưa chọn hạt giống hoặc dữ liệu cây bị trống!");
-        //        return;
-        //    }
-        //    Debug.Log("Gieo hạt");
-        //    Vector3Int cellPos = currentTargetCell;
-        //    Debug.Log("CellPos: " + cellPos);
-        //    TileBase currentTileBase = tm_Hole.GetTile(cellPos);
-        //    if (currentTileBase != tb_Hole)
-        //    {
-        //        Debug.Log("Không thể gieo hạt ở đây, vì không phải là đất đã được đào");
-        //    }
-        //    else if (currentTileBase == tb_Hole)
-        //    {
-        //        // Xóa hole để lộ ra chỗ gieo hạt 
-        //        tm_Hole.SetTile(cellPos, null);
-        //        // Lấy Stage đầu tiên (Hạt giống vừa gieo)
-        //        TileBase seedTile = selectedPlant.growthStages[0].stageTile;
-        //        tm_Seed.SetTile(cellPos, seedTile);
-        //        Debug.Log("Đã gieo hạt thành công!");
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("Không thể gieo hạt ở đây, vì đã có hạt hoặc đất chưa được đào");
-        //    }
-        //}
+        else if(item.itemType == ItemType.WateringCan && Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Tưới nước");
+            Vector3Int cellPos = currentTargetCell;
+            Debug.Log("CellPos: " + cellPos);
+            TileBase currentTileBase = tm_Seed.GetTile(cellPos);
+        }    
 
     }
     
