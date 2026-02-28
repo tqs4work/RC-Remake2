@@ -5,261 +5,260 @@ public class P_Action : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator animator;
+    P_Move move;
 
-    Vector3 mousePos;
-    Vector3 mouseWPos;
     Vector3 direct;
-    bool isDetectE;
-    bool isDetectM;
-    public bool isAction;
-    bool isRoll;
-    bool isRA;
-    public int numberTool;
-    public GameObject select;
-    [SerializeField] GameObject arrowDir;
-    [SerializeField] GameObject aPos;
-    [SerializeField] GameObject bPos;
-    [SerializeField] GameObject arrowPre;
 
+    public bool isAction;
+    bool isRolling;
+    bool isRangedAiming;
+
+    [Header("References")]
+    [SerializeField] HotbarUI hotbar;
+    [SerializeField] GameObject arrowDir;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] Transform shootPoint;
+    [SerializeField] GameObject arrowPrefab;
+
+    [Header("Stone Drop")]
     [SerializeField] GameObject stone1;
     [SerializeField] GameObject stone2;
     [SerializeField] GameObject stone3;
-    void Start()
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        move = GetComponent<P_Move>();
     }
+
     void Update()
     {
-        ScrollMouse();
+        if (isAction) return;
 
-        arrowDir.SetActive(isRA && isAction);
+        HandleInput();
 
-
-        if (isRA)
-        {
+        if (isRangedAiming)
             Aim();
-        }
-
-        CheckE();
-
     }
-    void ScrollMouse()
-    {
-        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        select.GetComponent<RectTransform>().anchoredPosition = new Vector2(-250f + (numberTool - 1) * 100f, 60);
-        if (scrollInput > 0)
-        {
-            numberTool++;
-            if (numberTool > 6) numberTool = 1;
 
-        }
-        else if (scrollInput < 0)
+    void HandleInput()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            numberTool--;
-            if (numberTool < 1) numberTool = 6;
+            UseCurrentItem();
         }
-        if (Input.GetKey(KeyCode.LeftShift) && !isRoll)
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling)
         {
             StartCoroutine(Roll());
         }
-        if (Input.GetMouseButtonDown(0) && !isAction)
+    }
+
+    void UseCurrentItem()
+    {
+        ItemRuntime item = hotbar.GetSelectedItem();
+        if (item == null) return;
+
+        switch (item.itemType)
         {
-            switch (numberTool)
+            case ItemType.Weapon:
+                if (EnoughMP(5))
+                    StartCoroutine(MeleeAttack());
+                break;
+
+            case ItemType.Arrow:
+                if (EnoughMP(5))
+                    StartCoroutine(RangedAttack());
+                break;
+
+            case ItemType.Consumable:
+                Consume(item);
+                break;
+
+            case ItemType.Seed:
+                StartCoroutine(Dig());
+                break;
+
+            case ItemType.Stone:
+                StartCoroutine(Mining());
+                break;
+        }
+    }
+
+    bool EnoughMP(int cost)
+    {
+        if (PlayerRuntime.Instance.Player.Mp < cost)
+            return false;
+
+        PlayerRuntime.Instance.Player.Mp -= cost;
+        return true;
+    }
+
+    #region Consumable
+
+    void Consume(ItemRuntime item)
+    {
+        if (item.quantity <= 0) return;
+
+        var player = PlayerRuntime.Instance.Player;
+
+        player.Hp += item.hpAmount;
+        player.Mp += item.mpAmount;
+
+        item.quantity--;
+
+        if (item.quantity <= 0)
+            player.Inventory.Remove(item);
+
+        hotbar.Refresh();
+    }
+
+    #endregion
+
+    #region Melee
+
+    IEnumerator MeleeAttack()
+    {
+        isAction = true;
+
+        animator.SetTrigger("MA");
+        yield return new WaitForSeconds(0.4f);
+
+        DoMeleeHit();
+
+        yield return new WaitForSeconds(0.2f);
+        isAction = false;
+    }
+
+    void DoMeleeHit()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            1.5f,
+            LayerMask.GetMask("Enemy")
+        );
+
+        foreach (var c in enemies)
+        {
+            if (!c.CompareTag("Enemy")) continue;
+
+            c.GetComponent<Animator>()?.SetTrigger("Hurt");
+
+            Rigidbody2D enemyRb = c.GetComponent<Rigidbody2D>();
+            if (enemyRb != null)
             {
-                case 1:
-                    StartCoroutine(Axe());
-                    break;
-                case 2:
-                    StartCoroutine(Minning());
-                    break;
-                case 3:
-                    StartCoroutine(Dig());
-                    break;
-                case 4:
-                    StartCoroutine(Water());
-                    break;
-                case 5:
-                    StartCoroutine(MA());
-                    break;
-                case 6:
-                    StartCoroutine(RA());
-                    break;
-                default:
-                    break;
+                Vector2 forceDir = (c.transform.position - transform.position).normalized;
+                enemyRb.AddForce(forceDir * 5f, ForceMode2D.Impulse);
             }
         }
     }
 
-    public IEnumerator Water()
-    {
-        animator.SetTrigger("Water");
-        isAction = true;
-        yield return new WaitForSeconds(1f);
-        isAction = false;
-    }
+    #endregion
 
-    public IEnumerator Axe()
-    {
-        animator.SetTrigger("Axe");
-        isAction = true;
-        yield return new WaitForSeconds(1f);
-        isAction = false;
-    }
+    #region Ranged
 
-    public IEnumerator Hammer()
+    IEnumerator RangedAttack()
     {
-        animator.SetTrigger("Hammer");
         isAction = true;
-        yield return new WaitForSeconds(1f);
-        isAction = false;
-    }
-    public IEnumerator Minning()
-    {
-        if (isDetectM)
-        {
-            TurnBody();
-        }
-        animator.SetTrigger("Mining");
-        isAction = true;
-        yield return new WaitForSeconds(4 / 6f);
-        Hit2();
-        yield return new WaitForSeconds(2 / 6f);
-        isAction = false;
-    }
+        isRangedAiming = true;
 
-    public IEnumerator Dig()
-    {
-        animator.SetTrigger("Dig");
-        isAction = true;
-        yield return new WaitForSeconds(1f);
-        isAction = false;
-    }
-
-    public IEnumerator Roll()
-    {
-        animator.SetTrigger("Roll");
-        isRoll = true;
-        yield return new WaitForSeconds(1f);
-        isRoll = false;
-    }
-
-    public IEnumerator MA()
-    {
-        PlayerRuntime.Instance.Player.Mp -= 5;
-        if (isDetectE)
-        {
-            TurnBody();
-        }
-        animator.SetTrigger("MA");
-        isAction = true;
-        yield return new WaitForSeconds(4 / 6f);
-        Hit1();
-        yield return new WaitForSeconds(2 / 6f);
-        isAction = false;
-    }
-
-    public IEnumerator RA()
-    {
-        PlayerRuntime.Instance.Player.Mp -= 5;
         animator.SetTrigger("RA");
-        isRA = true;
-        isAction = true;
-        yield return new WaitForSeconds(4 / 6f);
-        GameObject a = Instantiate(arrowPre, bPos.transform.position, Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90));
-        a.GetComponent<Rigidbody2D>().linearVelocity = direct * 15f;
-        Destroy(a, 3f);
-        isRA = false;
-        yield return new WaitForSeconds(2 / 6f);
+
+        yield return new WaitForSeconds(0.4f);
+
+        ShootArrow();
+
+        isRangedAiming = false;
+
+        yield return new WaitForSeconds(0.2f);
         isAction = false;
+    }
+
+    void ShootArrow()
+    {
+        GameObject arrow = Instantiate(
+            arrowPrefab,
+            shootPoint.position,
+            Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90)
+        );
+
+        arrow.GetComponent<Rigidbody2D>().linearVelocity = direct * 15f;
+        Destroy(arrow, 3f);
     }
 
     void Aim()
     {
-        mousePos = Input.mousePosition;
-        mouseWPos = Camera.main.ScreenToWorldPoint(mousePos);
-        direct = (mouseWPos - transform.position).normalized;
-        arrowDir.transform.rotation = Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90);
-        GetComponent<P_Move>().lastX = direct.x;
-        GetComponent<P_Move>().lastY = direct.y;
+        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direct = (mouse - transform.position).normalized;
+
+        arrowDir.SetActive(true);
+        arrowDir.transform.rotation =
+            Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90);
+
+        move.lastX = direct.x;
+        move.lastY = direct.y;
+
         animator.SetFloat("X", direct.x);
         animator.SetFloat("Y", direct.y);
     }
 
-    void TurnBody()
+    #endregion
+
+    #region Mining / Dig
+
+    IEnumerator Mining()
     {
-        GetComponent<P_Move>().lastX = direct.x;
-        GetComponent<P_Move>().lastY = direct.y;
-        animator.SetFloat("X", direct.x);
-        animator.SetFloat("Y", direct.y);
-    }
-    void CheckE()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCapsuleAll(aPos.transform.position, new Vector2(3, 3), CapsuleDirection2D.Horizontal, 0, LayerMask.GetMask("Enemy"));
-        foreach (Collider2D c in enemies)
-        {
-            if (enemies.Length == 0)
-            {
-                isDetectE = false;
-            }
-            else
-            {
-                isDetectE = true;
-                direct = (c.transform.position - transform.position).normalized;
-            }
-        }
+        isAction = true;
+
+        animator.SetTrigger("Mining");
+        yield return new WaitForSeconds(0.6f);
+
+        DropStone();
+
+        yield return new WaitForSeconds(0.2f);
+        isAction = false;
     }
 
-    void CheckM()
+    void DropStone()
     {
-        Collider2D[] enemies = Physics2D.OverlapCapsuleAll(aPos.transform.position, new Vector2(3, 3), CapsuleDirection2D.Horizontal, 0, LayerMask.GetMask("Stone"));
-        foreach (Collider2D c in enemies)
+        Collider2D[] stones = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            1.5f,
+            LayerMask.GetMask("Stone")
+        );
+
+        foreach (var c in stones)
         {
-            if (enemies.Length == 0)
-            {
-                isDetectM = false;
-            }
-            else
-            {
-                isDetectM = true;
-                direct = (c.transform.position - transform.position).normalized;
-            }
-        }
-    }
+            Vector3 dropPos = transform.position + Random.insideUnitSphere * 0.5f;
+            dropPos.z = 0;
 
-    void Hit1()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCapsuleAll(aPos.transform.position, new Vector2(3, 3), CapsuleDirection2D.Horizontal, 0, LayerMask.GetMask("Enemy"));
-
-        foreach (Collider2D c in enemies)
-        {
-            if (c.CompareTag("Enemy"))
-            {
-                c.GetComponent<Animator>().SetTrigger("Hurt");
-                //c.GetComponent<E_Life>().hp -= 1;
-                c.GetComponent<Rigidbody2D>().AddForce((c.transform.position - transform.position) * 5f, ForceMode2D.Impulse);
-            }
-        }
-    }
-
-    void Hit2()
-    {
-        Collider2D[] enemies = Physics2D.OverlapCapsuleAll(aPos.transform.position, new Vector2(3, 3), CapsuleDirection2D.Horizontal, 0, LayerMask.GetMask("Stone"));
-
-        foreach (Collider2D c in enemies)
-        {
             if (c.CompareTag("Stone1"))
-            {
-                Instantiate(stone1, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
-            }
+                Instantiate(stone1, dropPos, Quaternion.identity);
+
             if (c.CompareTag("Stone2"))
-            {
-                Instantiate(stone2, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
-            }
+                Instantiate(stone2, dropPos, Quaternion.identity);
+
             if (c.CompareTag("Stone3"))
-            {
-                Instantiate(stone3, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
-            }
+                Instantiate(stone3, dropPos, Quaternion.identity);
         }
+    }
+
+    IEnumerator Dig()
+    {
+        isAction = true;
+        animator.SetTrigger("Dig");
+        yield return new WaitForSeconds(1f);
+        isAction = false;
+    }
+
+    #endregion
+
+    IEnumerator Roll()
+    {
+        isRolling = true;
+        animator.SetTrigger("Roll");
+        yield return new WaitForSeconds(1f);
+        isRolling = false;
     }
 }

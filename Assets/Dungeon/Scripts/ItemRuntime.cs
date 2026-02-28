@@ -3,6 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class ItemRuntime
 {
+    public ItemType itemType;
+
     public string itemID;
     public string itemName;
     public string description;    
@@ -38,6 +40,8 @@ public class ItemRuntime
     {
         return new ItemRuntime
         {
+            itemType = item.itemType,
+
             itemID = item.itemID,
             itemName = item.itemName,
             description = item.description,
