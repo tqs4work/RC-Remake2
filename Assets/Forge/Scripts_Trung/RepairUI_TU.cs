@@ -5,6 +5,7 @@ using System.Collections;
 
 public class RepairUI_TU : MonoBehaviour
 {
+    public static RepairUI_TU Instance;
     [Header("Root")]
     public GameObject panelRoot;
     public Button btnClose;
@@ -46,7 +47,7 @@ public class RepairUI_TU : MonoBehaviour
     void Awake()
     {
         HideAllDialogs();
-
+        Instance = this;
         if (btnClose) btnClose.onClick.AddListener(Close);
         if (btnConfirmOK) btnConfirmOK.onClick.AddListener(StartRepair);
         if (btnConfirmCancel) btnConfirmCancel.onClick.AddListener(() => dialogConfirm.SetActive(false));

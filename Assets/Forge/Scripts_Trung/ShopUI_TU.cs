@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShopUI : MonoBehaviour
+public class ShopUI_TU : MonoBehaviour
 {
     public enum Mode { Buy, Sell }
 
@@ -172,5 +172,16 @@ public class ShopUI : MonoBehaviour
             default:
                 return InventoryContainerType.City;
         }
+    }
+    public void CloseShop()
+    {
+        gameObject.SetActive(false);
+
+        if (currentRow)
+            currentRow.SetSelected(false);
+
+        currentRow = null;
+
+        onShopClosed?.Invoke();
     }
 }

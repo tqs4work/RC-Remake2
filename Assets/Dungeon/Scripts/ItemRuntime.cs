@@ -12,16 +12,15 @@ public class ItemRuntime
 
     
 
-    [Header("Hình ?nh")]
+    [Header("Hï¿½nh ?nh")]
     public Sprite icon;
 
     [Header("Ch? s? v?t ph?m")]
     public bool isStackable;
     public int maxStack;
     public int price;
-    public int level;
 
-    [Header("V?t ph?m tiêu th?")]
+    [Header("V?t ph?m tiï¿½u th?")]
     public int quantity;
     public int hpAmount;
     public int mpAmount;
@@ -29,18 +28,24 @@ public class ItemRuntime
     [Header("V?t ph?m chi?n ??u")]
     public float atk;
     public float def;
-    public float durability;
+    public float durability = 100f;
 
     [Header("H?t gi?ng")]
     public float growTime;
 
     [Header("Ch? s? ??c bi?t")]
     public float bonus;
+    public int upgradeLevel; // 0-5
+
+    [Header("Upgrade Icons")]
+    
+    public Item itemData;   // reference tá»›i ScriptableObject gá»‘c
 
     public static ItemRuntime FromItem(Item item)
     {
         return new ItemRuntime
         {
+            itemData = item,
             itemType = item.itemType,
 
             itemID = item.itemID,
@@ -52,7 +57,7 @@ public class ItemRuntime
             maxStack = item.maxStack,
             
             price = item.price,
-            level = item.level,
+
 
             quantity = item.quantity,
             hpAmount = item.hpAmount,
@@ -60,11 +65,12 @@ public class ItemRuntime
 
             atk = item.atk,
             def = item.def,
-            durability = item.durability,
+            durability = item.maxDurability,
 
             growTime = item.growTime,
 
-            bonus = item.bonus
+            bonus = item.bonus,
+            upgradeLevel = 0
         };
     }
 
@@ -83,7 +89,7 @@ public class ItemRuntime
 
             
             price = int.Parse(data.price),
-            level = int.Parse(data.level),
+
 
             quantity = int.Parse(data.quantity),
             hpAmount = int.Parse(data.hpAmount),
@@ -92,12 +98,23 @@ public class ItemRuntime
             atk = float.Parse(data.atk),
             def = float.Parse(data.def),
             durability = float.Parse(data.durability),
+            upgradeLevel = int.Parse(data.upgradeLevel),
 
             growTime = float.Parse(data.growTime),
 
             bonus = float.Parse(data.bonus)
         };
     }
+    public void ApplyUpgradeVisual()
+    {
+       upgradeLevel = Mathf.Clamp(upgradeLevel, 0, 5);
 
+        if (itemData != null &&
+            itemData.upgradeIcons != null &&
+            itemData.upgradeIcons.Length > upgradeLevel)
+        {
+            icon = itemData.upgradeIcons[upgradeLevel];
+        }
+    }
 }
 
