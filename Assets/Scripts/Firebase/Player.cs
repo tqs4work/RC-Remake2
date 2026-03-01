@@ -167,6 +167,8 @@ public class Player
                 );
             }
         }
+
+        Wrapper = data.Wrapper;
     }
 }
 
