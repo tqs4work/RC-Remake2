@@ -441,7 +441,7 @@ public class SaveWrapper
                     y = pos.y,
                     z = pos.z,
                     state = 2, // state 2 là có cây
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = activeCrops[pos].plantInfo.seedName,
                     stage = activeCrops[pos].currentStage, //stage hiện tại của cây 
                     isWatered = activeCrops[pos].isWatered // trạng thái đã tưới hay chưa 
                 });
@@ -453,7 +453,7 @@ public class SaveWrapper
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = "none",
                     state = 1
                 });
             }
@@ -464,7 +464,7 @@ public class SaveWrapper
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = "none",
                     state = 0
                 });
             }
