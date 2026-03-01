@@ -26,6 +26,7 @@ public class InventoryUI : MonoBehaviour
     [Header("Reference")]
     public HotbarUI hotbarUI;
 
+
     void Start()
     {
         hotbarUI = Object.FindFirstObjectByType<HotbarUI>();
@@ -140,7 +141,7 @@ public class InventoryUI : MonoBehaviour
                 hover.SetDurability(item.itemData.maxDurability);
                 hover.SetAnchor(slot.GetComponent<RectTransform>());
 
-                if (item.isStackable && item.quantity > 1)
+                if (item.isStackable && item.quantity >= 1)
                 {
                     bgImg.gameObject.SetActive(true);
                     amount.text = item.quantity.ToString();
@@ -149,11 +150,7 @@ public class InventoryUI : MonoBehaviour
                 var itemCopy = item;
                 var typeCopy = type;
 
-                slot.onClick.RemoveAllListeners();
-                //slot.onClick.AddListener(() =>
-                //{
-                //    MoveItemToHotbar(typeCopy, itemCopy);
-                //});
+                slot.onClick.RemoveAllListeners();                
 
                 slot.onClick.AddListener(() =>
                 {
@@ -168,23 +165,33 @@ public class InventoryUI : MonoBehaviour
 
             }
         }
-    }
+    }    
+
+    // ===== CHANGED: Rewrite theo container system =====
     void MoveItemToHotbar(InventoryContainerType fromContainer, ItemRuntime item)
     {
         var player = PlayerRuntime.Instance.Player;
 
-        for (int i = 0; i < player.Hotbar.slots.Length; i++)
+        var hotbarContainer =
+            player.Inventory[InventoryContainerType.Hotbar];
+
+        // ===== CHANGED: ki?m tra còn ch? tr?ng (maxSize = 6) =====
+        if (hotbarContainer.maxSize > 0 &&
+            hotbarContainer.items.Count >= hotbarContainer.maxSize)
         {
-            if (player.Hotbar.slots[i] == null)
-            {
-                player.MoveToHotbar(fromContainer, item, i);
-                break;
-            }
+            Debug.Log("Hotbar Full");
+            return;
         }
+
+        // ===== CHANGED: dùng MoveItem thay vì MoveToHotbar =====
+        player.MoveItem(fromContainer,
+                        InventoryContainerType.Hotbar,
+                        item);
 
         hotbarUI.Refresh();
         RefreshAll();
     }
+    //
 
     public void RefreshAll()
     {

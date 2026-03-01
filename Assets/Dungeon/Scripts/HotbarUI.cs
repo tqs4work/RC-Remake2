@@ -5,13 +5,9 @@ public class HotbarUI : MonoBehaviour
 {
     public HotbarSlot[] slots;
     public int selectedIndex = 0;    
-    
-    HotbarData hotbarData;    
 
     void Start()
     {        
-        hotbarData = PlayerRuntime.Instance.Player.Hotbar;        
-
         Refresh();
         UpdateHighlight();
     }
@@ -42,22 +38,27 @@ public class HotbarUI : MonoBehaviour
 
             UpdateHighlight();
         }
-    }
-    
+    }    
+
     //
     public void Refresh()
     {
+        // ===== CHANGED: L?y container tr?c ti?p m?i l?n =====
+        var hotbarContainer =
+            PlayerRuntime.Instance.Player
+            .Inventory[InventoryContainerType.Hotbar];
+
         for (int i = 0; i < slots.Length; i++)
         {
             // ?? GÁN INDEX CHO SLOT
             slots[i].slotIndex = i;
 
-            var item = hotbarData.slots[i];
+            ItemRuntime item = null;
 
-            if (item != null)
-                slots[i].SetItem(item);
-            else
-                slots[i].SetItem(null);
+            if (i < hotbarContainer.items.Count)
+                item = hotbarContainer.items[i];
+
+            slots[i].SetItem(item);
         }
     }
     //
@@ -72,6 +73,14 @@ public class HotbarUI : MonoBehaviour
     
     public ItemRuntime GetSelectedItem()
     {
-        return hotbarData.slots[selectedIndex];
+        var hotbarContainer =
+            PlayerRuntime.Instance.Player
+            .Inventory[InventoryContainerType.Hotbar];
+
+        // ===== CHANGED: l?y t? container =====
+        if (selectedIndex < hotbarContainer.items.Count)
+            return hotbarContainer.items[selectedIndex];
+
+        return null;
     }
 }

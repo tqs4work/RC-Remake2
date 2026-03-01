@@ -89,6 +89,7 @@ public class UpdateCanvas : MonoBehaviour
         }
         else
         {
+            PlayerRuntime.Instance.Player.Hp = Hp;
             hpNum.text = Hp.ToString("F0") + " / " + hp0.ToString();
             isDead = false;
         }

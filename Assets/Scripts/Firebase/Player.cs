@@ -12,125 +12,179 @@ public class Player
     public int Lv;
     public int Gold;
 
-    //public List<ItemRuntime> Inventory = new();    
-
-    //
-    public Dictionary<InventoryContainerType, InventoryContainer> Inventory
-    = new();
+    // ===== INVENTORY DICTIONARY =====
+    public Dictionary<InventoryContainerType, InventoryContainer> Inventory = new();
 
     public List<TileState> Wrapper = new();
-
 
     public Player()
     {
         Inventory[InventoryContainerType.Tool] =
-            new InventoryContainer { containerType = InventoryContainerType.Tool };
+            new InventoryContainer
+            {
+                containerType = InventoryContainerType.Tool,
+                maxSize = 27        // ===== CHANGED =====
+            };
 
         Inventory[InventoryContainerType.Farm] =
-            new InventoryContainer { containerType = InventoryContainerType.Farm };
+            new InventoryContainer
+            {
+                containerType = InventoryContainerType.Farm,
+                maxSize = 27        // ===== CHANGED =====
+            };
 
         Inventory[InventoryContainerType.City] =
-            new InventoryContainer { containerType = InventoryContainerType.City };
+            new InventoryContainer
+            {
+                containerType = InventoryContainerType.City,
+                maxSize = 27        // ===== CHANGED =====
+            };
 
         Inventory[InventoryContainerType.Dungeon] =
-            new InventoryContainer { containerType = InventoryContainerType.Dungeon };
+            new InventoryContainer
+            {
+                containerType = InventoryContainerType.Dungeon,
+                maxSize = 27        // ===== CHANGED =====
+            };
 
-        Hotbar = new HotbarData(6); // 6 slot
+        Inventory[InventoryContainerType.Hotbar] =
+            new InventoryContainer
+            {
+                containerType = InventoryContainerType.Hotbar,
+                maxSize = 6
+            };
     }
 
-
-    private InventoryContainerType GetContainerType(string itemID)
+    // =====================================================
+    // ===== NEW: STACK LOGIC (QUAN TRỌNG NHẤT) ============
+    // =====================================================
+    private bool TryStackOrAdd(InventoryContainer container, ItemRuntime item)
     {
-        if (string.IsNullOrEmpty(itemID))
-            return InventoryContainerType.Tool;
-
-        char prefix = itemID[0];
-
-        return prefix switch
+        // ===== NEW: kiểm tra stack trước =====
+        foreach (var invItem in container.items)
         {
-            'T' => InventoryContainerType.Tool,
-            'F' => InventoryContainerType.Farm,
-            'C' => InventoryContainerType.City,
-            'D' => InventoryContainerType.Dungeon,
-            _ => InventoryContainerType.Tool
-        };
+            if (invItem.itemID == item.itemID && invItem.isStackable)
+            {
+                invItem.quantity += item.quantity;
+                return true;
+            }
+        }
+
+        // ===== NEW: kiểm tra full container =====
+        if (container.maxSize > 0 &&
+            container.items.Count >= container.maxSize)
+            return false;
+
+        container.items.Add(item);
+        return true;
     }
 
-    public void AddItem(Item item1, ItemRuntime item)
-    {
-        var containerType = GetContainerType(item.itemID);
-        Inventory[containerType].AddItem(item);
-    }
-
-    public void InitializeInventory()
-    {
-        Inventory = new Dictionary<InventoryContainerType, InventoryContainer>
-    {
-        { InventoryContainerType.Tool, new InventoryContainer() },
-        { InventoryContainerType.Farm, new InventoryContainer() },
-        { InventoryContainerType.City, new InventoryContainer() },
-        { InventoryContainerType.Dungeon, new InventoryContainer() }
-    };
-    }
-
-    public HotbarData Hotbar;
-
-    public bool MoveToHotbar(InventoryContainerType fromContainer, ItemRuntime item, int hotbarIndex)
+    // =====================================================
+    // ===== MOVE TO HOTBAR (STACK + SLOT FIXED) ==========
+    // =====================================================
+    public bool MoveToHotbar(
+        InventoryContainerType fromContainer,
+        ItemRuntime item,
+        int hotbarIndex)
     {
         if (!Inventory.ContainsKey(fromContainer))
             return false;
 
-        if (!Inventory[fromContainer].items.Contains(item))
+        var source = Inventory[fromContainer];
+        var hotbar = Inventory[InventoryContainerType.Hotbar];
+
+        if (!source.items.Contains(item))
             return false;
 
-        // N?u hotbar slot ?� c� item ? tr? v? container c?
-        if (Hotbar.slots[hotbarIndex] != null)
+        // ===== NEW: nếu hotbar slot đã có item =====
+        if (hotbarIndex < hotbar.items.Count)
         {
-            Inventory[fromContainer].AddItem(Hotbar.slots[hotbarIndex]);
+            var existing = hotbar.items[hotbarIndex];
+
+            // ===== NEW: nếu stack được thì cộng dồn =====
+            if (existing != null &&
+                existing.itemID == item.itemID &&
+                existing.isStackable)
+            {
+                existing.quantity += item.quantity;
+                source.items.Remove(item);
+                return true;
+            }
+
+            // ===== NEW: nếu có item khác thì trả về source =====
+            if (existing != null)
+            {
+                TryStackOrAdd(source, existing);
+                hotbar.items[hotbarIndex] = null;
+            }
         }
 
-        // Remove kh?i container
-        Inventory[fromContainer].items.Remove(item);
+        // ===== NEW: đảm bảo list đủ size =====
+        while (hotbar.items.Count <= hotbarIndex)
+            hotbar.items.Add(null);
 
-        // G�n v�o hotbar
-        Hotbar.slots[hotbarIndex] = item;
+        hotbar.items[hotbarIndex] = item;
+        source.items.Remove(item);
 
         return true;
     }
 
+    // =====================================================
+    // ===== MOVE FROM HOTBAR (STACK FIXED) ===============
+    // =====================================================
     public bool MoveFromHotbar(int hotbarIndex, InventoryContainerType toContainer)
     {
         if (!Inventory.ContainsKey(toContainer))
             return false;
 
-        var item = Hotbar.slots[hotbarIndex];
+        var hotbar = Inventory[InventoryContainerType.Hotbar];
+        var target = Inventory[toContainer];
+
+        if (hotbarIndex >= hotbar.items.Count)
+            return false;
+
+        var item = hotbar.items[hotbarIndex];
+
         if (item == null)
             return false;
 
-        Inventory[toContainer].AddItem(item);
+        // ===== CHANGED: dùng TryStackOrAdd thay vì AddItem =====
+        bool success = TryStackOrAdd(target, item);
 
-        Hotbar.slots[hotbarIndex] = null;
+        if (!success)
+            return false;
+
+        hotbar.items[hotbarIndex] = null;
 
         return true;
     }
 
+    // =====================================================
+    // ===== MOVE GIỮA CONTAINER (STACK FIXED) ============
+    // =====================================================
     public void MoveItem(
-    InventoryContainerType from,
-    InventoryContainerType to,
-    ItemRuntime item)
+        InventoryContainerType from,
+        InventoryContainerType to,
+        ItemRuntime item)
     {
         if (!Inventory.ContainsKey(from)) return;
         if (!Inventory.ContainsKey(to)) return;
 
-        if (Inventory[from].items.Contains(item))
+        var source = Inventory[from];
+        var target = Inventory[to];
+
+        if (!source.items.Contains(item)) return;
+
+        // ===== CHANGED: dùng stack logic =====
+        if (TryStackOrAdd(target, item))
         {
-            Inventory[from].items.Remove(item);
-            Inventory[to].items.Add(item);
+            source.items.Remove(item);
         }
     }
 
-    //
-
+    // =====================================================
+    // ===== LOAD DATA (HOTBAR FIXED) ======================
+    // =====================================================
     public void LoadFromData(PlayerData data)
     {
         ID = data.ID;
@@ -142,12 +196,43 @@ public class Player
         Gold = data.Gold;
 
         Inventory = new Dictionary<InventoryContainerType, InventoryContainer>
+{
+    { InventoryContainerType.Tool,
+        new InventoryContainer
         {
-            { InventoryContainerType.Tool, new InventoryContainer { containerType = InventoryContainerType.Tool } },
-            { InventoryContainerType.Farm, new InventoryContainer { containerType = InventoryContainerType.Farm } },
-            { InventoryContainerType.City, new InventoryContainer { containerType = InventoryContainerType.City } },
-            { InventoryContainerType.Dungeon, new InventoryContainer { containerType = InventoryContainerType.Dungeon } }
-        };
+            containerType = InventoryContainerType.Tool,
+            maxSize = 27            // ===== CHANGED =====
+        }
+    },
+    { InventoryContainerType.Farm,
+        new InventoryContainer
+        {
+            containerType = InventoryContainerType.Farm,
+            maxSize = 27            // ===== CHANGED =====
+        }
+    },
+    { InventoryContainerType.City,
+        new InventoryContainer
+        {
+            containerType = InventoryContainerType.City,
+            maxSize = 27            // ===== CHANGED =====
+        }
+    },
+    { InventoryContainerType.Dungeon,
+        new InventoryContainer
+        {
+            containerType = InventoryContainerType.Dungeon,
+            maxSize = 27            // ===== CHANGED =====
+        }
+    },
+    { InventoryContainerType.Hotbar,
+        new InventoryContainer
+        {
+            containerType = InventoryContainerType.Hotbar,
+            maxSize = 6
+        }
+    }
+};
 
         if (data.Inventory == null)
             return;
@@ -169,6 +254,5 @@ public class Player
         }
 
         Wrapper = data.Wrapper;
-    }
+    }    
 }
-

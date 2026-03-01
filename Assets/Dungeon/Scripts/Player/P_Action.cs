@@ -106,6 +106,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Consumable:
+                StartCoroutine(Doing());
                 Consume(item);
                 break;
 
@@ -114,7 +115,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Stone:
-                StartCoroutine(Mining());
+                //
                 break;
         }
     }
@@ -134,25 +135,38 @@ public class P_Action : MonoBehaviour
     {
         if (item == null || item.quantity <= 0)
             return;
-
+                
         var player = PlayerRuntime.Instance.Player;
+
 
         // HP / MP
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
-        item.quantity--;
-        
-        if (item.quantity <= 0)
+        item.quantity--;        
+
+        if(item.quantity <= 0)
         {
-            if (player.Inventory.ContainsKey(InventoryContainerType.Hotbar))
-            {
-                var Container = player.Inventory[InventoryContainerType.Hotbar];
-                Container.items.Remove(item);
-            }
+            // ===== CHANGED: Xóa kh?i Hotbar container =====
+            var hotbarContainer =
+                player.Inventory[InventoryContainerType.Hotbar];
+
+            hotbarContainer.items.Remove(item);
         }
 
+        
+
         hotbar.Refresh();
+    }
+
+    IEnumerator Doing()
+    {
+        isAction = true;
+
+        animator.SetTrigger("Doing");
+        yield return new WaitForSeconds(1f);        
+        
+        isAction = false;
     }
 
     #endregion
