@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShopUI : MonoBehaviour
+public class ShopUI_TU : MonoBehaviour
 {
     public enum Mode { Buy, Sell }
 

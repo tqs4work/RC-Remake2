@@ -28,6 +28,7 @@ public class Item2String
     public string atk;
     public string def;
     public string durability;
+    public string upgradeLevel;
 
     [Header("Hạt giống")]
     public string growTime;
@@ -54,7 +55,7 @@ public class Item2String
             maxStack = item.maxStack.ToString(),
             
             price = item.price.ToString(),
-            level = item.level.ToString(),
+            upgradeLevel = item.upgradeLevel.ToString(),
 
             quantity = item.quantity.ToString(),
             hpAmount = item.hpAmount.ToString(),

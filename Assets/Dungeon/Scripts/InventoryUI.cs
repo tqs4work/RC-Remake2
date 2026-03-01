@@ -97,7 +97,7 @@ public class InventoryUI : MonoBehaviour
 
 
     private float lastClickTime = 0f;
-    private float doubleClickThreshold = 0.3f; // 0.3 giây
+    private float doubleClickThreshold = 0.3f; // 0.3 giï¿½y
 
     void RenderItems(InventoryContainerType type, Transform parent)
     {
@@ -132,6 +132,13 @@ public class InventoryUI : MonoBehaviour
 
                 iconImg.sprite = item.icon;
                 iconImg.enabled = true;
+                var hover = slot.GetComponent<ItemHoverHandler_TU>();
+                if (hover == null)
+                    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
+
+                hover.Setup(item.itemData, item.upgradeLevel);
+                hover.SetDurability(item.itemData.maxDurability);
+                hover.SetAnchor(slot.GetComponent<RectTransform>());
 
                 if (item.isStackable && item.quantity > 1)
                 {
