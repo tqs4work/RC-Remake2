@@ -5,10 +5,10 @@ public class HarvestPopupUI : MonoBehaviour
 {
     public Button harvestBtn;
     private Vector3Int cropPosition;
-    private FarmController_TA farmManager;
+    private FarmController farmManager;
 
     // Khi cây chín sẽ có cái nút hiện ra và hàm này sẽ chạy ngay lúc ấy 
-    public void Setup(Vector3Int pos, FarmController_TA farm) // truyền vị trí và script farm vô 
+    public void Setup(Vector3Int pos, FarmController farm) // truyền vị trí và script farm vô 
     {
         cropPosition = pos;
         farmManager = farm;
