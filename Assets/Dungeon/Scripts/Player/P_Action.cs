@@ -124,19 +124,18 @@ public class P_Action : MonoBehaviour
 
         var player = PlayerRuntime.Instance.Player;
 
-        // H?i HP / MP
+        // HP / MP
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
         item.quantity--;
-
-        // N?u h?t item ? xóa kh?i Tool container
+        
         if (item.quantity <= 0)
         {
-            if (player.Inventory.ContainsKey(InventoryContainerType.Tool))
+            if (player.Inventory.ContainsKey(InventoryContainerType.Hotbar))
             {
-                var toolContainer = player.Inventory[InventoryContainerType.Tool];
-                toolContainer.items.Remove(item);
+                var Container = player.Inventory[InventoryContainerType.Hotbar];
+                Container.items.Remove(item);
             }
         }
 
