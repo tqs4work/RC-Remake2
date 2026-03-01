@@ -27,13 +27,13 @@ public class ChooseSeedui : MonoBehaviour
     public void OnSelect()
     {
         Debug.Log("BUTTON ĐÃ ĐƯỢC NHẤN!");
-        FarmController_TA player = FindAnyObjectByType<FarmController_TA>();
+        FarmController player = GameObject.Find("FarmController").GetComponent<FarmController>();
 
-        if (player != null && data != null  ) //&&PlayerRuntime.Instance.Player.Gold > data.buyPrice - đổi con player trong login mới check đc 
+        if (player != null && data != null && PlayerRuntime.Instance.Player.Gold > data.buyPrice)// - đổi con player trong login mới check đc 
         {
             //trừ tiền 
-            //PlayerRuntime.Instance.Player.Gold -= data.buyPrice;
-
+            PlayerRuntime.Instance.Player.Gold -= data.buyPrice;
+            Debug.Log("Tiền = " + PlayerRuntime.Instance.Player.Gold);
 
             //Lấy pos
             Vector3Int cellPos = player.GetCurrentTargetCell(); 

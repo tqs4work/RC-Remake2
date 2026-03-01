@@ -298,7 +298,7 @@ public class FarmController_TA : MonoBehaviour
             Debug.Log($"Cây ở {crop.position} ĐÃ CHÍN TỰ ĐỘNG!");
             Vector3 worldPos = tm_Seed.GetCellCenterWorld(crop.position);
             GameObject popup = Instantiate(harvestPopupPrefab, worldPos, Quaternion.identity);
-            popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
+            //popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
         }
     }
     public void HarvestCrop(Vector3Int pos)
