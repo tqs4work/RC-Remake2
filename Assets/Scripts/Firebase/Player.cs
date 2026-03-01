@@ -54,7 +54,7 @@ public class Player
         };
     }
 
-    public void AddItem(ItemRuntime item)
+    public void AddItem(Item item1, ItemRuntime item)
     {
         var containerType = GetContainerType(item.itemID);
         Inventory[containerType].AddItem(item);
@@ -81,7 +81,7 @@ public class Player
         if (!Inventory[fromContainer].items.Contains(item))
             return false;
 
-        // N?u hotbar slot ?ã có item ? tr? v? container c?
+        // N?u hotbar slot ?ï¿½ cï¿½ item ? tr? v? container c?
         if (Hotbar.slots[hotbarIndex] != null)
         {
             Inventory[fromContainer].AddItem(Hotbar.slots[hotbarIndex]);
@@ -90,7 +90,7 @@ public class Player
         // Remove kh?i container
         Inventory[fromContainer].items.Remove(item);
 
-        // Gán vào hotbar
+        // Gï¿½n vï¿½o hotbar
         Hotbar.slots[hotbarIndex] = item;
 
         return true;

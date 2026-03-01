@@ -2957,6 +2957,7 @@ MonoBehaviour:
   farmContainer: {fileID: 0}
   cityContainer: {fileID: 0}
   dungeonContainer: {fileID: 0}
+  hotbarUI: {fileID: 0}
 --- !u!4 &139365128
 Transform:
   m_ObjectHideFlags: 0
@@ -12085,8 +12086,8 @@ MonoBehaviour:
   Exp: 0
   Lv: 0
   Gold: 0
-  canvas: {fileID: 0}
-  player: {fileID: 0}
+  canvas: {fileID: 333321365}
+  player: {fileID: 1823608429}
   hpBar: {fileID: 0}
   hpNum: {fileID: 0}
   mpBar: {fileID: 0}
@@ -12094,7 +12095,7 @@ MonoBehaviour:
   usernameText: {fileID: 0}
   lvNum: {fileID: 0}
   expBar: {fileID: 0}
-  goldNum: {fileID: 0}
+  goldNum: {fileID: 285148641}
   isDead: 0
   hp0: 0
   mp0: 100
@@ -13234,6 +13235,7 @@ MonoBehaviour:
   farmContainer: {fileID: 2028248117}
   cityContainer: {fileID: 1566135997}
   dungeonContainer: {fileID: 1927549137}
+  hotbarUI: {fileID: 0}
 --- !u!1 &866168213
 GameObject:
   m_ObjectHideFlags: 0
@@ -28072,7 +28074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1253096843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33379,7 +33381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 504.99988, y: 18.17237}
+  m_AnchoredPosition: {x: 504.99988, y: 18.172363}
   m_SizeDelta: {x: -935.78, y: -9.740967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457300334
@@ -35205,7 +35207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 513.85, y: 26.000008}
+  m_AnchoredPosition: {x: 513.85, y: 26}
   m_SizeDelta: {x: -910.46014, y: -9.9001465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1560220980
@@ -35710,7 +35712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 505.0199, y: 24.48841}
+  m_AnchoredPosition: {x: 505.0199, y: 24.488403}
   m_SizeDelta: {x: -935.89, y: -3.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1585901946
@@ -39983,6 +39985,11 @@ PrefabInstance:
 --- !u!4 &1823608428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8599178225650108117, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
+  m_PrefabInstance: {fileID: 1823608427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1823608429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3879140044489312321, guid: 50b5654d76f34cd488cc839789c4a7a7, type: 3}
   m_PrefabInstance: {fileID: 1823608427}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1835039957
