@@ -420,7 +420,7 @@ public class SaveWrapper
         }
     }
     public void SaveGameData()
-    {
+    {        
         SaveWrapper wrapper = new SaveWrapper();
         // duyệt vị trí theo cái vùng đấy baseground (nằm ở đáy) để lấy tất cả vị trí có tile, nếu có cây thì lưu thông tin cây
         foreach (var pos in tm_BaseGround.cellBounds.allPositionsWithin)
@@ -462,6 +462,11 @@ public class SaveWrapper
                 });
             }
         }
+
+
+        ///Sau khi đã có wrapper chứa tất cả thông tin cần thiết, ta sẽ lưu wrapper này vào PlayerRuntime để có thể truy cập lại sau khi load game
+        PlayerRuntime.Instance.Player.Wrapper = wrapper.allTiles;
+
     }
 }
 

@@ -18,6 +18,8 @@ public class Player
     public Dictionary<InventoryContainerType, InventoryContainer> Inventory
     = new();
 
+    public List<TileState> Wrapper = new();
+
 
     public Player()
     {

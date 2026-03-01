@@ -14,10 +14,10 @@ public static class PlayerDataConverter
             Exp = player.Exp,
             Lv = player.Lv,
             Gold = player.Gold,            
-            
-           
-            Inventory = new Dictionary<string, Dictionary<string, Item2String>>()
-            
+                       
+            Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
+
+            Wrapper = player.Wrapper != null ? new List<TileState>(player.Wrapper) : new List<TileState>(),
         };       
         
         foreach (var container in player.Inventory)
