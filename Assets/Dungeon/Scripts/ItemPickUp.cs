@@ -18,43 +18,48 @@ public class ItemPickup : MonoBehaviour
     public void Pickup()
     {
         ItemRuntime newItem = ItemRuntime.FromItem(itemData);
-
         var player = PlayerRuntime.Instance.Player;
 
-        // Xác ??nh container theo itemID prefix
-        InventoryContainerType containerType = GetContainerType(newItem.itemID);
+        InventoryContainerType containerType =
+            GetContainerType(newItem.itemID);
 
         var container = player.Inventory[containerType];
 
-        // Ki?m tra stack
+        // ======================================================
+        // ===== 1?? KI?M TRA STACK TR??C =======================
+        // ======================================================
+
         foreach (var invItem in container.items)
         {
-            if (invItem.itemID == newItem.itemID && invItem.isStackable)
+            if (invItem.itemID == newItem.itemID &&
+                invItem.isStackable)
             {
                 invItem.quantity += newItem.quantity;
 
-                Debug.Log($"Picked up: {newItem.itemName} (Total: {invItem.quantity})");
-                Destroy(gameObject);
-                return;
-            }
-
-            if (invItem.itemID == newItem.itemID && !invItem.isStackable)
-            {
-                newItem.itemID = newItem.itemID + " " + Random.Range(0, 1000);
-
-                container.items.Add(newItem);
-
-                Debug.Log($"Picked up: {newItem.itemName}");
+                Debug.Log($"Picked up: {newItem.itemName} (Stacked)");
                 Destroy(gameObject);
                 return;
             }
         }
 
-        // N?u ch?a t?n t?i
+        // ======================================================
+        // ===== 2?? KI?M TRA FULL TR??C KHI ADD ================
+        // ======================================================
+
+        if (container.maxSize > 0 &&
+            container.items.Count >= container.maxSize)
+        {
+            Debug.Log("Inventory Full! Cannot pick up.");
+            return; // ? KHÔNG Destroy ? v?n n?m trên ??t
+        }
+
+        // ======================================================
+        // ===== 3?? ADD ITEM M?I ===============================
+        // ======================================================
+
         container.items.Add(newItem);
 
         Debug.Log($"Picked up: {newItem.itemName}");
-
         Destroy(gameObject);
     }
 

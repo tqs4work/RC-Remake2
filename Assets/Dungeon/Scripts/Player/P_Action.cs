@@ -115,7 +115,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Stone:
-                StartCoroutine(Mining());
+                //
                 break;
         }
     }
@@ -143,12 +143,18 @@ public class P_Action : MonoBehaviour
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
-        item.quantity--;
-        
-        if (item.quantity <= 0)
-        {            
-            PlayerRuntime.Instance.Player.Hotbar.slots[hotbar.selectedIndex] = null;            
+        item.quantity--;        
+
+        if(item.quantity <= 0)
+        {
+            // ===== CHANGED: Xóa kh?i Hotbar container =====
+            var hotbarContainer =
+                player.Inventory[InventoryContainerType.Hotbar];
+
+            hotbarContainer.items.Remove(item);
         }
+
+        
 
         hotbar.Refresh();
     }

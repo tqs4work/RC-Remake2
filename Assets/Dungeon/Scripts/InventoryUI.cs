@@ -158,23 +158,33 @@ public class InventoryUI : MonoBehaviour
 
             }
         }
-    }
+    }    
+
+    // ===== CHANGED: Rewrite theo container system =====
     void MoveItemToHotbar(InventoryContainerType fromContainer, ItemRuntime item)
     {
         var player = PlayerRuntime.Instance.Player;
 
-        for (int i = 0; i < player.Hotbar.slots.Length; i++)
+        var hotbarContainer =
+            player.Inventory[InventoryContainerType.Hotbar];
+
+        // ===== CHANGED: ki?m tra còn ch? tr?ng (maxSize = 6) =====
+        if (hotbarContainer.maxSize > 0 &&
+            hotbarContainer.items.Count >= hotbarContainer.maxSize)
         {
-            if (player.Hotbar.slots[i] == null)
-            {
-                player.MoveToHotbar(fromContainer, item, i);
-                break;
-            }
+            Debug.Log("Hotbar Full");
+            return;
         }
+
+        // ===== CHANGED: dùng MoveItem thay vì MoveToHotbar =====
+        player.MoveItem(fromContainer,
+                        InventoryContainerType.Hotbar,
+                        item);
 
         hotbarUI.Refresh();
         RefreshAll();
     }
+    //
 
     public void RefreshAll()
     {

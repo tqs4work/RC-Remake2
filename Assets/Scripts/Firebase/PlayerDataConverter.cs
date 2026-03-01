@@ -35,7 +35,7 @@ public static class PlayerDataConverter
                 data.Inventory[containerName][item.itemID] =
                     Item2String.FromRuntime(item);
             }
-        }        
+        }       
 
         return data;
     }

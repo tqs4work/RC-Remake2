@@ -57,12 +57,25 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
         {
             var player = PlayerRuntime.Instance.Player;
 
-            string itemID = currentItem.itemID;
+            string itemID = currentItem.itemID;            
 
-            player.MoveFromHotbar(
-                slotIndex,
-                GetContainerType(itemID)
-            );
+            // ===== CHANGED: L?y container Hotbar =====
+            var hotbarContainer =
+                player.Inventory[InventoryContainerType.Hotbar];
+
+            // ===== CHANGED: Ki?m tra index h?p l? =====
+            if (slotIndex < hotbarContainer.items.Count)
+            {
+                var item = hotbarContainer.items[slotIndex];
+
+                // ===== CHANGED: Move t? Hotbar container v? container g?c =====
+                player.MoveItem(
+                    InventoryContainerType.Hotbar,
+                    GetContainerType(itemID),
+                    item
+                );
+            }
+            //
 
             FindFirstObjectByType<HotbarUI>()?.Refresh();
             FindFirstObjectByType<InventoryUI>()?.RefreshAll();

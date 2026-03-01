@@ -3914,6 +3914,7 @@ MonoBehaviour:
   farmPanel: {fileID: 1521586422}
   cityPanel: {fileID: 689476316}
   dungeonPanel: {fileID: 1135296629}
+  isPanelOpen: 0
   toolContainer: {fileID: 1843785192}
   farmContainer: {fileID: 845158194}
   cityContainer: {fileID: 1400394818}
@@ -7401,7 +7402,7 @@ Transform:
   m_GameObject: {fileID: 1869669733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14341784, y: -0.065844774, z: -10}
+  m_LocalPosition: {x: 0.19402218, y: -0.065844774, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
