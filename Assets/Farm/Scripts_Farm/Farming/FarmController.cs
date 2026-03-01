@@ -74,7 +74,11 @@ public class SaveWrapper
 
     [SerializeField] HotbarUI hotbar;
 
-    
+    private void Awake()
+    {
+        LoadGameData(PlayerRuntime.Instance.Player.Wrapper);
+        Debug.Log("Load");
+    }
     private void Start()
     {
     }
@@ -88,6 +92,7 @@ public class SaveWrapper
         //CheckHole();
         //HandleFarmAction();
     }
+
     public void CheckHole()
     {
         // Kiểm tra xem ô hiện tại có phải là hố không, khi soil là null 
@@ -467,6 +472,59 @@ public class SaveWrapper
         ///Sau khi đã có wrapper chứa tất cả thông tin cần thiết, ta sẽ lưu wrapper này vào PlayerRuntime để có thể truy cập lại sau khi load game
         PlayerRuntime.Instance.Player.Wrapper = wrapper.allTiles;
 
+    }
+    public void LoadGameData(List<TileState> savedTiles)
+    {
+        // Duyệt qua tất cả tile đã lưu trong savedTiles
+        foreach (var tile in savedTiles)
+        {
+            Vector3Int pos = new Vector3Int(tile.x, tile.y, tile.z);
+            if (tile.state == 0) // Đất chưa được đào hố
+            {
+                tm_Soil.SetTile(pos, tb_Soil);
+                tm_Hole.SetTile(pos, tb_Hole);
+                tm_Seed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, null);
+            }
+            else if (tile.state == 1) // Hố trống
+            {
+                tm_Soil.SetTile(pos, null);
+                tm_Hole.SetTile(pos, tb_Hole);
+                tm_Seed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, null);
+            }
+            else if (tile.state == 2) // Có cây
+            {
+                PlantData plantData = Resources.Load<PlantData>($"Plants/{tile.plantName}");
+                if (plantData != null)
+                {
+                    PlantedCrop crop = new PlantedCrop
+                    {
+                        position = pos,
+                        plantInfo = plantData,
+                        currentStage = tile.stage,
+                        isWatered = tile.isWatered
+                    };
+                    activeCrops[pos] = crop;
+                    // Cập nhật Tilemap dựa trên giai đoạn phát triển của cây
+                    TileBase stageTile = plantData.growthStages[tile.stage].stageTile;
+                    tm_Seed.SetTile(pos, stageTile);
+                    // Nếu cây đã được tưới nước ở giai đoạn trước, đặt tile đất ướt
+                    if (tile.isWatered)
+                    {
+                        tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                    }
+                    else
+                    {
+                        tm_HoleSeed.SetTile(pos, null);
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Không tìm thấy PlantData cho cây: {tile.plantName}");
+                }
+            }
+        }
     }
 }
 
