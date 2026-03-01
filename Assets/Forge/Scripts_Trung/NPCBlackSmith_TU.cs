@@ -6,6 +6,7 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class NPCBlackSmith_TU : MonoBehaviour
 {
+    public GameObject InventoryUI;
     public static bool DialogueOpen { get; private set; }
 
     [Header("Dialogue Data")]
@@ -84,9 +85,15 @@ public class NPCBlackSmith_TU : MonoBehaviour
         if (repairUI != null) repairUI.onClose += ResumeDialogue;
         if (shopUI != null) shopUI.onShopClosed += ResumeDialogue;
     }
+    void Start()
+    {
+        playerTransform = GameObject.Find("Player").transform;
+    }
 
     void Update()
     {
+        InventoryUI.SetActive(true);
+        playerTransform = GameObject.Find("Player").transform;
         HandleHammer();
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -117,7 +124,7 @@ public class NPCBlackSmith_TU : MonoBehaviour
             StartDialogue();
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         if (!dialogueData || dialogueData.lines.Length == 0) return;
 

@@ -173,4 +173,15 @@ public class ShopUI_TU : MonoBehaviour
                 return InventoryContainerType.City;
         }
     }
+    public void CloseShop()
+    {
+        gameObject.SetActive(false);
+
+        if (currentRow)
+            currentRow.SetSelected(false);
+
+        currentRow = null;
+
+        onShopClosed?.Invoke();
+    }
 }

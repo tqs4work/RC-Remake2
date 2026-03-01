@@ -191,7 +191,6 @@ public class RepairUI_TU : MonoBehaviour
 
         // FULL durability
         currentItem.durability = 100;
-        InventoryUI.Instance?.RefreshAll();
 
         // Update lại text
         if (durabilityText)

@@ -34,10 +34,10 @@ public class InventoryUI : MonoBehaviour
 
     private void Update()
     {
-        isPanelOpen = (toolPanel.activeSelf ||
+        isPanelOpen = toolPanel.activeSelf ||
                        farmPanel.activeSelf ||
                        cityPanel.activeSelf ||
-                       dungeonPanel.activeSelf);
+                       dungeonPanel.activeSelf;
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -150,22 +150,37 @@ public class InventoryUI : MonoBehaviour
                 var itemCopy = item;
                 var typeCopy = type;
 
-                slot.onClick.RemoveAllListeners();                
+                slot.onClick.RemoveAllListeners();
 
                 slot.onClick.AddListener(() =>
-                {
-                    if (Time.time - lastClickTime <= doubleClickThreshold)
-                    {
-                        // Double click detected
-                        MoveItemToHotbar(typeCopy, itemCopy);
-                    }
+                 {
+                     if (Time.time - lastClickTime <= doubleClickThreshold)
+                     {
+                         // 🔥 Nếu Repair UI đang mở
+                         if (RepairUI_TU.Instance != null &&
+                             RepairUI_TU.Instance.gameObject.activeSelf)
+                         {
+                             RepairSlotCell_TU slotCell =
+                                 FindFirstObjectByType<RepairSlotCell_TU>();
 
-                    lastClickTime = Time.time;
-                });
+                             if (slotCell != null)
+                             {
+                                 slotCell.SetItem(itemCopy);
+                             }
+                         }
+                         else
+                         {
+                             // Mặc định chuyển qua hotbar
+                             MoveItemToHotbar(typeCopy, itemCopy);
+                         }
+                     }
+
+                     lastClickTime = Time.time;
+                 });
 
             }
         }
-    }    
+    }
 
     // ===== CHANGED: Rewrite theo container system =====
     void MoveItemToHotbar(InventoryContainerType fromContainer, ItemRuntime item)
@@ -175,7 +190,7 @@ public class InventoryUI : MonoBehaviour
         var hotbarContainer =
             player.Inventory[InventoryContainerType.Hotbar];
 
-        // ===== CHANGED: ki?m tra c�n ch? tr?ng (maxSize = 6) =====
+        // ===== CHANGED: ki?m tra c�n ch? tr?ng (maxSize = 6) =====
         if (hotbarContainer.maxSize > 0 &&
             hotbarContainer.items.Count >= hotbarContainer.maxSize)
         {
@@ -183,7 +198,7 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        // ===== CHANGED: d�ng MoveItem thay v� MoveToHotbar =====
+        // ===== CHANGED: d�ng MoveItem thay v� MoveToHotbar =====
         player.MoveItem(fromContainer,
                         InventoryContainerType.Hotbar,
                         item);
