@@ -13,6 +13,12 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
 
     public int slotIndex;
 
+
+    bool isOpenInventory;
+    void Update()
+    {
+        isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
+    }
     public void SetItem(ItemRuntime item)
     {
         currentItem = item;
@@ -28,7 +34,7 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
         icon.enabled = true;
         icon.sprite = item.icon;
 
-        amountText.text = item.isStackable && item.quantity > 1
+        amountText.text = item.isStackable && item.quantity >= 1
             ? item.quantity.ToString()
             : "";
     }
@@ -47,7 +53,7 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     {
         if (currentItem == null) return;
 
-        if (eventData.clickCount == 2)
+        if (eventData.clickCount == 2 && isOpenInventory)
         {
             var player = PlayerRuntime.Instance.Player;
 

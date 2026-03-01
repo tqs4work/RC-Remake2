@@ -26,6 +26,7 @@ public class InventoryUI : MonoBehaviour
     [Header("Reference")]
     public HotbarUI hotbarUI;
 
+
     void Start()
     {
         hotbarUI = Object.FindFirstObjectByType<HotbarUI>();
@@ -133,7 +134,7 @@ public class InventoryUI : MonoBehaviour
                 iconImg.sprite = item.icon;
                 iconImg.enabled = true;
 
-                if (item.isStackable && item.quantity > 1)
+                if (item.isStackable && item.quantity >= 1)
                 {
                     bgImg.gameObject.SetActive(true);
                     amount.text = item.quantity.ToString();
@@ -142,11 +143,7 @@ public class InventoryUI : MonoBehaviour
                 var itemCopy = item;
                 var typeCopy = type;
 
-                slot.onClick.RemoveAllListeners();
-                //slot.onClick.AddListener(() =>
-                //{
-                //    MoveItemToHotbar(typeCopy, itemCopy);
-                //});
+                slot.onClick.RemoveAllListeners();                
 
                 slot.onClick.AddListener(() =>
                 {
