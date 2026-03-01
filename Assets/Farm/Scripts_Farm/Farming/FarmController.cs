@@ -94,7 +94,7 @@ public class SaveWrapper
     }
 
     public void CheckHole()
-    {
+    {        
         // Kiểm tra xem ô hiện tại có phải là hố không, khi soil là null 
         if (tm_Hole.HasTile(currentTargetCell) && tm_Soil.GetTile(currentTargetCell) == null)
         {
@@ -122,17 +122,17 @@ public class SaveWrapper
                 ShowSeedMenu(false);
             }
         }
-        if (seedMenuPanel != null)
-        {
-            if (seedMenuPanel.activeSelf)
-            {
-                toolScript.enabled = false;
-            }
-            else
-            {
-                toolScript.enabled = true;
-            }
-        }
+        //if (seedMenuPanel != null)
+        //{
+        //    if (seedMenuPanel.activeSelf)
+        //    {
+        //        toolScript.enabled = false;
+        //    }
+        //    else
+        //    {
+        //        toolScript.enabled = true;
+        //    }
+        //}
     }
     public void UpdateSelectorTile(bool isFarm, Transform playerPos)
     {

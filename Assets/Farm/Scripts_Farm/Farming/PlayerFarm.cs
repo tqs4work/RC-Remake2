@@ -10,9 +10,14 @@ public class PlayerFarm : MonoBehaviour
     }
     void Update()
     {
+        GameObject obj = GameObject.Find("FarmController");
+        if (obj == null)
+        {
+            return;
+        }
         if (farmController == null)
         {
-            farmController = GameObject.Find("FarmController").GetComponent<FarmController>();
+            farmController = GameObject.Find("FarmController").GetComponent<FarmController>();            
         }
         farmController.UpdateSelectorTile(isFarm,transform);
         farmController.CheckHole();

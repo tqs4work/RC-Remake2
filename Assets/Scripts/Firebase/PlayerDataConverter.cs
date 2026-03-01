@@ -17,7 +17,7 @@ public static class PlayerDataConverter
                        
             Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
 
-            Wrapper = player.Wrapper,
+            Wrapper = player.Wrapper
         };       
         
         foreach (var container in player.Inventory)
