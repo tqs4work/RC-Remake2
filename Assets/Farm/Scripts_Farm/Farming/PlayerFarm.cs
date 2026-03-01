@@ -18,7 +18,11 @@ public class PlayerFarm : MonoBehaviour
         farmController.CheckHole();
         farmController.Shovel();
         farmController.Water();
-
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            farmController.SaveGameData();
+            Debug.Log("Save");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
