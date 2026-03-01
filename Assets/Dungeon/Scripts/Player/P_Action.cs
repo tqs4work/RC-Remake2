@@ -13,7 +13,7 @@ public class P_Action : MonoBehaviour
     bool isRolling;
     bool isRangedAiming;
 
-    bool isOpenInventory;
+    public bool isOpenInventory;
 
     [Header("References")]
     [SerializeField] HotbarUI hotbar;
