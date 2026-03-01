@@ -428,9 +428,9 @@ public class SaveWrapper
     {        
         SaveWrapper wrapper = new SaveWrapper();
         // duyệt vị trí theo cái vùng đấy baseground (nằm ở đáy) để lấy tất cả vị trí có tile, nếu có cây thì lưu thông tin cây
-        foreach (var pos in tm_GroundInvisible.cellBounds.allPositionsWithin)
+        foreach (var pos in tm_BaseGround.cellBounds.allPositionsWithin)
         {
-            if (!tm_GroundInvisible.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
+            if (!tm_BaseGround.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
 
             if (activeCrops.ContainsKey(pos)) // Trường hợp ô ĐANG CÓ CÂY đang được trồng 
             {
@@ -441,7 +441,7 @@ public class SaveWrapper
                     y = pos.y,
                     z = pos.z,
                     state = 2, // state 2 là có cây
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = activeCrops[pos].plantInfo.seedName,
                     stage = activeCrops[pos].currentStage, //stage hiện tại của cây 
                     isWatered = activeCrops[pos].isWatered // trạng thái đã tưới hay chưa 
                 });
@@ -453,18 +453,18 @@ public class SaveWrapper
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = "null",
                     state = 1
                 });
             }
-            else if(tm_Soil.GetTile(pos) == tb_Soil) // Trường hợp ĐẤT CHƯA ĐƯỢC ĐÀO HỐ
+            else if(tm_Soil.GetTile(pos) !=null) // Trường hợp ĐẤT CHƯA ĐƯỢC ĐÀO HỐ
             {
                 wrapper.allTiles.Add(new TileState
                 {
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
-                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
+                    plantName = "null",
                     state = 0
                 });
             }
@@ -486,19 +486,19 @@ public class SaveWrapper
                 tm_Soil.SetTile(pos, tb_Soil);
                 tm_Hole.SetTile(pos, tb_Hole);
                 tm_Seed.SetTile(pos, null);
-                tm_HoleSeed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, tb_HoleSeed);
             }
             else if (tile.state == 1) // Hố trống
             {
                 tm_Soil.SetTile(pos, null);
                 tm_Hole.SetTile(pos, tb_Hole);
                 tm_Seed.SetTile(pos, null);
-                tm_HoleSeed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, tb_HoleSeed);
             }
             else if (tile.state == 2) // Có cây
             {
-                PlantData plantData = Resources.Load<PlantData>($"Plants/{tile.plantName}");
-                if (plantData != null)
+                PlantData plantData = Resources.Load<PlantData>("PlantData/" + tile.plantName);
+                if (plantData.seedName != null)
                 {
                     PlantedCrop crop = new PlantedCrop
                     {
