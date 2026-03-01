@@ -31,7 +31,9 @@ public static class AccountFactory
 
             // ? C?u trúc Inventory m?i
 
-            Inventory = new Dictionary<string, Dictionary<string, Item2String>>()
+            Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
+
+            Wrapper = new List<TileState>()
         };
 
         // T?o s?n 4 container r?ng

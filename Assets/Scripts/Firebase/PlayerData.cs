@@ -17,4 +17,6 @@ public class PlayerData
     //
     public Dictionary<string, Dictionary<string, Item2String>> Inventory;
     //
+
+    public List<TileState> Wrapper;
 }

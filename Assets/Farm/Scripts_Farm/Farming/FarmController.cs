@@ -6,7 +6,21 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public class FarmController_TA : MonoBehaviour
+[System.Serializable]
+public class TileState
+{
+    public int x, y, z;
+    public int state; // 0:đất đào đc nhưng chưa đào 1: Hố trống, 2: Cây 
+    public string plantName;
+    public int stage;
+    public bool isWatered;
+}
+[System.Serializable]
+public class SaveWrapper
+{
+    public List<TileState> allTiles = new List<TileState>();
+}
+    public class FarmController : MonoBehaviour
 {
     [Header("Tilemap")]
     public Tilemap tm_Soil;
@@ -43,13 +57,14 @@ public class FarmController_TA : MonoBehaviour
     [Header("Harvest UI")]
     public GameObject harvestPopupPrefab;
 
+
     [System.Serializable]
     public class PlantedCrop
     {
         public Vector3Int position; //vị trí cây 
         public PlantData plantInfo; //thông tin cây 
         public int currentStage = 0;
-        public bool isWatered = false;     
+        public bool isWatered = false;
         public Coroutine growthCoroutine;  // Coroutine phát triển của cây trồng 
     }
 
@@ -58,15 +73,30 @@ public class FarmController_TA : MonoBehaviour
     public ItemPickup pickup;
 
     [SerializeField] HotbarUI hotbar;
+
+    private void Awake()
+    {
+        LoadGameData(PlayerRuntime.Instance.Player.Wrapper);
+        Debug.Log("Load");
+    }
     private void Start()
     {
-        toolScript = GetComponent<P_Action>();
     }
     private void Update()
     {
-        UpdateSelectorTile();
+        if (toolScript == null)
+        {
+            toolScript = GameObject.Find("Player").GetComponent<P_Action>();
+        }
+        //UpdateSelectorTile();
+        //CheckHole();
+        //HandleFarmAction();
+    }
+
+    public void CheckHole()
+    {        
         // Kiểm tra xem ô hiện tại có phải là hố không, khi soil là null 
-        if(tm_Hole.HasTile(currentTargetCell) && tm_Soil.GetTile(currentTargetCell) == null)
+        if (tm_Hole.HasTile(currentTargetCell) && tm_Soil.GetTile(currentTargetCell) == null)
         {
             // Nếu có hố và không có soil thì coi như đang đứng trên hố
             isStandingOnHole = true;
@@ -92,21 +122,19 @@ public class FarmController_TA : MonoBehaviour
                 ShowSeedMenu(false);
             }
         }
-        if (seedMenuPanel != null)
-        {
-            if (seedMenuPanel.activeSelf)
-            {
-                toolScript.enabled = false;
-            }
-            else
-            {
-                toolScript.enabled = true;
-            }
-        }
-        HandleFarmAction();
+        //if (seedMenuPanel != null)
+        //{
+        //    if (seedMenuPanel.activeSelf)
+        //    {
+        //        toolScript.isAction = false;
+        //    }
+        //    else
+        //    {
+        //        toolScript.isAction = true;
+        //    }
+        //}
     }
-
-    void UpdateSelectorTile()
+    public void UpdateSelectorTile(bool isFarm, Transform playerPos)
     {
         if (isFarm == false)
         {
@@ -119,7 +147,7 @@ public class FarmController_TA : MonoBehaviour
         else
         {
             // Lấy ô player đang đứng
-            Vector3Int playerCell = tm_Soil.WorldToCell(transform.position);
+            Vector3Int playerCell = tm_Soil.WorldToCell(playerPos.position);
 
             // Ô target = ô player 
             currentTargetCell = playerCell;
@@ -136,23 +164,6 @@ public class FarmController_TA : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Farm"))
-        {
-            isFarm = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Farm"))
-        {
-            isFarm = false;
-            // Xóa ngay lập tức khi vừa bước chân ra khỏi ruộng
-            tm_Selector.SetTile(previousTargetCell, null);
-        }
-    }
 
     void HandleFarmAction()
     {
@@ -161,26 +172,26 @@ public class FarmController_TA : MonoBehaviour
 
         if (seedMenuPanel.activeSelf) return;
 
-        if (item.itemType == ItemType.Shovel &&  Input.GetMouseButtonDown(0))
+        if (item.itemType == ItemType.Shovel && Input.GetMouseButtonDown(0))
         {
             Debug.Log("Đào");
             Vector3Int cellPos = currentTargetCell;
             Debug.Log("CellPos: " + cellPos);
             TileBase currentTileBase = tm_Soil.GetTile(cellPos);
-            if(currentTileBase == tb_Soil)
+            if (currentTileBase == tb_Soil)
             {
                 //Xóa tile soil
                 tm_Soil.SetTile(cellPos, null);
                 Debug.Log("Đã chuyển từ chưa đào hố sang đã có hố");
             }
-             
+
         }
-        else if(item.itemType == ItemType.WateringCan && Input.GetMouseButtonDown(0))
+        else if (item.itemType == ItemType.WateringCan && Input.GetMouseButtonDown(0))
         {
             Debug.Log("Tưới nước");
             Vector3Int cellPos = currentTargetCell;
             //kiểm tra xem ô này có cây không 
-            if(activeCrops.ContainsKey(cellPos))
+            if (activeCrops.ContainsKey(cellPos))
             {
                 //lấy thông tin của cái cây đó (truyền vị trí vô thì sẽ biết đc đó là cây gì) 
                 PlantedCrop crop = activeCrops[cellPos];
@@ -194,7 +205,7 @@ public class FarmController_TA : MonoBehaviour
                     //dùng này để tránh kẹt coroutin - khi coroutine cũ chưa chạy xong sẽ dễ kẹt nên tắt đi 
                     if (crop.growthCoroutine != null)
                     {
-                        StopCoroutine(crop.growthCoroutine); 
+                        StopCoroutine(crop.growthCoroutine);
                     }
                     // Chạy coroutin đếm ngược thời gian lớn 
                     crop.growthCoroutine = StartCoroutine(GrowCropRoutine(crop));
@@ -215,9 +226,76 @@ public class FarmController_TA : MonoBehaviour
                 Debug.Log("Ô này không có hạt giống, tưới tốn nước!");
             }
         }
-        
+
     }
-    
+    public void Shovel()
+    {
+        ItemRuntime item = hotbar.GetSelectedItem();
+        if (item == null) return;
+
+        if (seedMenuPanel.activeSelf) return;
+        if (item.itemType == ItemType.Shovel && Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Đào");
+            Vector3Int cellPos = currentTargetCell;
+            Debug.Log("CellPos: " + cellPos);
+            TileBase currentTileBase = tm_Soil.GetTile(cellPos);
+            if (currentTileBase == tb_Soil)
+            {
+                //Xóa tile soil
+                tm_Soil.SetTile(cellPos, null);
+                Debug.Log("Đã chuyển từ chưa đào hố sang đã có hố");
+            }
+
+        }
+    }
+    public void Water()
+    {
+        ItemRuntime item = hotbar.GetSelectedItem();
+        if (item == null) return;
+
+        if (seedMenuPanel.activeSelf) return;
+        if (item.itemType == ItemType.WateringCan && Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Tưới nước");
+            Vector3Int cellPos = currentTargetCell;
+            //kiểm tra xem ô này có cây không 
+            if (activeCrops.ContainsKey(cellPos))
+            {
+                //lấy thông tin của cái cây đó (truyền vị trí vô thì sẽ biết đc đó là cây gì) 
+                PlantedCrop crop = activeCrops[cellPos];
+                if (!crop.isWatered && crop.currentStage < crop.plantInfo.growthStages.Count - 1) // nếu cây chưa tưới nước và chưa chín 
+                {
+                    //đánh dấu đc tưới nước 
+                    crop.isWatered = true;
+
+                    // Đổi hình hố đất thành đất ướt 
+                    tm_HoleSeed.SetTile(cellPos, null);
+                    //dùng này để tránh kẹt coroutin - khi coroutine cũ chưa chạy xong sẽ dễ kẹt nên tắt đi 
+                    if (crop.growthCoroutine != null)
+                    {
+                        StopCoroutine(crop.growthCoroutine);
+                    }
+                    // Chạy coroutin đếm ngược thời gian lớn 
+                    crop.growthCoroutine = StartCoroutine(GrowCropRoutine(crop));
+
+                    Debug.Log("Tưới nước thành công! Đồng hồ thời gian bắt đầu chạy.");
+                }
+                else if (crop.currentStage >= crop.plantInfo.growthStages.Count - 1)
+                {
+                    Debug.Log("Cây đã chín rồi, không cần tưới nữa, mau thu hoạch thôi!");
+                }
+                else
+                {
+                    Debug.Log("Đất vẫn còn ướt, không cần tưới thêm!");
+                }
+            }
+            else
+            {
+                Debug.Log("Ô này không có hạt giống, tưới tốn nước!");
+            }
+        }
+    }
 
     void ShowSeedMenu(bool isShow)
     {
@@ -298,7 +376,7 @@ public class FarmController_TA : MonoBehaviour
             Debug.Log($"Cây ở {crop.position} ĐÃ CHÍN TỰ ĐỘNG!");
             Vector3 worldPos = tm_Seed.GetCellCenterWorld(crop.position);
             GameObject popup = Instantiate(harvestPopupPrefab, worldPos, Quaternion.identity);
-            //popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
+            popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
         }
     }
     public void HarvestCrop(Vector3Int pos)
@@ -334,7 +412,7 @@ public class FarmController_TA : MonoBehaviour
                     PlayerRuntime.Instance.Player.Inventory[InventoryContainerType.Farm].items.Add(newItem);
                 }
 
-                
+
 
                 Debug.Log($"Đã thu hoạch: {data.harvestItemName}");
             }
@@ -346,5 +424,109 @@ public class FarmController_TA : MonoBehaviour
             tm_HoleSeed.SetTile(pos, tb_HoleSeed);
         }
     }
-}    
+    public void SaveGameData()
+    {        
+        SaveWrapper wrapper = new SaveWrapper();
+        // duyệt vị trí theo cái vùng đấy baseground (nằm ở đáy) để lấy tất cả vị trí có tile, nếu có cây thì lưu thông tin cây
+        foreach (var pos in tm_BaseGround.cellBounds.allPositionsWithin)
+        {
+            if (!tm_BaseGround.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
+
+            if (activeCrops.ContainsKey(pos)) // Trường hợp ô ĐANG CÓ CÂY đang được trồng 
+            {
+                //thêm vào list wrapper tất cả thông tin cần thiết để lưu lại trạng thái của ô đất đó, bao gồm: vị trí, trạng thái (có cây hay không), tên cây, giai đoạn phát triển, có được tưới nước hay không
+                wrapper.allTiles.Add(new TileState
+                {
+                    x = pos.x,
+                    y = pos.y,
+                    z = pos.z,
+                    state = 2, // state 2 là có cây
+                    plantName = activeCrops[pos].plantInfo.seedName,
+                    stage = activeCrops[pos].currentStage, //stage hiện tại của cây 
+                    isWatered = activeCrops[pos].isWatered // trạng thái đã tưới hay chưa 
+                });
+            }
+            else if (tm_Soil.GetTile(pos) == null) // Trường hợp HỐ TRỐNG
+            {
+                wrapper.allTiles.Add(new TileState
+                {
+                    x = pos.x,
+                    y = pos.y,
+                    z = pos.z,
+                    plantName = "null",
+                    state = 1
+                });
+            }
+            else if(tm_Soil.GetTile(pos) !=null) // Trường hợp ĐẤT CHƯA ĐƯỢC ĐÀO HỐ
+            {
+                wrapper.allTiles.Add(new TileState
+                {
+                    x = pos.x,
+                    y = pos.y,
+                    z = pos.z,
+                    plantName = "null",
+                    state = 0
+                });
+            }
+        }
+
+
+        ///Sau khi đã có wrapper chứa tất cả thông tin cần thiết, ta sẽ lưu wrapper này vào PlayerRuntime để có thể truy cập lại sau khi load game
+        PlayerRuntime.Instance.Player.Wrapper = wrapper.allTiles;
+
+    }
+    public void LoadGameData(List<TileState> savedTiles)
+    {
+        // Duyệt qua tất cả tile đã lưu trong savedTiles
+        foreach (var tile in savedTiles)
+        {
+            Vector3Int pos = new Vector3Int(tile.x, tile.y, tile.z);
+            if (tile.state == 0) // Đất chưa được đào hố
+            {
+                tm_Soil.SetTile(pos, tb_Soil);
+                tm_Hole.SetTile(pos, tb_Hole);
+                tm_Seed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+            }
+            else if (tile.state == 1) // Hố trống
+            {
+                tm_Soil.SetTile(pos, null);
+                tm_Hole.SetTile(pos, tb_Hole);
+                tm_Seed.SetTile(pos, null);
+                tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+            }
+            else if (tile.state == 2) // Có cây
+            {
+                PlantData plantData = Resources.Load<PlantData>("PlantData/" + tile.plantName);
+                if (plantData.seedName != null)
+                {
+                    PlantedCrop crop = new PlantedCrop
+                    {
+                        position = pos,
+                        plantInfo = plantData,
+                        currentStage = tile.stage,
+                        isWatered = tile.isWatered
+                    };
+                    activeCrops[pos] = crop;
+                    // Cập nhật Tilemap dựa trên giai đoạn phát triển của cây
+                    TileBase stageTile = plantData.growthStages[tile.stage].stageTile;
+                    tm_Seed.SetTile(pos, stageTile);
+                    // Nếu cây đã được tưới nước ở giai đoạn trước, đặt tile đất ướt
+                    if (tile.isWatered)
+                    {
+                        tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                    }
+                    else
+                    {
+                        tm_HoleSeed.SetTile(pos, null);
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Không tìm thấy PlantData cho cây: {tile.plantName}");
+                }
+            }
+        }
+    }
+}
 

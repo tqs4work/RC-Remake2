@@ -13,6 +13,8 @@ public class P_Action : MonoBehaviour
     bool isRolling;
     bool isRangedAiming;
 
+    public bool isOpenInventory;
+
     [Header("References")]
     [SerializeField] HotbarUI hotbar;
     [SerializeField] GameObject arrowDir;
@@ -32,8 +34,19 @@ public class P_Action : MonoBehaviour
         move = GetComponent<P_Move>();
     }
 
+    void Start()
+    {
+        
+    }
+
     void Update()
     {
+        isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
+
+        if (hotbar == null)
+        {
+            hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
+        }            
         if (isAction) return;
 
         HandleInput();
@@ -44,7 +57,7 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory)
         {
             UseCurrentItem();
         }
@@ -124,19 +137,18 @@ public class P_Action : MonoBehaviour
 
         var player = PlayerRuntime.Instance.Player;
 
-        // H?i HP / MP
+        // HP / MP
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
         item.quantity--;
-
-        // N?u h?t item ? xóa kh?i Tool container
+        
         if (item.quantity <= 0)
         {
-            if (player.Inventory.ContainsKey(InventoryContainerType.Tool))
+            if (player.Inventory.ContainsKey(InventoryContainerType.Hotbar))
             {
-                var toolContainer = player.Inventory[InventoryContainerType.Tool];
-                toolContainer.items.Remove(item);
+                var Container = player.Inventory[InventoryContainerType.Hotbar];
+                Container.items.Remove(item);
             }
         }
 

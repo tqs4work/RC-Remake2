@@ -15,7 +15,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject cityPanel;
     public GameObject dungeonPanel;
 
-    bool isPanelOpen = false;
+    public bool isPanelOpen = false;
 
     [Header("Containers")]
     public Transform toolContainer;
@@ -95,6 +95,10 @@ public class InventoryUI : MonoBehaviour
         RenderItems(InventoryContainerType.Dungeon, dungeonContainer);
     }
 
+
+    private float lastClickTime = 0f;
+    private float doubleClickThreshold = 0.3f; // 0.3 giây
+
     void RenderItems(InventoryContainerType type, Transform parent)
     {
         var playerInventory = PlayerRuntime.Instance.Player.Inventory;
@@ -139,9 +143,20 @@ public class InventoryUI : MonoBehaviour
                 var typeCopy = type;
 
                 slot.onClick.RemoveAllListeners();
+                //slot.onClick.AddListener(() =>
+                //{
+                //    MoveItemToHotbar(typeCopy, itemCopy);
+                //});
+
                 slot.onClick.AddListener(() =>
                 {
-                    MoveItemToHotbar(typeCopy, itemCopy);
+                    if (Time.time - lastClickTime <= doubleClickThreshold)
+                    {
+                        // Double click detected
+                        MoveItemToHotbar(typeCopy, itemCopy);
+                    }
+
+                    lastClickTime = Time.time;
                 });
 
             }

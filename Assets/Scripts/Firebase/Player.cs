@@ -18,6 +18,8 @@ public class Player
     public Dictionary<InventoryContainerType, InventoryContainer> Inventory
     = new();
 
+    public List<TileState> Wrapper = new();
+
 
     public Player()
     {
@@ -138,7 +140,7 @@ public class Player
         Exp = data.Exp;
         Lv = data.Lv;
         Gold = data.Gold;
-        
+
         Inventory = new Dictionary<InventoryContainerType, InventoryContainer>
         {
             { InventoryContainerType.Tool, new InventoryContainer { containerType = InventoryContainerType.Tool } },
@@ -164,7 +166,9 @@ public class Player
                     ItemRuntime.FromData(itemPair.Value)
                 );
             }
-        }        
+        }
+
+        Wrapper = data.Wrapper;
     }
 }
 
