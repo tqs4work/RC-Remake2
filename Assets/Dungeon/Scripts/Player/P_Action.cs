@@ -34,12 +34,15 @@ public class P_Action : MonoBehaviour
 
     void Start()
     {
-        hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
+        
     }
 
     void Update()
-    {        
-
+    {
+        if (hotbar == null)
+        {
+            hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
+        }            
         if (isAction) return;
 
         HandleInput();
