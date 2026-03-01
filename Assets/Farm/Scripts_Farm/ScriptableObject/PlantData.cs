@@ -21,8 +21,7 @@ public class PlantData : ScriptableObject
     public List<PlantStage> growthStages;
 
     [Header("Harvest")]
-    [Tooltip("ID của VẬT PHẨM thu hoạch (phải khớp với ID trong InventoryItems)")]
-    public string harvestItemID;
+    public Item harvestItemData;
     public string harvestItemName;
     public string harvestItemDescription;
     public string harvestItemIconPath;

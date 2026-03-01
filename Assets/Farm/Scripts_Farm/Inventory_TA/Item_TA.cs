@@ -2,7 +2,12 @@
 
 public enum ItemType
 {
-    Weapon,
+    Shovel,
+    Axe,
+    Pickaxe,
+    WateringCan,
+    Bow,
+    Sword,
     Armor,
     Consumable,
     Seed,
