@@ -126,11 +126,11 @@ public class SaveWrapper
         //{
         //    if (seedMenuPanel.activeSelf)
         //    {
-        //        toolScript.enabled = false;
+        //        toolScript.isAction = false;
         //    }
         //    else
         //    {
-        //        toolScript.enabled = true;
+        //        toolScript.isAction = true;
         //    }
         //}
     }
@@ -428,9 +428,9 @@ public class SaveWrapper
     {        
         SaveWrapper wrapper = new SaveWrapper();
         // duyệt vị trí theo cái vùng đấy baseground (nằm ở đáy) để lấy tất cả vị trí có tile, nếu có cây thì lưu thông tin cây
-        foreach (var pos in tm_BaseGround.cellBounds.allPositionsWithin)
+        foreach (var pos in tm_GroundInvisible.cellBounds.allPositionsWithin)
         {
-            if (!tm_BaseGround.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
+            if (!tm_GroundInvisible.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
 
             if (activeCrops.ContainsKey(pos)) // Trường hợp ô ĐANG CÓ CÂY đang được trồng 
             {
@@ -441,7 +441,7 @@ public class SaveWrapper
                     y = pos.y,
                     z = pos.z,
                     state = 2, // state 2 là có cây
-                    plantName = activeCrops[pos].plantInfo.name,
+                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
                     stage = activeCrops[pos].currentStage, //stage hiện tại của cây 
                     isWatered = activeCrops[pos].isWatered // trạng thái đã tưới hay chưa 
                 });
@@ -453,6 +453,7 @@ public class SaveWrapper
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
+                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
                     state = 1
                 });
             }
@@ -463,6 +464,7 @@ public class SaveWrapper
                     x = pos.x,
                     y = pos.y,
                     z = pos.z,
+                    plantName = (activeCrops[pos].plantInfo.seedName == null) ? "unknown" : activeCrops[pos].plantInfo.seedName,
                     state = 0
                 });
             }
