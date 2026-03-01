@@ -15,7 +15,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject cityPanel;
     public GameObject dungeonPanel;
 
-    bool isPanelOpen = false;
+    public bool isPanelOpen = false;
 
     [Header("Containers")]
     public Transform toolContainer;

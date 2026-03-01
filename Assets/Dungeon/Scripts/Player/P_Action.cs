@@ -13,6 +13,8 @@ public class P_Action : MonoBehaviour
     bool isRolling;
     bool isRangedAiming;
 
+    bool isOpenInventory;
+
     [Header("References")]
     [SerializeField] HotbarUI hotbar;
     [SerializeField] GameObject arrowDir;
@@ -39,6 +41,8 @@ public class P_Action : MonoBehaviour
 
     void Update()
     {
+        isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
+
         if (hotbar == null)
         {
             hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
@@ -53,7 +57,7 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory)
         {
             UseCurrentItem();
         }
