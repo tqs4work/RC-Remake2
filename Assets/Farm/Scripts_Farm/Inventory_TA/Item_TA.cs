@@ -48,7 +48,7 @@ public class Item : ScriptableObject
      [Header("Durability")]
     [Tooltip("Áp dụng cho Weapon/Armor. Arrow/Stone không dùng độ bền.")]
      public bool useDurability = true;
-    public float durability;
+    // public float durability;
 
     [Header("Upgrade (+1..+5): cộng THÊM mỗi cấp")]
     [Tooltip("Độ dài <= 5. Mỗi phần tử là L1..L5 (cộng thêm so với cấp trước).")]
@@ -71,6 +71,8 @@ public class Item : ScriptableObject
     [Range(1, 3)] public int stoneLevel = 1;                 // 1=trắng, 2=xanh lá, 3=tím
     [Tooltip("Giá nâng từ stoneLevel hiện tại -> stoneLevel+1 (nếu có)")]
     public int upgradePriceToNext = 0;
+    [Header("Upgrade Icons (0-5)")]
+    public Sprite[] upgradeIcons = new Sprite[6];
 
     // ===== Helpers =====
     public bool IsStone => itemType == ItemType.Stone;
@@ -156,4 +158,4 @@ public class Item : ScriptableObject
     }
 #endif
 }
-
+    

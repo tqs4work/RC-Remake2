@@ -4,13 +4,10 @@ using UnityEngine;
 public class HotbarUI : MonoBehaviour
 {
     public HotbarSlot[] slots;
-    public int selectedIndex = 0;
-
-    List<ItemRuntime> inventory;
+    public int selectedIndex = 0;    
 
     void Start()
-    {
-        inventory = PlayerRuntime.Instance.Player.Inventory;
+    {        
         Refresh();
         UpdateHighlight();
     }
@@ -18,6 +15,7 @@ public class HotbarUI : MonoBehaviour
     void Update()
     {
         HandleScroll();
+        Refresh();
     }
 
     void HandleScroll()
@@ -40,18 +38,30 @@ public class HotbarUI : MonoBehaviour
 
             UpdateHighlight();
         }
-    }
+    }    
 
+    //
     public void Refresh()
     {
+        // ===== CHANGED: L?y container tr?c ti?p m?i l?n =====
+        var hotbarContainer =
+            PlayerRuntime.Instance.Player
+            .Inventory[InventoryContainerType.Hotbar];
+
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < inventory.Count)
-                slots[i].SetItem(inventory[i]);
-            else
-                slots[i].SetItem(null);
+            // ?? GÁN INDEX CHO SLOT
+            slots[i].slotIndex = i;
+
+            ItemRuntime item = null;
+
+            if (i < hotbarContainer.items.Count)
+                item = hotbarContainer.items[i];
+
+            slots[i].SetItem(item);
         }
     }
+    //
 
     void UpdateHighlight()
     {
@@ -59,12 +69,17 @@ public class HotbarUI : MonoBehaviour
         {
             slots[i].SetHighlight(i == selectedIndex);
         }
-    }
-
+    }    
+    
     public ItemRuntime GetSelectedItem()
     {
-        if (selectedIndex < inventory.Count)
-            return inventory[selectedIndex];
+        var hotbarContainer =
+            PlayerRuntime.Instance.Player
+            .Inventory[InventoryContainerType.Hotbar];
+
+        // ===== CHANGED: l?y t? container =====
+        if (selectedIndex < hotbarContainer.items.Count)
+            return hotbarContainer.items[selectedIndex];
 
         return null;
     }

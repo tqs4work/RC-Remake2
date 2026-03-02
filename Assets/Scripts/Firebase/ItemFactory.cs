@@ -33,7 +33,7 @@ public static class ItemFactory
 
         item.atk = int.Parse(data.atk);
         item.def = int.Parse(data.def);
-        item.durability = int.Parse(data.durability);
+        item.maxDurability = int.Parse(data.durability);
         
         item.bonus = int.Parse(data.bonus);
 

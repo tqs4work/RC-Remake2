@@ -3,7 +3,7 @@
 public class Item2String
 {
     [Header("Thông tin vật phẩm")]
-    public ItemType itemType;
+    public string itemType;
     public string itemID;
     public string itemName;
 
@@ -28,6 +28,7 @@ public class Item2String
     public string atk;
     public string def;
     public string durability;
+    public string upgradeLevel;
 
     [Header("Hạt giống")]
     public string growTime;
@@ -44,6 +45,7 @@ public class Item2String
     {
         return new Item2String
         {
+            itemType = item.itemType.ToString(),
             itemID = item.itemID,
             itemName = item.itemName,
             description = item.description,
@@ -53,7 +55,7 @@ public class Item2String
             maxStack = item.maxStack.ToString(),
             
             price = item.price.ToString(),
-            level = item.level.ToString(),
+            upgradeLevel = item.upgradeLevel.ToString(),
 
             quantity = item.quantity.ToString(),
             hpAmount = item.hpAmount.ToString(),

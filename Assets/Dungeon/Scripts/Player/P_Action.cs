@@ -13,6 +13,8 @@ public class P_Action : MonoBehaviour
     bool isRolling;
     bool isRangedAiming;
 
+    public bool isOpenInventory;
+
     [Header("References")]
     [SerializeField] HotbarUI hotbar;
     [SerializeField] GameObject arrowDir;
@@ -32,8 +34,19 @@ public class P_Action : MonoBehaviour
         move = GetComponent<P_Move>();
     }
 
+    void Start()
+    {
+        
+    }
+
     void Update()
     {
+        isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
+
+        if (hotbar == null)
+        {
+            hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
+        }            
         if (isAction) return;
 
         HandleInput();
@@ -44,7 +57,7 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory)
         {
             UseCurrentItem();
         }
@@ -93,6 +106,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Consumable:
+                StartCoroutine(Doing());
                 Consume(item);
                 break;
 
@@ -101,7 +115,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Stone:
-                StartCoroutine(Mining());
+                //
                 break;
         }
     }
@@ -115,23 +129,44 @@ public class P_Action : MonoBehaviour
         return true;
     }
 
-    #region Consumable
+    #region Consumable    
 
     void Consume(ItemRuntime item)
     {
-        if (item.quantity <= 0) return;
-
+        if (item == null || item.quantity <= 0)
+            return;
+                
         var player = PlayerRuntime.Instance.Player;
 
+
+        // HP / MP
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
-        item.quantity--;
+        item.quantity--;        
 
-        if (item.quantity <= 0)
-            player.Inventory.Remove(item);
+        if(item.quantity <= 0)
+        {
+            // ===== CHANGED: Xóa kh?i Hotbar container =====
+            var hotbarContainer =
+                player.Inventory[InventoryContainerType.Hotbar];
+
+            hotbarContainer.items.Remove(item);
+        }
+
+        
 
         hotbar.Refresh();
+    }
+
+    IEnumerator Doing()
+    {
+        isAction = true;
+
+        animator.SetTrigger("Doing");
+        yield return new WaitForSeconds(1f);        
+        
+        isAction = false;
     }
 
     #endregion
@@ -143,11 +178,11 @@ public class P_Action : MonoBehaviour
         isAction = true;
 
         animator.SetTrigger("MA");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(4/6f);
 
         DoMeleeHit();
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1/3f);
         isAction = false;
     }
 
@@ -183,34 +218,44 @@ public class P_Action : MonoBehaviour
         isAction = true;
         isRangedAiming = true;
 
-        animator.SetTrigger("RA");
+        animator.SetTrigger("RA");       
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(5/6f);
 
         ShootArrow();
 
         isRangedAiming = false;
 
-        yield return new WaitForSeconds(0.2f);
+
+        yield return new WaitForSeconds(1/6f);
+
+        arrowDir.SetActive(false);
         isAction = false;
     }
 
     void ShootArrow()
-    {
+    {        
         GameObject arrow = Instantiate(
             arrowPrefab,
             shootPoint.position,
             Quaternion.LookRotation(Vector3.forward, direct) * Quaternion.Euler(0, 0, 90)
         );
 
-        arrow.GetComponent<Rigidbody2D>().linearVelocity = direct * 15f;
+        //arrow.GetComponent<Rigidbody2D>().linearVelocity = direct.normalized * 15f;
+        arrow.GetComponent<Rigidbody2D>().AddForce(direct * 10f, ForceMode2D.Impulse);
+        
         Destroy(arrow, 3f);
+        
     }
 
     void Aim()
     {
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direct = (mouse - transform.position).normalized;
+        Vector3 mouse = Input.mousePosition;
+        mouse.z = Mathf.Abs(Camera.main.transform.position.z); // kho?ng cách t? camera t?i world
+
+        Vector3 worldMouse = Camera.main.ScreenToWorldPoint(mouse);
+
+        direct = ((Vector2)worldMouse - (Vector2)transform.position).normalized;
 
         arrowDir.SetActive(true);
         arrowDir.transform.rotation =
@@ -236,7 +281,7 @@ public class P_Action : MonoBehaviour
 
         DropStone();
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         isAction = false;
     }
 

@@ -7,7 +7,7 @@ public class InventoryUI : MonoBehaviour
 {
     [Header("Slot")]
     public Button slotPrefab;
-    public int maxSlots = 25;
+    public int maxSlots = 27;
 
     [Header("Panels")]
     public GameObject toolPanel;
@@ -15,45 +15,50 @@ public class InventoryUI : MonoBehaviour
     public GameObject cityPanel;
     public GameObject dungeonPanel;
 
+    public bool isPanelOpen = false;
+
     [Header("Containers")]
     public Transform toolContainer;
     public Transform farmContainer;
     public Transform cityContainer;
     public Transform dungeonContainer;
 
-    private List<ItemRuntime> inventory;
+    [Header("Reference")]
+    public HotbarUI hotbarUI;
+
 
     void Start()
     {
-        inventory = PlayerRuntime.Instance.Player.Inventory;        
+        hotbarUI = Object.FindFirstObjectByType<HotbarUI>();
     }
+
     private void Update()
-    {
+    {        
+        isPanelOpen = toolPanel.activeSelf ||
+                       farmPanel.activeSelf ||
+                       cityPanel.activeSelf ||
+                       dungeonPanel.activeSelf;
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (toolPanel.activeSelf || farmPanel.activeSelf || cityPanel.activeSelf || dungeonPanel.activeSelf)
+            if (isPanelOpen)
                 HideAllPanels();
             else
                 ShowToolPanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {            
-            ShowToolPanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ShowFarmPanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            ShowCityPanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            ShowDungeonPanel();
-        }
-    }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1) && isPanelOpen)
+            ShowToolPanel();
+
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isPanelOpen)
+            ShowFarmPanel();
+
+        if (Input.GetKeyDown(KeyCode.Alpha3) && isPanelOpen)
+            ShowCityPanel();
+
+        if (Input.GetKeyDown(KeyCode.Alpha4) && isPanelOpen)
+            ShowDungeonPanel();
+    }
 
     void HideAllPanels()
     {
@@ -67,40 +72,46 @@ public class InventoryUI : MonoBehaviour
     {
         HideAllPanels();
         toolPanel.SetActive(true);
-        RenderItems(toolPanel);
+        RenderItems(InventoryContainerType.Tool, toolContainer);
     }
 
     public void ShowFarmPanel()
     {
         HideAllPanels();
         farmPanel.SetActive(true);
-        RenderItems(farmPanel);
+        RenderItems(InventoryContainerType.Farm, farmContainer);
     }
 
     public void ShowCityPanel()
     {
         HideAllPanels();
         cityPanel.SetActive(true);
-        RenderItems(cityPanel);
+        RenderItems(InventoryContainerType.City, cityContainer);
     }
 
     public void ShowDungeonPanel()
     {
         HideAllPanels();
         dungeonPanel.SetActive(true);
-        RenderItems(dungeonPanel);
+        RenderItems(InventoryContainerType.Dungeon, dungeonContainer);
     }
 
-    void RenderItems(GameObject targetPanel)
-    {
-        inventory = PlayerRuntime.Instance.Player.Inventory;
 
-        Transform parent = GetContainer(targetPanel);
+    private float lastClickTime = 0f;
+    private float doubleClickThreshold = 0.3f; // 0.3 gi�y
 
+    void RenderItems(InventoryContainerType type, Transform parent)
+    {        
+        var playerInventory = PlayerRuntime.Instance.Player.Inventory;
+
+        if (!playerInventory.ContainsKey(type))
+            return;
+
+        List<ItemRuntime> items = playerInventory[type].items;
+
+        // Clear slot c?
         foreach (Transform child in parent)
             Destroy(child.gameObject);
-
-        List<ItemRuntime> filteredItems = FilterItemsByPanel(targetPanel);
 
         for (int i = 0; i < maxSlots; i++)
         {
@@ -113,54 +124,115 @@ public class InventoryUI : MonoBehaviour
 
             bgImg.gameObject.SetActive(false);
             iconImg.sprite = null;
+            iconImg.enabled = false;
             amount.text = string.Empty;
 
-            if (i < filteredItems.Count)
+            if (i < items.Count)
             {
-                var item = filteredItems[i];
+                var item = items[i];
+
                 iconImg.sprite = item.icon;
-                amount.text = (item.quantity >= 1 && item.isStackable)
-                    ? item.quantity.ToString()
-                    : string.Empty;
-
-                bgImg.gameObject.SetActive(item.quantity >= 1 && item.isStackable);
                 iconImg.enabled = true;
-            }
-            else
-            {
-                iconImg.enabled = false;
+                //var hover = slot.GetComponent<ItemHoverHandler_TU>();
+                //if (hover == null)
+                //    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
+
+                ////hover.Setup(item.itemData, item.upgradeLevel);
+                ////hover.SetDurability(item.itemData.maxDurability);
+
+                //if (item.itemData != null)
+                //{
+                //    hover.Setup(item, );
+                //    hover.SetDurability(item.durability);
+                //}
+                //else
+                //{
+                //    Debug.LogError("Missing itemData for item ID: " + item.itemID);
+                //}
+
+                
+
+                //hover.SetAnchor(slot.GetComponent<RectTransform>());
+
+                if (item.isStackable && item.quantity >= 1)
+                {
+                    bgImg.gameObject.SetActive(true);
+                    amount.text = item.quantity.ToString();
+                }
+
+                var itemCopy = item;
+                var typeCopy = type;
+
+                slot.onClick.RemoveAllListeners();
+
+                slot.onClick.AddListener(() =>
+                 {
+                     if (Time.time - lastClickTime <= doubleClickThreshold)
+                     {
+                         // 🔥 Nếu Repair UI đang mở
+                         if (RepairUI_TU.Instance != null &&
+                             RepairUI_TU.Instance.gameObject.activeSelf)
+                         {
+                             RepairSlotCell_TU slotCell =
+                                 FindFirstObjectByType<RepairSlotCell_TU>();
+
+                             if (slotCell != null)
+                             {
+                                 slotCell.SetItem(itemCopy);
+                             }
+                         }
+                         else
+                         {
+                             // Mặc định chuyển qua hotbar
+                             MoveItemToHotbar(typeCopy, itemCopy);
+                         }
+                     }
+
+                     lastClickTime = Time.time;
+                 });
+
             }
         }
     }
-    Transform GetContainer(GameObject panel)
+
+    // ===== CHANGED: Rewrite theo container system =====
+    void MoveItemToHotbar(InventoryContainerType fromContainer, ItemRuntime item)
     {
-        if (panel == toolPanel) return toolContainer;
-        if (panel == farmPanel) return farmContainer;
-        if (panel == cityPanel) return cityContainer;
-        if (panel == dungeonPanel) return dungeonContainer;
+        var player = PlayerRuntime.Instance.Player;
 
-        return null;
-    }
+        var hotbarContainer =
+            player.Inventory[InventoryContainerType.Hotbar];
 
-    List<ItemRuntime> FilterItemsByPanel(GameObject panel)
-    {
-        List<ItemRuntime> result = new List<ItemRuntime>();
-
-        foreach (var item in inventory)
+        // ===== CHANGED: ki?m tra c�n ch? tr?ng (maxSize = 6) =====
+        if (hotbarContainer.maxSize > 0 &&
+            hotbarContainer.items.Count >= hotbarContainer.maxSize)
         {
-            if (panel == toolPanel && item.itemID.StartsWith("T"))
-                result.Add(item);
-
-            else if (panel == farmPanel && item.itemID.StartsWith("F"))
-                result.Add(item);
-
-            else if (panel == cityPanel && item.itemID.StartsWith("C"))
-                result.Add(item);
-
-            else if (panel == dungeonPanel && item.itemID.StartsWith("D"))
-                result.Add(item);
+            Debug.Log("Hotbar Full");
+            return;
         }
 
-        return result;
+        // ===== CHANGED: d�ng MoveItem thay v� MoveToHotbar =====
+        player.MoveItem(fromContainer,
+                        InventoryContainerType.Hotbar,
+                        item);
+
+        hotbarUI.Refresh();
+        RefreshAll();
+    }
+    //
+
+    public void RefreshAll()
+    {
+        if (toolPanel.activeSelf)
+            ShowToolPanel();
+
+        else if (farmPanel.activeSelf)
+            ShowFarmPanel();
+
+        else if (cityPanel.activeSelf)
+            ShowCityPanel();
+
+        else if (dungeonPanel.activeSelf)
+            ShowDungeonPanel();
     }
 }
