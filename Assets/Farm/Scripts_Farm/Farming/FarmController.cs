@@ -525,6 +525,13 @@ public class SaveWrapper
                     else
                     {
                         tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                        if (crop.currentStage == crop.plantInfo.growthStages.Count - 1)
+                        {
+                            Debug.Log($"Cây ở {crop.position} ĐÃ CHÍN TỰ ĐỘNG!");
+                            Vector3 worldPos = tm_Seed.GetCellCenterWorld(crop.position);
+                            GameObject popup = Instantiate(harvestPopupPrefab, worldPos, Quaternion.identity);
+                            popup.GetComponent<HarvestPopupUI>().Setup(crop.position, this);
+                        }
                     }
                 }
                 else
