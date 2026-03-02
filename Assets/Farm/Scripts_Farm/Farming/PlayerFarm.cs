@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerFarm : MonoBehaviour
@@ -6,7 +7,7 @@ public class PlayerFarm : MonoBehaviour
     bool isFarm;
     private void Start()
     {
-        
+        StartCoroutine(AutoSaveRoutine());
     }
     void Update()
     {
@@ -22,13 +23,22 @@ public class PlayerFarm : MonoBehaviour
         farmController.UpdateSelectorTile(isFarm,transform);
         farmController.CheckHole();
         farmController.Shovel();
-        farmController.Water();
-        if(Input.GetKeyDown(KeyCode.K))
+        farmController.Water();        
+    }
+
+    IEnumerator AutoSaveRoutine()
+    {
+        while (true)
         {
-            farmController.SaveGameData();
-            Debug.Log("Save");
+            yield return new WaitForSeconds(1f);
+
+            if (farmController != null)
+            {
+                farmController.SaveGameData();                
+            }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Farm"))
