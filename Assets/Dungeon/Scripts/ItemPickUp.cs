@@ -56,7 +56,7 @@ public class ItemPickup : MonoBehaviour
             container.items.Count >= container.maxSize)
         {
             Debug.Log("Inventory Full! Cannot pick up.");
-            return; // ? KHÔNG Destroy ? v?n n?m trên ??t
+            return; // ? KHï¿½NG Destroy ? v?n n?m trï¿½n ??t
         }
 
         // ======================================================

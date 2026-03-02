@@ -15,7 +15,7 @@ public class FirebaseService
     }
 
     // ================= SIGN UP =================
-    // Ch? c?n data, không c?n key
+    // Ch? c?n data, khï¿½ng c?n key
     public async Task<List<AccountData>> GetAccounts()
     {
         return (await _client
@@ -29,7 +29,7 @@ public class FirebaseService
     {
         await _client
             .Child("Accounts")
-            .Child($"Acc _ {account.Username} _ {account.Timecreate}")
+            .Child($"Acc_{account.Username}_{account.Timecreate}")
             .PutAsync(account);
     }
 
