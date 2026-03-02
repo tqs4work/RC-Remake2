@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 4
   itemID: T006
-  itemName: Bow
-  description: 
+  itemName: "C\xE2y cung"
+  description: "1 c\xE2y cung "
   icon: {fileID: -1198785827, guid: 30ebcff71bbdba34fb8c822ad8eaa548, type: 3}
   isStackable: 0
   maxStack: 0
-  price: 0
+  price: 200
   stackable: 0
   level: 0
   quantity: 0
@@ -29,18 +29,24 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
-  durability: 100
-  addATKPerLevel: 0000000000000000000000000000000000000000
-  addDEFPerLevel: 0000000000000000000000000000000000000000
+  addATKPerLevel: 050000000a0000000f0000001400000019000000
+  addDEFPerLevel: 
   addCRITPerLevel:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 3
   maxDurability: 100
   maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -21,26 +21,27 @@ MonoBehaviour:
   maxStack: 10
   price: 100
   stackable: 0
-  level: 1
+  level: 0
   quantity: 1
   hpAmount: 0
   mpAmount: 0
-  atk: 10
+  atk: 5
   def: 0
   crit: 0
   useDurability: 1
-  durability: 100
-  addATKPerLevel: 0000000000000000000000000000000000000000
-  addDEFPerLevel: 0000000000000000000000000000000000000000
-  addCRITPerLevel:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  addATKPerLevel: 
+  addDEFPerLevel: 
+  addCRITPerLevel: []
   maxDurability: 100
   maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

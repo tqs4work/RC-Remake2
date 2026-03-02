@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 7
   itemID: D010
-  itemName: MP Pot
-  description: Hoi mana
+  itemName: "B\xECnh th\u1EC3 l\u1EF1c"
+  description: "D\xF9ng \u0111\u1EC3 h\u1ED3i th\u1EC3 l\u1EF1c"
   icon: {fileID: 21300000, guid: 44b7b40adfda3174facf5d4114b5baf6, type: 2}
   isStackable: 1
-  maxStack: 10
-  price: 100
+  maxStack: 99
+  price: 50
   stackable: 0
   level: 1
   quantity: 1
@@ -29,7 +29,6 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
-  durability: 0
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
@@ -44,3 +43,10 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

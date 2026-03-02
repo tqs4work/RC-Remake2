@@ -66,6 +66,7 @@ public class InventoryUI : MonoBehaviour
         farmPanel.SetActive(false);
         cityPanel.SetActive(false);
         dungeonPanel.SetActive(false);
+        ItemTooltipUI_TU.Ensure()?.Hide();
     }
 
     public void ShowToolPanel()
@@ -133,26 +134,14 @@ public class InventoryUI : MonoBehaviour
 
                 iconImg.sprite = item.icon;
                 iconImg.enabled = true;
-                //var hover = slot.GetComponent<ItemHoverHandler_TU>();
-                //if (hover == null)
-                //    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
+                var hover = slot.GetComponent<ItemHoverHandler_TU>();
+                if (hover == null)
+                   hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
 
-                ////hover.Setup(item.itemData, item.upgradeLevel);
-                ////hover.SetDurability(item.itemData.maxDurability);
+                hover.Setup(item.itemData, item.upgradeLevel);
+                hover.SetDurability(Mathf.RoundToInt(item.durability));
 
-                //if (item.itemData != null)
-                //{
-                //    hover.Setup(item, );
-                //    hover.SetDurability(item.durability);
-                //}
-                //else
-                //{
-                //    Debug.LogError("Missing itemData for item ID: " + item.itemID);
-                //}
-
-                
-
-                //hover.SetAnchor(slot.GetComponent<RectTransform>());
+                hover.SetAnchor(slot.GetComponent<RectTransform>());
 
                 if (item.isStackable && item.quantity >= 1)
                 {
@@ -223,6 +212,7 @@ public class InventoryUI : MonoBehaviour
 
     public void RefreshAll()
     {
+        ItemTooltipUI_TU.Ensure()?.Hide();   
         if (toolPanel.activeSelf)
             ShowToolPanel();
 

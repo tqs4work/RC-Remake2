@@ -7,7 +7,6 @@ public class ItemTooltipUI_TU : MonoBehaviour
 {
     // Singleton an toàn: có thể tìm thấy cả khi GameObject đang INACTIVE
     public static ItemTooltipUI_TU I { get; private set; }
-    static bool inited;
 
     public enum FollowMode { Anchor, Cursor }
 
@@ -33,45 +32,29 @@ public class ItemTooltipUI_TU : MonoBehaviour
     public static ItemTooltipUI_TU Ensure()
     {
         if (I == null)
-        {
-            I = FindObjectOfType<ItemTooltipUI_TU>(true); // true => tìm cả inactive
-            if (I != null && !inited) I.InitOnce();
-        }
+        I = FindObjectOfType<ItemTooltipUI_TU>(true);
+
         return I;
+
     }
 
     void Awake()
     {
-        if (I == null) I = this;
-        InitOnce();
-    }
+        I = this;
 
-    void InitOnce()
-    {
-        if (inited) return;
-        inited = true;
+        parentCanvas = GetComponentInParent<Canvas>();
+        root = GetComponent<RectTransform>();
 
-        if (!parentCanvas) parentCanvas = GetComponentInParent<Canvas>();
-        if (!root) root = GetComponent<RectTransform>();
-
-        // Cho phép Content Size Fitter tự tính (nếu có LayoutElement)
-        var le = root.GetComponent<LayoutElement>();
-        if (le) le.preferredWidth = -1;
-
-        // Tooltip KHÔNG chặn chuột
         var cg = GetComponent<CanvasGroup>();
         if (!cg) cg = gameObject.AddComponent<CanvasGroup>();
-        cg.blocksRaycasts = false;   // <- quan trọng để không che raycast của slot
-        cg.interactable  = false;
 
-        // GraphicRaycaster phải có trên Canvas cha
-        if (parentCanvas && !parentCanvas.GetComponent<GraphicRaycaster>())
-            parentCanvas.gameObject.AddComponent<GraphicRaycaster>();
+        cg.blocksRaycasts = false;
+        cg.interactable = false;
 
         transform.SetAsLastSibling();
-        Hide();
+
+        Hide();   // luôn reset khi scene load
     }
-    // -------------------------------------------------------------------------------
 
     void LateUpdate()
     {
