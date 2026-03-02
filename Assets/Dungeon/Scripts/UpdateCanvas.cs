@@ -31,11 +31,12 @@ public class UpdateCanvas : MonoBehaviour
 
     void Start()
     {
-        canvas = GameObject.Find("Canvas").transform.Find("Main Panel").transform.Find("PlayerInfo").gameObject;
+        if(canvas == null) canvas = GameObject.Find("Canvas").transform.Find("Main Panel").transform.Find("PlayerInfo").gameObject;
         player = GameObject.Find("Player");
     }
     private void Update()
-    {
+    {        
+
         Name = PlayerRuntime.Instance.Player.Name;
         Hp = PlayerRuntime.Instance.Player.Hp;
         Mp = PlayerRuntime.Instance.Player.Mp;
