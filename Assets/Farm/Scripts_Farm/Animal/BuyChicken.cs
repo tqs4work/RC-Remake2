@@ -10,22 +10,23 @@ public class BuyChicken : MonoBehaviour
     public GameObject hintUI;
     public int index = 0; // Chỉ số điểm xuất hiện gà, mặc định là 0
     private bool isPlayerNear = false;
-
+    public GameObject panelBuyChic;
     private void Start()
     {
-        if(hintUI!= null)
-        {
-            hintUI.SetActive(false);
-        }
+        
+        if (panelBuyChic != null) 
+            panelBuyChic.SetActive(false);
+        
     }
     private void Update()
     {
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
-        {
-            BuyChic();
-        }
     }
-    private void BuyChic()
+    public void ShowPanelBuyChic()
+    {
+        if (panelBuyChic != null) panelBuyChic.SetActive(true);
+        
+    }
+    public void BuyChic()
     {
         if (PlayerRuntime.Instance.Player.Gold >= chickenPrice && index <6) // chỉ cho mua 6 con gà 0-5
         {
@@ -36,6 +37,7 @@ public class BuyChicken : MonoBehaviour
             {
                 Instantiate(chickenPrefab, spawnPoint[index].position, Quaternion.identity);
             }
+            panelBuyChic.SetActive(false);
         }
         else if(index >= 6)
         {
@@ -46,22 +48,9 @@ public class BuyChicken : MonoBehaviour
             Debug.Log(" không đủ " + chickenPrice + " vàng để mua gà!");
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    public void CancelBuy()
     {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerNear = true;
-            if (hintUI != null) hintUI.SetActive(true); 
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerNear = false;
-            if (hintUI != null) hintUI.SetActive(false); 
-        }
+        if (panelBuyChic != null) panelBuyChic.SetActive(false);
     }
 
 
