@@ -428,9 +428,9 @@ public class SaveWrapper
     {        
         SaveWrapper wrapper = new SaveWrapper();
         // duyệt vị trí theo cái vùng đấy baseground (nằm ở đáy) để lấy tất cả vị trí có tile, nếu có cây thì lưu thông tin cây
-        foreach (var pos in tm_BaseGround.cellBounds.allPositionsWithin)
+        foreach (var pos in tm_GroundInvisible.cellBounds.allPositionsWithin)
         {
-            if (!tm_BaseGround.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
+            if (!tm_GroundInvisible.HasTile(pos)) continue; //nếu dưới baseground k có tile thì khỏi lưu vì đó k phải là ô đất trồng được
 
             if (activeCrops.ContainsKey(pos)) // Trường hợp ô ĐANG CÓ CÂY đang được trồng 
             {
@@ -487,6 +487,7 @@ public class SaveWrapper
                 tm_Hole.SetTile(pos, tb_Hole);
                 tm_Seed.SetTile(pos, null);
                 tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                tm_WaterSoil.SetTile(pos, tb_WaterSoil);
             }
             else if (tile.state == 1) // Hố trống
             {
@@ -494,9 +495,13 @@ public class SaveWrapper
                 tm_Hole.SetTile(pos, tb_Hole);
                 tm_Seed.SetTile(pos, null);
                 tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                tm_WaterSoil.SetTile(pos, tb_WaterSoil);
             }
             else if (tile.state == 2) // Có cây
             {
+                tm_Soil.SetTile(pos, null);
+                tm_Hole.SetTile(pos, null);
+                
                 PlantData plantData = Resources.Load<PlantData>("PlantData/" + tile.plantName);
                 if (plantData.seedName != null)
                 {
@@ -514,11 +519,12 @@ public class SaveWrapper
                     // Nếu cây đã được tưới nước ở giai đoạn trước, đặt tile đất ướt
                     if (tile.isWatered)
                     {
-                        tm_HoleSeed.SetTile(pos, tb_HoleSeed);
+                        tm_HoleSeed.SetTile(pos, null);
+                        StartCoroutine(GrowCropRoutine(crop)); // Tiếp tục đếm thời gian cho giai đoạn tiếp theo nếu cây chưa chín
                     }
                     else
                     {
-                        tm_HoleSeed.SetTile(pos, null);
+                        tm_HoleSeed.SetTile(pos, tb_HoleSeed);
                     }
                 }
                 else
