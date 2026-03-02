@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 6
   itemID: T010
-  itemName: Armor
+  itemName: "\xC1o Gi\xE1p"
   description: 
-  icon: {fileID: -3753825769889500098, guid: 27d65478d4b01294d8e16126927fe6ac, type: 3}
+  icon: {fileID: 21300000, guid: 455c8dae9cb6c864dbe8af647baa2915, type: 3}
   isStackable: 0
   maxStack: 0
-  price: 0
+  price: 300
   stackable: 0
   level: 0
   quantity: 0
@@ -29,18 +29,19 @@ MonoBehaviour:
   def: 10
   crit: 0
   useDurability: 1
-  durability: 100
-  addATKPerLevel: 0000000000000000000000000000000000000000
-  addDEFPerLevel: 0000000000000000000000000000000000000000
-  addCRITPerLevel:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  addATKPerLevel: 
+  addDEFPerLevel: 0a0000000f00000014000000190000001e000000
+  addCRITPerLevel: []
   maxDurability: 100
   maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -56,7 +56,7 @@ public class Item : ScriptableObject
     public int[] addDEFPerLevel = new int[5];
     public float[] addCRITPerLevel = new float[5];
 
-    [Range(1, 200)] public int maxDurability = 100;
+    [Range(1, 200)] public float maxDurability = 100;
     [Tooltip("Tối đa % giá mua để sửa từ 0% -> full. Ví dụ 0.5 = 50% giá mua.")]
     [Range(0f, 1f)] public float maxRepairRateOfBuyPrice = 0.5f;
 

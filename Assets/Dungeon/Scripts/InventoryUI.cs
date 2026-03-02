@@ -66,6 +66,7 @@ public class InventoryUI : MonoBehaviour
         farmPanel.SetActive(false);
         cityPanel.SetActive(false);
         dungeonPanel.SetActive(false);
+        ItemTooltipUI_TU.Ensure()?.Hide();
     }
 
     public void ShowToolPanel()
@@ -132,7 +133,15 @@ public class InventoryUI : MonoBehaviour
                 var item = items[i];
 
                 iconImg.sprite = item.icon;
-                iconImg.enabled = true;                
+                iconImg.enabled = true;
+                var hover = slot.GetComponent<ItemHoverHandler_TU>();
+                if (hover == null)
+                   hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
+
+                hover.Setup(item.itemData, item.upgradeLevel);
+                hover.SetDurability(Mathf.RoundToInt(item.durability));
+
+                hover.SetAnchor(slot.GetComponent<RectTransform>());
 
                 if (item.isStackable && item.quantity >= 1)
                 {
@@ -203,6 +212,7 @@ public class InventoryUI : MonoBehaviour
 
     public void RefreshAll()
     {
+        ItemTooltipUI_TU.Ensure()?.Hide();   
         if (toolPanel.activeSelf)
             ShowToolPanel();
 

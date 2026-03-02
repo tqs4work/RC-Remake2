@@ -19,7 +19,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 5dd6973e4d604f542a634673cc3ad146, type: 2}
   isStackable: 1
   maxStack: 99
-  price: 0
+  price: 50
   stackable: 1
   level: 1
   quantity: 5
@@ -29,7 +29,6 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 0
-  durability: 100
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
@@ -44,3 +43,10 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
