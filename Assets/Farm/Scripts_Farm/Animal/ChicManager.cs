@@ -48,7 +48,6 @@ public class ChicManager : MonoBehaviour
     public Image food;
     public Image sellIcon;
     public Button Interact;
-    public TextMeshProUGUI symbol;
 
     [Header("Movement Settings")]
     public float moveSpeed = 1.5f; // Tốc độ đi bộ
@@ -60,7 +59,6 @@ public class ChicManager : MonoBehaviour
 
     private void Start()
     {
-        adultUIPopup = GameObject.Find("SellChic");
         //Khởi tạo timer cho trạng thái baby
         hungerTimer = hungerInterval;
         babyModel.SetActive(true);
@@ -70,7 +68,6 @@ public class ChicManager : MonoBehaviour
         Interact.gameObject.SetActive(false);
         food.enabled = false;
         sellIcon.enabled = false;
-        symbol.enabled = false;
 
         startPos = transform.position; // Lưu lại mốc tọa độ ban đầu
         StartCoroutine(RoamRoutine()); // Bắt đầu tiến trình đi dạo
@@ -190,7 +187,6 @@ public class ChicManager : MonoBehaviour
         Interact.gameObject.SetActive(false);
         food.enabled = false;
         sellIcon.enabled = false;
-        symbol.enabled = false;
         StartCoroutine(WaitToEnableAdultInteract());
     }
     private IEnumerator WaitToEnableAdultInteract()
@@ -200,7 +196,6 @@ public class ChicManager : MonoBehaviour
         Debug.Log("Gà trưởng thành đã sẵn sàng để bán!");
         Interact.gameObject.SetActive(true);
         sellIcon.enabled = true;
-        symbol.enabled = true;
     }
     private void ShowAdultPopup()
     {
