@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 7
   itemID: D009
-  itemName: HP Pot
-  description: Hoi mau
+  itemName: "B\xECnh m\xE1u"
+  description: "D\xF9ng \u0111\u1EC3 h\u1ED3i m\xE1u"
   icon: {fileID: 21300000, guid: 333867a3099b71843a92795f48c3909a, type: 2}
   isStackable: 1
-  maxStack: 10
-  price: 100
+  maxStack: 99
+  price: 50
   stackable: 0
-  level: 1
+  level: 0
   quantity: 1
   hpAmount: 50
   mpAmount: 0
@@ -29,7 +29,6 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
-  durability: 0
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
@@ -44,3 +43,10 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
