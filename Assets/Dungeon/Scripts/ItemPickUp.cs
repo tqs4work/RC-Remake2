@@ -40,6 +40,12 @@ public class ItemPickup : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
+            else if (invItem.itemID == newItem.itemID &&
+                     !invItem.isStackable)
+            {
+                newItem.itemID += Random.Range(0f,100f);
+                Destroy(gameObject);                
+            }
         }
 
         // ======================================================
