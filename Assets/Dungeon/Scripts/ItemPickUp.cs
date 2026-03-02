@@ -43,7 +43,7 @@ public class ItemPickup : MonoBehaviour
             else if (invItem.itemID == newItem.itemID &&
                      !invItem.isStackable)
             {
-                newItem.itemID += Random.Range(0f,100f);
+                newItem.itemID += " " + Random.Range(0f,100f).ToString();
                 Destroy(gameObject);                
             }
         }

@@ -29,7 +29,7 @@ public class FirebaseService
     {
         await _client
             .Child("Accounts")
-            .Child($"Acc_{account.Timecreate}")
+            .Child($"Acc _ {account.Username} _ {account.Timecreate}")
             .PutAsync(account);
     }
 
