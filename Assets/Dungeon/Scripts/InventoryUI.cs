@@ -132,27 +132,7 @@ public class InventoryUI : MonoBehaviour
                 var item = items[i];
 
                 iconImg.sprite = item.icon;
-                iconImg.enabled = true;
-                //var hover = slot.GetComponent<ItemHoverHandler_TU>();
-                //if (hover == null)
-                //    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
-
-                ////hover.Setup(item.itemData, item.upgradeLevel);
-                ////hover.SetDurability(item.itemData.maxDurability);
-
-                //if (item.itemData != null)
-                //{
-                //    hover.Setup(item, );
-                //    hover.SetDurability(item.durability);
-                //}
-                //else
-                //{
-                //    Debug.LogError("Missing itemData for item ID: " + item.itemID);
-                //}
-
-                
-
-                //hover.SetAnchor(slot.GetComponent<RectTransform>());
+                iconImg.enabled = true;                
 
                 if (item.isStackable && item.quantity >= 1)
                 {
