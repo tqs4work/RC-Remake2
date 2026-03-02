@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+
 public class ItemDatabase : MonoBehaviour
 {
     public static ItemDatabase Instance;
@@ -8,7 +9,14 @@ public class ItemDatabase : MonoBehaviour
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public Item GetItemByID(string id)
