@@ -7,15 +7,15 @@ using UnityEngine.UI;
 
 public class UpdateCanvas : MonoBehaviour
 {
-    public string Name;
-    public int Hp;
-    public int Mp;
-    public int Exp;
-    public int Lv;
-    public int Gold;
+    [SerializeField] public string Name;
+    [SerializeField] public int Hp;
+    [SerializeField] public int Mp;
+    [SerializeField] public int Exp;
+    [SerializeField] public int Lv;
+    [SerializeField] public int Gold;
 
-    public GameObject canvas;
-    public GameObject player;
+    [SerializeField] public GameObject canvas;
+    [SerializeField] public GameObject player;
     [SerializeField] Image hpBar;
     [SerializeField] TextMeshProUGUI hpNum;
     [SerializeField] Image mpBar;
@@ -25,9 +25,9 @@ public class UpdateCanvas : MonoBehaviour
     [SerializeField] Image expBar;
     [SerializeField] TextMeshProUGUI goldNum;
 
-    public bool isDead;
-    public int hp0;
-    public int mp0 = 100;
+    [SerializeField] public bool isDead;
+    [SerializeField] public int hp0;
+    [SerializeField] public int mp0 = 100;
 
     void Start()
     {
