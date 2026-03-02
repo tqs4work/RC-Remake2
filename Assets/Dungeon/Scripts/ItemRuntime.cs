@@ -76,8 +76,11 @@ public class ItemRuntime
 
     public static ItemRuntime FromData(Item2String data)
     {
+        Item baseItem = ItemDatabase.Instance.GetItemByID(data.itemID);
+
         return new ItemRuntime
         {
+            itemData = baseItem, 
             itemType = Enum.Parse<ItemType>(data.itemType),
             itemID = data.itemID,
             itemName = data.itemName,
