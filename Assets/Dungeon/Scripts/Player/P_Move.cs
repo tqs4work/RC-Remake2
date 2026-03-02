@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class P_Move : MonoBehaviour
 {
-    public float moveSpeed;
+    [SerializeField] public float moveSpeed;
     
-    public float lastX;
-    public float lastY;
+    [SerializeField] public float lastX;
+    [SerializeField] public float lastY;
     bool isRun;    
     bool isAction;
     Rigidbody2D rb;
