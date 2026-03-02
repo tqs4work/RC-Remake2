@@ -70,10 +70,77 @@ public class ItemEditor : Editor
         addCRITPerLevel = serializedObject.FindProperty("addCRITPerLevel");
     }
 
+    //public override void OnInspectorGUI()
+    //{
+    //    serializedObject.Update();        
+
+    //    EditorGUILayout.PropertyField(itemType);
+    //    EditorGUILayout.PropertyField(itemID);
+    //    EditorGUILayout.PropertyField(itemName);
+    //    EditorGUILayout.PropertyField(icon);
+    //    EditorGUILayout.PropertyField(description);
+
+    //    EditorGUILayout.PropertyField(isStackable);
+    //    EditorGUILayout.PropertyField(price);
+    //    EditorGUILayout.PropertyField(level);
+
+    //    EditorGUILayout.Space();
+
+    //    ItemType type = (ItemType)itemType.enumValueIndex;
+
+    //    if (type == ItemType.Sword || type == ItemType.Armor || type == ItemType.Shovel || type == ItemType.Bow || type == ItemType.Axe || type == ItemType.Pickaxe)
+    //    {            
+    //        EditorGUILayout.PropertyField(atk);
+    //        EditorGUILayout.PropertyField(def);
+    //        EditorGUILayout.PropertyField(durability);
+
+
+    //        EditorGUILayout.PropertyField(crit);
+    //        EditorGUILayout.PropertyField(useDurability);
+    //        EditorGUILayout.Space();
+    //        EditorGUILayout.PropertyField(addATKPerLevel, true);
+    //        EditorGUILayout.PropertyField(addDEFPerLevel, true);
+    //        EditorGUILayout.PropertyField(addCRITPerLevel, true);
+
+
+    //    }
+
+    //    if(type == ItemType.Consumable)
+    //    {            
+    //        EditorGUILayout.PropertyField(hpAmount);
+    //        EditorGUILayout.PropertyField(mpAmount);
+    //    }
+
+
+    //    if (isStackable.boolValue == true)
+    //    {
+    //        EditorGUILayout.PropertyField(quantity);
+    //        EditorGUILayout.PropertyField(maxStack);
+    //    }
+
+
+    //    if(type == ItemType.Seed)
+    //    {            
+    //        EditorGUILayout.PropertyField(growTime);
+    //    }
+
+    //    EditorGUILayout.PropertyField(bonus);
+    //    serializedObject.ApplyModifiedProperties();
+    //}
     public override void OnInspectorGUI()
     {
-        serializedObject.Update();        
-        
+        if (serializedObject == null)
+            return;
+
+        serializedObject.Update();
+
+        // ===== SAFETY CHECK =====
+        if (itemType == null)
+        {
+            EditorGUILayout.HelpBox("itemType property not found. Check field name in Item class.", MessageType.Error);
+            return;
+        }
+
         EditorGUILayout.PropertyField(itemType);
         EditorGUILayout.PropertyField(itemID);
         EditorGUILayout.PropertyField(itemName);
@@ -83,49 +150,53 @@ public class ItemEditor : Editor
         EditorGUILayout.PropertyField(isStackable);
         EditorGUILayout.PropertyField(price);
         EditorGUILayout.PropertyField(level);
-        
+
         EditorGUILayout.Space();
 
         ItemType type = (ItemType)itemType.enumValueIndex;
 
-        if (type == ItemType.Sword || type == ItemType.Armor || type == ItemType.Shovel || type == ItemType.Bow || type == ItemType.Axe || type == ItemType.Pickaxe)
-        {            
-            EditorGUILayout.PropertyField(atk);
-            EditorGUILayout.PropertyField(def);
-            EditorGUILayout.PropertyField(durability);
-
-
-            EditorGUILayout.PropertyField(crit);
-            EditorGUILayout.PropertyField(useDurability);
-            EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(addATKPerLevel, true);
-            EditorGUILayout.PropertyField(addDEFPerLevel, true);
-            EditorGUILayout.PropertyField(addCRITPerLevel, true);
-
-
-        }
-
-        if(type == ItemType.Consumable)
-        {            
-            EditorGUILayout.PropertyField(hpAmount);
-            EditorGUILayout.PropertyField(mpAmount);
-        }
-
-
-        if (isStackable.boolValue == true)
+        // ===== Equipment =====
+        if (type == ItemType.Sword || type == ItemType.Armor ||
+            type == ItemType.Shovel || type == ItemType.Bow ||
+            type == ItemType.Axe || type == ItemType.Pickaxe)
         {
-            EditorGUILayout.PropertyField(quantity);
-            EditorGUILayout.PropertyField(maxStack);
+            if (atk != null) EditorGUILayout.PropertyField(atk);
+            if (def != null) EditorGUILayout.PropertyField(def);
+            if (durability != null) EditorGUILayout.PropertyField(durability);
+
+            if (crit != null) EditorGUILayout.PropertyField(crit);
+            if (useDurability != null) EditorGUILayout.PropertyField(useDurability);
+
+            EditorGUILayout.Space();
+
+            if (addATKPerLevel != null) EditorGUILayout.PropertyField(addATKPerLevel, true);
+            if (addDEFPerLevel != null) EditorGUILayout.PropertyField(addDEFPerLevel, true);
+            if (addCRITPerLevel != null) EditorGUILayout.PropertyField(addCRITPerLevel, true);
         }
 
-
-        if(type == ItemType.Seed)
-        {            
-            EditorGUILayout.PropertyField(growTime);
+        // ===== Consumable =====
+        if (type == ItemType.Consumable)
+        {
+            if (hpAmount != null) EditorGUILayout.PropertyField(hpAmount);
+            if (mpAmount != null) EditorGUILayout.PropertyField(mpAmount);
         }
 
-        EditorGUILayout.PropertyField(bonus);
+        // ===== Stackable =====
+        if (isStackable != null && isStackable.boolValue)
+        {
+            if (quantity != null) EditorGUILayout.PropertyField(quantity);
+            if (maxStack != null) EditorGUILayout.PropertyField(maxStack);
+        }
+
+        // ===== Seed =====
+        if (type == ItemType.Seed)
+        {
+            if (growTime != null) EditorGUILayout.PropertyField(growTime);
+        }
+
+        if (bonus != null)
+            EditorGUILayout.PropertyField(bonus);
+
         serializedObject.ApplyModifiedProperties();
     }
-    
 }

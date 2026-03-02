@@ -33,7 +33,7 @@ public class InventoryUI : MonoBehaviour
     }
 
     private void Update()
-    {
+    {        
         isPanelOpen = toolPanel.activeSelf ||
                        farmPanel.activeSelf ||
                        cityPanel.activeSelf ||
@@ -101,7 +101,7 @@ public class InventoryUI : MonoBehaviour
     private float doubleClickThreshold = 0.3f; // 0.3 gi�y
 
     void RenderItems(InventoryContainerType type, Transform parent)
-    {
+    {        
         var playerInventory = PlayerRuntime.Instance.Player.Inventory;
 
         if (!playerInventory.ContainsKey(type))
@@ -133,13 +133,26 @@ public class InventoryUI : MonoBehaviour
 
                 iconImg.sprite = item.icon;
                 iconImg.enabled = true;
-                var hover = slot.GetComponent<ItemHoverHandler_TU>();
-                if (hover == null)
-                    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
+                //var hover = slot.GetComponent<ItemHoverHandler_TU>();
+                //if (hover == null)
+                //    hover = slot.gameObject.AddComponent<ItemHoverHandler_TU>();
 
-                hover.Setup(item.itemData, item.upgradeLevel);
-                hover.SetDurability(item.itemData.maxDurability);
-                hover.SetAnchor(slot.GetComponent<RectTransform>());
+                ////hover.Setup(item.itemData, item.upgradeLevel);
+                ////hover.SetDurability(item.itemData.maxDurability);
+
+                //if (item.itemData != null)
+                //{
+                //    hover.Setup(item, );
+                //    hover.SetDurability(item.durability);
+                //}
+                //else
+                //{
+                //    Debug.LogError("Missing itemData for item ID: " + item.itemID);
+                //}
+
+                
+
+                //hover.SetAnchor(slot.GetComponent<RectTransform>());
 
                 if (item.isStackable && item.quantity >= 1)
                 {
