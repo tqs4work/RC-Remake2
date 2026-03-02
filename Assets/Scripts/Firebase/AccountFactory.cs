@@ -22,10 +22,10 @@ public static class AccountFactory
             ID = Guid.NewGuid().ToString(),
             Name = "NewPlayer",
             Hp = 100,
-            Mp = 50,
+            Mp = 100,
             Exp = 0,
             Lv = 1,
-            Gold = 0,
+            Gold = 1000,
             IsOnline = false,
             LastLogin = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"),
 
