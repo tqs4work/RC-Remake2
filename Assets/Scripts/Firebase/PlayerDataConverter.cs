@@ -19,7 +19,9 @@ public static class PlayerDataConverter
 
             Store = player.Store,
 
-            Wrapper = player.Wrapper
+            Wrapper = player.Wrapper,
+
+            ChickenWrapper = player.ChickenWrapper
         };       
         
         foreach (var container in player.Inventory)

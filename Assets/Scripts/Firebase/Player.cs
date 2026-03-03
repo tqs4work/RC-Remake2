@@ -19,6 +19,8 @@ public class Player
 
     public List<TileState> Wrapper = new();
 
+    public List<ChickenData> ChickenWrapper = new();
+
     public Player()
     {
         Inventory[InventoryContainerType.Tool] =
@@ -258,5 +260,7 @@ public class Player
         Store = data.Store;
 
         Wrapper = data.Wrapper;
+
+        ChickenWrapper = data.ChickenWrapper;
     }    
 }

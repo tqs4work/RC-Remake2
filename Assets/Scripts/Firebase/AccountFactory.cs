@@ -35,7 +35,9 @@ public static class AccountFactory
 
             Store = new List<ItemRuntime>(),
 
-            Wrapper = new List<TileState>()
+            Wrapper = new List<TileState>(),
+
+            ChickenWrapper = new List<ChickenData>()
         };
 
         // T?o s?n 4 container r?ng
