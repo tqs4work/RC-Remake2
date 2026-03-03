@@ -34,11 +34,22 @@ public class ItemPickup : MonoBehaviour
             if (invItem.itemID == newItem.itemID &&
                 invItem.isStackable)
             {
-                invItem.quantity += newItem.quantity;
-
-                Debug.Log($"Picked up: {newItem.itemName} (Stacked)");
-                Destroy(gameObject);
-                return;
+                if(invItem.quantity + newItem.quantity > invItem.maxStack)
+                {
+                    int spaceLeft = invItem.maxStack - invItem.quantity;
+                    invItem.quantity += spaceLeft;
+                    newItem.quantity -= spaceLeft;
+                    newItem.itemID += " " + Random.Range(0f, 100f).ToString();
+                    Debug.Log($"Picked up: {newItem.itemName} (Partially Stacked)");
+                }
+                else
+                {
+                    invItem.quantity += newItem.quantity;                    
+                    Debug.Log($"Picked up: {newItem.itemName} (Stacked)");
+                    Destroy(gameObject);
+                    return;
+                }                
+                
             }
             else if (invItem.itemID == newItem.itemID &&
                      !invItem.isStackable)

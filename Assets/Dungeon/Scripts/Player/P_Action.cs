@@ -1,4 +1,6 @@
 using System.Collections;
+using FirebaseAdmin.Messaging;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class P_Action : MonoBehaviour
@@ -28,7 +30,7 @@ public class P_Action : MonoBehaviour
     [SerializeField] GameObject stone3;
     [SerializeField] GameObject wood;
 
-    P_Audio audio;
+    P_Audio audioPlayer;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +40,7 @@ public class P_Action : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<P_Audio>();
+        audioPlayer = GetComponent<P_Audio>();
     }
 
     void Update()
@@ -84,7 +86,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(MeleeAttack());
-                    audio.sword.Play();
+                    audioPlayer.sword.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -99,7 +101,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(RangedAttack());
-                    audio.bow.Play();
+                    audioPlayer.bow.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -114,7 +116,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Dig());
-                    audio.shovel.Play();
+                    audioPlayer.shovel.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -129,7 +131,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Axe());
-                    audio.axe.Play();
+                    audioPlayer.axe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -144,7 +146,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Mining());  
-                    audio.pickaxe.Play();
+                    audioPlayer.pickaxe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -159,7 +161,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Water());
-                    audio.water.Play();
+                    audioPlayer.water.Play();
                     item.durability -= 1;
                     hotbar.Refresh();
                 }
@@ -358,7 +360,8 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in stones)
         {
-            Vector3 dropPos = transform.position + Random.insideUnitSphere * 0.5f;
+            Vector3 vec = new Vector3(0, 0.5f, 0);
+            Vector3 dropPos = c.transform.position - vec + Random.insideUnitSphere * 0.5f;
             dropPos.z = 0;
 
             if (c.CompareTag("Stone1"))
@@ -403,7 +406,8 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in Woods)
         {
-            Vector3 dropPos = transform.position + Random.insideUnitSphere * 0.5f;
+            Vector3 vec = new Vector3(0, 1.5f, 0);
+            Vector3 dropPos = c.transform.position - vec - Random.insideUnitSphere * 0.5f; 
             dropPos.z = 0;
 
             if (c.CompareTag("Tree"))
@@ -439,4 +443,11 @@ public class P_Action : MonoBehaviour
             Debug.Log("Not enough MP to roll!");
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.transform.position, 1.5f);        
+    }
 }
+
