@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 456234257882555967}
   - component: {fileID: 8130288120500681007}
   - component: {fileID: 1629867912622007935}
+  - component: {fileID: 7080646695636788114}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1160203513
-  m_SortingLayer: 30
+  m_SortingLayer: 29
   m_SortingOrder: 0
   m_Sprite: {fileID: -7832987262840425037, guid: 0868b347768956149bd3c50ed38d37a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,6 +208,7 @@ MonoBehaviour:
   moveSpeed: 3
   lastX: 0
   lastY: 0
+  isBlock: 0
 --- !u!114 &456234257882555967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAction: 0
+  isOpenInventory: 0
   hotbar: {fileID: 0}
   arrowDir: {fileID: 5680183309000555417}
   attackPoint: {fileID: 6494936513683437936}
@@ -252,6 +255,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3000cfa90c3ed2a40aaa0ac5983bff8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  farmController: {fileID: 0}
+--- !u!114 &7080646695636788114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879140044489312321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c1a0ef97d64464d9a5affbaa09a72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImmune: 0
 --- !u!1 &4750511402780536614
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5296332563064691426
 Transform:
   m_ObjectHideFlags: 0
@@ -395,7 +412,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1160203513
-  m_SortingLayer: 30
+  m_SortingLayer: 29
   m_SortingOrder: -1
   m_Sprite: {fileID: 3312798837105470071, guid: 527b02276b2e9f946aa8572c1b8a4ffa, type: 3}
   m_Color: {r: 1, g: 0.0056602955, b: 0.0056602955, a: 0.6117647}

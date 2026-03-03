@@ -15,6 +15,8 @@ public class Player
     // ===== INVENTORY DICTIONARY =====
     public Dictionary<InventoryContainerType, InventoryContainer> Inventory = new();
 
+    public List<ItemRuntime> Store = new();
+
     public List<TileState> Wrapper = new();
 
     public Player()
@@ -252,6 +254,8 @@ public class Player
                 );
             }
         }
+
+        Store = data.Store;
 
         Wrapper = data.Wrapper;
     }    

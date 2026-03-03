@@ -16,7 +16,7 @@ MonoBehaviour:
   itemID: F2
   itemName: Carrot
   description: 
-  icon: {fileID: -3829704256182829468, guid: a82741115f92345448d14144bb89f44c, type: 3}
+  icon: {fileID: 21300000, guid: d46a074793a7af54eac662456fc3f9bc, type: 2}
   isStackable: 1
   maxStack: 99
   price: 100
@@ -29,7 +29,6 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
-  durability: 0
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
@@ -44,3 +43,10 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradeIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
