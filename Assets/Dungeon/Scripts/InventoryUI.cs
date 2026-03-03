@@ -60,7 +60,7 @@ public class InventoryUI : MonoBehaviour
             ShowDungeonPanel();
     }
 
-    void HideAllPanels()
+    public void HideAllPanels()
     {
         toolPanel.SetActive(false);
         farmPanel.SetActive(false);
@@ -158,23 +158,23 @@ public class InventoryUI : MonoBehaviour
                  {
                      if (Time.time - lastClickTime <= doubleClickThreshold)
                      {
-                         // 🔥 Nếu Repair UI đang mở
-                         if (RepairUI_TU.Instance != null &&
-                             RepairUI_TU.Instance.gameObject.activeSelf)
-                         {
-                             RepairSlotCell_TU slotCell =
-                                 FindFirstObjectByType<RepairSlotCell_TU>();
+                            Debug.Log("DOUBLE CLICK DETECTED");
 
-                             if (slotCell != null)
-                             {
-                                 slotCell.SetItem(itemCopy);
-                             }
-                         }
-                         else
-                         {
-                             // Mặc định chuyển qua hotbar
-                             MoveItemToHotbar(typeCopy, itemCopy);
-                         }
+                            ShopUI_TU shop = FindObjectOfType<ShopUI_TU>();
+
+                            if (shop != null && shop.gameObject.activeSelf && shop.CurrentMode == ShopUI_TU.Mode.Sell)
+                            {
+                                shop.OpenSellPopup(itemCopy, typeCopy);
+                            }
+                            else if (RepairUI_TU.Instance != null &&
+                                    RepairUI_TU.Instance.gameObject.activeInHierarchy)
+                            {
+                                RepairUI_TU.Instance.repairSlotCell.SetItem(itemCopy);
+                            }
+                            else
+                            {
+                                MoveItemToHotbar(typeCopy, itemCopy);
+                            }
                      }
 
                      lastClickTime = Time.time;

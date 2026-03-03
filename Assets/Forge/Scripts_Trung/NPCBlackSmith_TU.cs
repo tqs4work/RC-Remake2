@@ -6,7 +6,6 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class NPCBlackSmith_TU : MonoBehaviour
 {
-    public GameObject InventoryUI;
     public  bool DialogueOpen { get; private set; }
 
     [Header("Dialogue Data")]
@@ -71,7 +70,6 @@ public class NPCBlackSmith_TU : MonoBehaviour
         repairPanel?.SetActive(false);
         stonePanel?.SetActive(false);
         weaponUpgradePanel?.SetActive(false);
-        inventoryPanel?.SetActive(false);
 
         buttonTrade?.onClick.AddListener(OpenShop);
         buttonRepair?.onClick.AddListener(OpenRepair);
@@ -95,7 +93,6 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
     void Update()
     {
-         InventoryUI.SetActive(true);
         HandleHammer();
 
         // ===== BẮT PHÍM E ĐỂ MỞ DIALOGUE =====
@@ -221,7 +218,10 @@ public class NPCBlackSmith_TU : MonoBehaviour
         choicesUI.SetActive(false);
         dialogueUI.SetActive(false);
 
-        inventoryPanel?.SetActive(true);
+         InventoryUI inventory = FindFirstObjectByType<InventoryUI>();
+        if (inventory != null)
+            inventory.ShowToolPanel();   // bật inventory đúng cách
+
         panel?.SetActive(true);
 
         PauseHammer();
@@ -233,7 +233,11 @@ public class NPCBlackSmith_TU : MonoBehaviour
         repairPanel?.SetActive(false);
         stonePanel?.SetActive(false);
         weaponUpgradePanel?.SetActive(false);
-        inventoryPanel?.SetActive(false);
+        InventoryUI inventory = FindFirstObjectByType<InventoryUI>();
+        if (inventory != null)
+        {
+            inventory.HideAllPanels();
+        }
 
         waitingExternal = false;
         dialogueUI.SetActive(true);

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 166.9, y: -48}
-  m_SizeDelta: {x: 333.8, y: 94.57}
+  m_AnchoredPosition: {x: 231.31, y: -66.164}
+  m_SizeDelta: {x: 462.62, y: 130.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1938428838067067287
 CanvasRenderer:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4951868, g: 0.90188676, b: 0.873952, a: 0.2784314}
+  m_Color: {r: 0.5849056, g: 0.53231496, b: 0.51537913, a: 0.2784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -110,7 +110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121.3, y: 0}
+  m_AnchoredPosition: {x: -187.5, y: 19.6}
   m_SizeDelta: {x: 70, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4570266712733864040
@@ -202,8 +202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 265.2, y: -26.5}
-  m_SizeDelta: {x: 71.9996, y: 23.5784}
+  m_AnchoredPosition: {x: 381.13745, y: -39.019}
+  m_SizeDelta: {x: 135.2746, y: 48.617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2944092268096573892
 CanvasRenderer:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4284451342
-  m_fontColor: {r: 0.05490196, g: 0.5411765, b: 0.37254903, a: 1}
+  m_fontColor: {r: 0.09019608, g: 1, b: 0.09019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -260,15 +260,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 153.2, y: -25.699997}
-  m_SizeDelta: {x: 126.21, y: 26.3914}
+  m_AnchoredPosition: {x: 187.54106, y: -37.916}
+  m_SizeDelta: {x: 194.8921, y: 50.8234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2758493371046866059
 CanvasRenderer:
@@ -379,8 +379,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284451342
-  m_fontColor: {r: 0.05490196, g: 0.5411765, b: 0.37254903, a: 1}
+    rgba: 4279762711
+  m_fontColor: {r: 0.088679194, g: 1, b: 0.088679194, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 333.8, y: 94.57}
+  m_AnchoredPosition: {x: 64.41162, y: -18.521301}
+  m_SizeDelta: {x: 462.6232, y: 131.6126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1243728968648952272
 CanvasRenderer:
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -694,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.5, y: 0.29999924}
-  m_SizeDelta: {x: 77.72009, y: 36.663788}
+  m_AnchoredPosition: {x: -0.0017089844, y: -0.00064086914}
+  m_SizeDelta: {x: -0.0035, y: 0.0015106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2058914347669803893
 CanvasRenderer:
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 164.45279, y: 53.57177, z: 0, w: 13.829334}
+  m_margin: {x: 164.45279, y: 88.79925, z: 0, w: 13.829334}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
