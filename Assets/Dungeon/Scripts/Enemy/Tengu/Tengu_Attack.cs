@@ -56,6 +56,9 @@ public class Tengu_Attack : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             yield return new WaitForSeconds(0.5f);
             transform.position = player.transform.position;
+            GameObject r = Instantiate(redZone1, player.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+            Destroy(r);
             sr.enabled = true;
             anim.SetTrigger("MU");
             yield return new WaitForSeconds(0.8f);
