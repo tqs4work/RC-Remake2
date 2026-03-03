@@ -267,4 +267,74 @@ public class ChicManager : MonoBehaviour
             }
         }
     }
+    public ChickenData SaveChic()
+    {
+        ChickenData data = new ChickenData();
+        data.posX = transform.position.x;
+        data.posY = transform.position.y;
+        data.posZ = transform.position.z;
+
+        // Lưu trạng thái
+        data.state = currentState;
+        data.eggsProduced = eggsProduced;
+
+        if (currentState == ChicState.Baby)
+        {
+            data.currentTimer = hungerTimer;      
+            data.isHungryStatus = isHungry;       
+            data.feedCount = timesFed;            
+        }
+        else if (currentState == ChicState.Teen)
+        {
+            data.currentTimer = teenHungerTimer;  
+            data.isHungryStatus = isTeenHungry;   
+            data.feedCount = teenTimesFed;        
+        }
+        // Adult thì không cần lưu timer hay đói, chỉ cần vị trí và state là đủ
+        return data;
+    }
+    public void LoadData(ChickenData data)
+    {
+        transform.position = new Vector3(data.posX, data.posY, data.posZ);
+        startPos = transform.position; // Cập nhật lại điểm gốc đi dạo
+
+        // Khôi phục các chỉ số chung
+        currentState = data.state;
+        eggsProduced = data.eggsProduced;
+
+        // Tắt hết model để bật lại cái đúng
+        babyModel.SetActive(false);
+        teenModel.SetActive(false);
+        AdultModel.SetActive(false);
+        Interact.gameObject.SetActive(false); // Mặc định tắt nút tương tác
+
+        if (currentState == ChicState.Baby)
+        {
+            babyModel.SetActive(true);
+            hungerTimer = data.currentTimer;
+            isHungry = data.isHungryStatus;
+            timesFed = data.feedCount;
+            if (isHungry) ShowHungryUI();
+        }
+        else if (currentState == ChicState.Teen)
+        {
+            teenModel.SetActive(true);
+            teenHungerTimer = data.currentTimer;
+            isTeenHungry = data.isHungryStatus;
+            teenTimesFed = data.feedCount;
+            if (isTeenHungry) ShowHungryUI();
+        }
+        else if (currentState == ChicState.Adult)
+        {
+            AdultModel.SetActive(true);
+            StartCoroutine(WaitToEnableAdultInteract());
+        }
+    }
+
+    void ShowHungryUI()
+    {
+        Interact.gameObject.SetActive(true);
+        food.enabled = true;
+        sellIcon.enabled = false;
+    }
 }
