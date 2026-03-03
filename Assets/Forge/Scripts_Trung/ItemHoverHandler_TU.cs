@@ -31,6 +31,12 @@ public class ItemHoverHandler_TU : MonoBehaviour,
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!item) return;
+
+        // 🔥 Nếu đang có popup sửa thành công → không cho hover
+        if (RepairUI_TU.Instance != null &&
+            RepairUI_TU.Instance.IsBlockingUI())
+            return;
+
         var tt = ItemTooltipUI_TU.Ensure(); // <-- đảm bảo có instance kể cả khi object bị tắt
         if (tt == null) return;
 

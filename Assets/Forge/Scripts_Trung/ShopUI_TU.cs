@@ -7,7 +7,7 @@ using TMPro;
 public class ShopUI_TU : MonoBehaviour
 {
     public enum Mode { Buy, Sell }
-
+    public Mode CurrentMode => mode;
     [Header("Data")]
     public ShopCatalogSO_TU catalog;
 
@@ -22,6 +22,9 @@ public class ShopUI_TU : MonoBehaviour
     [Header("Buttons")]
     public Button btnBuyMode;
     public Button btnSellMode;
+
+    [Header("Dialog")]
+    [SerializeField] private InfoDialog_TU infoDialog;
 
     [NonSerialized] public Action onShopClosed;
 
@@ -77,6 +80,7 @@ public class ShopUI_TU : MonoBehaviour
 
     void OnClickBuyRow(ShopItemRow_TU row)
     {
+        if (mode != Mode.Buy) return;
         float now = Time.time;
 
         if (currentRow == row && (now - lastClickTime) < doubleClickThreshold)
@@ -93,7 +97,7 @@ public class ShopUI_TU : MonoBehaviour
         lastClickTime = now;
     }
 
-    void OpenBuyPopup(ShopItemRow_TU row)
+    public void OpenBuyPopup(ShopItemRow_TU row)
     {
         int maxQty = row.Item.stackable ? 99 : 1;
 
@@ -105,7 +109,8 @@ public class ShopUI_TU : MonoBehaviour
 
             if (player.Gold < total)
             {
-                Debug.Log("Không đủ vàng!");
+                if (infoDialog != null)
+                infoDialog.Show("Không đủ vàng!");
                 return;
             }
 
@@ -119,9 +124,27 @@ public class ShopUI_TU : MonoBehaviour
             // lấy container type từ itemID
             var containerType = GetContainerType(item);
             player.Inventory[containerType].AddItem(runtimeItem);
+            InventoryUI inventoryUI = FindObjectOfType<InventoryUI>();
+            if (inventoryUI != null)
+            {
+                inventoryUI.RefreshAll();
+            }
 
         }, maxQty);
-        popup.Close();
+    }
+    public void OpenSellPopup(ItemRuntime runtimeItem, InventoryContainerType type)
+    {
+       int sellPrice = Mathf.RoundToInt(runtimeItem.price * catalog.sellRate);
+
+        popup.Open(runtimeItem.itemData, sellPrice, "Bán", (it, qty) =>
+        {
+            SellItem(runtimeItem, type, qty);
+            InventoryUI inventoryUI = FindObjectOfType<InventoryUI>();
+            if (inventoryUI != null)
+            {
+                inventoryUI.RefreshAll();
+            }
+        }, runtimeItem.quantity);
     }
 
     /* ======================= SELL ======================= */

@@ -33,6 +33,11 @@ public class ShopItemRow_TU : MonoBehaviour
         if (priceText) priceText.text = price + "G";
         SetSelected(false);
         SetInteractable(true);
+        var hover = GetComponent<ItemHoverHandler_TU>();
+        if (hover == null) hover = gameObject.AddComponent<ItemHoverHandler_TU>();
+        hover.Setup(it, 0);
+        hover.SetDurability(100);
+        hover.SetAnchor(GetComponent<RectTransform>());
     }
 
     public Item Item => item;
