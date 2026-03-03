@@ -44,7 +44,7 @@ public class P_Action : MonoBehaviour
         if(GameObject.Find("Canvas").transform.Find("InventoryUI") != null)
             isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
 
-        if (hotbar == null)
+        if (hotbar == null && GameObject.Find("Canvas").transform.Find("HotBarManager") != null)
         {
             hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
         }
