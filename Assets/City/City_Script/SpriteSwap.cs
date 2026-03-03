@@ -1,12 +1,10 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class SpriteSwap : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] public GameObject shopPanel;
+    [SerializeField] public GameObject pharmacyPanel;
 
     [Header("Animation Frames")]
     [SerializeField] public Sprite[] openAnimation;
@@ -28,7 +26,7 @@ public class SpriteSwap : MonoBehaviour
 
     void Start()
     {
-        shopPanel.SetActive(false);
+        pharmacyPanel.SetActive(false);
     }
 
     void Update()
@@ -36,12 +34,13 @@ public class SpriteSwap : MonoBehaviour
         
     }
 
-    public void OpenDoor()
+    public IEnumerator OpenDoor()
     {
         if (!isAnimating)
         {
             StartCoroutine(PlayAnimation());
-            shopPanel.SetActive(true);
+            yield return new WaitForSeconds(0.5f); // Wait for animation to complete
+            pharmacyPanel.SetActive(true);           
         }
     }
 
@@ -50,7 +49,7 @@ public class SpriteSwap : MonoBehaviour
     if (isOpen && !isAnimating)
     {
         StartCoroutine(PlayAnimation());
-        shopPanel.SetActive(false);
+        pharmacyPanel.SetActive(false);
     }
 }
 

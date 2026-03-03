@@ -67,5 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "RC-Remake2.slnx"
+    "dotnet.defaultSolution": "RC-Remake2.slnx",
+    "FSharp.suggestGitignore": false
 }
