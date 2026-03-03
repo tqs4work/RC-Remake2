@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class TileState
@@ -415,8 +416,9 @@ public class SaveWrapper
 
 
                 Debug.Log($"Đã thu hoạch: {data.harvestItemName}");
+                
             }
-
+            activeCrops.Remove(pos);
             //setup lại nông trại, tất cả đất về bình thường trừ cái seed phải là null 
             tm_Soil.SetTile(pos, tb_Soil);
             tm_Hole.SetTile(pos, tb_Hole);

@@ -15,8 +15,20 @@ public class ChooseRecipe : MonoBehaviour
     [Header("Ingredient Display")]
     public Transform ingredientContainer; // dưới cái scroll view, nơi hiển thị nguyên liệu
     public GameObject ingredientPrefab;
-    public void Setup(Recipe result)
+
+    public Slider timeslider; // thanh hiển thị thời gian nấu ăn
+
+    private Action<Recipe,ChooseRecipe> _onCookAction; // gọi về manager 
+    private void Start()
     {
+        if (timeslider != null)
+        {
+            timeslider.gameObject.SetActive(false); // ẩn thanh thời gian khi bắt đầu
+        }
+    }
+    public void Setup(Recipe result, Action<Recipe,ChooseRecipe> onCookCallback)
+    {
+        _onCookAction = onCookCallback; // lưu lại hàm trycook của manager
         rep = result;
         nameText.text = rep.resultItem.itemName;
         timeToCook.text = rep.craftingTime.ToString() + "s";
@@ -25,6 +37,9 @@ public class ChooseRecipe : MonoBehaviour
             iconImage.sprite = rep.resultItem.icon;
         }
         SpawnIngredients();
+
+        cookButton.onClick.RemoveAllListeners(); 
+        cookButton.onClick.AddListener(OnCookButtonClicked);
     }
     void SpawnIngredients()
     {
@@ -46,8 +61,14 @@ public class ChooseRecipe : MonoBehaviour
     }
 
     // Gán vào sự kiện onclick của Button trong prefab ChooseRecipe
-    public void OnSelect()
+    void OnCookButtonClicked()
     {
-        Debug.Log("Nút nấu ăn đã được nhấn!");
+        Debug.Log("Đã bấm nút nấu món: " + rep.resultItem.itemName);
+
+        // gọi hàm TryCook bên CookingManager
+        if (_onCookAction != null)
+        {
+            _onCookAction.Invoke(rep,this);
+        }
     }
 }
