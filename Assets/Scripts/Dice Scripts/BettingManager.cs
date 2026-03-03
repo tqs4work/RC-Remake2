@@ -10,7 +10,7 @@ public class BettingManager : MonoBehaviour
 {
     public static BettingManager Instance;
 
-    [SerializeField] private int playerCoins = PlayerRuntime.Instance.Player.Gold;
+    [SerializeField] private int playerCoins;
     [SerializeField] private Button BetOddButton;
     [SerializeField] private Button BetEvenButton;
     [SerializeField] private GameObject allPanel;
@@ -34,6 +34,7 @@ public class BettingManager : MonoBehaviour
 
     void Start()
     {
+        playerCoins = PlayerRuntime.Instance.Player.Gold; // Khởi tạo vàng từ PlayerRuntime
         WelcomePanel.SetActive(true);
         allPanel.SetActive(true);
         instructionsPanel.gameObject.SetActive(false);
