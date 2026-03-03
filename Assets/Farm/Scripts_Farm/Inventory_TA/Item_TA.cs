@@ -124,6 +124,12 @@ public class Item : ScriptableObject
         float maxCost = price * maxRepairRateOfBuyPrice;
         return Mathf.CeilToInt(maxCost * missing);
     }
+    public bool UseUpgradeColor()
+    {
+        return itemType == ItemType.Bow ||
+            itemType == ItemType.Sword ||
+            itemType == ItemType.Armor;
+    }
 
 #if UNITY_EDITOR
     // Bảo đảm dữ liệu “hợp lệ” mỗi lần chỉnh trong Inspector

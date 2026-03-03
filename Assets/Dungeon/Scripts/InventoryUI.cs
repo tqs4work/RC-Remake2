@@ -172,6 +172,11 @@ public class InventoryUI : MonoBehaviour
                             {
                                 RepairUI_TU.Instance.repairSlotCell.SetItem(itemCopy);
                             }
+                            else if (StoneUpgradeUI_TU.Instance != null &&
+                                    StoneUpgradeUI_TU.Instance.gameObject.activeInHierarchy)
+                            {
+                                StoneUpgradeUI_TU.Instance.TryPlaceStone(itemCopy);
+                            }
                             else
                             {
                                 MoveItemToHotbar(typeCopy, itemCopy);

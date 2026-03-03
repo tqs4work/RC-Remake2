@@ -70,7 +70,9 @@ public class ItemRuntime
             growTime = item.growTime,
 
             bonus = item.bonus,
-            upgradeLevel = 0
+            upgradeLevel = (item.itemType == ItemType.Stone)
+            ? item.stoneLevel
+            : item.level,
         };
     }
 

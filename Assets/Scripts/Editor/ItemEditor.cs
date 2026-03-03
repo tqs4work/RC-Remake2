@@ -35,6 +35,8 @@ public class ItemEditor : Editor
     SerializedProperty addATKPerLevel;
     SerializedProperty addDEFPerLevel;
     SerializedProperty addCRITPerLevel;
+    SerializedProperty stoneLevel;
+    SerializedProperty upgradePriceToNext;
 
     void OnEnable()
     {
@@ -60,6 +62,8 @@ public class ItemEditor : Editor
         growTime = serializedObject.FindProperty("growTime");
 
         bonus = serializedObject.FindProperty("bonus");
+        stoneLevel = serializedObject.FindProperty("stoneLevel");
+        upgradePriceToNext = serializedObject.FindProperty("upgradePriceToNext");
 
 
         crit = serializedObject.FindProperty("crit");
@@ -149,11 +153,26 @@ public class ItemEditor : Editor
 
         EditorGUILayout.PropertyField(isStackable);
         EditorGUILayout.PropertyField(price);
-        EditorGUILayout.PropertyField(level);
+        if ((ItemType)itemType.enumValueIndex != ItemType.Stone)
+        {
+            EditorGUILayout.PropertyField(level);
+        }
 
         EditorGUILayout.Space();
 
         ItemType type = (ItemType)itemType.enumValueIndex;
+        // ===== Stone =====
+        if (type == ItemType.Stone)
+        {
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Stone Settings", EditorStyles.boldLabel);
+
+            if (stoneLevel != null)
+                EditorGUILayout.PropertyField(stoneLevel);
+
+            if (upgradePriceToNext != null)
+                EditorGUILayout.PropertyField(upgradePriceToNext);
+        }
 
         // ===== Equipment =====
         if (type == ItemType.Sword || type == ItemType.Armor ||
