@@ -11,9 +11,13 @@ public class Tengu_Attack : MonoBehaviour
     bool isAction;
     [SerializeField] GameObject aPos;
     [SerializeField] GameObject bPos;
-    [SerializeField] float ballSpeed;
+    
     [SerializeField] float aRange;
     [SerializeField] float bRange;
+
+    [SerializeField] GameObject redZone1;
+    [SerializeField] GameObject redZone2;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +29,8 @@ public class Tengu_Attack : MonoBehaviour
 
     void Update()
     {
+        if (PlayerRuntime.Instance.Player.Hp <= 0) return;
+
         if (!isAction && isDetectPlayer() && !isAttackPlayer())
         {
             StartCoroutine(MoveToPlayer());
@@ -52,6 +58,13 @@ public class Tengu_Attack : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             yield return new WaitForSeconds(0.5f);
             transform.position = player.transform.position;
+            GameObject r = Instantiate(redZone1, player.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+            r.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.05f);
+            r.GetComponent<CircleCollider2D>().enabled = true;
+            yield return new WaitForSeconds(0.2f);
+            Destroy(r);
             sr.enabled = true;
             anim.SetTrigger("MU");
             yield return new WaitForSeconds(0.8f);
@@ -64,26 +77,65 @@ public class Tengu_Attack : MonoBehaviour
             yield return new WaitForSeconds(0f);
             isAction = false;
         }
-    }
+    }    
 
     IEnumerator A1()
     {
         isAction = true;
         anim.SetTrigger("Jump");
         yield return new WaitForSeconds(0.25f);
-        Vector3 curPos = player.transform.position;
-        float dis = Mathf.Abs(transform.position.x - curPos.x);
+
+        Vector3 startPos = transform.position;
+        Vector3 targetPos = player.transform.position;
+
+        GameObject r = Instantiate(redZone2, targetPos, Quaternion.identity);        
+
         box.enabled = false;
-        rb.linearVelocity = new Vector2((transform.position.x > curPos.x) ? -dis : dis, 4);
-        yield return new WaitUntil(() => transform.position.y - curPos.y >= 2.5f);
-        rb.linearVelocity = new Vector2((transform.position.x > curPos.x) ? -dis * 1.5f : dis * 1.5f, 0);
-        yield return new WaitUntil(() => Mathf.Abs(transform.position.x - curPos.x) <= 1f);
-        anim.SetBool("isFall", true);
-        rb.linearVelocity = new Vector2(0, -5);
-        yield return new WaitUntil(() => transform.position.y - curPos.y <= 0.1);
-        rb.linearVelocity = Vector2.zero;
+
+        float distance = Vector2.Distance(startPos, targetPos);
+
+        // ?? Ch?m l?i g?p 2
+        float duration = Mathf.Clamp(distance / 6f *1.5f, 0.3f * 1.5f, 0.8f * 1.5f); //:2, *2, *2
+
+        float jumpHeight = 2.5f;
+
+        float timer = 0f;
+        bool fallTriggered = false;
+
+        while (timer < duration)
+        {
+            float t = timer / duration;
+
+            Vector3 pos = Vector3.Lerp(startPos, targetPos, t);
+
+            float heightOffset = 4 * jumpHeight * t * (1 - t);
+
+            transform.position = pos + new Vector3(0, heightOffset, 0);
+
+            // ?? Khi b?t ??u ?i xu?ng (qua ??nh)
+            if (!fallTriggered && t >= 0.5f)
+            {
+                anim.SetBool("isFall", true);
+                fallTriggered = true;
+            }
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPos;
+
         anim.SetBool("isFall", false);
+        
         box.enabled = true;
+
+        r.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.05f);
+        r.GetComponent<CircleCollider2D>().enabled = true;
+
+        yield return new WaitForSeconds(0.2f);
+        Destroy(r);
+
         yield return new WaitForSeconds(2f);
         isAction = false;
     }

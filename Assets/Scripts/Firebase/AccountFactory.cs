@@ -33,6 +33,8 @@ public static class AccountFactory
 
             Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
 
+            Store = new List<ItemRuntime>(),
+
             Wrapper = new List<TileState>()
         };
 

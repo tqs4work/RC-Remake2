@@ -8,6 +8,7 @@ public class P_Move : MonoBehaviour
     [SerializeField] public float lastY;
     bool isRun;    
     bool isAction;
+    public bool isBlock;
     Rigidbody2D rb;
     Animator animator;
     void Start()
@@ -21,7 +22,7 @@ public class P_Move : MonoBehaviour
     {        
         isAction = GetComponent<P_Action>().isAction;
         Animate();
-        if(!isAction)
+        if(!isAction && !isBlock)
         {
             Move();
         }   
