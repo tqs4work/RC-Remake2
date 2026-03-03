@@ -27,6 +27,7 @@ public class P_Action : MonoBehaviour
     [SerializeField] GameObject stone2;
     [SerializeField] GameObject stone3;
 
+    P_Audio audio;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +37,7 @@ public class P_Action : MonoBehaviour
 
     void Start()
     {
-
+        audio = GetComponent<P_Audio>();
     }
 
     void Update()
@@ -59,7 +60,7 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0) && !isOpenInventory)
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling)
         {
             UseCurrentItem();
         }
@@ -82,6 +83,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(MeleeAttack());
+                    audio.sword.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -96,6 +98,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(RangedAttack());
+                    audio.bow.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -110,6 +113,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Dig());
+                    audio.shovel.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -124,6 +128,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Axe());
+                    audio.axe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -137,7 +142,8 @@ public class P_Action : MonoBehaviour
                 if (EnoughMP(5) && item.durability > 0)
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
-                    StartCoroutine(Mining());                    
+                    StartCoroutine(Mining());  
+                    audio.pickaxe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -152,6 +158,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Water());
+                    audio.water.Play();
                     item.durability -= 1;
                     hotbar.Refresh();
                 }
@@ -399,6 +406,7 @@ public class P_Action : MonoBehaviour
         if (EnoughMP(10))
         {
             isRolling = true;
+            PlayerRuntime.Instance.Player.Mp -= 10;
             animator.SetTrigger("Roll");
             GetComponent<P_Interact>().isImmune = true;
             yield return new WaitForSeconds(1f);

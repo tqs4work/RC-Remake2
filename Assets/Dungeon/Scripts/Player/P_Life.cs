@@ -11,7 +11,7 @@ public class P_Life : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        InvokeRepeating("mpRestore", 0, 3f);
+        InvokeRepeating("mpRestore", 0, 1f);
     }
     private void Update()
     {
@@ -19,6 +19,7 @@ public class P_Life : MonoBehaviour
         if (PlayerRuntime.Instance.Player.Hp <= 0)
         {
             isDead = true;
+            GetComponent<P_Move>().isBlock = true;
             CancelInvoke("mpRestore");
         }
         
