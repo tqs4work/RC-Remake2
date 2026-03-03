@@ -398,7 +398,9 @@ public class P_Action : MonoBehaviour
         {
             isRolling = true;
             animator.SetTrigger("Roll");
+            GetComponent<P_Interact>().isImmune = true;
             yield return new WaitForSeconds(1f);
+            GetComponent<P_Interact>().isImmune = false;
             isRolling = false;
         }
         else
