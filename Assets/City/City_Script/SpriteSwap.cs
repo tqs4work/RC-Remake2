@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SpriteSwap : MonoBehaviour
 {
@@ -45,13 +46,25 @@ public class SpriteSwap : MonoBehaviour
     }
 
     public void CloseDoor()
-{
-    if (isOpen && !isAnimating)
-    {
-        StartCoroutine(PlayAnimation());
-            panel.SetActive(false);
+    {  
+        if (isOpen && !isAnimating)
+        {
+            StartCoroutine(PlayAnimation());
+                panel.SetActive(false);           
+        }
     }
-}
+
+    public void StartMinigame()
+    {
+        CloseDoor();
+        StartCoroutine(loadMinigmae());
+    }
+
+    public IEnumerator loadMinigmae()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("DiceRoll");
+    }
 
     public IEnumerator PlayAnimation()
     {
