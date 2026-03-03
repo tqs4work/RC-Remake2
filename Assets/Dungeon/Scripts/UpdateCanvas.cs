@@ -24,8 +24,7 @@ public class UpdateCanvas : MonoBehaviour
     [SerializeField] TextMeshProUGUI lvNum;
     [SerializeField] Image expBar;
     [SerializeField] TextMeshProUGUI goldNum;
-
-    [SerializeField] public bool isDead;
+    
     [SerializeField] public int hp0;
     [SerializeField] public int mp0 = 100;
 
@@ -67,8 +66,7 @@ public class UpdateCanvas : MonoBehaviour
     }
     void UpdateHPMP()
     {
-        hp0 = 100 + (Lv - 1) * 10;
-        player.GetComponent<Animator>().SetBool("isDead", isDead);
+        hp0 = 100 + (Lv - 1) * 10;        
 
         if (Hp > hp0)
         {
@@ -85,14 +83,12 @@ public class UpdateCanvas : MonoBehaviour
         if (Hp <= 0)
         {
             PlayerRuntime.Instance.Player.Hp = 0;
-            hpNum.text = "0 / " + hp0.ToString();
-            isDead = true;
+            hpNum.text = "0 / " + hp0.ToString();            
         }
         else
         {
             PlayerRuntime.Instance.Player.Hp = Hp;
-            hpNum.text = Hp.ToString("F0") + " / " + hp0.ToString();
-            isDead = false;
+            hpNum.text = Hp.ToString("F0") + " / " + hp0.ToString();            
         }
 
         if (Mp <= 0)

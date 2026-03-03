@@ -46,12 +46,15 @@ public class ShopUI_TU : MonoBehaviour
 
     void BuildRowsIfNeeded()
     {
-        if (rows.Count > 0) return;
-        if (catalog.items == null) return;
+         if (rows.Count > 0)
+        return; // đã build rồi thì không build lại
+
+        if (catalog == null || catalog.items == null)
+            return;
 
         foreach (var it in catalog.items)
         {
-            if (!it) continue;
+            if (it == null) continue;
 
             var row = Instantiate(shopItemRowPrefab, shopListParent);
             row.Bind(it, it.price, OnClickBuyRow);
