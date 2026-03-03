@@ -1,14 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ChickenSpawner : MonoBehaviour
 {
     public GameObject chickenPrefab;
+
+    void Start()
+    {
+        StartCoroutine(AutoSaveRoutine());
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            GetCurrentChickenData();
-        }
+        //if(Input.GetKeyDown(KeyCode.K))
+        //{
+        //    GetCurrentChickenData();
+        //}
     }
     private void Awake()
     {
@@ -60,5 +66,17 @@ public class ChickenSpawner : MonoBehaviour
     {
         ChicManager[] chickens = FindObjectsByType<ChicManager>(FindObjectsSortMode.None);
         foreach (var c in chickens) Destroy(c.gameObject);
+    }
+
+
+    IEnumerator AutoSaveRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            GetCurrentChickenData();
+            
+        }
     }
 }
