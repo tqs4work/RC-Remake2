@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069a5edb7eebb41a6aee52b0bf2b95a1, type: 3}
+  m_Name: Henry
+  m_EditorClassIdentifier: 
+  npcName: Pharmacy NPC
+  npcPortrait: {fileID: 4723107735738678597, guid: c799764c64c5d4fbeb272287081d11d1, type: 3}
+  dialogueLines:
+  - Hello my friend !!
+  - Do you need any medicine...
+  - Nice, press P to open Pharmacy !!
+  - Oh... Ok...
+  - See yah later !!!
+  autoProgressLines: 0101000101
+  endProgressLines: 0000010001
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: d752744ea7ea44b90a7357e2ed4a9ed6, type: 3}
+  voicePitch: 1
+  dialogueChoices:
+  - DialogueIndex: 1
+    Choices:
+    - yes
+    - No
+    NextDialogueIndexes: 0200000003000000
