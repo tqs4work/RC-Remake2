@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b21e0805e8f824899f3c7c38347a74, type: 3}
+  m_Name: Kale
+  m_EditorClassIdentifier: 
+  seedName: Kale
+  seedIcon: {fileID: 21300000, guid: 7569442c1ea68704a85fa3b903432c66, type: 2}
+  buyPrice: 70
+  growthStages:
+  - stageTile: {fileID: 11400000, guid: d86d99cf44a7d014e80a86f034a7512f, type: 2}
+    growthTimeInSeconds: 7
+  - stageTile: {fileID: 11400000, guid: 591791aad90033347ad88893c186fc77, type: 2}
+    growthTimeInSeconds: 7
+  - stageTile: {fileID: 11400000, guid: 59a520957b16b954181f1a0030ff78f6, type: 2}
+    growthTimeInSeconds: 7
+  - stageTile: {fileID: 11400000, guid: 60b7cfca9e9ed9a4fb8f8713c7944771, type: 2}
+    growthTimeInSeconds: 7
+  - stageTile: {fileID: 11400000, guid: 837703978d208d045ab784ad04204ea6, type: 2}
+    growthTimeInSeconds: 7
+  harvestItemData: {fileID: 11400000, guid: 8aed7c63542dfbc46a3215679c2a5407, type: 2}
+  harvestItemName: Kale
+  harvestItemDescription: 
+  harvestItemIconPath: 
+  harvestQuantity: 1
+  pricePerUnit: 0
+  plantState: 9
