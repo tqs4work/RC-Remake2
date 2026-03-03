@@ -30,24 +30,26 @@ public class P_Interact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D c)
     {
-        if (c.gameObject.CompareTag("Enemy") && !isImmune)
-        {
-            GetComponent<Animator>().SetTrigger("Hurt");
-            PlayerRuntime.Instance.Player.Hp -= 10;
-            isImmune = true;
-            StartCoroutine(ResetImmune());
-        }
+        //if (c.gameObject.CompareTag("Enemy") && !isImmune)
+        //{
+        //    GetComponent<Animator>().SetTrigger("Hurt");
+        //    PlayerRuntime.Instance.Player.Hp -= 10;
+        //    isImmune = true;
+        //    StartCoroutine(ResetImmune());
+        //}
 
         if (c.gameObject.CompareTag("Exp"))
         {
             PlayerRuntime.Instance.Player.Exp += 10;
             Destroy(c.gameObject);
         }
-        if (c.gameObject.CompareTag("E_Bullet"))
+        if (c.gameObject.CompareTag("E_Bullet") && !isImmune)
         {
             GetComponent<Animator>().SetTrigger("Hurt");
             PlayerRuntime.Instance.Player.Hp -= 10;
             Destroy(c.gameObject);
+            isImmune = true;
+            StartCoroutine(ResetImmune());
         }        
 
     }

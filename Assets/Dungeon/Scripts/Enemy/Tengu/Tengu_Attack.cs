@@ -29,6 +29,8 @@ public class Tengu_Attack : MonoBehaviour
 
     void Update()
     {
+        if (PlayerRuntime.Instance.Player.Hp <= 0) return;
+
         if (!isAction && isDetectPlayer() && !isAttackPlayer())
         {
             StartCoroutine(MoveToPlayer());
@@ -58,6 +60,10 @@ public class Tengu_Attack : MonoBehaviour
             transform.position = player.transform.position;
             GameObject r = Instantiate(redZone1, player.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
+            r.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.05f);
+            r.GetComponent<CircleCollider2D>().enabled = true;
+            yield return new WaitForSeconds(0.2f);
             Destroy(r);
             sr.enabled = true;
             anim.SetTrigger("MU");
@@ -71,30 +77,7 @@ public class Tengu_Attack : MonoBehaviour
             yield return new WaitForSeconds(0f);
             isAction = false;
         }
-    }
-
-    //IEnumerator A1()
-    //{
-    //    isAction = true;
-    //    anim.SetTrigger("Jump");
-    //    yield return new WaitForSeconds(0.25f);
-    //    Vector3 curPos = player.transform.position;
-    //    float dis = Mathf.Abs(transform.position.x - curPos.x);
-    //    box.enabled = false;
-    //    rb.linearVelocity = new Vector2((transform.position.x > curPos.x) ? -dis : dis, 4);
-    //    yield return new WaitUntil(() => transform.position.y - curPos.y >= 2.5f);
-    //    rb.linearVelocity = new Vector2((transform.position.x > curPos.x) ? -dis * 1.5f : dis * 1.5f, 0);
-    //    yield return new WaitUntil(() => Mathf.Abs(transform.position.x - curPos.x) <= 1f);
-    //    anim.SetBool("isFall", true);
-    //    rb.linearVelocity = new Vector2(0, -5);
-    //    yield return new WaitUntil(() => transform.position.y - curPos.y <= 0.1);
-    //    rb.linearVelocity = Vector2.zero;
-    //    anim.SetBool("isFall", false);
-    //    box.enabled = true;
-    //    yield return new WaitForSeconds(2f);
-    //    isAction = false;
-    //}
-
+    }    
 
     IEnumerator A1()
     {
@@ -105,7 +88,7 @@ public class Tengu_Attack : MonoBehaviour
         Vector3 startPos = transform.position;
         Vector3 targetPos = player.transform.position;
 
-        GameObject r = Instantiate(redZone2, targetPos, Quaternion.identity);
+        GameObject r = Instantiate(redZone2, targetPos, Quaternion.identity);        
 
         box.enabled = false;
 
@@ -143,9 +126,15 @@ public class Tengu_Attack : MonoBehaviour
         transform.position = targetPos;
 
         anim.SetBool("isFall", false);
-
-        Destroy(r);
+        
         box.enabled = true;
+
+        r.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.05f);
+        r.GetComponent<CircleCollider2D>().enabled = true;
+
+        yield return new WaitForSeconds(0.2f);
+        Destroy(r);
 
         yield return new WaitForSeconds(2f);
         isAction = false;
