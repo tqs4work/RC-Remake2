@@ -45,6 +45,7 @@ public class PlayerFarm : MonoBehaviour
         {
             isFarm = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -53,5 +54,6 @@ public class PlayerFarm : MonoBehaviour
         {
             isFarm = false;
         }
+
     }
 }

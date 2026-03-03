@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a82741115f92345448d14144bb89f44c
+guid: 424a30a510cea204b862d92e293bae01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3829704256182829468
-    second: carrot_05_0
+      213: 4457663794195168306
+    second: Hit_0
+  - first:
+      213: -5364657433725072944
+    second: Hit_1
+  - first:
+      213: -4947864620551752270
+    second: Hit_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +80,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carrot_05_0
+      name: Hit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 2
+        width: 49
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49999997, y: -0.001830327}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46ebb6705482adac0800000000000000
-      internalID: -3829704256182829468
+      spriteID: 23c7f156a9dccdd30800000000000000
+      internalID: 4457663794195168306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 49
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0018596152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d98829bc78ec85b0800000000000000
+      internalID: -5364657433725072944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1
+        width: 50
+        height: 46
+      alignment: 9
+      pivot: {x: 0.49822876, y: 0.0033035097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b53a4fa757a55bb0800000000000000
+      internalID: -4947864620551752270
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 19f4fdb7c2207eb44ae929ce42561010
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      carrot_05_0: -3829704256182829468
+      Hit_0: 4457663794195168306
+      Hit_1: -5364657433725072944
+      Hit_2: -4947864620551752270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

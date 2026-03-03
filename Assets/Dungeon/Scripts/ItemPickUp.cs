@@ -40,6 +40,12 @@ public class ItemPickup : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
+            else if (invItem.itemID == newItem.itemID &&
+                     !invItem.isStackable)
+            {
+                newItem.itemID += " " + Random.Range(0f,100f).ToString();
+                Destroy(gameObject);                
+            }
         }
 
         // ======================================================
@@ -50,7 +56,7 @@ public class ItemPickup : MonoBehaviour
             container.items.Count >= container.maxSize)
         {
             Debug.Log("Inventory Full! Cannot pick up.");
-            return; // ? KHÔNG Destroy ? v?n n?m trên ??t
+            return; // ? KHï¿½NG Destroy ? v?n n?m trï¿½n ??t
         }
 
         // ======================================================
