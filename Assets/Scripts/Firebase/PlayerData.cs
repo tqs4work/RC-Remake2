@@ -19,6 +19,7 @@ public class PlayerData
     //    
 
     public List<ItemRuntime> Store;
+    public List<ItemRuntime> Machine;
     public List<TileState> Wrapper;
     public List<ChickenData> ChickenWrapper;
 }

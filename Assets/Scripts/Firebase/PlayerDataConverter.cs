@@ -19,6 +19,8 @@ public static class PlayerDataConverter
 
             Store = player.Store,
 
+            Machine = player.Machine,
+
             Wrapper = player.Wrapper,
 
             ChickenWrapper = player.ChickenWrapper

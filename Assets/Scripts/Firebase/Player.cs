@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player
@@ -16,6 +17,8 @@ public class Player
     public Dictionary<InventoryContainerType, InventoryContainer> Inventory = new();
 
     public List<ItemRuntime> Store = new();
+
+    public List<ItemRuntime> Machine = new();
 
     public List<TileState> Wrapper = new();
 
@@ -258,6 +261,8 @@ public class Player
         }
 
         Store = data.Store;
+
+        Machine = data.Machine;
 
         Wrapper = data.Wrapper;
 
