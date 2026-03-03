@@ -22,10 +22,11 @@ public class P_Action : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
 
-    [Header("Stone Drop")]
+    [Header("Objects Drop")]
     [SerializeField] GameObject stone1;
     [SerializeField] GameObject stone2;
     [SerializeField] GameObject stone3;
+    [SerializeField] GameObject wood;
 
     P_Audio audio;
     void Awake()
@@ -388,7 +389,27 @@ public class P_Action : MonoBehaviour
         animator.SetTrigger("Axe");
         isAction = true;
         yield return new WaitForSeconds(1f);
+        DropWood();
         isAction = false;
+    }
+
+    void DropWood()
+    {
+        Collider2D[] Woods = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            1.5f,
+            LayerMask.GetMask("Tree")
+        );
+
+        foreach (var c in Woods)
+        {
+            Vector3 dropPos = transform.position + Random.insideUnitSphere * 0.5f;
+            dropPos.z = 0;
+
+            if (c.CompareTag("Tree"))
+                Instantiate(wood, dropPos, Quaternion.identity);
+            
+        }
     }
 
     public IEnumerator Water()

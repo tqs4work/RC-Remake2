@@ -618,9 +618,10 @@ MonoBehaviour:
   attackPoint: {fileID: 6494936513683437936}
   shootPoint: {fileID: 5296332563064691426}
   arrowPrefab: {fileID: 4579202726128203985, guid: f19bf9aacc992c64280ad29258662e8e, type: 3}
-  stone1: {fileID: 0}
-  stone2: {fileID: 0}
-  stone3: {fileID: 0}
+  stone1: {fileID: 6517649723061401571, guid: 6fa944b86d527a44cb1da62979e1a731, type: 3}
+  stone2: {fileID: 5628309441776501962, guid: 5a0bccfa312ac2b49adf82e64440f2aa, type: 3}
+  stone3: {fileID: 2693743588637483524, guid: e73f5888c00dc4e4baaa51d24bb822f1, type: 3}
+  wood: {fileID: 8798160648870197441, guid: a8c5d351b8c80754e975fd35be81b0cd, type: 3}
 --- !u!114 &8130288120500681007
 MonoBehaviour:
   m_ObjectHideFlags: 0
