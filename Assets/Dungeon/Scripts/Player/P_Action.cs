@@ -78,6 +78,7 @@ public class P_Action : MonoBehaviour
             case ItemType.Sword:
                 if (EnoughMP(5) && item.durability > 0)
                 {
+                    PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(MeleeAttack());
                     item.durability -= 5;
                     hotbar.Refresh();
@@ -91,6 +92,7 @@ public class P_Action : MonoBehaviour
             case ItemType.Bow:
                 if (EnoughMP(5) && item.durability > 0)
                 {
+                    PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(RangedAttack());
                     item.durability -= 5;
                     hotbar.Refresh();
@@ -104,6 +106,7 @@ public class P_Action : MonoBehaviour
             case ItemType.Shovel:
                 if (EnoughMP(5) && item.durability > 0)
                 {
+                    PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Dig());
                     item.durability -= 5;
                     hotbar.Refresh();
@@ -117,6 +120,7 @@ public class P_Action : MonoBehaviour
             case ItemType.Axe:
                 if (EnoughMP(5) && item.durability > 0)
                 {
+                    PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Axe());
                     item.durability -= 5;
                     hotbar.Refresh();
@@ -130,7 +134,8 @@ public class P_Action : MonoBehaviour
             case ItemType.Pickaxe:
                 if (EnoughMP(5) && item.durability > 0)
                 {
-                    StartCoroutine(Mining());
+                    PlayerRuntime.Instance.Player.Mp -= 5;
+                    StartCoroutine(Mining());                    
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -143,6 +148,7 @@ public class P_Action : MonoBehaviour
             case ItemType.WateringCan:
                 if (EnoughMP(5) && item.durability > 0)
                 {
+                    PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Water());
                     item.durability -= 1;
                     hotbar.Refresh();
@@ -172,8 +178,7 @@ public class P_Action : MonoBehaviour
     {
         if (PlayerRuntime.Instance.Player.Mp < cost)
             return false;
-
-        PlayerRuntime.Instance.Player.Mp -= cost;
+        
         return true;
     }
 
@@ -389,9 +394,16 @@ public class P_Action : MonoBehaviour
 
     IEnumerator Roll()
     {
-        isRolling = true;
-        animator.SetTrigger("Roll");
-        yield return new WaitForSeconds(1f);
-        isRolling = false;
+        if (EnoughMP(10))
+        {
+            isRolling = true;
+            animator.SetTrigger("Roll");
+            yield return new WaitForSeconds(1f);
+            isRolling = false;
+        }
+        else
+        {
+            Debug.Log("Not enough MP to roll!");
+        }
     }
 }
