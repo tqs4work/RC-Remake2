@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
-  m_Name: Item_Wheat
+  m_Name: Item_EggAndWheat
   m_EditorClassIdentifier: 
   itemType: 7
-  itemID: F1
-  itemName: Wheat
+  itemID: F002
+  itemName: Egg And Wheat
   description: 
-  icon: {fileID: 21300000, guid: f58aaf66845cdfd4bae7f46868c67c60, type: 2}
+  icon: {fileID: -3593213518556833045, guid: eafbc1504211aee48b08769a40484fe4, type: 3}
   isStackable: 1
   maxStack: 99
-  price: 50
+  price: 0
   stackable: 0
   level: 0
   quantity: 1
