@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
-  m_Name: Item_Carrot
+  m_Name: Item_Potato
   m_EditorClassIdentifier: 
   itemType: 7
-  itemID: F2
-  itemName: Carrot
+  itemID: F3
+  itemName: Potato
   description: 
-  icon: {fileID: 21300000, guid: d46a074793a7af54eac662456fc3f9bc, type: 2}
+  icon: {fileID: 21300000, guid: 5686f35e986ebc14e9b5b2a6589129db, type: 2}
   isStackable: 1
   maxStack: 99
   price: 0
