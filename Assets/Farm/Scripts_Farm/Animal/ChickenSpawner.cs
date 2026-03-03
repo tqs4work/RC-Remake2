@@ -3,6 +3,30 @@
 public class ChickenSpawner : MonoBehaviour
 {
     public GameObject chickenPrefab;
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            GetCurrentChickenData();
+        }
+    }
+    private void Awake()
+    {
+        var chicList = PlayerRuntime.Instance.Player.ChickenWrapper;
+        // Kiểm tra xem danh sách có dữ liệu không mới đẻ
+        if (chicList != null && chicList.Count > 0)
+        {
+            foreach (ChickenData data in chicList)
+            {
+                SpawnChickenFromData(data); // Đẻ từng con một
+            }
+            Debug.Log("Đã load thành công đàn gà từ PlayerRuntime!");
+        }
+        else
+        {
+            Debug.Log("Chưa có dữ liệu gà để load.");
+        }
+    }
     public ChickenListWrapper GetCurrentChickenData()
     {
         //bỏ vô wrapper để lưu firebase
@@ -16,6 +40,7 @@ public class ChickenSpawner : MonoBehaviour
             // Nhét dữ liệu đó vào danh sách
             wrapper.chickens.Add(data);
         }
+        PlayerRuntime.Instance.Player.ChickenWrapper = wrapper.chickens; // Cập nhật dữ liệu vào PlayerRuntime
         return wrapper;
     }
    
