@@ -18,7 +18,7 @@ public class Dice2Scripts : MonoBehaviour
     {
         if (body != null)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 RollDice();
                 

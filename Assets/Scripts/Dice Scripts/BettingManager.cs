@@ -2,20 +2,25 @@
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
+using Mono.Cecil.Cil;
 
 public class BettingManager : MonoBehaviour
 {
     public static BettingManager Instance;
 
-    [SerializeField] private int playerCoins = 20;
+    [SerializeField] private int playerCoins = PlayerRuntime.Instance.Player.Gold;
     [SerializeField] private Button BetOddButton;
     [SerializeField] private Button BetEvenButton;
+    [SerializeField] private GameObject allPanel;
 
     [Header("Panels")]
     [SerializeField] private GameObject WelcomePanel;
     [SerializeField] private GameObject WinPanel;
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private CanvasGroup ScorePanel;
+    [SerializeField] private CanvasGroup instructionsPanel;
 
     private string playerBetType;
     private bool hasBet = false;
@@ -29,9 +34,26 @@ public class BettingManager : MonoBehaviour
     void Start()
     {
         WelcomePanel.SetActive(true);
+        allPanel.SetActive(true);
+        instructionsPanel.gameObject.SetActive(false);
         WinPanel.SetActive(false);
         LosePanel.SetActive(false);
         ScorePanel.gameObject.SetActive(false);
+    }
+
+    public void Update()
+    {
+        PlayerRuntime.Instance.Player.Gold = playerCoins; // Đồng bộ vàng với PlayerRuntime
+    }
+
+    public void play()
+    {    
+        WelcomePanel.SetActive(false);
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void BetOdd()
@@ -41,11 +63,13 @@ public class BettingManager : MonoBehaviour
 
     public void BetEven()
     {
-        PlaceBet("Even");
+        PlaceBet("Even");   
     }
 
     public void PlaceBet(string type)
     {
+        StartCoroutine(showInstructions());
+
         if (playerCoins >= 1)
         {
             playerBetType = type;
@@ -53,7 +77,7 @@ public class BettingManager : MonoBehaviour
             hasBet = true;
 
             Debug.Log($"🎯 Bet: {type} | Coins left: {playerCoins}");
-            WelcomePanel.SetActive(false);
+            allPanel.SetActive(false);
         }
         else
         {
@@ -65,19 +89,15 @@ public class BettingManager : MonoBehaviour
     {
         if (!hasBet) return;
 
-        Debug.Log($"🎲 Dice result: {total}");
-
         bool isEven = (total % 2 == 0);
 
         if (isEven)
         {
-            Debug.Log("➡ Result: EVEN");
             if (playerBetType == "Even") WinBet();
             else LoseBet();
         }
         else
         {
-            Debug.Log("➡ Result: ODD");
             if (playerBetType == "Odd") WinBet();
             else LoseBet();
         }
@@ -91,14 +111,59 @@ public class BettingManager : MonoBehaviour
     {
         playerCoins += 2;
         playerWon = true;
-        Debug.Log("🏆 You Win!");
     }
 
     public void LoseBet()
     {
         playerCoins -= 2;
         playerWon = false;
-        Debug.Log("😢 You Lose!");
+    }
+
+    IEnumerator showInstructions()
+    {
+        instructionsPanel.gameObject.SetActive(true);
+
+    // 🚫 Khóa tương tác khi bắt đầu
+    instructionsPanel.interactable = true;
+    instructionsPanel.blocksRaycasts = true;
+
+    // Fade IN
+    instructionsPanel.alpha = 0;
+    float t = 0;
+
+    while (t < 0.3f)
+    {
+        t += Time.deltaTime;
+        instructionsPanel.alpha = t / 0.3f;
+        yield return null;
+    }
+
+    instructionsPanel.alpha = 1;
+
+    // ✅ Khi alpha == 1 → mở tương tác
+    instructionsPanel.interactable = false;
+    instructionsPanel.blocksRaycasts = false;
+
+    yield return new WaitForSeconds(2f);
+
+    // 🚫 Khóa lại trước khi fade out
+    instructionsPanel.interactable = false;
+    instructionsPanel.blocksRaycasts = false;
+
+    // Fade OUT
+    t = 0;
+    while (t < 0.3f)
+    {
+        t += Time.deltaTime;
+        instructionsPanel.alpha = 1 - (t / 0.3f);
+        yield return null;
+    }
+
+    instructionsPanel.alpha = 0;
+    instructionsPanel.interactable = true;
+    instructionsPanel.blocksRaycasts = true;
+
+    instructionsPanel.gameObject.SetActive(false);
     }
 
     // ✔ ScorePanel → wait → fade out → rồi mới Win/Lose panel
@@ -134,8 +199,28 @@ public class BettingManager : MonoBehaviour
 
         // ✔ Sau khi score biến mất → hiện win/lose
         if (playerWon)
-            WinPanel.SetActive(true);
+            StartCoroutine(winPanelTimer());
         else
-            LosePanel.SetActive(true);
+            StartCoroutine(losePanelTimer());
+    }
+
+    IEnumerator winPanelTimer()
+    {
+        WinPanel.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        WinPanel.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        
+        RestartGame();
+    }
+
+    IEnumerator losePanelTimer()
+    {
+        LosePanel.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        LosePanel.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        
+        RestartGame();
     }
 }
