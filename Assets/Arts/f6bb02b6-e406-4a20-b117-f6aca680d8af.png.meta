@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: b59d95f42e79a704682a5c3e9a9213e9
+guid: 615a522d229a2474d8a09675f362760e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1757550856330813920
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_0"
+      213: 598776329710959160
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_0
   - first:
-      213: 5961401035391687303
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_1"
+      213: -8241736355979125023
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_1
   - first:
-      213: -4371783472842113731
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_2"
+      213: 2607426149682352824
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_2
   - first:
-      213: -1530956326497368991
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_3"
+      213: -3667501846554496665
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_3
   - first:
-      213: 7143268393320001549
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_4"
+      213: -1616904867996291462
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_4
   - first:
-      213: 1011919866277378190
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_5"
+      213: 9199436778453919748
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_5
   - first:
-      213: 8683693755538446464
-    second: "\u2014Pngtree\u2014color stylish gradient game card_5486029_6"
+      213: -4465308783900609816
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_6
+  - first:
+      213: -4706975787330224999
+    second: f6bb02b6-e406-4a20-b117-f6aca680d8af_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -114,43 +117,105 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_0"
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 630
+        x: 11
+        y: 0
+        width: 608
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a755046e74f4800800000000000000
+      internalID: 598776329710959160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_1
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 0
+        width: 1074
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee117963787f9d80800000000000000
+      internalID: -8241736355979125023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_2
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 551
+        width: 246
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b291e5b4407f2420800000000000000
+      internalID: 2607426149682352824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_3
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 802
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761b707708a6a1dc0800000000000000
+      internalID: -3667501846554496665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_4
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 273
         width: 277
-        height: 276
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e128422133146810800000000000000
-      internalID: 1757550856330813920
+      spriteID: a7e2b7bd6999f89e0800000000000000
+      internalID: -1616904867996291462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_1"
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_5
       rect:
         serializedVersion: 2
-        x: 435
-        y: 630
-        width: 277
-        height: 277
+        x: 690
+        y: 272
+        width: 151
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78ada2628a62bb250800000000000000
-      internalID: 5961401035391687303
+      spriteID: 408e8616207faaf70800000000000000
+      internalID: 9199436778453919748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_2"
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_6
       rect:
         serializedVersion: 2
-        x: 742
-        y: 630
-        width: 277
-        height: 276
+        x: 847
+        y: 272
+        width: 271
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3d725a181e4453c0800000000000000
-      internalID: -4371783472842113731
+      spriteID: 8e23c2bb1590802c0800000000000000
+      internalID: -4465308783900609816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_3"
+      name: f6bb02b6-e406-4a20-b117-f6aca680d8af_7
       rect:
         serializedVersion: 2
-        x: 184
-        y: 376
-        width: 184
-        height: 195
+        x: 995
+        y: 200
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,74 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 164cc781553f0cae0800000000000000
-      internalID: -1530956326497368991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_4"
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 376
-        width: 196
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d003d1fc1ccf12360800000000000000
-      internalID: 7143268393320001549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_5"
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 376
-        width: 196
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e88bf9ac1cf0b0e00800000000000000
-      internalID: 1011919866277378190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u2014Pngtree\u2014color stylish gradient game card_5486029_6"
-      rect:
-        serializedVersion: 2
-        x: 834
-        y: 375
-        width: 195
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0889525667da28870800000000000000
-      internalID: 8683693755538446464
+      spriteID: 99c31d5c5767daeb0800000000000000
+      internalID: -4706975787330224999
       vertices: []
       indices: 
       edges: []
@@ -311,13 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_0": 1757550856330813920
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_1": 5961401035391687303
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_2": -4371783472842113731
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_3": -1530956326497368991
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_4": 7143268393320001549
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_5": 1011919866277378190
-      "\u2014Pngtree\u2014color stylish gradient game card_5486029_6": 8683693755538446464
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_0: 598776329710959160
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_1: -8241736355979125023
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_2: 2607426149682352824
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_3: -3667501846554496665
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_4: -1616904867996291462
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_5: 9199436778453919748
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_6: -4465308783900609816
+      f6bb02b6-e406-4a20-b117-f6aca680d8af_7: -4706975787330224999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
