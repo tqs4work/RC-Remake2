@@ -41,7 +41,8 @@ public class P_Action : MonoBehaviour
 
     void Update()
     {
-        isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
+        if(GameObject.Find("Canvas").transform.Find("InventoryUI") != null)
+            isOpenInventory = GameObject.Find("Canvas").transform.Find("InventoryUI").GetComponent<InventoryUI>().isPanelOpen;
 
         if (hotbar == null)
         {
