@@ -56,7 +56,7 @@ public class Interactable_TU : MonoBehaviour
        //Nhấn phím E tương tác
        // + Dialogue hiện tại chưa mở
        // + Player đang ở gần
-       if (Input.GetKeyDown(interactKey) && !NPCBlackSmith_TU.DialogueOpen && IsPlayerCloseEnough())
+       if (Input.GetKeyDown(interactKey) && !FindObjectOfType<NPCBlackSmith_TU>().DialogueOpen && IsPlayerCloseEnough())
        {
            Interact();
        }
