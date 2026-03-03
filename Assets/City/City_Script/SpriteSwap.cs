@@ -4,7 +4,7 @@ using System.Collections;
 public class SpriteSwap : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] public GameObject pharmacyPanel;
+    [SerializeField] public GameObject panel;
 
     [Header("Animation Frames")]
     [SerializeField] public Sprite[] openAnimation;
@@ -26,7 +26,7 @@ public class SpriteSwap : MonoBehaviour
 
     void Start()
     {
-        pharmacyPanel.SetActive(false);
+        panel.SetActive(false);
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class SpriteSwap : MonoBehaviour
         {
             StartCoroutine(PlayAnimation());
             yield return new WaitForSeconds(0.5f); // Wait for animation to complete
-            pharmacyPanel.SetActive(true);           
+            panel.SetActive(true);           
         }
     }
 
@@ -49,7 +49,7 @@ public class SpriteSwap : MonoBehaviour
     if (isOpen && !isAnimating)
     {
         StartCoroutine(PlayAnimation());
-        pharmacyPanel.SetActive(false);
+            panel.SetActive(false);
     }
 }
 

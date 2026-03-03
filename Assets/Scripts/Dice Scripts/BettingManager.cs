@@ -21,6 +21,7 @@ public class BettingManager : MonoBehaviour
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private CanvasGroup ScorePanel;
     [SerializeField] private CanvasGroup instructionsPanel;
+    [SerializeField] private TextMeshProUGUI moneyText;
 
     private string playerBetType;
     private bool hasBet = false;
@@ -44,6 +45,8 @@ public class BettingManager : MonoBehaviour
     public void Update()
     {
         PlayerRuntime.Instance.Player.Gold = playerCoins; // Đồng bộ vàng với PlayerRuntime
+
+        moneyText.text = playerCoins.ToString();
     }
 
     public void play()
@@ -109,13 +112,13 @@ public class BettingManager : MonoBehaviour
     // ✔ Không bật panel ở đây nữa — chỉ tính xu + lưu kết quả
     public void WinBet()
     {
-        playerCoins += 2;
+        PlayerRuntime.Instance.Player.Gold += 2;
         playerWon = true;
     }
 
     public void LoseBet()
     {
-        playerCoins -= 2;
+        PlayerRuntime.Instance.Player.Gold -= 2;
         playerWon = false;
     }
 
@@ -199,9 +202,17 @@ public class BettingManager : MonoBehaviour
 
         // ✔ Sau khi score biến mất → hiện win/lose
         if (playerWon)
-            StartCoroutine(winPanelTimer());
+        {
+            WinBet(); // Cập nhật lại xu nếu thắng
+            StartCoroutine(winPanelTimer());            
+        }
+            
         else
+        {
+            LoseBet(); // Cập nhật lại xu nếu thua
             StartCoroutine(losePanelTimer());
+        }
+            
     }
 
     IEnumerator winPanelTimer()
