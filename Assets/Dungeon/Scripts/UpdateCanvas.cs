@@ -1,8 +1,10 @@
 using System;
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UpdateCanvas : MonoBehaviour
@@ -26,11 +28,14 @@ public class UpdateCanvas : MonoBehaviour
     [SerializeField] TextMeshProUGUI goldNum;
     
     [SerializeField] public int hp0;
-    [SerializeField] public int mp0 = 100;
+    [SerializeField] public int mp0 = 100;    
 
     void Start()
     {
-        if(canvas == null) canvas = GameObject.Find("Canvas").transform.Find("Main Panel").transform.Find("PlayerInfo").gameObject;
+        if (canvas == null)
+        {
+            canvas = GameObject.Find("Canvas").transform.Find("Main Panel").transform.Find("PlayerInfo").gameObject;
+        }        
         player = GameObject.Find("Player");
     }
     private void Update()
@@ -54,6 +59,7 @@ public class UpdateCanvas : MonoBehaviour
         
         UpdateHPMP();
         UpdateUELG();
+        
     }
 
     void UpdateUELG()
@@ -126,6 +132,6 @@ public class UpdateCanvas : MonoBehaviour
             PlayerRuntime.Instance.Player.Lv++;
             Hp = hp0;
         }
-    }
-
+    }    
 }
+

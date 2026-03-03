@@ -93,6 +93,29 @@ public class ItemTooltipUI_TU : MonoBehaviour
 
         if (!isStone)
         {
+            //
+            if(item.itemType == ItemType.Consumable)
+            {
+                if (statText)
+                {
+                    statText.textWrappingMode = TextWrappingModes.Normal;
+                    statText.richText = true;
+                    statText.text = $"+ {item.hpAmount} HP\n+ {item.mpAmount} MP";
+                }
+                if (descText)
+                {
+                    descText.textWrappingMode = TextWrappingModes.Normal;
+                    descText.richText = true;
+                    descText.text = item.description;
+                }
+                transform.SetAsLastSibling();
+                root.gameObject.SetActive(true);
+                visible = true;
+                if (followMode == FollowMode.Anchor) FollowAnchor();
+                else FollowCursor();
+                return;
+            }    
+            //
             item.GetFinalStats(upgradeLevel, out float fATK, out float fDEF, out float fCRIT);
             item.GetAddedAtLevel(upgradeLevel, out int aATK, out int aDEF, out float aC);
 
