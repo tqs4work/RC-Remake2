@@ -17,6 +17,8 @@ public static class PlayerDataConverter
                        
             Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
 
+            Store = player.Store,
+
             Wrapper = player.Wrapper
         };       
         

@@ -7,7 +7,7 @@ using System.Collections;
 public class NPCBlackSmith_TU : MonoBehaviour
 {
     public GameObject InventoryUI;
-    public static bool DialogueOpen { get; private set; }
+    public  bool DialogueOpen { get; private set; }
 
     [Header("Dialogue Data")]
     public BlackSmithDialogue_TU dialogueData;
@@ -52,16 +52,18 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
     Coroutine hammerCo;
     bool hammerPaused;
+    bool isClosing;
 
     int index;
     bool isTyping;
     Coroutine typingCo;
     bool waitingExternal;
-    bool exitLine;
-    static float reopenBlock;
+    float reopenBlock;
 
     void Awake()
     {
+        DialogueOpen = false;
+        reopenBlock = 0f;
         dialogueUI.SetActive(false);
         choicesUI.SetActive(false);
 
@@ -87,29 +89,43 @@ public class NPCBlackSmith_TU : MonoBehaviour
     }
     void Start()
     {
+        
         playerTransform = GameObject.Find("Player").transform;
     }
 
     void Update()
     {
-        InventoryUI.SetActive(true);
-        playerTransform = GameObject.Find("Player").transform;
+         InventoryUI.SetActive(true);
         HandleHammer();
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // ===== BẮT PHÍM E ĐỂ MỞ DIALOGUE =====
+        if (!DialogueOpen && !isClosing)
         {
-            CloseDialogue();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (Vector2.Distance(transform.position, playerTransform.position) <= talkRange)
+                {
+                    StartDialogue();
+                }
+            }
+        }
+
+        if (!DialogueOpen || isClosing)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !waitingExternal)
+        {
+            ShowExitLine();
             return;
         }
 
-        if (!dialogueUI.activeSelf || waitingExternal) return;
+        if (waitingExternal)
+            return;
 
         if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
             if (isTyping)
                 FinishTyping();
-            else if (exitLine)
-                CloseDialogue();
         }
     }
 
@@ -126,11 +142,12 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
     public void StartDialogue()
     {
+        //Chặn mở lại ua nhanh sau khi đóng
+        if (Time.time < reopenBlock) return;
         if (!dialogueData || dialogueData.lines.Length == 0) return;
 
         DialogueOpen = true;
         index = 0;
-        exitLine = false;
 
         dialogueUI.SetActive(true);
         ShowLine();
@@ -227,22 +244,43 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
     void ShowExitLine()
     {
+         if (!DialogueOpen || waitingExternal || isClosing)
+        return;
+
+        isClosing = true;   // 🔥 KHÓA INPUT
+
+        if (typingCo != null)
+            StopCoroutine(typingCo);
+
+        isTyping = false;
+
+        dialogueUI.SetActive(true);
         choicesUI.SetActive(false);
-        exitLine = true;
+
         index = Mathf.Min(1, dialogueData.lines.Length - 1);
         ShowLine();
+
+        StartCoroutine(CloseAfterDelay());
     }
 
+    IEnumerator CloseAfterDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        CloseDialogue();
+    }
     void CloseDialogue()
     {
+         if (typingCo != null)
+            StopCoroutine(typingCo);
+
         dialogueUI.SetActive(false);
         choicesUI.SetActive(false);
 
         DialogueOpen = false;
-        exitLine = false;
         waitingExternal = false;
+        isClosing = false;   // 🔥 MỞ KHÓA LẠI
 
-        reopenBlock = Time.time + 0.25f;
+        reopenBlock = Time.time + 0.15f;
     }
 
     void HandleHammer()

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069a5edb7eebb41a6aee52b0bf2b95a1, type: 3}
+  m_Name: John
+  m_EditorClassIdentifier: 
+  npcName: John
+  npcPortrait: {fileID: -7527145504033472756, guid: 6e5182f67dea64812bee97829b003bd2, type: 3}
+  dialogueLines:
+  - 'Hi '
+  - I am having a quest for you
+  - Can you do it ?
+  - I know you can do it
+  - Thank you for your time
+  - Oh ok then see you my child !!
+  - Next time...
+  autoProgressLines: 01010100000101
+  endProgressLines: 00000001010001
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  dialogueChoices:
+  - DialogueIndex: 2
+    Choices:
+    - 'Yes '
+    - Not now
+    NextDialogueIndexes: 0300000004000000
