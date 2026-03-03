@@ -36,7 +36,7 @@ public class P_Action : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -46,7 +46,7 @@ public class P_Action : MonoBehaviour
         if (hotbar == null)
         {
             hotbar = GameObject.Find("Canvas").transform.Find("HotBarManager").GetComponent<HotbarUI>();
-        }            
+        }
         if (isAction) return;
 
         HandleInput();
@@ -76,33 +76,81 @@ public class P_Action : MonoBehaviour
         switch (item.itemType)
         {
             case ItemType.Sword:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(MeleeAttack());
+                    item.durability -= 5;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.Bow:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(RangedAttack());
+                    item.durability -= 5;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.Shovel:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(Dig());
+                    item.durability -= 5;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.Axe:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(Axe());
+                    item.durability -= 5;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.Pickaxe:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(Mining());
+                    item.durability -= 5;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.WateringCan:
-                if (EnoughMP(5))
+                if (EnoughMP(5) && item.durability > 0)
+                {
                     StartCoroutine(Water());
+                    item.durability -= 1;
+                    hotbar.Refresh();
+                }
+                else
+                {
+                    Debug.Log("Not enough MP or durability!");
+                }
                 break;
 
             case ItemType.Consumable:
@@ -111,7 +159,7 @@ public class P_Action : MonoBehaviour
                 break;
 
             case ItemType.Seed:
-                StartCoroutine(Dig());
+                //StartCoroutine(Doing());
                 break;
 
             case ItemType.Stone:
@@ -135,7 +183,7 @@ public class P_Action : MonoBehaviour
     {
         if (item == null || item.quantity <= 0)
             return;
-                
+
         var player = PlayerRuntime.Instance.Player;
 
 
@@ -143,9 +191,9 @@ public class P_Action : MonoBehaviour
         player.Hp += item.hpAmount;
         player.Mp += item.mpAmount;
 
-        item.quantity--;        
+        item.quantity--;
 
-        if(item.quantity <= 0)
+        if (item.quantity <= 0)
         {
             // ===== CHANGED: Xóa kh?i Hotbar container =====
             var hotbarContainer =
@@ -154,7 +202,7 @@ public class P_Action : MonoBehaviour
             hotbarContainer.items.Remove(item);
         }
 
-        
+
 
         hotbar.Refresh();
     }
@@ -164,8 +212,8 @@ public class P_Action : MonoBehaviour
         isAction = true;
 
         animator.SetTrigger("Doing");
-        yield return new WaitForSeconds(1f);        
-        
+        yield return new WaitForSeconds(1f);
+
         isAction = false;
     }
 
@@ -178,11 +226,11 @@ public class P_Action : MonoBehaviour
         isAction = true;
 
         animator.SetTrigger("MA");
-        yield return new WaitForSeconds(4/6f);
+        yield return new WaitForSeconds(4 / 6f);
 
         DoMeleeHit();
 
-        yield return new WaitForSeconds(1/3f);
+        yield return new WaitForSeconds(1 / 3f);
         isAction = false;
     }
 
@@ -218,23 +266,23 @@ public class P_Action : MonoBehaviour
         isAction = true;
         isRangedAiming = true;
 
-        animator.SetTrigger("RA");       
+        animator.SetTrigger("RA");
 
-        yield return new WaitForSeconds(5/6f);
+        yield return new WaitForSeconds(5 / 6f);
 
         ShootArrow();
 
         isRangedAiming = false;
 
 
-        yield return new WaitForSeconds(1/6f);
+        yield return new WaitForSeconds(1 / 6f);
 
         arrowDir.SetActive(false);
         isAction = false;
     }
 
     void ShootArrow()
-    {        
+    {
         GameObject arrow = Instantiate(
             arrowPrefab,
             shootPoint.position,
@@ -243,9 +291,9 @@ public class P_Action : MonoBehaviour
 
         //arrow.GetComponent<Rigidbody2D>().linearVelocity = direct.normalized * 15f;
         arrow.GetComponent<Rigidbody2D>().AddForce(direct * 10f, ForceMode2D.Impulse);
-        
+
         Destroy(arrow, 3f);
-        
+
     }
 
     void Aim()
