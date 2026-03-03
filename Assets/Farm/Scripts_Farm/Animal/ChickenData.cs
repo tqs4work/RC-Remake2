@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class ChickenData
 {
-
     public float posX, posY, posZ;
     public ChicManager.ChicState state;
     public float currentTimer;
