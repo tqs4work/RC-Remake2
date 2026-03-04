@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 
 public class UICookingPlus : MonoBehaviour
 {
@@ -7,10 +8,14 @@ public class UICookingPlus : MonoBehaviour
     {
         HideCookingPanel(); // Ẩn panel khi bắt đầu
     }
-
+    private void Update()
+    {
+        GameObject.Find("Player").GetComponent<P_Action>().isFarm = cookingPanel.activeSelf; // Khi mở panel nấu ăn thì player sẽ không thể di chuyển
+    }
     public void ShowCookingPanel()
     {
         cookingPanel.SetActive(true);
+        
     }
     public void HideCookingPanel()
     {
