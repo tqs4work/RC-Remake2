@@ -6,14 +6,13 @@ using System.Collections;
 public class RepairUI_TU : MonoBehaviour
 {
     public static RepairUI_TU Instance;
+    public InfoDialog_TU infoDialog;
+
     [Header("Root")]
     public GameObject panelRoot;
     public Button btnClose;
-
-    [Header("Item Display")]
-    public Image itemIcon;
-    public TMP_Text itemNameText;
-    public TMP_Text durabilityText;
+    [Header("Slot")]
+    public RepairSlotCell_TU repairSlotCell;
 
     [Header("Confirm Dialog")]
     public GameObject dialogConfirm;
@@ -36,8 +35,8 @@ public class RepairUI_TU : MonoBehaviour
     public Slider loadingBar;
     public TMP_Text loadingPercent;
     public TMP_Text loadingTitle;
+    RepairSlotCell_TU currentSlot;
 
-    // Runtime
     ItemRuntime currentItem;
     int repairPrice;
     Coroutine dotsCo;
@@ -46,8 +45,9 @@ public class RepairUI_TU : MonoBehaviour
 
     void Awake()
     {
-        HideAllDialogs();
         Instance = this;
+        HideAllDialogs();
+
         if (btnClose) btnClose.onClick.AddListener(Close);
         if (btnConfirmOK) btnConfirmOK.onClick.AddListener(StartRepair);
         if (btnConfirmCancel) btnConfirmCancel.onClick.AddListener(() => dialogConfirm.SetActive(false));
@@ -63,48 +63,34 @@ public class RepairUI_TU : MonoBehaviour
             dotsCo = null;
         }
 
-        if (dialogConfirm) dialogConfirm.SetActive(false);
-        if (dialogInfo) dialogInfo.SetActive(false);
-        if (dialogSuccess) dialogSuccess.SetActive(false);
-        if (loadingPanel) loadingPanel.SetActive(false);
+        dialogConfirm?.SetActive(false);
+        dialogInfo?.SetActive(false);
+        dialogSuccess?.SetActive(false);
+        loadingPanel?.SetActive(false);
     }
 
     public void Open()
     {
         gameObject.SetActive(true);
-        if (panelRoot) panelRoot.SetActive(true);
+        panelRoot?.SetActive(true);
         HideAllDialogs();
-        ClearItem();
     }
 
     public void Close()
     {
         HideAllDialogs();
-        if (panelRoot) panelRoot.SetActive(false);
+        panelRoot?.SetActive(false);
         gameObject.SetActive(false);
         onClose?.Invoke();
     }
 
-    // Nhận item
-    public void SetItem(ItemRuntime item)
+    // ===== Nhận item từ RepairSlot =====
+    public void SetItem(ItemRuntime item, RepairSlotCell_TU slot)
     {
-        if (item == null)
-        {
-            ShowInfo("Không có vật phẩm.");
-            return;
-        }
-
-        if (item.durability >= 100)
-        {
-            ShowInfo("Vật phẩm đã đầy độ bền.");
-            return;
-        }
+         if (item == null) return;
 
         currentItem = item;
-
-        if (itemIcon) itemIcon.sprite = item.icon;
-        if (itemNameText) itemNameText.text = item.itemName;
-        if (durabilityText) durabilityText.text = "Độ bền: " + item.durability + "%";
+        currentSlot = slot;
 
         repairPrice = CalculateRepairCost(item);
 
@@ -118,8 +104,7 @@ public class RepairUI_TU : MonoBehaviour
 
     int CalculateRepairCost(ItemRuntime item)
     {
-        float missing = 100f - item.durability;
-        return Mathf.RoundToInt(item.price * (missing / 100f));
+        return item.itemData.GetRepairCost(Mathf.RoundToInt(item.durability));
     }
 
     void ShowInfo(string msg)
@@ -128,14 +113,13 @@ public class RepairUI_TU : MonoBehaviour
         dialogInfo.SetActive(true);
     }
 
-    // Thực hiện sửa
     void StartRepair()
     {
         dialogConfirm.SetActive(false);
 
         if (currentItem == null)
         {
-            ShowInfo("Không có vật phẩm.");
+          infoDialog?.Show("Không có vật phẩm.");
             return;
         }
 
@@ -143,14 +127,11 @@ public class RepairUI_TU : MonoBehaviour
 
         if (player.Gold < repairPrice)
         {
-            ShowInfo("Bạn không đủ vàng.");
+           infoDialog?.Show("Bạn không đủ vàng.");
             return;
         }
 
-        // Trừ vàng
         player.Gold -= repairPrice;
-
-        // Chặn spam
         btnConfirmOK.interactable = false;
 
         StartCoroutine(CoRepair());
@@ -189,12 +170,7 @@ public class RepairUI_TU : MonoBehaviour
 
         loadingPanel.SetActive(false);
 
-        // FULL durability
         currentItem.durability = 100;
-
-        // Update lại text
-        if (durabilityText)
-            durabilityText.text = "Độ bền: 100%";
 
         successText.text = "Sửa thành công!";
         dialogSuccess.SetActive(true);
@@ -205,16 +181,17 @@ public class RepairUI_TU : MonoBehaviour
     void OnSuccessOK()
     {
         dialogSuccess.SetActive(false);
-        ClearItem();
-    }
 
-    void ClearItem()
-    {
+        if (currentSlot != null)
+            currentSlot.SetEmpty();
+
+        // 🔥 refresh inventory ngay
+        var inv = FindObjectOfType<InventoryUI>();
+        if (inv != null)
+            inv.RefreshAll();
+
         currentItem = null;
-
-        if (itemIcon) itemIcon.sprite = null;
-        if (itemNameText) itemNameText.text = "";
-        if (durabilityText) durabilityText.text = "";
+        currentSlot = null;
     }
 
     IEnumerator CoDots()
@@ -232,4 +209,17 @@ public class RepairUI_TU : MonoBehaviour
             }
         }
     }
+    public bool IsBlockingUI()
+{
+    if (dialogSuccess != null && dialogSuccess.activeSelf)
+        return true;
+
+    if (dialogConfirm != null && dialogConfirm.activeSelf)
+        return true;
+
+    if (loadingPanel != null && loadingPanel.activeSelf)
+        return true;
+
+    return false;
+}
 }

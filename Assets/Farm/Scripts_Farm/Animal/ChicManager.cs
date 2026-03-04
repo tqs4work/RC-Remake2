@@ -57,6 +57,11 @@ public class ChicManager : MonoBehaviour
     private Vector3 startPos; // Lưu vị trí lúc mới sinh ra để gà không đi quá xa
     private bool isWalking = false;
 
+    public AudioSource AudioSource;
+    public AudioClip eatSound;
+    public Transform chicVisuals;
+
+    public TextMeshProUGUI noti;
     private void Start()
     {
         //Khởi tạo timer cho trạng thái baby
@@ -71,31 +76,40 @@ public class ChicManager : MonoBehaviour
 
         startPos = transform.position; // Lưu lại mốc tọa độ ban đầu
         StartCoroutine(RoamRoutine()); // Bắt đầu tiến trình đi dạo
+        noti.text = "";
     }
     private void Update()
     {
-        if (currentState == ChicState.Baby && !isHungry)
+        if (currentState == ChicState.Baby)
         {
-            hungerTimer -= Time.deltaTime;
-            if (hungerTimer <= 0f)
+            if (isHungry)
             {
-                isHungry = true;
-                Debug.Log("Gà đói rồi! Hãy cho ăn!");
-                Interact.gameObject.SetActive(true);
-                food.enabled = true;
-                sellIcon.enabled = false;
+                ShowHungryUI();
+            }
+            else
+            {
+                hungerTimer -= Time.deltaTime;
+                if (hungerTimer <= 0f)
+                {
+                    isHungry = true;
+                    Debug.Log("Gà đói rồi! Hãy cho ăn!");
+                    
+                }
             }
         }
-        else if (currentState == ChicState.Teen && !isTeenHungry)
+        else if (currentState == ChicState.Teen)
         {
-            teenHungerTimer -= Time.deltaTime;
-            if (teenHungerTimer <= 0f)
+            if (isTeenHungry)
             {
-                Interact.gameObject.SetActive(true);
-                food.enabled = true;
-                sellIcon.enabled = false;
-                isTeenHungry = true;
-                Debug.Log("Gà teen đói rồi! Hãy cho ăn!");
+                ShowHungryUI();
+            }
+            else
+            {
+                teenHungerTimer -= Time.deltaTime;
+                if (teenHungerTimer <= 0f)
+                {
+                    isTeenHungry = true;
+                }
             }
         }
     }
@@ -136,8 +150,33 @@ public class ChicManager : MonoBehaviour
                 }
         }    
     }
+    private bool Feed()
+    {
+        var player = PlayerRuntime.Instance.Player;
+        var farmInventory = player.Inventory[InventoryContainerType.Farm];
+        var wheatItem = farmInventory.items.Find(x => x.itemID == "F1"); //  ID của thức ăn wheat là F1
+        if (wheatItem == null || wheatItem.quantity <= 0)
+        {
+            Debug.Log("Bạn không có thức ăn để cho gà con ăn!");
+            StartCoroutine(NotiMess("Bạn không có thức ăn để cho gà con ăn!", 2));
+            return false;
+        }
+        wheatItem.quantity--; // Trừ 1 thức ăn
+        Debug.Log("Đã sử dụng 1 thức ăn. Còn lại: " + wheatItem.quantity);
+        StartCoroutine(NotiMess("Đã sử dụng 1 thức ăn. Còn lại: " + wheatItem.quantity, 2));
+        if (wheatItem.quantity <= 0)
+        {
+            farmInventory.items.Remove(wheatItem); // Xóa khỏi túi nếu hết
+            Debug.Log("Bạn đã dùng hết thức ăn!");
+            return true;
+        }
+        return true;
+    }    
     private void FeedBaby()
     {
+        if (!Feed()) return;
+        AudioSource.PlayOneShot(eatSound);
+        Debug.Log("Sound of chic!");
         isHungry = false;
         hungerTimer = hungerInterval; // Reset lại đồng hồ đếm đói
         timesFed++;
@@ -161,6 +200,9 @@ public class ChicManager : MonoBehaviour
     }
     private void FeedTeen()
     {
+        if (!Feed()) return;
+        AudioSource.PlayOneShot(eatSound);
+        Debug.Log("Sound of chic!");
         isTeenHungry = false;
         teenHungerTimer = teenHungerInterval; // Reset lại đồng hồ đếm đói
         teenTimesFed++;
@@ -248,11 +290,11 @@ public class ChicManager : MonoBehaviour
             // Chú ý: Giả định model gốc của bạn đang quay mặt sang phải. X = 1 là phải, -1 là trái.
             if (targetPos.x < transform.position.x)
             {
-                transform.localScale = new Vector3(-1, 1, 1); // Lật sang trái
+                chicVisuals.localScale = new Vector3(-1, 1, 1); // Lật sang trái
             }
             else if (targetPos.x > transform.position.x)
             {
-                transform.localScale = new Vector3(1, 1, 1); // Lật sang phải
+                chicVisuals.localScale = new Vector3(1, 1, 1); // Lật sang phải
             }
 
             // 4. Bắt đầu di chuyển từ từ đến targetPos
@@ -267,4 +309,80 @@ public class ChicManager : MonoBehaviour
             }
         }
     }
+    public ChickenData SaveChic()
+    {
+        ChickenData data = new ChickenData();
+        data.posX = transform.position.x;
+        data.posY = transform.position.y;
+        data.posZ = transform.position.z;
+
+        // Lưu trạng thái
+        data.state = currentState;
+        data.eggsProduced = eggsProduced;
+
+        if (currentState == ChicState.Baby)
+        {
+            data.currentTimer = hungerTimer;      
+            data.isHungryStatus = isHungry;       
+            data.feedCount = timesFed;            
+        }
+        else if (currentState == ChicState.Teen)
+        {
+            data.currentTimer = teenHungerTimer;  
+            data.isHungryStatus = isTeenHungry;   
+            data.feedCount = teenTimesFed;        
+        }
+        // Adult thì không cần lưu timer hay đói, chỉ cần vị trí và state là đủ
+        return data;
+    }
+    public void LoadData(ChickenData data)
+    {
+        transform.position = new Vector3(data.posX, data.posY, data.posZ);
+        startPos = transform.position; // Cập nhật lại điểm gốc đi dạo
+
+        // Khôi phục các chỉ số chung
+        currentState = data.state;
+        eggsProduced = data.eggsProduced;
+
+        // Tắt hết model để bật lại cái đúng
+        babyModel.SetActive(false);
+        teenModel.SetActive(false);
+        AdultModel.SetActive(false);
+        Interact.gameObject.SetActive(false); // Mặc định tắt nút tương tác
+
+        if (currentState == ChicState.Baby)
+        {
+            babyModel.SetActive(true);
+            hungerTimer = data.currentTimer;
+            isHungry = data.isHungryStatus;
+            timesFed = data.feedCount;
+            if (isHungry) ShowHungryUI();
+        }
+        else if (currentState == ChicState.Teen)
+        {
+            teenModel.SetActive(true);
+            teenHungerTimer = data.currentTimer;
+            isTeenHungry = data.isHungryStatus;
+            teenTimesFed = data.feedCount;
+            if (isTeenHungry) ShowHungryUI();
+        }
+        else if (currentState == ChicState.Adult)
+        {
+            AdultModel.SetActive(true);
+            StartCoroutine(WaitToEnableAdultInteract());
+        }
+    }
+
+    void ShowHungryUI()
+    {
+        Interact.gameObject.SetActive(true);
+        food.enabled = true;
+        sellIcon.enabled = false;
+    }
+    IEnumerator NotiMess(string message, int time)
+    {
+        noti.text = message;
+        yield return new WaitForSeconds(time);
+        noti.text = ""; 
+    }    
 }

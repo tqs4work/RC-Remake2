@@ -20,7 +20,7 @@ public static class AccountFactory
         PlayerData player = new PlayerData
         {
             ID = Guid.NewGuid().ToString(),
-            Name = "NewPlayer",
+            Name = "Minh",
             Hp = 100,
             Mp = 100,
             Exp = 0,
@@ -35,7 +35,11 @@ public static class AccountFactory
 
             Store = new List<ItemRuntime>(),
 
-            Wrapper = new List<TileState>()
+            Machine = new List<ItemRuntime>(),
+
+            Wrapper = new List<TileState>(),
+
+            ChickenWrapper = new List<ChickenData>()
         };
 
         // T?o s?n 4 container r?ng

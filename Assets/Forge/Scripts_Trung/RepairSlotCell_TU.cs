@@ -1,72 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.EventSystems;
 
 public class RepairSlotCell_TU : MonoBehaviour, IPointerClickHandler
 {
-    [Header("UI")]
     public Image icon;
-    public TMP_Text durabilityText;
+
+    // 🔥 KÉO THẢ TRONG INSPECTOR
+    public InfoDialog_TU infoDialog;
 
     ItemRuntime currentItem;
 
-    public bool IsEmpty()
-    {
-        return currentItem == null;
-    }
-
     public void SetItem(ItemRuntime item)
     {
-        if (item == null)
-        {
-            SetEmpty();
-            return;
-        }
+        if (item == null) return;
+        if (item.itemData == null) return;
+        if (!item.itemData.useDurability) return;
 
-        // Chỉ cho phép item có durability
-        if (item.durability <= 0 && item.durability > 100)
+        if (item.durability >= item.itemData.maxDurability)
         {
-            Debug.Log("Item không hợp lệ.");
+            infoDialog?.Show("Độ bền đã đầy, không cần sửa chữa.");
             return;
         }
 
         currentItem = item;
+        icon.sprite = item.icon;
+        icon.enabled = true;
 
-        if (icon)
-        {
-            icon.sprite = item.icon;
-            icon.enabled = true;
-        }
-
-        if (durabilityText)
-            durabilityText.text = item.durability + "%";
-
-        // Gửi sang RepairUI
-        if (RepairUI_TU.Instance != null)
-            RepairUI_TU.Instance.SetItem(item);
+        RepairUI_TU.Instance?.SetItem(item, this);
     }
 
     public void SetEmpty()
     {
         currentItem = null;
-
-        if (icon)
-        {
-            icon.sprite = null;
-            icon.enabled = false;
-        }
-
-        if (durabilityText)
-            durabilityText.text = "";
+        icon.sprite = null;
+        icon.enabled = false;
     }
 
-    // Double click để bỏ item khỏi slot
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.clickCount >= 2)
-        {
             SetEmpty();
-        }
     }
 }

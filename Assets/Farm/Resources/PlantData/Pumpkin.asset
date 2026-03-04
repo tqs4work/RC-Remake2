@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b21e0805e8f824899f3c7c38347a74, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  seedName: Pumpkin
+  seedIcon: {fileID: 21300000, guid: 5e7a160415a7061448eec1d3feb6c7f4, type: 2}
+  buyPrice: 100
+  growthStages:
+  - stageTile: {fileID: 11400000, guid: 284f998bcd253d5429543019458c601c, type: 2}
+    growthTimeInSeconds: 10
+  - stageTile: {fileID: 11400000, guid: f7048cb9dae477643a322f6fa85d3a0e, type: 2}
+    growthTimeInSeconds: 10
+  - stageTile: {fileID: 11400000, guid: b0058ff1aedab1642a1a9e012462d428, type: 2}
+    growthTimeInSeconds: 10
+  - stageTile: {fileID: 11400000, guid: 010ace4d2067d664aa61375f2e165961, type: 2}
+    growthTimeInSeconds: 10
+  - stageTile: {fileID: 11400000, guid: 3fdc202f109dbac44aaf631e3ca053f8, type: 2}
+    growthTimeInSeconds: 10
+  harvestItemData: {fileID: 11400000, guid: 149b925e235f17b44a8a941d89176191, type: 2}
+  harvestItemName: Pumpkin
+  harvestItemDescription: 
+  harvestItemIconPath: 
+  harvestQuantity: 1
+  pricePerUnit: 0
+  plantState: 12

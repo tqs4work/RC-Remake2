@@ -12,6 +12,9 @@ TagManager:
   - Chic_cage
   - Wall
   - Tree
+  - Stone1
+  - Stone2
+  - Stone3
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,8 @@ TagManager:
   - Water
   - UI
   - Wall
-  - 
-  - 
+  - Tree
+  - Stone
   - 
   - 
   - 
@@ -124,12 +127,6 @@ TagManager:
   - name: canvas
     uniqueID: 3152315233
     locked: 0
-  - name: UpgrdeAnimated
-    uniqueID: 2051001651
-    locked: 0
-  - name: Arrow
-    uniqueID: 1526079609
-    locked: 0
   - name: DoorAnim
     uniqueID: 931872001
     locked: 0
@@ -138,6 +135,12 @@ TagManager:
     locked: 0
   - name: Canvas
     uniqueID: 831296717
+    locked: 0
+  - name: Arrow
+    uniqueID: 1526079609
+    locked: 0
+  - name: UpgrdeAnimated
+    uniqueID: 2051001651
     locked: 0
   - name: CityCanvas
     uniqueID: 1551888139

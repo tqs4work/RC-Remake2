@@ -23813,7 +23813,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -23835,7 +23835,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -23857,7 +23857,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -23866,6 +23866,28 @@ TextureImporter:
       bones: []
       spriteID: 4dfffc4dc6c846042ad8ed0e2216048c
       internalID: -1253279232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: awood
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2e7fd05400d584dabda85becc0c144
+      internalID: 863718677
       vertices: []
       indices: 
       edges: []
@@ -24957,6 +24979,7 @@ TextureImporter:
       Overworld_997: -948700061
       Overworld_998: -221629229
       Overworld_999: -770555719
+      awood: 863718677
       fountain1: -418310334
       fountain2: -1561022880
       fountain3: -1253279232

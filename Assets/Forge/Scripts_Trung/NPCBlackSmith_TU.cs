@@ -6,7 +6,6 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class NPCBlackSmith_TU : MonoBehaviour
 {
-    public GameObject InventoryUI;
     public  bool DialogueOpen { get; private set; }
 
     [Header("Dialogue Data")]
@@ -71,7 +70,6 @@ public class NPCBlackSmith_TU : MonoBehaviour
         repairPanel?.SetActive(false);
         stonePanel?.SetActive(false);
         weaponUpgradePanel?.SetActive(false);
-        inventoryPanel?.SetActive(false);
 
         buttonTrade?.onClick.AddListener(OpenShop);
         buttonRepair?.onClick.AddListener(OpenRepair);
@@ -86,6 +84,8 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
         if (repairUI != null) repairUI.onClose += ResumeDialogue;
         if (shopUI != null) shopUI.onShopClosed += ResumeDialogue;
+        if (stoneUI != null) stoneUI.onClose += ResumeDialogue;
+        if (weaponUI != null) weaponUI.onClose += ResumeDialogue;
     }
     void Start()
     {
@@ -95,7 +95,6 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
     void Update()
     {
-         InventoryUI.SetActive(true);
         HandleHammer();
 
         // ===== BẮT PHÍM E ĐỂ MỞ DIALOGUE =====
@@ -150,6 +149,9 @@ public class NPCBlackSmith_TU : MonoBehaviour
         index = 0;
 
         dialogueUI.SetActive(true);
+        //Khóa player
+        LockPlayer();
+
         ShowLine();
     }
 
@@ -221,9 +223,12 @@ public class NPCBlackSmith_TU : MonoBehaviour
         choicesUI.SetActive(false);
         dialogueUI.SetActive(false);
 
-        inventoryPanel?.SetActive(true);
-        panel?.SetActive(true);
+         InventoryUI inventory = FindFirstObjectByType<InventoryUI>();
+        if (inventory != null)
+            inventory.ShowToolPanel();   // bật inventory đúng cách
 
+        panel?.SetActive(true);
+        LockPlayer(true);
         PauseHammer();
     }
 
@@ -233,12 +238,16 @@ public class NPCBlackSmith_TU : MonoBehaviour
         repairPanel?.SetActive(false);
         stonePanel?.SetActive(false);
         weaponUpgradePanel?.SetActive(false);
-        inventoryPanel?.SetActive(false);
+        InventoryUI inventory = FindFirstObjectByType<InventoryUI>();
+        if (inventory != null)
+        {
+            inventory.HideAllPanels();
+        }
 
         waitingExternal = false;
         dialogueUI.SetActive(true);
-        choicesUI.SetActive(true);
-
+        choicesUI.SetActive(true);  
+        LockPlayer(true);
         ResumeHammer();
     }
 
@@ -259,6 +268,8 @@ public class NPCBlackSmith_TU : MonoBehaviour
 
         index = Mathf.Min(1, dialogueData.lines.Length - 1);
         ShowLine();
+        // 🔥 MỞ KHÓA PLAYER NGAY
+        LockPlayer(false);
 
         StartCoroutine(CloseAfterDelay());
     }
@@ -279,6 +290,7 @@ public class NPCBlackSmith_TU : MonoBehaviour
         DialogueOpen = false;
         waitingExternal = false;
         isClosing = false;   // 🔥 MỞ KHÓA LẠI
+        LockPlayer(false);
 
         reopenBlock = Time.time + 0.15f;
     }
@@ -331,5 +343,16 @@ public class NPCBlackSmith_TU : MonoBehaviour
     void ResumeHammer()
     {
         hammerPaused = false;
+    }
+    void LockPlayer(bool lockState = true)
+    {
+       var move = playerTransform.GetComponent<P_Move>();
+        if (move != null)
+            move.isBlock = lockState;
+
+        var action = playerTransform.GetComponent<P_Action>();
+        
+        if (action != null)
+            action.enabled = !lockState;
     }
 }

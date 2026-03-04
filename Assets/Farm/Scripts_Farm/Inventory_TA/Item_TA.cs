@@ -48,7 +48,7 @@ public class Item : ScriptableObject
      [Header("Durability")]
     [Tooltip("Áp dụng cho Weapon/Armor. Arrow/Stone không dùng độ bền.")]
      public bool useDurability = true;
-    // public float durability;
+    public float durability;
 
     [Header("Upgrade (+1..+5): cộng THÊM mỗi cấp")]
     [Tooltip("Độ dài <= 5. Mỗi phần tử là L1..L5 (cộng thêm so với cấp trước).")]
@@ -123,6 +123,12 @@ public class Item : ScriptableObject
         float missing = 1f - (durabilityPercent / 100f);
         float maxCost = price * maxRepairRateOfBuyPrice;
         return Mathf.CeilToInt(maxCost * missing);
+    }
+    public bool UseUpgradeColor()
+    {
+        return itemType == ItemType.Bow ||
+            itemType == ItemType.Sword ||
+            itemType == ItemType.Armor;
     }
 
 #if UNITY_EDITOR

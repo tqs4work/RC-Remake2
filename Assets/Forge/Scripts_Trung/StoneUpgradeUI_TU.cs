@@ -6,6 +6,8 @@ using TMPro;
 
 public class StoneUpgradeUI_TU : MonoBehaviour
 {
+    [Header("Info Dialog")]
+    public InfoDialog_TU infoDialog;
     public System.Action onClose;
     public static StoneUpgradeUI_TU Instance;
 
@@ -21,7 +23,6 @@ public class StoneUpgradeUI_TU : MonoBehaviour
     public Button btnNo;
 
     [Header("Price")]
-    public TMP_Text priceText;
     public int priceL1toL2 = 200;
     public int priceL2toL3 = 500;
 
@@ -39,13 +40,15 @@ public class StoneUpgradeUI_TU : MonoBehaviour
         btnYes.onClick.AddListener(OnConfirmYes);
         btnNo.onClick.AddListener(OnConfirmNo);
         btnClose.onClick.AddListener(Close);
-
+        if (fxObject)
+        fxObject.SetActive(false);
         gameObject.SetActive(false);
     }
 
     public void Open()
     {
         gameObject.SetActive(true);
+        
 
         slotA.SetEmpty();
         slotB.SetEmpty();
@@ -60,7 +63,7 @@ public class StoneUpgradeUI_TU : MonoBehaviour
         slotA.SetEmpty();
         slotB.SetEmpty();
         slotC.SetEmpty();
-
+        confirmRoot.SetActive(false);
         onClose?.Invoke();
     }
 
@@ -70,69 +73,85 @@ public class StoneUpgradeUI_TU : MonoBehaviour
 
     public void TryPlaceStone(ItemRuntime runtime)
     {
-        if (!gameObject.activeSelf)
-            return;
+        if (!gameObject.activeSelf) return;
+        if (IsBlockingUI()) return;
 
         if (runtime.itemType != ItemType.Stone)
+        {
+            infoDialog?.Show("Chỉ có thể đặt ĐÁ vào đây!");
             return;
+        }
 
+        // 🔥 Chặn max cấp ngay từ đầu
         if (runtime.upgradeLevel >= 3)
         {
-            Debug.Log("Đá max cấp.");
+            infoDialog?.Show("Đá đã đạt cấp cao nhất!");
             return;
         }
 
         if (slotA.IsEmpty())
         {
-            slotA.SetItem(runtime);
+            PlaceStone(runtime, slotA);
+            return;
         }
-        else if (slotB.IsEmpty())
+
+        if (slotB.IsEmpty())
         {
+            // chỉ cần check cùng cấp
             if (slotA.StoneLevel != runtime.upgradeLevel)
             {
-                Debug.Log("Cần cùng cấp.");
+                infoDialog?.Show("Phải dùng 2 viên đá cùng cấp!");
                 return;
             }
 
-            slotB.SetItem(runtime);
+            PlaceStone(runtime, slotB);
+            return;
         }
-
-        RefreshUI();
     }
 
     void RefreshUI()
     {
-        int targetLv = GetTargetLevel();
+        int result = GetTargetLevel();
 
-        if (targetLv == 0)
+        if (result == 0)
         {
             confirmRoot.SetActive(false);
-            priceText.text = "-";
+            return;
         }
-        else
+
+        if (result == -1)
         {
-            confirmRoot.SetActive(true);
-            int price = GetPrice(targetLv);
-            confirmText.text = $"Ghép Lv{targetLv - 1} → Lv{targetLv}";
-            priceText.text = price + " G";
+            infoDialog?.Show("Chỉ được ghép đá cùng loại và cùng cấp!");
+            slotB.SetEmpty();
+            return;
         }
+
+        if (result == -2)
+        {
+            infoDialog?.Show("Đá đã đạt cấp tối đa!");
+            slotA.SetEmpty();
+            slotB.SetEmpty();
+            return;
+        }
+
+
+        int price = GetPrice(result);
+
+        confirmRoot.SetActive(true);
+        confirmText.text = $"Ghép Lv{result - 1} → Lv{result}\nGiá: {price}G";
     }
 
     int GetTargetLevel()
     {
         if (slotA.IsEmpty() || slotB.IsEmpty())
-            return 0;
-
-        if (slotA.StoneLevel != slotB.StoneLevel)
-            return 0;
-
-        if (slotA.StoneLevel == 1)
-            return 2;
-
-        if (slotA.StoneLevel == 2)
-            return 3;
-
         return 0;
+
+        int currentLevel = slotA.StoneLevel;
+
+        if (currentLevel >= 3)
+            return -2;
+
+        return currentLevel + 1;
     }
 
     int GetPrice(int targetLv)
@@ -148,48 +167,81 @@ public class StoneUpgradeUI_TU : MonoBehaviour
         if (targetLv == 0) return;
 
         int price = GetPrice(targetLv);
-
         var player = PlayerRuntime.Instance.Player;
 
         if (player.Gold < price)
         {
-            Debug.Log("Không đủ vàng");
+            infoDialog?.Show("Không đủ vàng");
             return;
         }
 
         player.Gold -= price;
+
+        confirmRoot.SetActive(false);
+
+        // 🔥 XÓA ĐÁ CŨ NGAY
+        RemoveStoneFromInventory(slotA.Item);
+        RemoveStoneFromInventory(slotB.Item);
 
         StartCoroutine(CoUpgrade(targetLv));
     }
 
     IEnumerator CoUpgrade(int newLevel)
     {
-        if (fxObject) fxObject.SetActive(true);
+        slotA.SetEmpty();
+        slotB.SetEmpty();
+
+        // ===== PLAY FX =====
+        if (fxObject)
+        {
+            fxObject.SetActive(true);
+
+            // Nếu là ParticleSystem → reset sạch
+            var ps = fxObject.GetComponent<ParticleSystem>();
+            if (ps)
+            {
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                ps.Play();
+            }
+        }
 
         yield return new WaitForSeconds(mergeTime);
 
-        if (fxObject) fxObject.SetActive(false);
+        // ===== TẮT FX NGAY =====
+        if (fxObject)
+        {
+            var ps = fxObject.GetComponent<ParticleSystem>();
+            if (ps)
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
-        var player = PlayerRuntime.Instance.Player;
+            fxObject.SetActive(false);
+        }
 
-        // XÓA 2 viên cũ
-        RemoveStoneFromInventory(slotA.Item);
-        RemoveStoneFromInventory(slotB.Item);
+        // ===== TẠO ĐÁ MỚI =====
+        Item baseItem = ItemDatabase.Instance.GetItemByID("D_Stone_Lv" + newLevel);
 
-        // TẠO VIÊN MỚI
-        ItemRuntime newStone = new ItemRuntime();
-        newStone.itemType = ItemType.Stone;
-        newStone.upgradeLevel = newLevel;
-        newStone.itemID = "D_Stone_Lv" + newLevel;
-        newStone.itemName = "Stone Lv" + newLevel;
+        if (baseItem == null)
+        {
+            Debug.LogError("Stone ID không tồn tại!");
+            yield break;
+        }
 
-        player.Inventory[InventoryContainerType.Dungeon].AddItem(newStone);
+        ItemRuntime newStone = ItemRuntime.FromItem(baseItem);
 
-        slotA.SetEmpty();
-        slotB.SetEmpty();
         slotC.SetItem(newStone);
 
-        RefreshUI();
+        infoDialog?.Show(
+            $"Nâng cấp thành công! Đá Lv{newLevel}",
+            () =>
+            {
+                var player = PlayerRuntime.Instance.Player;
+
+                player.Inventory[InventoryContainerType.Dungeon].AddItem(newStone);
+
+                slotC.SetEmpty();
+
+                FindFirstObjectByType<InventoryUI>()?.RefreshAll();
+            });
     }
 
     void RemoveStoneFromInventory(ItemRuntime item)
@@ -212,5 +264,32 @@ public class StoneUpgradeUI_TU : MonoBehaviour
         slotB.SetEmpty();
         RefreshUI();
     }
-    
+    public bool IsBlockingUI()
+    {
+        return confirmRoot.activeSelf ||
+            (infoDialog != null && infoDialog.gameObject.activeSelf);
+    }
+    void PlaceStone(ItemRuntime source, StoneSlotCell targetSlot)
+    {
+        if (source.isStackable && source.quantity > 1)
+        {
+            source.quantity--;
+
+            ItemRuntime clone = ItemRuntime.FromItem(source.itemData);
+
+            //QUAN TRỌNG
+            clone.upgradeLevel = source.upgradeLevel;
+            clone.icon = source.icon;
+
+            targetSlot.SetItem(clone);
+        }
+        else
+        {
+            RemoveStoneFromInventory(source);
+            targetSlot.SetItem(source);
+        }
+
+        FindFirstObjectByType<InventoryUI>()?.RefreshAll();
+        RefreshUI();
+    }
 }

@@ -76,10 +76,20 @@ public class ItemTooltipUI_TU : MonoBehaviour
             iconImage.enabled = (item.icon != null);
         }
 
-        // tên + màu theo cấp
-        Color col = Item.GetColorByLevel(Mathf.Clamp(upgradeLevel, 0, 5));
+        bool canColorUpgrade =
+            item.itemType == ItemType.Sword ||
+            item.itemType == ItemType.Bow ||
+            item.itemType == ItemType.Armor;
+
+        Color col = canColorUpgrade
+            ? Item.GetColorByLevel(Mathf.Clamp(upgradeLevel, 0, 5))
+            : Color.white;
+
         string hex = ColorUtility.ToHtmlStringRGB(col);
-        string plus = upgradeLevel > 0 ? $" <color=#{hex}>(+{upgradeLevel})</color>" : "";
+
+        string plus = (canColorUpgrade && upgradeLevel > 0)
+            ? $" <color=#{hex}>(+{upgradeLevel})</color>"
+            : "";
 
         if (nameText)
         {
@@ -93,6 +103,29 @@ public class ItemTooltipUI_TU : MonoBehaviour
 
         if (!isStone)
         {
+            //
+            if(item.itemType == ItemType.Consumable)
+            {
+                if (statText)
+                {
+                    statText.textWrappingMode = TextWrappingModes.Normal;
+                    statText.richText = true;
+                    statText.text = $"+ {item.hpAmount} HP\n+ {item.mpAmount} MP";
+                }
+                if (descText)
+                {
+                    descText.textWrappingMode = TextWrappingModes.Normal;
+                    descText.richText = true;
+                    descText.text = item.description;
+                }
+                transform.SetAsLastSibling();
+                root.gameObject.SetActive(true);
+                visible = true;
+                if (followMode == FollowMode.Anchor) FollowAnchor();
+                else FollowCursor();
+                return;
+            }    
+            //
             item.GetFinalStats(upgradeLevel, out float fATK, out float fDEF, out float fCRIT);
             item.GetAddedAtLevel(upgradeLevel, out int aATK, out int aDEF, out float aC);
 
@@ -126,9 +159,7 @@ public class ItemTooltipUI_TU : MonoBehaviour
         {
             if (statText)
             {
-                statText.textWrappingMode = TextWrappingModes.Normal;
-                statText.richText = true;
-                statText.text = $"Đá cường hoá Lv{item.stoneLevel}";
+                 statText.text = "";
             }
         }
 

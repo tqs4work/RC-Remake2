@@ -38,6 +38,8 @@ public class E_Life : MonoBehaviour
     }
     IEnumerator Death()
     {
+        if(GameObject.Find("redZone1") != null) Destroy(GameObject.Find("redZone1"));
+        if (GameObject.Find("redZone2") != null) Destroy(GameObject.Find("redZone2"));
         yield return StartCoroutine(DropExp());        
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);

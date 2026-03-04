@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b21e0805e8f824899f3c7c38347a74, type: 3}
+  m_Name: Radish
+  m_EditorClassIdentifier: 
+  seedName: Radish
+  seedIcon: {fileID: 21300000, guid: 9f74e2a7ebcd8e545be86770aa815fea, type: 2}
+  buyPrice: 50
+  growthStages:
+  - stageTile: {fileID: 11400000, guid: 26a059d00b40c0d4588a3dcd198fb5aa, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: c322496532b63e545b300c1c109c6d08, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: 8bcf3957b7acd5748a727d429f673de6, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: 6d4cd2c25ffe0e54f9119450b9294129, type: 2}
+    growthTimeInSeconds: 5
+  - stageTile: {fileID: 11400000, guid: 9c5ad142a50c90c4e9848ab5e4fe390d, type: 2}
+    growthTimeInSeconds: 5
+  harvestItemData: {fileID: 11400000, guid: 28f929637fbc89b4d94d2af253b39d6e, type: 2}
+  harvestItemName: Radish
+  harvestItemDescription: 
+  harvestItemIconPath: 
+  harvestQuantity: 1
+  pricePerUnit: 0
+  plantState: 7

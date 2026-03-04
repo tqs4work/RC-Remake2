@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b21e0805e8f824899f3c7c38347a74, type: 3}
+  m_Name: Beetroot
+  m_EditorClassIdentifier: 
+  seedName: Beetroot
+  seedIcon: {fileID: 21300000, guid: 84d1cf4417b09cd46b95fe814ad42cb7, type: 2}
+  buyPrice: 40
+  growthStages:
+  - stageTile: {fileID: 11400000, guid: 847e478cb2c77704abff848c83288b98, type: 2}
+    growthTimeInSeconds: 4
+  - stageTile: {fileID: 11400000, guid: f29a4262aa9fd8a4bbed9f82a3109896, type: 2}
+    growthTimeInSeconds: 4
+  - stageTile: {fileID: 11400000, guid: 40df3851e79cf2b44b963f3b638db285, type: 2}
+    growthTimeInSeconds: 4
+  - stageTile: {fileID: 11400000, guid: 79172321913af3a4388a909bc5302eda, type: 2}
+    growthTimeInSeconds: 4
+  - stageTile: {fileID: 11400000, guid: 91dfb672cdfe49842acab7e9a4addd3a, type: 2}
+    growthTimeInSeconds: 4
+  harvestItemData: {fileID: 11400000, guid: aba3887c298a8bb49be9b86835b9afce, type: 2}
+  harvestItemName: Beetroot
+  harvestItemDescription: 
+  harvestItemIconPath: 
+  harvestQuantity: 1
+  pricePerUnit: 0
+  plantState: 6

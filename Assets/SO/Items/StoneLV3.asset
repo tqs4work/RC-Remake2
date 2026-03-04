@@ -13,22 +13,24 @@ MonoBehaviour:
   m_Name: StoneLV3
   m_EditorClassIdentifier: 
   itemType: 11
-  itemID: D003
-  itemName: Stone LV3
-  description: 
+  itemID: D_Stone_Lv3
+  itemName: "\u0110\xE1 c\u01B0\u1EDDng h\xF3a LV3"
+  description: "D\xF9ng \u0111\u1EC3 c\u01B0\u1EDDng h\xF3a v\u0169 khi ho\u1EB7c
+    \xE1o gi\xE1p"
   icon: {fileID: 21300000, guid: 5d696392c52994143b18ae65fd8e544b, type: 2}
   isStackable: 1
   maxStack: 99
   price: 150
   stackable: 1
   level: 3
-  quantity: 5
+  quantity: 10
   hpAmount: 0
   mpAmount: 0
   atk: 0
   def: 0
   crit: 0
   useDurability: 0
+  durability: 0
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
@@ -41,7 +43,7 @@ MonoBehaviour:
   maxRepairRateOfBuyPrice: 0.5
   growTime: 0
   bonus: 0
-  stoneLevel: 1
+  stoneLevel: 3
   upgradePriceToNext: 0
   upgradeIcons:
   - {fileID: 0}

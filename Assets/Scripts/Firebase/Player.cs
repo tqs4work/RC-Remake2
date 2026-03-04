@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player
@@ -17,7 +18,11 @@ public class Player
 
     public List<ItemRuntime> Store = new();
 
+    public List<ItemRuntime> Machine = new();
+
     public List<TileState> Wrapper = new();
+
+    public List<ChickenData> ChickenWrapper = new();
 
     public Player()
     {
@@ -257,6 +262,10 @@ public class Player
 
         Store = data.Store;
 
+        Machine = data.Machine;
+
         Wrapper = data.Wrapper;
+
+        ChickenWrapper = data.ChickenWrapper;
     }    
 }

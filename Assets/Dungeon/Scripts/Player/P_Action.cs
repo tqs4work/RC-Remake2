@@ -1,4 +1,6 @@
 using System.Collections;
+using FirebaseAdmin.Messaging;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class P_Action : MonoBehaviour
@@ -22,11 +24,13 @@ public class P_Action : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
 
-    [Header("Stone Drop")]
+    [Header("Objects Drop")]
     [SerializeField] GameObject stone1;
     [SerializeField] GameObject stone2;
     [SerializeField] GameObject stone3;
+    [SerializeField] GameObject wood;
 
+    P_Audio audioPlayer;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +40,7 @@ public class P_Action : MonoBehaviour
 
     void Start()
     {
-
+        audioPlayer = GetComponent<P_Audio>();
     }
 
     void Update()
@@ -59,7 +63,7 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0) && !isOpenInventory)
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling)
         {
             UseCurrentItem();
         }
@@ -82,6 +86,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(MeleeAttack());
+                    audioPlayer.sword.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -96,6 +101,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(RangedAttack());
+                    audioPlayer.bow.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -110,6 +116,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Dig());
+                    audioPlayer.shovel.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -124,6 +131,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Axe());
+                    audioPlayer.axe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -137,7 +145,8 @@ public class P_Action : MonoBehaviour
                 if (EnoughMP(5) && item.durability > 0)
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
-                    StartCoroutine(Mining());                    
+                    StartCoroutine(Mining());  
+                    audioPlayer.pickaxe.Play();
                     item.durability -= 5;
                     hotbar.Refresh();
                 }
@@ -152,6 +161,7 @@ public class P_Action : MonoBehaviour
                 {
                     PlayerRuntime.Instance.Player.Mp -= 5;
                     StartCoroutine(Water());
+                    audioPlayer.water.Play();
                     item.durability -= 1;
                     hotbar.Refresh();
                 }
@@ -350,7 +360,8 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in stones)
         {
-            Vector3 dropPos = transform.position + Random.insideUnitSphere * 0.5f;
+            Vector3 vec = new Vector3(0, 0.5f, 0);
+            Vector3 dropPos = c.transform.position - vec + Random.insideUnitSphere * 0.5f;
             dropPos.z = 0;
 
             if (c.CompareTag("Stone1"))
@@ -381,7 +392,28 @@ public class P_Action : MonoBehaviour
         animator.SetTrigger("Axe");
         isAction = true;
         yield return new WaitForSeconds(1f);
+        DropWood();
         isAction = false;
+    }
+
+    void DropWood()
+    {
+        Collider2D[] Woods = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            1.5f,
+            LayerMask.GetMask("Tree")
+        );
+
+        foreach (var c in Woods)
+        {
+            Vector3 vec = new Vector3(0, 1.5f, 0);
+            Vector3 dropPos = c.transform.position - vec - Random.insideUnitSphere * 0.5f; 
+            dropPos.z = 0;
+
+            if (c.CompareTag("Tree"))
+                Instantiate(wood, dropPos, Quaternion.identity);
+            
+        }
     }
 
     public IEnumerator Water()
@@ -399,6 +431,7 @@ public class P_Action : MonoBehaviour
         if (EnoughMP(10))
         {
             isRolling = true;
+            PlayerRuntime.Instance.Player.Mp -= 10;
             animator.SetTrigger("Roll");
             GetComponent<P_Interact>().isImmune = true;
             yield return new WaitForSeconds(1f);
@@ -410,4 +443,11 @@ public class P_Action : MonoBehaviour
             Debug.Log("Not enough MP to roll!");
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.transform.position, 1.5f);        
+    }
 }
+
