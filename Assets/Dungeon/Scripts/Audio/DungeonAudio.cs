@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DungeonAudio : MonoBehaviour
 {
+    public GameObject cam2;
+
     public AudioSource bg1;
     public AudioSource bg2;
 
@@ -21,7 +23,11 @@ public class DungeonAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            cam2.SetActive(!cam2.activeSelf);
+        }
+
     }
 
     public void SwitchAudio()
@@ -36,5 +42,5 @@ public class DungeonAudio : MonoBehaviour
             bg2.Stop();
             bg1.Play();
         }
-    }   
+    }
 }
