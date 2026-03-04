@@ -13,6 +13,9 @@ public class CookingManager : MonoBehaviour
     public Transform contentParent;        //  'Content' của Scroll View 
     private bool isCooking = false;//u can just cook only 1 dish at a time 
     public TextMeshProUGUI notiText; 
+    //phát ra âm thanh khi nấu
+    public AudioSource AudioSource;
+    public AudioClip cookingAudioClip;
     void Start()
     {
         notiText.text = "";
@@ -44,7 +47,12 @@ public class CookingManager : MonoBehaviour
     {
         isCooking = true;
         ConsumeIngredients(recipe);
-
+        if (AudioSource != null && cookingAudioClip != null)
+        {
+            AudioSource.clip = cookingAudioClip;
+            AudioSource.loop = true; // Cho phép lặp lại nếu thời gian nấu dài hơn file âm thanh
+            AudioSource.Play();
+        }
         Slider targetSlider = uiSlot.timeslider;
         if (targetSlider != null)
         {
@@ -58,6 +66,10 @@ public class CookingManager : MonoBehaviour
             timer += Time.deltaTime;
             if (targetSlider != null) targetSlider.value = timer;
             yield return null;
+        }
+        if (AudioSource != null)
+        {
+            AudioSource.Stop();
         }
         AddResultItem(recipe);
         if (targetSlider != null) targetSlider.gameObject.SetActive(false); // Tắt đi sau khi nấu xong
@@ -167,7 +179,9 @@ public class CookingManager : MonoBehaviour
 
         // --- Thêm món mới vào túi ---
         container.items.Add(newItem);
-        
+        StartCoroutine(ShowNotification($"Bạn đã nấu được: {newItem.itemName} x{newItem.quantity}", 1f));
+
+
     }
     IEnumerator ShowNotification(string message, float duration)
     {

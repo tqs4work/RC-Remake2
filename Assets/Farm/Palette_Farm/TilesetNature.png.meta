@@ -1226,7 +1226,7 @@ TextureImporter:
         width: 28
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1248,7 +1248,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1257,6 +1257,28 @@ TextureImporter:
       bones: []
       spriteID: bc206ecdda74d8246851bd868f55df20
       internalID: -1806579020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigstone1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 84
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29dc95893a462c459ba0d19272ba015
+      internalID: 1236906365
       vertices: []
       indices: 
       edges: []
@@ -1315,6 +1337,7 @@ TextureImporter:
       TilesetNature_8: 2278481083563173663
       TilesetNature_9: 2007063168123445105
       bigsstone: 1234592806
+      bigstone1: 1236906365
       greentree: 134151546
       sakura2: -1274279864
       smallstone: -1806579020

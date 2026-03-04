@@ -12,6 +12,7 @@ public class P_Action : MonoBehaviour
     Vector3 direct;
 
     public bool isAction;
+    public bool isFarm;
     bool isRolling;
     bool isRangedAiming;
 
@@ -63,12 +64,12 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling)
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling && !isFarm)
         {
             UseCurrentItem();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling && !isFarm)
         {
             StartCoroutine(Roll());
         }
@@ -242,6 +243,8 @@ public class P_Action : MonoBehaviour
     {
         isAction = true;
 
+        FaceTarget(LayerMask.GetMask("Enemy"), 1.5f);
+
         animator.SetTrigger("MA");
         yield return new WaitForSeconds(4 / 6f);
 
@@ -270,6 +273,7 @@ public class P_Action : MonoBehaviour
             {
                 Vector2 forceDir = (c.transform.position - transform.position).normalized;
                 enemyRb.AddForce(forceDir * 5f, ForceMode2D.Impulse);
+                c.GetComponent<E_Life>().hp -= 1;
             }
         }
     }
@@ -341,6 +345,8 @@ public class P_Action : MonoBehaviour
     {
         isAction = true;
 
+        FaceTarget(LayerMask.GetMask("Stone"), 1.5f);
+
         animator.SetTrigger("Mining");
         yield return new WaitForSeconds(0.6f);
 
@@ -360,7 +366,7 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in stones)
         {
-            Vector3 vec = new Vector3(0, 0.5f, 0);
+            Vector3 vec = new Vector3(0, 1.5f, 0);
             Vector3 dropPos = c.transform.position - vec + Random.insideUnitSphere * 0.5f;
             dropPos.z = 0;
 
@@ -391,6 +397,7 @@ public class P_Action : MonoBehaviour
     {
         animator.SetTrigger("Axe");
         isAction = true;
+        FaceTarget(LayerMask.GetMask("Wood"), 1.5f);
         yield return new WaitForSeconds(1f);
         DropWood();
         isAction = false;
@@ -406,7 +413,7 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in Woods)
         {
-            Vector3 vec = new Vector3(0, 1.5f, 0);
+            Vector3 vec = new Vector3(0, 1f, 0);
             Vector3 dropPos = c.transform.position - vec - Random.insideUnitSphere * 0.5f; 
             dropPos.z = 0;
 
@@ -417,9 +424,9 @@ public class P_Action : MonoBehaviour
     }
 
     public IEnumerator Water()
-    {
-        animator.SetTrigger("Water");
+    {        
         isAction = true;
+        animator.SetTrigger("Water");
         yield return new WaitForSeconds(1f);
         isAction = false;
     }
@@ -449,5 +456,40 @@ public class P_Action : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.transform.position, 1.5f);        
     }
+
+
+    void FaceTarget(LayerMask targetLayer, float radius)
+    {
+        Collider2D[] targets = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            radius,
+            targetLayer
+        );
+
+        if (targets.Length == 0) return;
+
+        // Tìm target g?n nh?t
+        Transform nearest = targets[0].transform;
+        float minDist = Vector2.Distance(transform.position, nearest.position);
+
+        foreach (var t in targets)
+        {
+            float dist = Vector2.Distance(transform.position, t.transform.position);
+            if (dist < minDist)
+            {
+                minDist = dist;
+                nearest = t.transform;
+            }
+        }
+
+        Vector2 dir = (nearest.position - transform.position).normalized;
+
+        move.lastX = dir.x;
+        move.lastY = dir.y;
+
+        animator.SetFloat("X", dir.x);
+        animator.SetFloat("Y", dir.y);
+    }
+
 }
 

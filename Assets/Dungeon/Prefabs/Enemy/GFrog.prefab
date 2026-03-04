@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 2554929526563419276}
   - component: {fileID: 2924658850138164430}
   - component: {fileID: 2908069279554067063}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: GFrog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -281,7 +281,7 @@ MonoBehaviour:
   timeDeath: 0.5
   expDrop: 5
   isDead: 0
-  expPre: {fileID: 0}
+  expPre: {fileID: 5537155711423816314, guid: 83476c1d11e577743b032c63dea790d8, type: 3}
 --- !u!114 &2908069279554067063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,5 +298,5 @@ MonoBehaviour:
   ball: {fileID: 3617749674907281369, guid: 49484b5d99c2bf94e9cc9049d5f3aa60, type: 3}
   bPos: {fileID: 3861399357557092907}
   ballSpeed: 5
-  aRange: 5
-  bRange: 3.5
+  aRange: 5.5
+  bRange: 4

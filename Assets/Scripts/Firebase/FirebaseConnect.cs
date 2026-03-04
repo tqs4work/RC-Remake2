@@ -97,7 +97,11 @@ public class FirebaseConnect : MonoBehaviour
         PlayerRuntime.Instance.Player.LoadFromData(snapshot.Object.Player);
 
         ShowMessage("Sign in successful");
-        SceneManager.LoadScene("GameScene");
+
+        await Task.Delay(1000);
+
+        //SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Menu");
     }
 
 

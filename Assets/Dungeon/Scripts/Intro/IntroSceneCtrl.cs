@@ -127,4 +127,8 @@ public class IntroSceneCtrl : MonoBehaviour
         isImageClicked = true;
     }
 
+    public void SkipScene()
+    {        
+        SceneManager.LoadScene("Login");
+    }
 }
