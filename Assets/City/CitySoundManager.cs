@@ -54,10 +54,10 @@ public class CitySoundManager : MonoBehaviour
         MinigameSoundtrackDoorOpen.Play();
     }
 
-    public void PlayMinigameDoorClose()
-    {
-        MinigameDoorClose.Play();
-    }
+    // public void PlayMinigameDoorClose()
+    // {
+    //     MinigameDoorClose.Play();
+    // }
 
     public void PlayPharmacyMusic()
     {
