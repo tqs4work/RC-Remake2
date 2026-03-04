@@ -360,7 +360,7 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in stones)
         {
-            Vector3 vec = new Vector3(0, 0.5f, 0);
+            Vector3 vec = new Vector3(0, 1.5f, 0);
             Vector3 dropPos = c.transform.position - vec + Random.insideUnitSphere * 0.5f;
             dropPos.z = 0;
 
@@ -406,7 +406,7 @@ public class P_Action : MonoBehaviour
 
         foreach (var c in Woods)
         {
-            Vector3 vec = new Vector3(0, 1.5f, 0);
+            Vector3 vec = new Vector3(0, 1f, 0);
             Vector3 dropPos = c.transform.position - vec - Random.insideUnitSphere * 0.5f; 
             dropPos.z = 0;
 
