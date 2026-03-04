@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: NonMana0 1
   m_EditorClassIdentifier: 
   itemType: 7
-  itemID: 
+  itemID: C004
   itemName: Non Potion
   description: 
   icon: {fileID: -1759222375088360163, guid: 5f2ebbbca57f90442a52c577f51b9a92, type: 3}
-  isStackable: 0
+  isStackable: 1
   maxStack: 1000
-  price: 0
+  price: 10
   stackable: 0
   level: 0
   quantity: 1
@@ -44,6 +44,7 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradePrice: 0000000000000000000000000000000000000000
   upgradeIcons:
   - {fileID: 0}
   - {fileID: 0}
