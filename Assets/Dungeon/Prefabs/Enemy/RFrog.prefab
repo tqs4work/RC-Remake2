@@ -195,7 +195,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -281,7 +281,7 @@ MonoBehaviour:
   timeDeath: 0.5
   expDrop: 5
   isDead: 0
-  expPre: {fileID: 0}
+  expPre: {fileID: 5537155711423816314, guid: 83476c1d11e577743b032c63dea790d8, type: 3}
 --- !u!114 &6463072794168271371
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -242,6 +242,8 @@ public class P_Action : MonoBehaviour
     {
         isAction = true;
 
+        FaceTarget(LayerMask.GetMask("Enemy"), 1.5f);
+
         animator.SetTrigger("MA");
         yield return new WaitForSeconds(4 / 6f);
 
@@ -341,6 +343,8 @@ public class P_Action : MonoBehaviour
     {
         isAction = true;
 
+        FaceTarget(LayerMask.GetMask("Stone"), 1.5f);
+
         animator.SetTrigger("Mining");
         yield return new WaitForSeconds(0.6f);
 
@@ -391,6 +395,7 @@ public class P_Action : MonoBehaviour
     {
         animator.SetTrigger("Axe");
         isAction = true;
+        FaceTarget(LayerMask.GetMask("Wood"), 1.5f);
         yield return new WaitForSeconds(1f);
         DropWood();
         isAction = false;
@@ -449,5 +454,40 @@ public class P_Action : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.transform.position, 1.5f);        
     }
+
+
+    void FaceTarget(LayerMask targetLayer, float radius)
+    {
+        Collider2D[] targets = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            radius,
+            targetLayer
+        );
+
+        if (targets.Length == 0) return;
+
+        // Tìm target g?n nh?t
+        Transform nearest = targets[0].transform;
+        float minDist = Vector2.Distance(transform.position, nearest.position);
+
+        foreach (var t in targets)
+        {
+            float dist = Vector2.Distance(transform.position, t.transform.position);
+            if (dist < minDist)
+            {
+                minDist = dist;
+                nearest = t.transform;
+            }
+        }
+
+        Vector2 dir = (nearest.position - transform.position).normalized;
+
+        move.lastX = dir.x;
+        move.lastY = dir.y;
+
+        animator.SetFloat("X", dir.x);
+        animator.SetFloat("Y", dir.y);
+    }
+
 }
 
