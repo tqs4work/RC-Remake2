@@ -12,6 +12,7 @@ public class P_Action : MonoBehaviour
     Vector3 direct;
 
     public bool isAction;
+    public bool isFarm;
     bool isRolling;
     bool isRangedAiming;
 
@@ -63,12 +64,12 @@ public class P_Action : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling)
+        if (Input.GetMouseButtonDown(0) && !isOpenInventory && !isRolling && !isFarm)
         {
             UseCurrentItem();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isRolling && !isFarm)
         {
             StartCoroutine(Roll());
         }
@@ -272,6 +273,7 @@ public class P_Action : MonoBehaviour
             {
                 Vector2 forceDir = (c.transform.position - transform.position).normalized;
                 enemyRb.AddForce(forceDir * 5f, ForceMode2D.Impulse);
+                c.GetComponent<E_Life>().hp -= 1;
             }
         }
     }
@@ -422,9 +424,9 @@ public class P_Action : MonoBehaviour
     }
 
     public IEnumerator Water()
-    {
-        animator.SetTrigger("Water");
+    {        
         isAction = true;
+        animator.SetTrigger("Water");
         yield return new WaitForSeconds(1f);
         isAction = false;
     }
