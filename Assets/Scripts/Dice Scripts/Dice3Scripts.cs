@@ -21,7 +21,6 @@ public class Dice3Scripts : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 RollDice();
-                
             }
         }
     }
@@ -38,6 +37,8 @@ public class Dice3Scripts : MonoBehaviour
         // Apply upward force and torque to the dice
         body.AddForce(Vector3.up * startRollingForce);
         body.AddTorque(forceX, forceY, forceZ);
+
+        DiceSound.Instance.PlayDice();
     }
 
     private void Initialized()

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Dice1Scripts : MonoBehaviour
@@ -21,7 +22,8 @@ public class Dice1Scripts : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 RollDice();
-            }           
+                StartCoroutine(stopSound());
+            }         
         }
     }
 
@@ -38,6 +40,8 @@ public class Dice1Scripts : MonoBehaviour
         body.AddForce(Vector3.up * startRollingForce);
         body.AddTorque(forceX, forceY, forceZ);
 
+        DiceSound.Instance.PlayDice();
+        DiceSound.Instance.StopMainMusic();
     }
 
     private void Initialized()
@@ -45,6 +49,12 @@ public class Dice1Scripts : MonoBehaviour
         body = GetComponent<Rigidbody>();
         body.isKinematic = true;
         transform.rotation = new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0,360), 0); // Random initial rotation
+    }
+
+    public IEnumerator stopSound()
+    {
+        yield return new WaitForSeconds(2f);
+        DiceSound.Instance.StopDice();
     }
 }
 

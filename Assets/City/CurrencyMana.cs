@@ -5,7 +5,6 @@ public class CurrencyMana : MonoBehaviour
 {
     public static CurrencyMana Instance;
 
-    private int currentCoin;
 
     private void Awake()
     {
@@ -14,14 +13,14 @@ public class CurrencyMana : MonoBehaviour
 
     public void Start()
     {
-        currentCoin = PlayerRuntime.Instance.Player.Gold;
+  
     }
 
     public bool SpendCoin(int amount)
     {
-        if (currentCoin >= amount)
+        if (PlayerRuntime.Instance.Player.Gold >= amount)
         {
-            currentCoin -= amount;
+            PlayerRuntime.Instance.Player.Gold -= amount;
             return true;
         }
 
