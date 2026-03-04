@@ -25,11 +25,11 @@ public static class AccountFactory
             Mp = 100,
             Exp = 0,
             Lv = 1,
-            Gold = 1000,
+            Gold = 10000,
             IsOnline = false,
             LastLogin = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"),
 
-            // ? C?u trúc Inventory m?i
+            // ? C?u trï¿½c Inventory m?i
 
             Inventory = new Dictionary<string, Dictionary<string, Item2String>>(),
 

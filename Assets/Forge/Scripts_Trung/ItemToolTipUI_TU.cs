@@ -65,6 +65,12 @@ public class ItemTooltipUI_TU : MonoBehaviour
 
     public void Show(Item item, int upgradeLevel, RectTransform anchor, int durabilityPercent = 100, bool showRepairPrice = false)
     {
+        if (FindObjectOfType<InfoDialog_TU>()?.gameObject.activeSelf == true)
+        {
+            Hide();
+            return;
+        }
+    
         if (!item) return;
         Ensure(); // bảo đảm đã init
         anchorTarget = anchor;
@@ -72,8 +78,21 @@ public class ItemTooltipUI_TU : MonoBehaviour
         // icon
         if (iconImage)
         {
-            iconImage.sprite = item.icon;
-            iconImage.enabled = (item.icon != null);
+            Sprite icon = null;
+            if (item.upgradeIcons != null &&
+                upgradeLevel >= 0 &&
+                upgradeLevel < item.upgradeIcons.Length &&
+                item.upgradeIcons[upgradeLevel] != null)
+            {
+                icon = item.upgradeIcons[upgradeLevel];
+            }
+            else
+            {
+                icon = item.icon;
+            }
+
+            iconImage.sprite = icon;
+            iconImage.enabled = icon != null;
         }
 
         bool canColorUpgrade =
@@ -136,9 +155,9 @@ public class ItemTooltipUI_TU : MonoBehaviour
             string PlusPct(float v) => v > 0.0001f ? $" <color=#{hex}>(+{v:0.#}%)</color>" : "";
 
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine($"ATK: {fATK}{PlusInt(aATK)}");
-            sb.AppendLine($"DEF: {fDEF}{PlusInt(aDEF)}");
-            sb.AppendLine($"CRIT: {fCRIT:0.#}%{PlusPct(aC)}");
+            sb.AppendLine($"<color=#{hex}>ATK: {fATK}{PlusInt(aATK)}</color>");
+            sb.AppendLine($"<color=#{hex}>DEF: {fDEF}{PlusInt(aDEF)}</color>");
+            sb.AppendLine($"<color=#{hex}>CRIT: {fCRIT:0.#}%{PlusPct(aC)}</color>");
 
             if (item.useDurability && item.itemType != ItemType.Arrow)
             {

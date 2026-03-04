@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shovel
   m_EditorClassIdentifier: 
   itemType: 0
-  itemID: T003
+  itemID: T0053
   itemName: Shovel
   description: "M\u1ED9t chi\u1EBFc r\xECu ch\u1EAFc ch\u1EAFn"
   icon: {fileID: -3766519690804746565, guid: 2ac65bce02deb3e438d0098e13193539, type: 3}
@@ -29,6 +29,7 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
+  durability: 0
   addATKPerLevel: 
   addDEFPerLevel: 
   addCRITPerLevel: []
@@ -38,10 +39,5 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
-  upgradeIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  upgradePrice: 
+  upgradeIcons: []

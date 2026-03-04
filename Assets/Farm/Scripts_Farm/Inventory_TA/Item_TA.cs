@@ -70,7 +70,10 @@ public class Item : ScriptableObject
     [Header("Stone (only when type = Stone)")]
     [Range(1, 3)] public int stoneLevel = 1;                 // 1=trắng, 2=xanh lá, 3=tím
     [Tooltip("Giá nâng từ stoneLevel hiện tại -> stoneLevel+1 (nếu có)")]
+    
     public int upgradePriceToNext = 0;
+    [Header("Weapon Upgrade Price")]
+    public int[] upgradePrice = new int[5];
     [Header("Upgrade Icons (0-5)")]
     public Sprite[] upgradeIcons = new Sprite[6];
 

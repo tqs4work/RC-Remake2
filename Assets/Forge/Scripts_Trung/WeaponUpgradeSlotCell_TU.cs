@@ -32,18 +32,13 @@ public class WeaponUpgradeSlotCell_TU : MonoBehaviour, IPointerClickHandler
     {
         currentItem = item;
         upgradeLevel = level;
-
-        icon.sprite = item.icon;
+        icon.sprite = currentItem.icon;
         icon.enabled = true;
 
-        if (item.isStackable && item.quantity > 1)
-        {
-            amountText.text = item.quantity.ToString();
-        }
+        if (currentItem.isStackable)
+            amountText.text = currentItem.quantity.ToString();
         else
-        {
             amountText.text = "";
-        }
     }
 
     public void Clear()

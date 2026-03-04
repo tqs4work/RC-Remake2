@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: cd8d4fa19c412f8428afb589edd7cce6
+guid: e6fe1be280e26ba49988af6186ef96d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9137636755131992856
-    second: Idle_se_0
-  - first:
-      213: 7518468854707776851
-    second: Idle_se_1
-  - first:
-      213: -947054593630971040
-    second: Idle_se_2
-  - first:
-      213: -2967678013753851448
-    second: Idle_se_3
+      213: 1020468522976622029
+    second: bow 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -83,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -109,7 +100,7 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,7 +113,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -135,7 +126,7 @@ TextureImporter:
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -148,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bow
+      name: bow 1_0
       rect:
         serializedVersion: 2
-        x: 310
-        y: 28
-        width: 11
-        height: 15
+        x: 2
+        y: 0
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ebf49a43cb486e34e84c046f1fc717e0
-      internalID: -1198785827
+      spriteID: dc53d7807be692e00800000000000000
+      internalID: 1020468522976622029
       vertices: []
       indices: 
       edges: []
@@ -173,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 56efeda90eae4144e9335045d82e2874
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -183,13 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bow: -1198785827
-      ra_RD_0: 692422251
-      ra_RD_1: 813263432
-      ra_RD_2: 441794410
-      ra_RD_3: -1001843221
-      ra_RD_4: -1694115974
-      ra_RD_5: 1045632254
+      bow 1_0: 1020468522976622029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

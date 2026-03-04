@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PickAxe
   m_EditorClassIdentifier: 
   itemType: 2
-  itemID: T002
+  itemID: T0052
   itemName: Pickaxe
   description: "M\u1ED9t chi\u1EBFc r\xECu ch\u1EAFc ch\u1EAFn"
   icon: {fileID: 8959118705387878318, guid: fba5edceb6f923c42809b3bbd88a483a, type: 3}
@@ -29,6 +29,7 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
+  durability: 0
   addATKPerLevel: 
   addDEFPerLevel: 
   addCRITPerLevel: []
@@ -38,10 +39,5 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
-  upgradeIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  upgradePrice: 
+  upgradeIcons: []

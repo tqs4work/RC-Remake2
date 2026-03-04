@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 4798130314159102228}
   - component: {fileID: 8254234158102775305}
   - component: {fileID: 1723671846950943161}
-  - component: {fileID: 5718875183628418556}
   m_Layer: 5
   m_Name: InventoryIcon
   m_TagString: Untagged
@@ -152,23 +151,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5718875183628418556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982866744304794129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e11140ec9d00e439c8c6d82f17c429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  upgradeLevel: 0
-  anchor: {fileID: 0}
-  durabilityPercent: 100
-  showRepairPrice: 0
 --- !u!1 &1389521425330969132
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,16 +284,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389521425330969132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6544c96fd393fbc4aa005d26c0c66bb1, type: 3}
+  m_Script: {fileID: 11500000, guid: f1d1203171307824e8328ce8b76738b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotType: 0
   icon: {fileID: 1723671846950943161}
-  countBadge: {fileID: 554753021307552478}
-  countText: {fileID: 1373029881156567856}
-  selectBG: {fileID: 6799262836875535309}
-  useBackgroundForEmpty: 1
-  emptySlotSprite: {fileID: 0}
-  showCountWhenOne: 0
+  amountText: {fileID: 1373029881156567856}
+  currentItem:
+    itemType: 0
+    itemID: 
+    itemName: 
+    description: 
+    icon: {fileID: 0}
+    isStackable: 0
+    maxStack: 0
+    price: 0
+    quantity: 0
+    hpAmount: 0
+    mpAmount: 0
+    atk: 0
+    def: 0
+    durability: 100
+    growTime: 0
+    bonus: 0
+    upgradeLevel: 0
+    itemData: {fileID: 0}
+  upgradeLevel: 0
 --- !u!1 &6799262836875535309
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +488,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
