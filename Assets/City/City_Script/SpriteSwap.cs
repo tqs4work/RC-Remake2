@@ -62,7 +62,7 @@ public class SpriteSwap : MonoBehaviour
 
     public IEnumerator loadMinigmae()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("DiceRoll");
     }
 
