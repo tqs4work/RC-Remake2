@@ -15,7 +15,8 @@ public class MenuCtrl : MonoBehaviour
 
     public void LoadFarm()
     {
-        SceneManager.LoadScene("Farm");
+        //SceneManager.LoadScene("Farm");
+        SceneManager.LoadScene("GameScene");
     }
     public void LoadCity()
     {
