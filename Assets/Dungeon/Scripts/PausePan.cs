@@ -68,7 +68,7 @@ public class PausePan : MonoBehaviour
         if (!IsPanelOpen()) return;
 
         Time.timeScale = 1;
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene("Menu");
     }
 
     public void ContinueGame()

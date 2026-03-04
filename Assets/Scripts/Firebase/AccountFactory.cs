@@ -20,7 +20,7 @@ public static class AccountFactory
         PlayerData player = new PlayerData
         {
             ID = Guid.NewGuid().ToString(),
-            Name = "NewPlayer",
+            Name = "Minh",
             Hp = 100,
             Mp = 100,
             Exp = 0,

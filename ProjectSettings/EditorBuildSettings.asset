@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 6a778a3b25a7fce43939a6b7fe5e3d47
+  - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 3c22140b0c5b335449aecea82f3fcc19
   - enabled: 1
@@ -27,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/DiceRoll.unity
     guid: f3ab2620c5735a4479a2b122b87a00f3
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: 35b69535c631ac44abd49ae4b95dfca3
+    path: Assets/Scenes/Menu.unity
+    guid: eb469490622c91b46bf461b0285bd1ce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
