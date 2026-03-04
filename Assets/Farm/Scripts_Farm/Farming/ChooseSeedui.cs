@@ -26,6 +26,7 @@ public class ChooseSeedui : MonoBehaviour
     // Gán vào sự kiện onclick của Button trong prefab ChooseSeedui
     public void OnSelect()
     {
+        
         Debug.Log("BUTTON ĐÃ ĐƯỢC NHẤN!");
         FarmController player = GameObject.Find("FarmController").GetComponent<FarmController>();
 

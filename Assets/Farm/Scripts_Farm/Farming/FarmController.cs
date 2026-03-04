@@ -92,6 +92,7 @@ public class SaveWrapper
         //UpdateSelectorTile();
         //CheckHole();
         //HandleFarmAction();
+        GameObject.Find("Player").GetComponent<P_Action>().isFarm = seedMenuPanel.activeSelf;
     }
 
     public void CheckHole()
@@ -113,6 +114,7 @@ public class SaveWrapper
             if (!seedMenuPanel.activeSelf)
             {
                 ShowSeedMenu(true);
+                
             }
         }
         else
@@ -121,6 +123,7 @@ public class SaveWrapper
             if (seedMenuPanel.activeSelf)
             {
                 ShowSeedMenu(false);
+                
             }
         }
         //if (seedMenuPanel != null)
