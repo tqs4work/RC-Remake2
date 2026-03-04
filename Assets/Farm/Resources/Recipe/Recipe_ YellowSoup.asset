@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf1114f5b45b60488343c6029d8a007, type: 3}
+  m_Name: Recipe_ YellowSoup
+  m_EditorClassIdentifier: 
+  ingredients:
+  - item: {fileID: 11400000, guid: 36d860074f80f484baa8f85e64184191, type: 2}
+    quantity: 2
+  - item: {fileID: 11400000, guid: 149b925e235f17b44a8a941d89176191, type: 2}
+    quantity: 1
+  resultItem: {fileID: 11400000, guid: 8bdc76b971a386549839b8ba957323a6, type: 2}
+  resultQuantity: 1
+  craftingTime: 7
