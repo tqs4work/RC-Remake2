@@ -138630,6 +138630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8298868b10d45db469739b9f95fcccc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam2: {fileID: 2045240698}
   bg1: {fileID: 1994006595}
   bg2: {fileID: 725201712}
   frog: {fileID: 1986468652}
@@ -171701,6 +171702,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5055590}
     m_Modifications:
+    - target: {fileID: 303189343101478447, guid: 2f8404a164a12064199e26d68aa1e21a, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1791144777164126933, guid: 2f8404a164a12064199e26d68aa1e21a, type: 3}
       propertyPath: m_Name
       value: BTengu
