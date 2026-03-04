@@ -177,6 +177,24 @@ public class InventoryUI : MonoBehaviour
                             {
                                 StoneUpgradeUI_TU.Instance.TryPlaceStone(itemCopy);
                             }
+                                var upgradeUI = FindObjectOfType<WeaponUpgradeUI_TU>();
+                                if (upgradeUI != null && upgradeUI.gameObject.activeInHierarchy)
+                                {
+                                    if (itemCopy.itemType == ItemType.Stone)
+                                    {
+                                       
+                                        upgradeUI.slotB.SetItem(itemCopy);
+                                        upgradeUI.OnSlotClicked(upgradeUI.slotB);
+                                    }
+                                    else if (itemCopy.itemType == ItemType.Sword ||
+                                            itemCopy.itemType == ItemType.Armor ||
+                                            itemCopy.itemType == ItemType.Bow)
+                                    {
+                                        upgradeUI.slotA.SetItem(itemCopy, itemCopy.upgradeLevel);
+                                        upgradeUI.OnSlotClicked(upgradeUI.slotA);
+                                    }
+                                }
+                            
                             else
                             {
                                 MoveItemToHotbar(typeCopy, itemCopy);

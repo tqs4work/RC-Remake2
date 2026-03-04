@@ -22,6 +22,7 @@ public class InfoDialog_TU : MonoBehaviour
         if (messageText) messageText.text = message;
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
+        ItemTooltipUI_TU.Ensure()?.Hide();
     }
 
     public void Hide() => gameObject.SetActive(false);

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   itemType: 5
-  itemID: T005
+  itemID: T001
   itemName: "Ki\u1EBFm "
-  description: 
+  description: "C\xE2y ki\u1EBFm th\u01B0\u1EDDng"
   icon: {fileID: 21300000, guid: daee3c8ed472a6e498169a6d50dc8662, type: 2}
   isStackable: 0
   maxStack: 0
@@ -29,8 +29,8 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
-  durability: 40
-  addATKPerLevel: 0a0000000f00000014000000190000001e000000
+  durability: 100
+  addATKPerLevel: 140000001e00000037000000500000006e000000
   addDEFPerLevel: 
   addCRITPerLevel:
   - 2
@@ -44,10 +44,11 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
+  upgradePrice: 140000003200000064000000c80000002c010000
   upgradeIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: daee3c8ed472a6e498169a6d50dc8662, type: 2}
+  - {fileID: 21300000, guid: 3639a4d68fcf3d845a23f763e5e686d3, type: 3}
+  - {fileID: 21300000, guid: cb1f9ebc7fd6129418468243f5605d2c, type: 2}
+  - {fileID: 21300000, guid: a407fbdbf23e2d94a86d594c20ffda41, type: 2}
+  - {fileID: 21300000, guid: 1ed57b97fb319924097cfd9ad2be3fab, type: 2}
+  - {fileID: 21300000, guid: 0e7eba2f6cd9107428cd4bf57b8f4d56, type: 3}

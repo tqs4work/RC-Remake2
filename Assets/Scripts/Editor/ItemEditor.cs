@@ -36,7 +36,9 @@ public class ItemEditor : Editor
     SerializedProperty addDEFPerLevel;
     SerializedProperty addCRITPerLevel;
     SerializedProperty stoneLevel;
-    SerializedProperty upgradePriceToNext;
+    SerializedProperty upgradePriceToNext; // dành cho Stone
+    SerializedProperty upgradePrice; // dành cho Weapon
+    SerializedProperty upgradeIcons;
 
     void OnEnable()
     {
@@ -60,10 +62,11 @@ public class ItemEditor : Editor
         durability = serializedObject.FindProperty("durability");
 
         growTime = serializedObject.FindProperty("growTime");
-
+        upgradeIcons = serializedObject.FindProperty("upgradeIcons");
         bonus = serializedObject.FindProperty("bonus");
         stoneLevel = serializedObject.FindProperty("stoneLevel");
         upgradePriceToNext = serializedObject.FindProperty("upgradePriceToNext");
+        upgradePrice = serializedObject.FindProperty("upgradePrice");
 
 
         crit = serializedObject.FindProperty("crit");
@@ -185,6 +188,8 @@ public class ItemEditor : Editor
 
             if (crit != null) EditorGUILayout.PropertyField(crit);
             if (useDurability != null) EditorGUILayout.PropertyField(useDurability);
+            EditorGUILayout.PropertyField(upgradeIcons, true);
+            EditorGUILayout.PropertyField(upgradePrice, true);
 
             EditorGUILayout.Space();
 

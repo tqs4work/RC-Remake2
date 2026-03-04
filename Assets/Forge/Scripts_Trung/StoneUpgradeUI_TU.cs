@@ -33,6 +33,9 @@ public class StoneUpgradeUI_TU : MonoBehaviour
     public GameObject fxObject;
     public float mergeTime = 1f;
 
+    [Header("Sound")]
+    public AudioSource mergeSound;
+
     void Awake()
     {
         Instance = this;
@@ -196,6 +199,8 @@ public class StoneUpgradeUI_TU : MonoBehaviour
         {
             fxObject.SetActive(true);
 
+            
+
             // Nếu là ParticleSystem → reset sạch
             var ps = fxObject.GetComponent<ParticleSystem>();
             if (ps)
@@ -204,6 +209,10 @@ public class StoneUpgradeUI_TU : MonoBehaviour
                 ps.Play();
             }
         }
+        if (mergeSound && mergeSound.clip != null)
+            {
+                mergeSound.PlayOneShot(mergeSound.clip);
+            }
 
         yield return new WaitForSeconds(mergeTime);
 

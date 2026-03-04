@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   itemType: 1
-  itemID: T001
+  itemID: T0051
   itemName: "C\xE2y r\xECu"
   description: "M\u1ED9t chi\u1EBFc r\xECu ch\u1EAFc ch\u1EAFn"
   icon: {fileID: 21300000, guid: 581dad9d9f9e2884dae04ad8b761cc29, type: 2}
@@ -29,6 +29,7 @@ MonoBehaviour:
   def: 0
   crit: 0
   useDurability: 1
+  durability: 0
   addATKPerLevel: 
   addDEFPerLevel: 
   addCRITPerLevel: []
@@ -38,10 +39,5 @@ MonoBehaviour:
   bonus: 0
   stoneLevel: 1
   upgradePriceToNext: 0
-  upgradeIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  upgradePrice: 
+  upgradeIcons: []
