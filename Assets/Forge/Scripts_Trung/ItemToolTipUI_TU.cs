@@ -76,10 +76,20 @@ public class ItemTooltipUI_TU : MonoBehaviour
             iconImage.enabled = (item.icon != null);
         }
 
-        // tên + màu theo cấp
-        Color col = Item.GetColorByLevel(Mathf.Clamp(upgradeLevel, 0, 5));
+        bool canColorUpgrade =
+            item.itemType == ItemType.Sword ||
+            item.itemType == ItemType.Bow ||
+            item.itemType == ItemType.Armor;
+
+        Color col = canColorUpgrade
+            ? Item.GetColorByLevel(Mathf.Clamp(upgradeLevel, 0, 5))
+            : Color.white;
+
         string hex = ColorUtility.ToHtmlStringRGB(col);
-        string plus = upgradeLevel > 0 ? $" <color=#{hex}>(+{upgradeLevel})</color>" : "";
+
+        string plus = (canColorUpgrade && upgradeLevel > 0)
+            ? $" <color=#{hex}>(+{upgradeLevel})</color>"
+            : "";
 
         if (nameText)
         {
@@ -149,9 +159,7 @@ public class ItemTooltipUI_TU : MonoBehaviour
         {
             if (statText)
             {
-                statText.textWrappingMode = TextWrappingModes.Normal;
-                statText.richText = true;
-                statText.text = $"Đá cường hoá Lv{item.stoneLevel}";
+                 statText.text = "";
             }
         }
 

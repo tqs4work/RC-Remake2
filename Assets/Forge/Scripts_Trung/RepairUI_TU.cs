@@ -210,16 +210,16 @@ public class RepairUI_TU : MonoBehaviour
         }
     }
     public bool IsBlockingUI()
-    {
-        if (dialogSuccess != null && dialogSuccess.activeSelf)
-            return true;
+{
+    if (dialogSuccess != null && dialogSuccess.activeSelf)
+        return true;
 
-        if (dialogConfirm != null && dialogConfirm.activeSelf)
-            return true;
+    if (dialogConfirm != null && dialogConfirm.activeSelf)
+        return true;
 
-        if (loadingPanel != null && loadingPanel.activeSelf)
-            return true;
+    if (loadingPanel != null && loadingPanel.activeSelf)
+        return true;
 
-        return false;
-    }
+    return false;
+}
 }

@@ -36,7 +36,9 @@ public class ItemHoverHandler_TU : MonoBehaviour,
         if (RepairUI_TU.Instance != null &&
             RepairUI_TU.Instance.IsBlockingUI())
             return;
-
+        if (StoneUpgradeUI_TU.Instance != null &&
+        StoneUpgradeUI_TU.Instance.IsBlockingUI())
+        return;
         var tt = ItemTooltipUI_TU.Ensure(); // <-- đảm bảo có instance kể cả khi object bị tắt
         if (tt == null) return;
 

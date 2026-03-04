@@ -42,6 +42,13 @@ public class StoneSlotCell : MonoBehaviour
             icon.sprite = item.icon;
             icon.enabled = true;
         }
+        var hover = GetComponent<ItemHoverHandler_TU>();
+        if (hover == null)
+            hover = gameObject.AddComponent<ItemHoverHandler_TU>();
+
+        hover.Setup(item.itemData, item.upgradeLevel);
+        hover.SetDurability(Mathf.RoundToInt(item.durability));
+        hover.SetAnchor(GetComponent<RectTransform>());
     }
 
     public bool IsEmpty()

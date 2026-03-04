@@ -32,11 +32,10 @@ public class Interactable_TU : MonoBehaviour
    {
        // Lấy Collider2D gắn trên object này
        col2D = GetComponent<Collider2D>();
-       //Nếu dùng Trigger Zone -> bật isTrigger
-       if (useTriggerZone)
-       {
-           col2D.isTrigger = true;
-       }
+       if (useTriggerZone && col2D.isTrigger == false)
+        {
+            Debug.LogWarning("Interactable đang cố bật Trigger trên collider chính.");
+        }
        //Nếu chưa gắn playerTransform -> tìm player theo tag "Player"
        if (playerTransform == null)
        {
