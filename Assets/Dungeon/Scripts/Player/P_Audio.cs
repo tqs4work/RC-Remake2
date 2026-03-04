@@ -11,6 +11,10 @@ public class P_Audio : MonoBehaviour
     [Header("Audio Weapon")]
     public AudioSource sword;
     public AudioSource bow;
-    
+
+    [Header("Audio Interact")]
+    public AudioSource pickup;
+    //public AudioSource bow;
+
 
 }

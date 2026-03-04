@@ -14,6 +14,9 @@ public class PlayerRuntime : MonoBehaviour
 
     private bool _isSaving = false;
 
+    //load scene
+    public int indexScene = 0;
+
     private void Awake()
     {
         if (Instance == null)

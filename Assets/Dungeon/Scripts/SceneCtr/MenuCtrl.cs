@@ -4,29 +4,42 @@ using UnityEngine.SceneManagement;
 
 public class MenuCtrl : MonoBehaviour
 {
-    public void ExitButton()
+    GameObject player;
+    void Start()
     {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false; // Thoát Play Mode trong Unity Editor
-#else
-        Application.Quit(); // Thoát khi build game
-#endif
+        Time.timeScale = 1f; // ??m b?o th?i gian ch?y bình th??ng khi vào menu
+        player = GameObject.Find("PlayerRuntime");
+    }
+
+    public void LogoutButton()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
+    public void LoadTest()
+    {
+        player.GetComponent<PlayerRuntime>().indexScene = 0;
+        SceneManager.LoadScene("GameLoad");
     }
 
     public void LoadFarm()
     {
-        SceneManager.LoadScene("Farm");
+        player.GetComponent<PlayerRuntime>().indexScene = 1;
+        SceneManager.LoadScene("GameLoad");
     }
     public void LoadCity()
     {
-        SceneManager.LoadScene("City");
+        player.GetComponent<PlayerRuntime>().indexScene = 2;
+        SceneManager.LoadScene("GameLoad");
     }
     public void LoadForge()
     {
-        SceneManager.LoadScene("Forge");
+        player.GetComponent<PlayerRuntime>().indexScene = 3;
+        SceneManager.LoadScene("GameLoad");
     }
     public void LoadDungeon()
     {
-        SceneManager.LoadScene("Dungeon");
+        player.GetComponent<PlayerRuntime>().indexScene = 4;
+        SceneManager.LoadScene("GameLoad");
     }
 }
