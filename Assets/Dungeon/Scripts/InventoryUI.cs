@@ -157,8 +157,8 @@ public class InventoryUI : MonoBehaviour
 
                 slot.onClick.AddListener(() =>
                  {
-                     if (Time.time - lastClickTime <= doubleClickThreshold)
-                     {
+                    if (Time.time - lastClickTime <= doubleClickThreshold)
+                        {
                             Debug.Log("DOUBLE CLICK DETECTED");
 
                             ShopUI_TU shop = FindObjectOfType<ShopUI_TU>();
@@ -166,40 +166,43 @@ public class InventoryUI : MonoBehaviour
                             if (shop != null && shop.gameObject.activeSelf && shop.CurrentMode == ShopUI_TU.Mode.Sell)
                             {
                                 shop.OpenSellPopup(itemCopy, typeCopy);
+                                return;
                             }
-                            else if (RepairUI_TU.Instance != null &&
-                                    RepairUI_TU.Instance.gameObject.activeInHierarchy)
+
+                            if (RepairUI_TU.Instance != null &&
+                                RepairUI_TU.Instance.gameObject.activeInHierarchy)
                             {
                                 RepairUI_TU.Instance.repairSlotCell.SetItem(itemCopy);
+                                return;
                             }
-                            else if (StoneUpgradeUI_TU.Instance != null &&
-                                    StoneUpgradeUI_TU.Instance.gameObject.activeInHierarchy)
+
+                            if (StoneUpgradeUI_TU.Instance != null &&
+                                StoneUpgradeUI_TU.Instance.gameObject.activeInHierarchy)
                             {
                                 StoneUpgradeUI_TU.Instance.TryPlaceStone(itemCopy);
+                                return;
                             }
-                                var upgradeUI = FindObjectOfType<WeaponUpgradeUI_TU>();
-                                if (upgradeUI != null && upgradeUI.gameObject.activeInHierarchy)
-                                {
-                                    if (itemCopy.itemType == ItemType.Stone)
-                                    {
-                                       
-                                        upgradeUI.slotB.SetItem(itemCopy);
-                                        upgradeUI.OnSlotClicked(upgradeUI.slotB);
-                                    }
-                                    else if (itemCopy.itemType == ItemType.Sword ||
-                                            itemCopy.itemType == ItemType.Armor ||
-                                            itemCopy.itemType == ItemType.Bow)
-                                    {
-                                        upgradeUI.slotA.SetItem(itemCopy, itemCopy.upgradeLevel);
-                                        upgradeUI.OnSlotClicked(upgradeUI.slotA);
-                                    }
-                                }
-                            
-                            else
+
+                            var upgradeUI = FindObjectOfType<WeaponUpgradeUI_TU>();
+                            if (upgradeUI != null && upgradeUI.gameObject.activeInHierarchy)
                             {
-                                MoveItemToHotbar(typeCopy, itemCopy);
+                                if (itemCopy.itemType == ItemType.Stone)
+                                {
+                                    upgradeUI.slotB.SetItem(itemCopy);
+                                    upgradeUI.OnSlotClicked(upgradeUI.slotB);
+                                }
+                                else if (itemCopy.itemType == ItemType.Sword ||
+                                        itemCopy.itemType == ItemType.Armor ||
+                                        itemCopy.itemType == ItemType.Bow)
+                                {
+                                    upgradeUI.slotA.SetItem(itemCopy, itemCopy.upgradeLevel);
+                                    upgradeUI.OnSlotClicked(upgradeUI.slotA);
+                                }
+                                return;
                             }
-                     }
+
+                            MoveItemToHotbar(typeCopy, itemCopy);
+                        }
 
                      lastClickTime = Time.time;
                  });
