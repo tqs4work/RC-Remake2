@@ -1,73 +1,143 @@
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class CitySoundManager : MonoBehaviour
 {
-    public static CitySoundManager Instance { get; set; }
+    public static CitySoundManager Instance { get; private set; }
 
     [Header("City Sounds")]
-    public AudioSource CityMusic;
+    [SerializeField] private AudioSource cityMusic;
 
     [Header("Door Sounds")]
-    public AudioSource DoorOpen;
-    public AudioSource DoorClose;
+    [SerializeField] private AudioSource doorOpen;
+    [SerializeField] private AudioSource doorClose;
 
     [Header("Minigame Sounds")]
-    public AudioSource MinigameSoundtrack;
-    public AudioSource MinigameSoundtrackDoorOpen;
-    public AudioSource MinigameSoundtrackDoorClose;
+    [SerializeField] private AudioSource minigameMusic;
+    [SerializeField] private AudioSource minigameDoorOpen;
+    [SerializeField] private AudioSource minigameDoorClose;
 
     [Header("Pharmacy Sounds")]
-    public AudioSource PharmacySoundtrack;
+    [SerializeField] private AudioSource pharmacyMusic;
 
     [Header("Random Machine Sounds")]
-    public AudioSource RandomMachineSoundtrack;
+    [SerializeField] private AudioSource randomMachineMusic;
+    [SerializeField] private AudioSource prizeMachineMusic;
 
-    public void Awake()
+    private AudioSource currentMusic;
+
+    private void Awake()
     {
-        Instance = this;
+        // Singleton protection
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        PlayCityMusic();
+    }
+
+    private void Update()
+    {
+        // Nếu đang phát nhạc khác và nó kết thúc → quay lại CityMusic
+        if (currentMusic != null && currentMusic != cityMusic)
+        {
+            if (!currentMusic.isPlaying)
+            {
+                PlayCityMusic();
+            }
+        }
+    }
+
+    // ======================
+    // CORE MUSIC CONTROLLER
+    // ======================
+
+    private void PlayMusic(AudioSource newMusic)
+    {
+        if (newMusic == null) return;
+
+        if (currentMusic != null && currentMusic.isPlaying)
+        {
+            currentMusic.Stop();
+        }
+
+        currentMusic = newMusic;
+        currentMusic.Play();
     }
 
     public void PlayCityMusic()
     {
-        CityMusic.Play();
+        PlayMusic(cityMusic);
     }
 
-    public void PlayDoorOpen()
+    public void StopCityMusic()
     {
-        DoorOpen.Play();
+        if (cityMusic != null)
+            cityMusic.Stop();
     }
 
-    public void PlayDoorClose()
+    public void ResumeCityMusic()
     {
-        DoorClose.Play();
+        PlayMusic(cityMusic);
     }
+
+    // ======================
+    // OTHER MUSIC
+    // ======================
 
     public void PlayMinigameMusic()
     {
-        MinigameSoundtrack.Play();
+        PlayMusic(minigameMusic);
     }
-
-    public void PlayMinigameDoorOpen()
-    {
-        MinigameSoundtrackDoorOpen.Play();
-    }
-
-    // public void PlayMinigameDoorClose()
-    // {
-    //     MinigameDoorClose.Play();
-    // }
 
     public void PlayPharmacyMusic()
     {
-        PharmacySoundtrack.Play();
+        PlayMusic(pharmacyMusic);
     }
 
     public void PlayRandomMachineMusic()
     {
-        RandomMachineSoundtrack.Play();
+        PlayMusic(randomMachineMusic);
     }
 
+    public void PlayPrizeMachineMusic()
+    {
+        PlayMusic(prizeMachineMusic);
+    }
 
+    // ======================
+    // SOUND EFFECTS (không ảnh hưởng cityMusic)
+    // ======================
+
+    public void PlayDoorOpen()
+    {
+        if (doorOpen != null)
+            doorOpen.Play();
+    }
+
+    public void PlayDoorClose()
+    {
+        if (doorClose != null)
+            doorClose.Play();
+    }
+
+    public void PlayMinigameDoorOpen()
+    {
+        if (minigameDoorOpen != null)
+            minigameDoorOpen.Play();
+    }
+
+    public void PlayMinigameDoorClose()
+    {
+        if (minigameDoorClose != null)
+            minigameDoorClose.Play();
+    }
 }

@@ -142,31 +142,6 @@ public class BettingManager : MonoBehaviour
     // ÁP DỤNG KẾT QUẢ (chỉ cộng tiền nếu thắng)
     void ApplyResult()
     {
-        // RIG SYSTEM: 2 WIN → 5 LOSE
-
-        if (forcedLoseCount > 0)
-        {
-            playerWon = false;
-            forcedLoseCount--;
-        }
-        else
-        {
-            if (playerWon)
-            {
-                winStreak++;
-
-                if (winStreak >= 2)
-                {
-                    winStreak = 0;
-                    forcedLoseCount = 5;
-                    Debug.Log("Forced Lose Activated (5 rounds)");
-                }
-            }
-            else
-            {
-                winStreak = 0;
-            }
-        }
         // APPLY MONEY
         if (playerWon)
         {
