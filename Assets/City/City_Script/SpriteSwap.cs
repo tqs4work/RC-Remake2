@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using FWC;
 
 public class SpriteSwap : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class SpriteSwap : MonoBehaviour
         {
             StartCoroutine(PlayAnimation());
             yield return new WaitForSeconds(0.5f); // Wait for animation to complete
-            panel.SetActive(true);           
+            panel.SetActive(true);
+            CitySoundManager.Instance.PlayDoorOpen();
         }
     }
 
@@ -50,7 +52,8 @@ public class SpriteSwap : MonoBehaviour
         if (isOpen && !isAnimating)
         {
             StartCoroutine(PlayAnimation());
-                panel.SetActive(false);           
+                panel.SetActive(false);  
+            CitySoundManager.Instance.PlayDoorClose();         
         }
     }
 
@@ -58,6 +61,7 @@ public class SpriteSwap : MonoBehaviour
     {
         CloseDoor();
         StartCoroutine(loadMinigmae());
+        CitySoundManager.Instance.PlayMinigameMusic();
     }
 
     public IEnumerator loadMinigmae()
