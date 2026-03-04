@@ -61,6 +61,7 @@ public class ChicManager : MonoBehaviour
     public AudioClip eatSound;
     public Transform chicVisuals;
 
+    public TextMeshProUGUI noti;
     private void Start()
     {
         //Khởi tạo timer cho trạng thái baby
@@ -75,6 +76,7 @@ public class ChicManager : MonoBehaviour
 
         startPos = transform.position; // Lưu lại mốc tọa độ ban đầu
         StartCoroutine(RoamRoutine()); // Bắt đầu tiến trình đi dạo
+        noti.text = "";
     }
     private void Update()
     {
@@ -156,15 +158,17 @@ public class ChicManager : MonoBehaviour
         if (wheatItem == null || wheatItem.quantity <= 0)
         {
             Debug.Log("Bạn không có thức ăn để cho gà con ăn!");
+            StartCoroutine(NotiMess("Bạn không có thức ăn để cho gà con ăn!", 2));
             return false;
         }
         wheatItem.quantity--; // Trừ 1 thức ăn
         Debug.Log("Đã sử dụng 1 thức ăn. Còn lại: " + wheatItem.quantity);
+        StartCoroutine(NotiMess("Đã sử dụng 1 thức ăn. Còn lại: " + wheatItem.quantity, 2));
         if (wheatItem.quantity <= 0)
         {
             farmInventory.items.Remove(wheatItem); // Xóa khỏi túi nếu hết
             Debug.Log("Bạn đã dùng hết thức ăn!");
-            return false;
+            return true;
         }
         return true;
     }    
@@ -375,4 +379,10 @@ public class ChicManager : MonoBehaviour
         food.enabled = true;
         sellIcon.enabled = false;
     }
+    IEnumerator NotiMess(string message, int time)
+    {
+        noti.text = message;
+        yield return new WaitForSeconds(time);
+        noti.text = ""; 
+    }    
 }
