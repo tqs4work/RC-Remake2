@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3f10594e0b809c4e91d90a336ba911d, type: 3}
-  m_Name: BigMP
+  m_Name: NonMana0 2
   m_EditorClassIdentifier: 
   itemType: 7
-  itemID: C002
-  itemName: Big Mana potion
+  itemID: C003
+  itemName: Non Potion
   description: 
-  icon: {fileID: 3962441118982862879, guid: c9c96c11e0a76ed4294a3a41eface06b, type: 3}
+  icon: {fileID: 8111962580898547391, guid: c60ddfe701e712e41859bc811515a8b6, type: 3}
   isStackable: 1
-  maxStack: 10
-  price: 200
+  maxStack: 1000
+  price: 0
   stackable: 0
-  level: 1
+  level: 0
   quantity: 1
   hpAmount: 0
-  mpAmount: 100
+  mpAmount: 0
   atk: 0
   def: 0
   crit: 0
   useDurability: 1
+  durability: 0
   addATKPerLevel: 0000000000000000000000000000000000000000
   addDEFPerLevel: 0000000000000000000000000000000000000000
   addCRITPerLevel:
