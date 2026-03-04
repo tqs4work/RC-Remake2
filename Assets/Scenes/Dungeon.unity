@@ -1058,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlamSpirit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6694548093932786794, guid: 9aedbc456e27d684f8c1748c612062d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -137128,6 +137132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlamSpirit
       objectReference: {fileID: 0}
+    - target: {fileID: 6694548093932786794, guid: 9aedbc456e27d684f8c1748c612062d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -138579,6 +138587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BSlime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7464121952687417204, guid: c3124251ca199b5409e932dd93f90398, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -139431,6 +139443,10 @@ PrefabInstance:
     - target: {fileID: 7952440064398859979, guid: b61e8b64b6ecd164fb3751fdbd2708d5, type: 3}
       propertyPath: m_Name
       value: RFrog
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952440064398859979, guid: b61e8b64b6ecd164fb3751fdbd2708d5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -171689,6 +171705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BTengu
       objectReference: {fileID: 0}
+    - target: {fileID: 1791144777164126933, guid: 2f8404a164a12064199e26d68aa1e21a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4577406443555801147, guid: 2f8404a164a12064199e26d68aa1e21a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 131.37
@@ -173424,6 +173444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 7464121952687417204, guid: c3124251ca199b5409e932dd93f90398, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -173986,6 +174010,10 @@ PrefabInstance:
     - target: {fileID: 7952440064398859979, guid: b61e8b64b6ecd164fb3751fdbd2708d5, type: 3}
       propertyPath: m_Name
       value: RFrog (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952440064398859979, guid: b61e8b64b6ecd164fb3751fdbd2708d5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
